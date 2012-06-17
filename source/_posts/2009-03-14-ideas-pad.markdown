@@ -1,0 +1,14 @@
+---
+date: '2009-03-14 13:14:00'
+layout: post
+slug: ideas-pad
+status: publish
+title: Ideas Pad
+wordpress_id: '37'
+---
+
+So in an effort to actually keep me regularly posting I think I'm going to use this place more as a repository for my general ideas. I've found that it's possible to update blogger via email so I will be able to put stuff up here from work so instead of coming home with a backpack full of "post it" notes I'll just be able to check here  
+  
+In other news, the DS sequencer is pretty much working. I'll try to add MIDI output tonight and once that's done i can hook it up to stuff for noises. Code will be released at some point to. Happy Happy Joy Joy  
+  
+Guy

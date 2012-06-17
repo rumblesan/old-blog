@@ -1,0 +1,1723 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html   xmlns:og="http://opengraphprotocol.org/schema/"
+        xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <title>Live from the Palace of Flies | Rumblesan</title>
+    
+    
+
+
+ 
+    <meta name="Description" content="
+Live from the Palace of Flies by RumbleSan, released 18 September 2011
+
+1. Movement 1
+2. Movement 2
+3. Movement 3
+
+An experimental ambient noise artist from the UK
+">
+    
+     
+         
+           
+    
+    <link rel="shortcut icon" href="http://f0.bcbits.com/z/19/96/1996758618-1.jpg">
+    <link rel="apple-touch-icon" href="http://f0.bcbits.com/z/19/96/1996758618-1.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black translucent" />-->
+    
+    
+    
+        <meta name="title" content="Live from the Palace of Flies, by RumbleSan" />
+        <meta property="og:title" content="Live from the Palace of Flies, by RumbleSan" />
+        <meta property="og:type" content="album" />
+        <meta property="og:site_name"   content="Rumblesan" />
+        <meta property="og:description" content="3 track album"/>
+    
+    
+        
+        
+        <link rel="image_src" href="http://f0.bcbits.com/z/19/96/1996758618-1.jpg" />
+        <meta property="og:image" content="http://f0.bcbits.com/z/19/96/1996758618-1.jpg" />
+        
+        <meta property="og:url"   content="http://rumblesan.bandcamp.com/album/live-from-the-palace-of-flies"/>
+        
+        <meta name="medium"         content="video" />
+        <meta name="video_height"   content="105" />
+        <meta name="video_width"    content="400" />
+        <meta name="video_type"     content="application/x-shockwave-flash" />  
+
+		 
+            
+             
+        
+        <meta property="og:video" 
+            content="http://bandcamp.com/EmbeddedPlayer.swf/size=venti/album=3372726929/" />        
+        <meta property="og:video:height" content="105" />
+        <meta property="og:video:width" content="400" />
+        <meta property="og:video:type" content="application/x-shockwave-flash" />
+
+        <meta property="fb:app_id"      content="165661066782720" /> 
+        <meta property="fb:admins" content="" /> 
+
+        
+        
+    
+     
+
+    
+    
+    <link type="text/css" rel="stylesheet" href="http://s0.bcbits.com/tmpdata/cache/global_bundle_8c594464c6e1e7259ba26fe7efea4b56.css" media="all">
+<link type="text/css" rel="stylesheet" href="http://s0.bcbits.com/tmpdata/cache/tralbum_bundle_9469d272799ba0b7cbfa56c244198306.css" media="all">
+
+    <script type="text/javascript">
+        var isDebug = false;
+    </script>
+
+    
+
+
+<script type="text/javascript">
+    
+    var isDebug = false;
+    var siteroot = "http:\/\/bandcamp.com";
+    var siteroot_https = "https:\/\/bandcamp.com";
+    var siteroot_current = "http:\/\/bandcamp.com";
+    var band_url = "http:\/\/music.rumblesan.com";
+    var isProduction = true;
+
+    
+    document.documentElement.className += " js";
+    
+    
+    var Browser = {"grade":"X","type":null,"version":[-1],"make":null,"platform":null};    
+
+    
+    var TemplGlobals = {"is_https":false,"siteroot":"http:\/\/bandcamp.com","static_siteroot":"http:\/\/s0.bcbits.com","siteroot_https":"https:\/\/bandcamp.com"};
+
+    
+    
+
+
+        
+        
+
+<!-- JS set for template album.liquid: legacy-->
+
+
+    var JSLoader = {
+        sets : 
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+        {
+            
+
+            
+            
+            
+            
+            
+            legacy: {
+                head: [
+                    
+                     
+
+    "http://s0.bcbits.com/tmpdata/cache/yahoo-dom-event_d9c5d404cba3fba1e0dadf35b37d1c44.js"
+
+
+                
+                
+                ],
+                
+                foot: [
+                    
+                    
+                     
+
+    "http://s0.bcbits.com/tmpdata/cache/json-min_5f97e41133fcf214c90129e9ae0fb794.js"
+
+
+                    ,
+                    
+                     
+
+    "http://s0.bcbits.com/tmpdata/cache/utils_be27514dbb39b12924748c549f347721.js"
+
+
+    
+                                
+    
+                ]
+            },
+        
+
+            lastThing:0 
+        }
+,
+        writeScriptTags: function( section ) {
+            var libs = JSLoader.currentset[ section ];
+            if ( !libs ) 
+                throw "couldn't find js section: " + section;
+            for ( var i=0; i < libs.length; i++ ) {
+                document.write( '<script type="text/javascript" src="' + libs[i] + '"><\/s' + 'cript>' );
+            }
+        },
+        
+        requireJS : function(src) {
+            if(typeof(src) == "string")
+            {
+                JSLoader._addRequire(src);
+            }
+            else
+            {
+                for(var i=0; i<src.length; i++)
+                {
+                    JSLoader._addRequire(src[i]);
+                }
+            }
+        },
+
+        selectSet : function(setname) {
+            if(!setname || !JSLoader.sets[setname]) {
+                if(setname && console.log) {
+                    console.log("JS set \"" + setname + "\" not found, using legacy set.");
+                }
+                setname = "legacy";
+            }
+
+            JSLoader.currentset = JSLoader.sets[setname];
+        },
+
+        checkSets : function() {
+            return; //disabled
+            if(!console.log || !JSLoader.sets.legacy) return;
+
+            var a = JSLoader.original_sets;
+            var b = JSLoader.sets.legacy;
+
+            var sections = ["head", "foot"];
+
+            for(var s=0; s<sections.length; s++) {
+                var seca = a[sections[s]];
+                var secb = b[sections[s]];
+
+                for(var i=0; i<seca.length; i++) {
+                    if(seca[i] != secb[i]) {
+                        console.log("warning: js lib " + sections[s] + "[" + i + "] mismatch:");
+                        console.log("should be: " + seca[i]);
+                        console.log("       is: " + secb[i]);
+                    }
+                }
+            }
+        },
+        
+        _addRequire : function(src) {
+            var libs = JSLoader.currentset.foot;
+            for(var i=0; i<libs.length; i++)
+            {
+                if(libs[i] == src) return;
+            }
+            libs.push( src );
+        },
+            
+        onJSLoaded : null
+    };
+
+
+        
+        
+         
+
+    /* keep a copy of the original loader sets here for comparison during debugging */
+    
+    JSLoader.original_sets = {
+            head: [
+                
+                "http://s0.bcbits.com/tmpdata/cache/yahoo-dom-event_4a56b2534195bbe8e54bf5cd18025fbb.js"
+            
+            
+            ],
+            
+            foot: [
+                
+                
+                "http://s0.bcbits.com/tmpdata/cache/json-min_5f97e41133fcf214c90129e9ae0fb794.js",
+                
+                "http://s0.bcbits.com/tmpdata/cache/utils_be27514dbb39b12924748c549f347721.js"
+                            
+            ]
+        };
+    
+
+    JSLoader.checkSets();
+    JSLoader.selectSet("legacy");
+    JSLoader.writeScriptTags( "head" );
+
+    
+</script>    
+
+
+    <script type="text/javascript" src="http://s0.bcbits.com/tmpdata/cache/tralbum_head_bundle_23dca42f7d6dd6d1abcbc5213a61fdfe.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+        (function(){
+            function snickerdoodle(which) {
+                var pairs = document.cookie.split(/;\s*/);
+                for (var i = 0; i < pairs.length; ++i) {
+                    var pair = pairs[i].split("=");
+                    if (pair[0] == which) {
+                        return pair[1];
+                    }
+                }
+                return null;
+            }
+
+
+            // pull id from the server; 'bust' is paranoia as we also tag the response no-cache
+            document.write('<script type="text/javascript" src="http://bandcamp.com/client_id/custom_js?c=' + encodeURIComponent(snickerdoodle("session")||"") + '&bust=' + new Date().getTime() + '"></scr'+'ipt>');
+
+        })();
+    </script>
+
+
+        <script type="text/javascript">
+            
+        
+            var gCrumb = null;
+            Control.registerEvents();
+            Control.registerController( "/no_js", TPController );
+        </script>
+    
+
+    
+    
+        
+            <link rel="alternate" type="application/rss+xml" title="Rumblesan" href="/feed" />
+            
+                <link rel="alternate" type="application/rss+xml" title="Rumblesan: Live from the Palace of Flies" href="/feed/album/live-from-the-palace-of-flies" />
+            
+            
+        
+    
+
+    
+    
+    
+    
+    
+</head>
+
+
+<body class="invertIconography ">
+
+
+    <script type="text/javascript" src="http://bandcamp.com/cd_ui"></script>
+
+
+
+<div id="centerWrapper">
+    <div id="propOpenWrapper">
+        
+        
+
+    
+    
+    
+
+    
+
+        <div id="pgBd" class="yui-skin-sam">
+            
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+        
+        
+        
+    
+    
+<style type="text/css" media="all">
+    
+    #propOpenWrapper {
+        background: #000000;
+    }
+    
+    #pgBd {
+        background: #000000;
+        color: #363636;
+    }
+        
+    .primaryText {
+        color: #363636;
+    }
+    
+    .secondaryText {
+        color: #666666;
+    }
+    
+    #trackInfo a, #tagArea a, #rightColumn a, #name-section a, #indexpage a, .merch-grid a, #band-navbar a {
+        color: #0687F5;
+    }
+    
+    #trackInfo a.notable {
+        color: red; /* overrides above */
+    }
+    
+    
+    #band-navbar {
+        background-color: #F6F6F6;
+    }
+    
+    
+    body {
+        background: #999999;
+        background-position: left top;
+        background-repeat: repeat;
+        background-image: url(http://f0.bcbits.com/z/42/69/4269570556-1.jpg);
+    }
+    
+    body.has-navbar {
+        background-position: left 48px;
+    }
+    body.has-top-banner {
+        background-position: left 40px;
+    }
+    body.has-navbar.has-top-banner {
+        background-position: left 88px;
+    }
+    
+    #pgHd, #pgFt {
+        background-color: #404040;
+    }	
+    
+</style>
+
+
+
+<script type="text/javascript">
+
+    
+    
+    
+    
+    var FarbtasticUrls = {
+        js:  "http://s0.bcbits.com/tmpdata/cache/farbtastic_9c4c3f4954397658c3653f9304dcdd29.js",      
+        css: "http://s0.bcbits.com/tmpdata/cache/farbtastic_083d56a53dfbf370dde499187c7e9df1.css"     
+    };
+</script>
+
+
+
+
+
+<style type="text/css">
+
+table.track_list tr.lyricsRow {
+   display:none;
+}
+
+.hiddenLyrics {
+   display:none;
+}
+
+table.track_list tr td div.collapsibleLyrics {
+    height:0px;
+    overflow:hidden;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    width:349px;
+} 
+ 
+</style>
+
+
+    
+
+<script type="text/javascript">
+JSLoader.requireJS("http://s0.bcbits.com/tmpdata/cache/shows_track_4a78d2013a73f7e36be93868b7a88331.js");
+
+Control.registerController( "/", {
+    download_tralbum: function( paths, params, url, event ) {
+        TralbumDownload.begin( event ); 
+    },
+    
+    
+    track: function( paths, params, url, event ) {
+        
+        var urlHash = Url.toHash( url );   
+        var tracknum = urlsToTrackNums[ "/track/" + paths[0] + urlHash.hash ];
+    
+        if( tracknum ) {
+            var content = "_lyrics_" + tracknum ;
+            var thingToExpand = "lyrics_div_" + tracknum ;              
+            var parentOfThingToExpand = "lyrics_row_" + tracknum ;
+            
+            Expando.toggle( content, thingToExpand, parentOfThingToExpand );
+            
+        }
+        
+        else {
+            document.location = url;
+        }
+        
+    }
+} );
+
+var SiteData = {
+    supportEmail: "support@rumblesan.bandcamp.com"
+};
+
+var BandData = {
+    id: 1117253719,
+    name : "Rumblesan",
+    country: "GB",
+    state: "--",
+    country_name: "United Kingdom",
+    country_is_eu: true,
+    tax_rate: null,
+    has_discounts: null,
+    fan_email: null,
+    bio: {"image_id":4085,"screen":{"https_url":"https:\/\/f.bandcamp.com\/z\/33\/30\/3330550341-1.jpg","file_id":3330550341,"format":20,"url":"http:\/\/f0.bcbits.com\/z\/33\/30\/3330550341-1.jpg","width":1024,"height":768,"image_id":4085},"has_recommendations":false,"image_filename":"back.jpg","thumb":{"https_url":"https:\/\/f.bandcamp.com\/z\/31\/07\/3107630124-1.jpg","file_id":3107630124,"format":21,"url":"http:\/\/f0.bcbits.com\/z\/31\/07\/3107630124-1.jpg","width":null,"height":null,"image_id":4085},"phone":{"https_url":"https:\/\/f.bandcamp.com\/z\/18\/75\/1875247870-1.jpg","file_id":1875247870,"format":23,"url":"http:\/\/f0.bcbits.com\/z\/18\/75\/1875247870-1.jpg","width":null,"height":null,"image_id":4085},"bio":"An experimental noise artist hailing from the UK","bio_part1":"An experimental noise artist hailing from the UK","bio_part2":null},
+    account_id: 3161782935
+};
+/* to do: fix these urls in the controller? */
+var EmbedData = {
+    tralbum_param : { name : "album", value : 3372726929 }, 
+    swf_base_url : "http:\/\/bandcamp.com",
+
+    art_url : "http:\/\/f0.bcbits.com\/z\/12\/18\/1218834325-1.jpg",
+    lg_art_url : "http:\/\/f0.bcbits.com\/z\/56\/31\/563160084-1.jpg",
+
+    album_title : "Live from the Palace of Flies",
+    artist : "RumbleSan",
+    linkback : "http://music.rumblesan.com/album/live-from-the-palace-of-flies",
+    download_base : "http:\/\/popplers5.bandcamp.com\/"
+};
+
+var TralbumData = {
+    // For the curious:
+    // http://bandcamp.com/faq#steal
+    // http://bandcamp.com/terms_of_use
+    current: {"purchase_title":null,"new_desc_format":1,"require_email":null,"about":"An experimental ambient noise artist from the UK","minimum_price":0.0,"require_email_0":null,"credits":null,"mod_date":"Sun Sep 18 14:39:46 UTC 2011","featured_track_id":4177687268,"set_price":7.0,"new_date":"Sun Sep 18 13:44:49 UTC 2011","artist":"RumbleSan","private":null,"title":"Live from the Palace of Flies","id":3372726929,"upc":null,"release_date":"Sun Sep 18 00:00:00 UTC 2011","band_id":1117253719,"is_set_price":null,"minimum_price_nonzero":5.0,"type":"album","purchase_url":null,"download_pref":2,"publish_date":"Sun Sep 18 13:44:49 UTC 2011","download_desc_id":null,"art_id":1006318306,"auto_repriced":null},
+    is_preorder: null,
+    preorder_count: null,
+    currentDownloads: [{"encoding_name":"mp3-320","description":"MP3 320","size_mb":"76.5MB"},{"encoding_name":"flac","description":"FLAC","size_mb":"242.4MB"},{"encoding_name":"mp3-v0","description":"MP3 VBR (V0)","size_mb":"68.1MB"},{"encoding_name":"aac-hi","description":"AAC","size_mb":"55.7MB"},{"encoding_name":"vorbis","description":"Ogg Vorbis","size_mb":"38.9MB"},{"encoding_name":"alac","description":"ALAC","size_mb":"249.1MB"}],
+    artThumbURL: "http:\/\/f0.bcbits.com\/z\/19\/96\/1996758618-1.jpg",
+	artFullsizeUrl: "http:\/\/f0.bcbits.com\/z\/19\/34\/1934725917-1.png",
+    trackinfo : [{"duration":792.963,"track_num":1,"has_info":"Movement 1 of Live form the Palace of Flies","has_free_download":false,"unreleased_track":false,"title":"Movement 1","download_tooltip":"name your price high quality formats","is_downloadable":2,"has_lyrics":false,"streaming":1,"is_draft":false,"title_link":"\/track\/movement-1","id":4177687268,"sizeof_lyrics":0,"album_preorder":false,"file":"http:\/\/popplers5.bandcamp.com\/download\/track?enc=mp3-128&fsig=50daaf34a3589898a11c95110a2447ab&id=4177687268&stream=1&ts=1339878384.0"},{"duration":554.21,"track_num":2,"has_info":"Movement 2 of Live form the Palace of Flies","has_free_download":false,"unreleased_track":false,"title":"Movement 2","download_tooltip":"name your price high quality formats","is_downloadable":2,"has_lyrics":false,"streaming":1,"is_draft":false,"title_link":"\/track\/movement-2","id":856919991,"sizeof_lyrics":0,"album_preorder":false,"file":"http:\/\/popplers5.bandcamp.com\/download\/track?enc=mp3-128&fsig=106b7ebc147a1803f3b208c59da4ba0c&id=856919991&stream=1&ts=1339878384.0"},{"duration":632.777,"track_num":3,"has_info":"Movement 3 of Live form the Palace of Flies","has_free_download":false,"unreleased_track":false,"title":"Movement 3","download_tooltip":"name your price high quality formats","is_downloadable":2,"has_lyrics":false,"streaming":1,"is_draft":false,"title_link":"\/track\/movement-3","id":529778464,"sizeof_lyrics":0,"album_preorder":false,"file":"http:\/\/popplers5.bandcamp.com\/download\/track?enc=mp3-128&fsig=54e7e69cc82eb14e023ef96aedbad619&id=529778464&stream=1&ts=1339878384.0"}],
+    playing_from : "album page",
+    featured_track_id : 4177687268,
+	initial_track_num : null,
+    packages: [],
+    sizeof_album_lyrics: 0,
+    url: "http://music.rumblesan.com/album/live-from-the-palace-of-flies",
+    defaultPrice: 7.0,
+    freeDownloadPage: "http:\/\/music.rumblesan.com\/download?enc=mp3-320&id=3372726929&ts=1339878383.3037841047&tsig=e462ea2229ea6f3bd76fa2938b463d3c&type=album",
+    maxPrice: 1000.0,
+    minPrice: 0.4,
+    FREE: 1,
+    PAID: 2,
+    artist: "RumbleSan"
+};
+
+
+
+if ( window.FacebookData ) {
+    var  ti = TralbumData.trackinfo;
+    
+    if ( ti && ti.length ){
+        for( var i = 0; i < ti.length; i++ ) {
+           if (ti[i].title_link) {
+               ti[i].title_link = ( fb_band_url + ti[i].title_link );    
+           }
+                
+        }
+    }
+}
+
+
+var PaymentData = {
+    paymentType: null,
+    paymentDownloadPage: null
+};
+
+var ReferrerToken = null;
+
+var CurrencyData = {"list":["USD","AUD","THB","PAB","ETB","BOB","GBP","CAD","CRC","NIO","CZK","GMD","DKK","MKD","IQD","KWD","DZD","LYD","BHD","JOD","TND","MAD","AED","STD","BND","ZWD","TWD","SBD","BBD","JMD","TTD","BSD","LRD","BMD","BZD","XCD","GYD","NAD","KYD","CVE","EUR","XOF","BIF","XAF","GNF","KMF","XPF","DJF","HTG","PYG","ANG","AWG","HKD","UAH","HUF","ILS","JPY","PGK","LAK","ISK","HRK","MWK","ZMK","MMK","LVL","ALL","HNL","SLL","MDL","SZL","TRY","LTL","LSL","MXN","NGN","NZD","BTN","NOK","MRO","TOP","MOP","ARS","COP","PHP","DOP","CLP","UYU","PLN","LBP","FKP","SYP","SHP","EGP","GIP","BWP","GTQ","ZAR","BRL","OMR","SAR","YER","QAR","KHR","MYR","RUB","MVR","RUP","LKR","PKR","NPR","SCR","INR","MUR","IDR","SOS","TZS","UGX","KES","SGD","PEN","SEK","CHF","BDT","WST","KZT","MNT","VUV","KPW","KRW","CNY"],"current":{"places":2,"prefix":"&#x20A4;","prefix_informal":"&#x20A4;","paypal":true,"suffix_informal":"","prefix_informal_utf8":"\u00a3","symbol":"GBP","a_dollar":1.0,"medium_min_price":0.4,"small_min_price":0.15,"plural":"British Pounds Sterling","long":"British Pound Sterling","slang":["quid","nicker"],"fixed_rate":1,"april_2009":1.4669},"setting":"GBP","info":{"BND":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BND","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"SOS":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SOS","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Shilling","long":"Shilling","fixed_rate":1,"april_2009":1},"LRD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LRD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"ZMK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ZMK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kwacha","long":"Kwacha","fixed_rate":1,"april_2009":1},"OMR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"OMR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rial","long":"Rial","fixed_rate":1,"april_2009":1},"GYD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"GYD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"GBP":{"places":2,"prefix":"&#x20A4;","prefix_informal":"&#x20A4;","paypal":true,"suffix_informal":"","prefix_informal_utf8":"\u00a3","symbol":"GBP","a_dollar":1.0,"medium_min_price":0.4,"small_min_price":0.15,"plural":"British Pounds Sterling","long":"British Pound Sterling","slang":["quid","nicker"],"fixed_rate":1,"april_2009":1.4669},"LKR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LKR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"MOP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MOP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pataca","long":"Pataca","fixed_rate":1,"april_2009":1},"XAF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"XAF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"RUP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"RUP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"XCD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"XCD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"PGK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PGK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kina","long":"Kina","fixed_rate":1,"april_2009":1},"ALL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ALL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Lek","long":"Lek","fixed_rate":1,"april_2009":1},"TZS":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TZS","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Shilling","long":"Shilling","fixed_rate":1,"april_2009":1},"MYR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MYR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Ringgit","long":"Ringgit","fixed_rate":1,"april_2009":1},"CLP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"CLP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"DKK":{"places":2,"prefix":"","prefix_informal":"kr.","paypal":true,"suffix_informal":"","prefix_informal_utf8":"kr.","symbol":"DKK","a_dollar":6.0,"medium_min_price":3.0,"small_min_price":1.5,"plural":"Danish Kroner","long":"Danish Krone","fixed_rate":5,"april_2009":0.1767},"PEN":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PEN","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Sol","long":"Sol","fixed_rate":1,"april_2009":1},"IDR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"IDR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupiah","long":"Rupiah","fixed_rate":1,"april_2009":1},"SHP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SHP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1},"GMD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"GMD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dalasi","long":"Dalasi","fixed_rate":1,"april_2009":1},"CRC":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"CRC","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Colon","long":"Colon","fixed_rate":1,"april_2009":1},"HUF":{"places":0,"prefix":"","prefix_informal":"","paypal":true,"suffix_informal":" Ft","prefix_informal_utf8":"","symbol":"HUF","a_dollar":200,"medium_min_price":100.0,"small_min_price":40.0,"plural":"Hungarian Forint","long":"Hungarian Forint","fixed_rate":200,"april_2009":0.0046},"MUR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MUR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"TWD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TWD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"JOD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"JOD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"BBD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BBD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"TND":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TND","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"MAD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MAD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dirham","long":"Dirham","fixed_rate":1,"april_2009":1},"DOP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"DOP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"MXN":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"MXN","a_dollar":12.0,"medium_min_price":5.0,"small_min_price":2.0,"plural":"Mexican Pesos","long":"Mexican Peso","fixed_rate":10,"april_2009":0.0764},"BMD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BMD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"STD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"STD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dobra","long":"Dobra","fixed_rate":1,"april_2009":1},"KWD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KWD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"UAH":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"UAH","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Hryvnia","long":"Hryvnia","fixed_rate":1,"april_2009":1},"NPR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"NPR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"FKP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"FKP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1},"PLN":{"places":2,"prefix":"","prefix_informal":"","paypal":true,"suffix_informal":" zl","prefix_informal_utf8":"","symbol":"PLN","a_dollar":3.0,"medium_min_price":1.5,"small_min_price":0.5,"plural":"Polish Zlotych","long":"Polish Zloty","fixed_rate":3,"april_2009":0.3044},"SLL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SLL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Leone","long":"Leone","fixed_rate":1,"april_2009":1},"LBP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LBP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1},"BWP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BWP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pula","long":"Pula","fixed_rate":1,"april_2009":1},"VUV":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"VUV","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Vatu","long":"Vatu","fixed_rate":1,"april_2009":1},"CHF":{"places":2,"prefix":"","prefix_informal":"Sfr. ","paypal":true,"suffix_informal":"","prefix_informal_utf8":"Sfr. ","symbol":"CHF","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"Swiss Francs","long":"Swiss Franc","fixed_rate":1,"april_2009":0.8649},"NGN":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"NGN","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Naira","long":"Naira","fixed_rate":1,"april_2009":1},"GTQ":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"GTQ","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Quetzal","long":"Quetzal","fixed_rate":1,"april_2009":1},"LYD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LYD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"BIF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BIF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"ZAR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ZAR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rand","long":"Rand","fixed_rate":1,"april_2009":1},"ZWD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ZWD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"PKR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PKR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"HTG":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"HTG","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Gourde","long":"Gourde","fixed_rate":1,"april_2009":1},"CVE":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"CVE","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Escudo","long":"Escudo","fixed_rate":1,"april_2009":1},"CAD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"CAD","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"Canadian Dollars","long":"Canadian Dollar","fixed_rate":1,"april_2009":0.817},"SZL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SZL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Lilangeni","long":"Lilangeni","fixed_rate":1,"april_2009":1},"MKD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MKD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Denar","long":"Denar","fixed_rate":1,"april_2009":1},"PYG":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PYG","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Guarani","long":"Guarani","fixed_rate":1,"april_2009":1},"ISK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ISK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Krona","long":"Krona","fixed_rate":1,"april_2009":1},"ARS":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ARS","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"THB":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"THB","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Baht","long":"Baht","fixed_rate":1,"april_2009":1},"MVR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MVR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rufiyaa","long":"Rufiyaa","fixed_rate":1,"april_2009":1},"COP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"COP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"EUR":{"places":2,"prefix":"&#x20AC;","prefix_informal":"&#x20AC;","paypal":true,"suffix_informal":"","prefix_informal_utf8":"\u20ac","symbol":"EUR","a_dollar":1.0,"medium_min_price":0.4,"small_min_price":0.15,"plural":"Euros","long":"Euro","fixed_rate":1,"april_2009":1.3164},"BHD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BHD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"PHP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PHP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"IQD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"IQD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"TOP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TOP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pa'anga","long":"Pa'anga","fixed_rate":1,"april_2009":1},"MDL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MDL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Leu","long":"Leu","fixed_rate":1,"april_2009":1},"HRK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"HRK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kuna","long":"Kuna","fixed_rate":1,"april_2009":1},"ILS":{"places":2,"prefix":"&#x20AA;","prefix_informal":"&#x20AA;","paypal":true,"suffix_informal":"","prefix_informal_utf8":"\u20aa","symbol":"ILS","a_dollar":4.0,"medium_min_price":1.5,"small_min_price":0.5,"plural":"Israeli New Sheqalim","long":"Israeli New Sheqel","fixed_rate":5,"april_2009":0.2426},"RUB":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"RUB","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Ruble","long":"Ruble","fixed_rate":1,"april_2009":1},"KZT":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KZT","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Tenge","long":"Tenge","fixed_rate":1,"april_2009":1},"BZD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BZD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"TRY":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TRY","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Lira","long":"Lira","fixed_rate":1,"april_2009":1},"NZD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"NZD","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"New Zealand Dollars","long":"New Zealand Dollar","fixed_rate":1,"april_2009":0.5833},"USD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"USD","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"US Dollars","long":"US Dollar","slang":["bucks","bones","clams","smackers"],"fixed_rate":1,"april_2009":1.0},"MMK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MMK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kyat","long":"Kyat","fixed_rate":1,"april_2009":1},"EGP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"EGP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1},"LAK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LAK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kip","long":"Kip","fixed_rate":1,"april_2009":1},"BTN":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BTN","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Ngultrum","long":"Ngultrum","fixed_rate":1,"april_2009":1},"SAR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SAR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rial","long":"Rial","fixed_rate":1,"april_2009":1},"AED":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"AED","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dirham","long":"Dirham","fixed_rate":1,"april_2009":1},"ANG":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ANG","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Guilder","long":"Guilder","fixed_rate":1,"april_2009":1},"XPF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"XPF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"SGD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"SGD","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"Singapore Dollars","long":"Singapore Dollar","fixed_rate":1,"april_2009":0.6602},"SBD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SBD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"LSL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LSL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Loti","long":"Loti","fixed_rate":1,"april_2009":1},"BRL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BRL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Real","long":"Real","fixed_rate":1,"april_2009":1},"YER":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"YER","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rial","long":"Rial","fixed_rate":1,"april_2009":1},"GNF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"GNF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"KPW":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KPW","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Won","long":"Won","fixed_rate":1,"april_2009":1},"KRW":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KRW","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Won","long":"Won","fixed_rate":1,"april_2009":1},"LTL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LTL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Litas","long":"Litas","fixed_rate":1,"april_2009":1},"KHR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KHR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Riels","long":"Riels","fixed_rate":1,"april_2009":1},"AUD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"AUD","a_dollar":1.0,"medium_min_price":0.5,"small_min_price":0.2,"plural":"Australian Dollars","long":"Australian Dollar","fixed_rate":1,"april_2009":0.7195},"DZD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"DZD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dinar","long":"Dinar","fixed_rate":1,"april_2009":1},"PAB":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"PAB","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Balboa","long":"Balboa","fixed_rate":1,"april_2009":1},"HNL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"HNL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Lempira","long":"Lempira","fixed_rate":1,"april_2009":1},"MWK":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MWK","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Kwacha","long":"Kwacha","fixed_rate":1,"april_2009":1},"KYD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KYD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"CZK":{"places":2,"prefix":"","prefix_informal":"","paypal":true,"suffix_informal":" Kc","prefix_informal_utf8":"","symbol":"CZK","a_dollar":20.0,"medium_min_price":10.0,"small_min_price":4.0,"plural":"Czech Koruna","long":"Czech Koruna","fixed_rate":20,"april_2009":0.0497},"SYP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SYP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1},"CNY":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"CNY","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Yuan Renminbi","long":"Yuan Renminbi","fixed_rate":1,"april_2009":1},"INR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"INR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"AWG":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"AWG","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Guilder","long":"Guilder","fixed_rate":1,"april_2009":1},"BSD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BSD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"HKD":{"places":2,"prefix":"$","prefix_informal":"$","paypal":true,"suffix_informal":"","prefix_informal_utf8":"$","symbol":"HKD","a_dollar":8.0,"medium_min_price":3.0,"small_min_price":1.5,"plural":"Hong Kong Dollars","long":"Hong Kong Dollar","fixed_rate":8,"april_2009":0.129},"MRO":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MRO","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Ouguiya","long":"Ouguiya","fixed_rate":1,"april_2009":1},"KMF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KMF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"JMD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"JMD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"BDT":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BDT","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Taka","long":"Taka","fixed_rate":1,"april_2009":1},"QAR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"QAR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rial","long":"Rial","fixed_rate":1,"april_2009":1},"TTD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"TTD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"MNT":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"MNT","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Tugrik","long":"Tugrik","fixed_rate":1,"april_2009":1},"DJF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"DJF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"JPY":{"places":0,"prefix":"&#x00A5;","prefix_informal":"&#x00A5;","paypal":true,"suffix_informal":"","prefix_informal_utf8":"\u00a5","symbol":"JPY","a_dollar":100,"medium_min_price":50.0,"small_min_price":20.0,"plural":"Japanese Yen","long":"Japanese Yen","fixed_rate":100,"april_2009":0.01},"WST":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"WST","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Tala","long":"Tala","fixed_rate":1,"april_2009":1},"KES":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"KES","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Shilling","long":"Shilling","fixed_rate":1,"april_2009":1},"XOF":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"XOF","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Franc","long":"Franc","fixed_rate":1,"april_2009":1},"UGX":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"UGX","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Shilling","long":"Shilling","fixed_rate":1,"april_2009":1},"ETB":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"ETB","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Birr","long":"Birr","fixed_rate":1,"april_2009":1},"NOK":{"places":2,"prefix":"","prefix_informal":"kr ","paypal":true,"suffix_informal":"","prefix_informal_utf8":"kr ","symbol":"NOK","a_dollar":7.0,"medium_min_price":3.0,"small_min_price":1.5,"plural":"Norwegian Kroner","long":"Norwegian Krone","fixed_rate":6,"april_2009":0.1504},"NAD":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"NAD","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Dollar","long":"Dollar","fixed_rate":1,"april_2009":1},"SCR":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"SCR","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Rupee","long":"Rupee","fixed_rate":1,"april_2009":1},"LVL":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"LVL","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Lat","long":"Lat","fixed_rate":1,"april_2009":1},"BOB":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"BOB","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Boliviano","long":"Boliviano","fixed_rate":1,"april_2009":1},"UYU":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"UYU","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Peso","long":"Peso","fixed_rate":1,"april_2009":1},"SEK":{"places":2,"prefix":"","prefix_informal":"","paypal":true,"suffix_informal":" kr","prefix_informal_utf8":"","symbol":"SEK","a_dollar":8.0,"medium_min_price":3.0,"small_min_price":1.5,"plural":"Swedish Kronor","long":"Swedish Krona","fixed_rate":7,"april_2009":0.121},"NIO":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"NIO","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Cordoba","long":"Cordoba","fixed_rate":1,"april_2009":1},"GIP":{"places":2,"prefix":"","prefix_informal":"","paypal":false,"suffix_informal":"","prefix_informal_utf8":"","symbol":"GIP","a_dollar":1,"medium_min_price":1,"small_min_price":1,"plural":"Pound","long":"Pound","fixed_rate":1,"april_2009":1}},"rates":{"SOS":0.0006,"BND":0.7869,"LRD":0.0133,"OMR":2.5991,"GYD":0.0049,"ZMK":0.0002,"GBP":1.571,"LKR":0.0076,"MOP":0.1251,"XAF":0.0019,"RUP":1.0,"XCD":0.3704,"PGK":0.4905,"ALL":0.0091,"TZS":0.0006,"MYR":0.3165,"CLP":0.002,"DKK":0.1702,"PEN":0.375,"IDR":0.0001,"SHP":1.5534,"CRC":0.002,"HUF":0.0043,"GMD":0.032,"MUR":0.033,"TWD":0.0334,"JOD":1.4094,"BBD":0.5,"TND":0.629,"MAD":0.1142,"DOP":0.0256,"MXN":0.0718,"BMD":1.0,"STD":0.0001,"KWD":3.5689,"NPR":0.0112,"FKP":1.5533,"PLN":0.2974,"UAH":0.124,"SLL":0.0002,"LBP":0.0007,"BWP":0.129,"VUV":0.0106,"CHF":1.0522,"NGN":0.0061,"GTQ":0.1271,"LYD":0.7878,"BIF":0.0007,"ZAR":0.1197,"ZWD":1.0,"PKR":0.0106,"HTG":0.0238,"CVE":0.0114,"CAD":0.9789,"SZL":0.1205,"MKD":0.0205,"PYG":0.0002,"ISK":0.0079,"ARS":0.2225,"THB":0.0317,"MVR":0.0652,"COP":0.0006,"EUR":1.2638,"BHD":2.6522,"PHP":0.0237,"IQD":0.0009,"MDL":0.0831,"HRK":0.1673,"ILS":0.2595,"TOP":0.561,"KZT":0.0067,"RUB":0.0308,"BZD":0.5226,"NZD":0.7879,"USD":1.0,"TRY":0.5515,"MMK":0.0012,"EGP":0.1653,"LAK":0.0001,"BTN":0.018,"SAR":0.2666,"SGD":0.7874,"AED":0.2722,"ANG":0.5587,"XPF":0.0106,"SBD":0.1419,"LSL":0.1206,"BRL":0.4875,"KPW":0.0011,"GNF":0.0001,"YER":0.0047,"KRW":0.0009,"LTL":0.3661,"KHR":0.0002,"AUD":1.0081,"DZD":0.0128,"PAB":1.0,"HNL":0.0525,"MWK":0.0037,"KYD":1.2195,"CZK":0.0497,"SYP":0.0157,"CNY":0.1571,"INR":0.0181,"AWG":0.5576,"HKD":0.1289,"BSD":1.0,"MRO":0.0034,"KMF":0.0026,"BDT":0.0122,"JMD":0.0114,"QAR":0.2746,"MNT":0.0008,"TTD":0.1561,"DJF":0.0056,"JPY":0.0127,"WST":0.4204,"KES":0.0118,"XOF":0.0019,"UGX":0.0004,"ETB":0.0563,"NOK":0.168,"NAD":0.1197,"SCR":0.0694,"LVL":1.8142,"BOB":0.1447,"SEK":0.1433,"UYU":0.0465,"NIO":0.0426,"GIP":1.5534}};
+
+Y.util.Event.onDOMReady(function() {
+
+    PopupImage.attach( "a.popupImage" );
+
+    if ( window.Cart ){
+        Cart.startup();
+    }
+    if ( window.AutoLyrics ) {
+        AutoLyrics.init("_lyrics_", "lyrics_div_", "lyrics_row_", TralbumData.trackinfo.length, 1 );
+    }
+    if ( window.Player ) {
+        Player.init(TralbumData, AlbumPage.registerPlaylistListeners);
+    }   
+    if ( window.Share ) {
+        Share.setupMenu();
+    }
+    if ( window.TralbumDownload ) {
+        TralbumDownload.init();
+    }
+    if ( window.TralbumUpdater ) {
+        TralbumUpdater.init();
+    }
+    if ( window.PackageOrder ) {
+        PackageOrder.init();
+    }
+    
+    Y.util.Event.on("buy-disc-link", "click", function() {Stats.record({kind:"click", click:"buy_disc"}); return true;});
+    Y.util.Event.on("rssFeedAlbum", "click", function() {Stats.record({kind:"click", click:"rss_feed"}); return true;});
+    Y.util.Event.on("rssFeedArtist", "click", function() {Stats.record({kind:"click", click:"rss_feed"}); return true;});
+
+    if ( window.AlbumPage ) {
+        AlbumPage.registerMouseOverForTrackRows();
+    }
+    
+    if ( window.FacebookUtils ){
+        FacebookUtils.initPage("album", "http://rumblesan.bandcamp.com/album/live-from-the-palace-of-flies");
+    }
+    
+    
+    
+    if ( window.TralbumFans ){
+        TralbumFans.initialize(null);
+    }
+    
+    if( window.Trackpipe ) {
+        Trackpipe.maybeDoTralbumActions();
+    }
+});
+
+</script>
+
+
+
+<div id="customHeaderWrapper">
+
+
+    
+        
+        
+        
+        
+        
+    
+
+
+<div id="customHeader">
+    
+    
+        
+        
+    
+    
+    
+        
+        
+            
+        
+    
+    
+    
+     
+    
+    <a href="http://music.rumblesan.com"><img id="headerImage" src="http://f0.bcbits.com/z/39/58/3958737460-1.jpg"/></a>
+     
+
+     
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="bannercontainer">
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="trackView leftMiddleColumns has-art"
+     itemscope itemtype="http://schema.org/MusicAlbum">
+    
+    <div id="name-section" >
+        
+        <h2 class="trackTitle" itemprop="name">
+            Live from the Palace of Flies
+            
+        </h2>
+        
+
+        <h3 style="margin:0px;">by
+            <span itemprop="byArtist"> 
+                
+                <a href="http://www.rumblesan.com">RumbleSan</a>
+                
+            </span>
+        </h3>
+
+    
+    </div>
+
+    <div class="middleColumn">
+        <div id="tralbumArt" style="z-index: 1;">
+        
+            
+                
+            
+		<a class="popupImage" href="http://f0.bcbits.com/z/19/34/1934725917-1.png">
+            <img src="http://f0.bcbits.com/z/30/62/3062401024-1.jpg" alt="Live from the Palace of Flies cover art" itemprop="image">
+        </a>
+        
+    
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>
+    
+    
+    
+     gFacebookAppId = 165661066782720;
+     
+     window.fbAsyncInit = function() {
+        
+           
+        Log.note("calling FB.init");
+        
+        FB.init({appId: gFacebookAppId.toString(), status: true, cookie: true, xfbml: true});
+        
+        
+       
+     }; 
+     
+     
+     
+     
+     (function() {
+        
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+     }());
+    
+</script>
+
+
+
+<style type="text/css" media="all">
+   
+  #bc-tweet-link, #bc-fb-link {
+    padding: 3px 5px 2px 20px;
+    border-bottom-width: 1px;
+    
+    margin-top: 18px;
+    
+    
+    font: 11px "lucida grande",tahoma,verdana,arial,sans-serif;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border: 1px solid #CCCCCC;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+    
+  .gecko #bc-tweet-link, .gecko #bc-fb-link {
+    padding-bottom: 2px;
+  }
+  
+  .gecko.mac #bc-tweet-link, .gecko.mac #bc-fb-link {
+    padding-bottom: 1px;
+  }
+  
+  .ie #bc-tweet-link, .ie #bc-fb-link {
+    padding-bottom: 2px;
+  }
+  
+  .ieLte7 #bc-tweet-link, .ieLte7 #bc-fb-link {
+    margin-top: 19px;
+  }
+  
+  #bc-tweet-link:hover, #bc-tweet-link:hover {
+      border-color: #9DACCE;
+      background-color: #EBEDF4;
+  }
+  
+  .tweet-color{
+    color: #3B5998;
+    background: url("http://s0.bcbits.com/img/tweet.png") no-repeat scroll 3px bottom #ECEEF5;
+    border: 1px solid #ccc;
+    border-color: #CAD4E7;   
+  }
+  
+  .share-fb-color{
+    color: #3B5998;
+    background: url("/img/share_facebook_small.png") no-repeat scroll 4px center #ECEEF5;
+    border: 1px solid #CAD4E7;   
+  }
+  
+  .ie .tweet-color{
+    background: url("http://s0.bcbits.com/img/tweet.png") no-repeat scroll 1px bottom #ECEEF5;
+  }
+  
+  .ieLte7 .tweet-color{
+    background: url("http://s0.bcbits.com/img/tweet.png") no-repeat scroll 3px center #ECEEF5;
+  }
+  
+  .inverted-tweet-color {
+    color: #333333;
+  	background: url("http://s0.bcbits.com/img/tweet.png") no-repeat scroll 3px bottom #C7C7C7;
+    border-color: #E2E2E2;      
+  }
+  
+  .ieLte7 .inverted-tweet-color {
+    background: url("http://s0.bcbits.com/img/tweet.png") no-repeat scroll 3px center #C7C7C7;     
+  }
+  
+  #share-buttons-list {
+      padding-left:0;
+      margin-left:0;
+  }
+  
+  #share-buttons-list a {
+     color:#3B5998;
+  }
+  .share-buttons-inline-list {
+       margin-top: 0;
+       margin-bottom: 0;
+       margin-right: 5px;
+       display: inline-block;
+       vertical-align: top;
+  }
+  
+
+
+  .ieLte7 .share-buttons-inline-list {
+     zoom: 1;              
+     display: inline;
+  }
+
+ 
+
+ 
+</style>
+<ul id="share-buttons-list">
+
+
+
+<li class="share-buttons-inline-list">
+  <a id="bc-tweet-link" class="inverted-tweet-color" onclick="return TwitterUtils.onClick()" target="_blank">Tweet</a>
+  
+  
+</li>
+
+
+<li id="li-fb-buttons-container" class="share-buttons-inline-list" >
+<div id="like-button-area" class="like-button-area">
+
+
+<fb:like id="fb-like" href="http://rumblesan.bandcamp.com/album/live-from-the-palace-of-flies" layout="button_count" show_faces=false font="verdana" 
+            colorscheme="dark" ></fb:like>
+            
+</div>
+</li>
+
+
+</ul>
+ 
+
+
+
+        
+         </div>
+        
+    </div>
+
+    <div id="trackInfo" class="leftColumn">
+        <div id="trackInfoInner">       
+            
+            
+            
+            
+            
+                <div class="inline_player desktop-view"><table>
+    <tr>
+        <td rowspan="2">
+            <a><div class="playbutton"></div></a>
+        </td>
+        <td>
+            <div class="track_info">
+                <span class="title-section hiddenelem">
+                    <a class="title_link" href="#"><span class="title"></span></a>
+                </span>
+                <span class="time secondaryText hiddenelem">
+                    <span class="time_elapsed"></span>
+                    /
+                    <span class="time_total"></span>
+                </span>
+                <span class="message hiddenelem"></span>
+            </div>
+        </td>
+        <td>
+            <a><div class="prevbutton hiddenelem"></div></a>
+        </td>
+        <td>
+            <a><div class="nextbutton hiddenelem"></div></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="progbar_cell" colspan="3">
+            <div class="progbar">
+                <div class="progbar_empty">
+                    <div class="progbar_fill"></div>
+                </div>
+                <div class="thumb"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+                
+            
+        
+            
+            
+            <ul class="tralbumCommands">
+            
+             
+
+            
+                <li class="buyItem">
+                    
+
+
+    
+
+
+
+    
+
+
+
+    
+    
+
+
+
+    
+
+
+
+    <h3 class="hd">
+         
+            <a id='noJSDownloadLink' href="/download_tralbum">
+              <span class="buyItemPackageTitle primaryText">Digital Album</span>
+            </a>
+        
+    </h3>
+        
+    
+        <div class="bd">
+            Immediate download of 3-track album in your choice of MP3 320, FLAC, or just about any other format you could possibly desire.
+            
+        </div>
+    
+        
+    <h4 class="ft compound-button">
+        
+          
+            <a id='noJSDownloadLink' href="/download_tralbum">Buy Now</a>
+          
+        
+        
+            <span class="buyItemExtra buyItemNyp secondaryText">&nbsp;name your price</span>
+        
+    </h4>
+    
+    
+    
+    
+    
+    
+
+    
+        <script type="text/javascript">
+        
+        </script>        
+     
+
+
+
+
+
+                </li>
+             
+                
+                                 
+
+                
+                
+                <li>
+                    <h3><a id="share-link" class="compound-button">Share<span id="share-link-embed"> / Embed</span></a></h3>
+                </li>
+                
+            </ul>
+ 
+            <table class="track_list track_table" id="track_table">
+                                
+                
+                                
+                
+                
+                                
+                
+                
+                
+                
+                
+                
+                <tr class="track_row_view linked" rel="tracknum=1"
+                    itemprop="tracks" itemscope itemtype="http://www.schema.org/MusicRecording">
+                    <td class="play-col"><a><div class="play_status disabled"></div></a></td>
+<td class="track-number-col"><div class="track_number secondaryText">1.</div></td>
+<td class="title-col">
+    <div class="title">
+    
+        <a href="/track/movement-1" itemprop="url"><span itemprop="name">Movement 1</span></a>
+    
+    
+    
+    
+    
+        <span class="time secondaryText">
+        
+            13:12
+        
+        </span>
+        <meta itemprop="duration" content="P00H13M12S"/>
+    
+    
+    </div> 
+</td>
+<td class="info-col"><div class="info_link"><a href="/track/movement-1">info</a></div></td>
+<td class="download-col"><div class="dl_link"><a href="/track/movement-1?action=download" title="name your price high quality formats">download</a></div></td>
+
+                </tr>
+                
+                
+                
+                    
+                
+                                
+                
+                
+                                
+                
+                
+                
+                
+                
+                
+                <tr class="track_row_view linked" rel="tracknum=2"
+                    itemprop="tracks" itemscope itemtype="http://www.schema.org/MusicRecording">
+                    <td class="play-col"><a><div class="play_status disabled"></div></a></td>
+<td class="track-number-col"><div class="track_number secondaryText">2.</div></td>
+<td class="title-col">
+    <div class="title">
+    
+        <a href="/track/movement-2" itemprop="url"><span itemprop="name">Movement 2</span></a>
+    
+    
+    
+    
+    
+        <span class="time secondaryText">
+        
+            09:14
+        
+        </span>
+        <meta itemprop="duration" content="P00H09M14S"/>
+    
+    
+    </div> 
+</td>
+<td class="info-col"><div class="info_link"><a href="/track/movement-2">info</a></div></td>
+<td class="download-col"><div class="dl_link"><a href="/track/movement-2?action=download" title="name your price high quality formats">download</a></div></td>
+
+                </tr>
+                
+                
+                
+                    
+                
+                                
+                
+                
+                                
+                
+                
+                
+                
+                
+                
+                <tr class="track_row_view linked" rel="tracknum=3"
+                    itemprop="tracks" itemscope itemtype="http://www.schema.org/MusicRecording">
+                    <td class="play-col"><a><div class="play_status disabled"></div></a></td>
+<td class="track-number-col"><div class="track_number secondaryText">3.</div></td>
+<td class="title-col">
+    <div class="title">
+    
+        <a href="/track/movement-3" itemprop="url"><span itemprop="name">Movement 3</span></a>
+    
+    
+    
+    
+    
+        <span class="time secondaryText">
+        
+            10:32
+        
+        </span>
+        <meta itemprop="duration" content="P00H10M32S"/>
+    
+    
+    </div> 
+</td>
+<td class="info-col"><div class="info_link"><a href="/track/movement-3">info</a></div></td>
+<td class="download-col"><div class="dl_link"><a href="/track/movement-3?action=download" title="name your price high quality formats">download</a></div></td>
+
+                </tr>
+                
+                
+                
+                    
+                
+            </table>
+            
+            
+            <h3 class="about-label">about</h3>
+            <div class="tralbumData tralbum-about" itemprop="description">An experimental ambient noise artist from the UK</div>
+            
+                      
+            <h3 class="credits-label">credits</h3>
+            <div class="tralbumData">
+                
+                    released 18 September 2011
+                
+                <meta itemprop="datePublished" content="20110918"/>
+                
+            </div>
+            
+            
+    
+        <h3 class="tags-label">tags</h3>
+        <div class="tralbumData tralbum-tags">
+           <span class="tags-inline-label">tags:</span> 
+           <a class="tag" href="http://bandcamp.com/tag/experimental" itemprop="keywords" rel="nofollow"
+                onmousedown="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                onclick="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                >experimental</a>
+        
+           <a class="tag" href="http://bandcamp.com/tag/experimental" itemprop="keywords" rel="nofollow"
+                onmousedown="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                onclick="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                >experimental</a>
+        
+           <a class="tag" href="http://bandcamp.com/tag/industrial-ambient" itemprop="keywords" rel="nofollow"
+                onmousedown="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                onclick="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                >industrial ambient</a>
+        
+           <a class="tag" href="http://bandcamp.com/tag/noise" itemprop="keywords" rel="nofollow"
+                onmousedown="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                onclick="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                >noise</a>
+        
+           <a class="tag" href="http://bandcamp.com/tag/london" itemprop="keywords" rel="nofollow"
+                onmousedown="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                onclick="if (this.href.indexOf('?')==-1) this.href += '?from=tralbum&artist=1117253719';"
+                >London</a>
+        </div>
+    
+
+
+			
+<h3 class="license-label">license</h3>
+<div id="license" class="info">
+
+
+ 
+   
+   
+   
+   
+
+<a class="cc-icons" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank"><span class="attribution"></span><span class="share-alike"></span></a><a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">some rights reserved</a>
+
+
+
+</div>
+
+            
+			
+			<h3 class="feed-label">feeds</h3>
+            <div class="tralbumData tralbum-feed">
+                <img src="http://s0.bcbits.com/img/icon_feed.gif">
+                feeds for <a id="rssFeedAlbum" href="http://music.rumblesan.com/feed/album/live-from-the-palace-of-flies" target="_blank">this album</a>, <a id="rssFeedArtist" href="http://music.rumblesan.com/feed" target="_blank">this artist</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+
+
+
+<div id="rightColumn" class="rightColumn"
+     itemscope itemtype="http://schema.org/MusicGroup">
+
+
+
+<script type="text/javascript">if (Cart) { Cart.contentsScriptLoad(); }</script>
+
+
+<meta itemprop="name" content="RumbleSan"/>
+
+
+
+
+
+
+
+
+
+<style type="text/css" media="all">
+    
+    .bio-label {
+        /* like hiddenAccess, hide text but keep it available for screen readers */    
+        position: absolute;
+        left: -10000px;
+        top: -10000px;
+    }
+    
+    
+    #bio-container {
+        padding-bottom: 5px;
+    }
+    
+    div.rightColumn.cart-visible #bio-container {
+        border-top: 1px solid #DDD;
+        padding-top: 1em;
+    }
+    
+    #bio-container img.band-photo {
+        display: block;
+        margin-bottom: 1em;
+    }
+    
+    #bio-text {
+        word-wrap: break-word;
+        margin-top: 0;
+    }
+    
+    #bio-text span.more {
+        display: none;
+    }
+    
+    #bio-text.truncated span.more {
+        display: inline;
+    }
+    
+    #bio-text.truncated span.less {
+        display: none;
+    }
+    
+    #band-links {
+        padding: 0;
+        margin: 0 0 10px;
+    }
+    
+    #band-links li {
+        list-style-type: none;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    #recommended {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div id="bio-container">
+    <h3 class="title bio-label">about</h3>
+    
+        
+        <span class="band-photo-container landscape">
+            <a class="popupImage" href="http://f0.bcbits.com/z/33/30/3330550341-1.jpg" data-image-size="1024,768" data-image-preload="true">
+            <script type="text/javascript">WriteJS.bestImg("<img src=\"http:\/\/f0.bcbits.com\/z\/31\/07\/3107630124-1.jpg\" class=\"band-photo\" alt=\"Rumblesan image\">","http:\/\/f0.bcbits.com\/z\/18\/75\/1875247870-1.jpg")</script><noscript><img src="http://f0.bcbits.com/z/31/07/3107630124-1.jpg" class="band-photo" alt="Rumblesan image"></noscript>
+            </a>
+        </span>
+    
+    
+    
+        <meta itemprop="description" content="An experimental noise artist hailing from the UK"/>
+        
+            <p id="bio-text">An experimental noise artist hailing from the UK</p>
+        
+    
+    
+    
+        <ol id="band-links">
+            
+                <li><a target="_blank" href="http://www.rumblesan.com" itemprop="url">rumblesan.com</a></li>
+            
+        </ol>
+    
+    
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        
+        
+            
+        
+    
+
+<div id="discography" style="display:none"> 
+<h3 class="title">discography</h3>
+<ul>
+    
+    
+    <li>
+        <div>
+            <a class="thumbthumb" href="/album/live-from-the-palace-of-flies">
+        
+            <script type="text/javascript">WriteJS.bestImg("<img src=\"http:\/\/f0.bcbits.com\/z\/19\/96\/1996758618-1.jpg\" alt=\"Live from the Palace of Flies cover art\">","http:\/\/f0.bcbits.com\/z\/56\/31\/563160084-1.jpg")</script><noscript><img src="http://f0.bcbits.com/z/19/96/1996758618-1.jpg" alt="Live from the Palace of Flies cover art"></noscript>
+        
+        
+            </a>
+        </div>
+        
+        <div class="trackTitle"><a href="/album/live-from-the-palace-of-flies">Live from the Palace of Flies</a></div>
+        
+        
+        <div class="trackYear secondaryText">Sep 2011</div>
+    </li>
+    
+</ul>
+</div>
+
+
+
+
+
+
+
+
+<h3 id="contact-help" class="title">contact / help</h3>
+
+<p>For help with downloads, <a href="/faq_downloading" target="_blank">click here</a>.</p>
+<p>For all other inquiries,
+
+
+
+
+
+
+
+
+
+<a href="/no_js/contact" title="Send an email to Rumblesan">click here</a>.</p>
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<script type="text/javascript">
+JSLoader.requireJS("http://s0.bcbits.com/tmpdata/cache/validators_fe9b2bffacdfad6768920053e3c1de2d.js");
+JSLoader.requireJS("http://s0.bcbits.com/tmpdata/cache/contact_174a871d1b1ffbb9067eb9aa64b8f536.js");
+
+var Contact = {
+
+    validation: {
+        sections: {
+            contact: {prefix: 'contact'}
+        },
+        messages: {  // UISTRING
+            "contact.generic": {
+                generic: "Sorry, there was an unexpected problem. Please try that again."
+            },
+            "contact.name": {
+                missingValue: "please enter your name"
+            },
+            "contact.email": {
+                missingValue: "please enter your email address",
+                badFormat:    "that's not a valid email address"
+            },
+            "contact.message": {
+                missingValue: "please enter your missive",
+                stringLength: "that message is too long"
+            }
+        }
+    },
+
+    show_form: function(ev,subj,msg) {
+        if (window.FacebookData) {
+           var patchYui = false;
+           FacebookUtils.correctSrollThen( patchYui, Contact, Contact.show_form_inner, ev, subj, msg );
+        } else {
+            this.show_form_inner(ev,subj,msg);
+        }
+    },
+    
+    show_form_inner: function(ev,subj,msg) {
+        // This is how to put a form inside of an alert
+        var dlg = Dialog.openTemplate("Contact " + "Rumblesan", "contact_form", {band_id: 1117253719}, [], "515px");
+        
+        dlg.cfg.setProperty("postmethod", "none");
+        dlg.cfg.setProperty("hideaftersubmit", false); 
+      
+        Y.util.Event.addListener("contact.cancel", "click", function(ev) {Contact.cancel_button(ev, dlg)}); 
+        Form.init("contactForm", null, null, Contact.validation, function(ev) {Contact.send_button(ev, dlg)} );
+        
+        dlg.destroyEvent.subscribe( function() {
+                Form.detach();
+            });
+            
+        if (subj) {
+            elt("contact.subject").value = subj;
+        }
+        if (msg) {
+            elt("contact.message").value = msg;
+        }
+        
+        Y.util.Event.stopEvent(ev);
+        return dlg;
+    },
+
+    send_button: function(ev, dlg) {
+        Y.util.Event.stopEvent(ev);
+        Contact.disable_the_buttons();
+    	var callbacks = {success: function(res) {Contact.success(res, dlg)}, failure: Contact.failure};
+        Y.util.Connect.setForm("contactForm");       
+        Y.util.Connect.asyncRequest('POST', "/contact_cb", callbacks);
+    },
+
+    success: function(res, dlg) {
+        var response = eval('(' + res.responseText + ')');
+        if (response.errors) {
+            Contact.enable_the_buttons();
+            Form.validate.show_alerts(response.errors);
+        } else {
+    	   dlg.destroy();
+    	   if( !window.FacebookData ) {
+    	       Dialog.alert("Contact " + "Rumblesan", "Thanks, your message has been sent!");
+    	   }
+    	}
+    },
+
+    failure: function(res) {
+        Contact.enable_the_buttons();
+        Form.validate.show_alerts({field: "contact.generic", reason: "generic"});
+        Log.info("contact callback failure: status: " + res.status + "; statusText: " + res.statusText);
+    },
+
+    cancel_button: function(ev, dlg) {
+        Y.util.Event.stopEvent(ev);
+	    dlg.destroy();
+    },
+
+    disable_the_buttons: function() {
+        Y.util.Dom.addClass("contact.send", "disabled");
+        elt("contact.send").disabled = true;
+        elt("contact.send.text").innerHTML = "Sending...";
+        Y.util.Dom.addClass("contact.cancel", "disabled");
+        elt("contact.cancel").disabled = true;
+    },
+
+    enable_the_buttons: function() {
+        Y.util.Dom.removeClass("contact.send", "disabled");
+        elt("contact.send").disabled = false;
+        elt("contact.send.text").innerHTML = "Send";
+        Y.util.Dom.removeClass("contact.cancel", "disabled");
+        elt("contact.cancel").disabled = false;
+    },
+    
+zzz: null    
+};
+</script>
+
+
+
+
+</div>
+
+
+<div id="sharemenu"></div>
+
+
+
+<script>
+if ( !window.ReferrerToken ) { window.ReferrerToken = '1Z0a3372726929x1339878383'; } 
+</script>
+
+
+
+<script type= "text/javascript">
+ var urlsToTrackNums = {};
+</script>
+
+
+
+
+
+            <div style="clear:both"></div>
+        </div>
+        <div id="pgFt">
+            <div id="pgFt-inner">
+
+    <div id="footer-logo-wrapper">
+    
+        <a id="footer-logo" href="http://bandcamp.com?from=logo" ><span class="hiddenAccess">Bandcamp</span></a>
+    
+        <span id="view-switcher" style="display:none"></span>
+        <span id="webapp-selector-ui" style="display:none"></span>
+    </div>
+    
+    <ul id="legal" class="horizNav">
+        
+        <li id="login"><a href="https://bandcamp.com/login"><span id="login-artist">artist </span>login</a></li>
+        
+        <li><a href="http://bandcamp.com/terms_of_use">terms of use</a></li>
+        <li><a href="http://bandcamp.com/privacy">privacy</a></li>
+        <li><a href="http://bandcamp.com/copyright">copyright policy</a></li>
+        
+            <li id="site-status"><a href="http://twitter.com/bandcampstatus" target="_blank">status</a></li>
+        
+        
+    </ul>
+    <span class="static-content">&nbsp;</span>
+
+</div>
+
+<script type="text/javascript">
+    if (typeof Y != "undefined") {
+        Y.util.Event.onDOMReady(function() {
+            WebappSelector.create_ui("http:\/\/bandcamp.com", null);
+        });
+    }
+</script>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    
+    
+    JSLoader.writeScriptTags( "foot" );
+
+    
+</script>    
+
+
+
+<script type="text/javascript" src="http://s0.bcbits.com/tmpdata/cache/tralbum_bundle_155d66165a0bde446ac0d163b8a6f414.js"></script>
+
+<script type="text/javascript">
+    
+    
+
+    if(JSLoader.onJSLoaded) {
+        JSLoader.onJSLoaded();
+    }
+    Dom.initActiveElement();
+</script>
+
+
+
+<script type="text/javascript">
+    (function() {
+
+        Y.util.Event.onDOMReady( function() {
+            Control.handleDomReady();
+            FieldHints.init();
+            Dom.scrollToParamElt();
+        });
+
+    })();
+    
+</script>
+
+
+
+<script type="text/javascript">
+if(!isDebug)
+{
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<script type="text/javascript">
+if(!isDebug)
+{
+    var pageTracker = _gat._getTracker("UA-4189134-2");
+    pageTracker._setDomainName("bandcamp.com");
+    pageTracker._trackPageview();
+    
+}
+</script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+if(!isDebug)
+{
+    var _qevents = _qevents || [];
+    
+    (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    })();
+    
+    _qevents.push({
+    qacct:"p-0207-dhLCDgvg"
+    });
+}
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-0207-dhLCDgvg.gif" border="0" height="1" width="1">
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+</body>
+</html>
+<!-- bender-13 Sat Jun 16 20:26:23 UTC 2012 -->
+<!-- album id 3372726929 -->
+<!-- CACHE Sat Jun 16 20:26:23 UTC 2012 fb97db752b9d685467a4b826d207d85a 2 18512 56 ---1--X 1117253719 1330277841 http /album/live-from-the-palace-of-flies  -->

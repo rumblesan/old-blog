@@ -1,0 +1,28 @@
+---
+date: '2010-11-07 21:11:00'
+layout: post
+slug: '132'
+status: publish
+title: 'Patch-a-Day Month Day 7: Generative Drum Sequencer with Sounds'
+wordpress_id: '132'
+categories:
+- Music
+- Patch-A-Day
+- Pure Data
+tags:
+- algorithmic
+- drums
+- generative
+- pure data
+- sequencing
+---
+
+So the extension from yesterday is pretty simple but it helps round it out quite a bit. I've taken some basic drum synthesis patches I've made and tacked them on so that now this thing creates rhythms. It's not great to be honest and it reminds me an awful lot of  the sort of drum sounds and patterns on old Casio keyboards. But it quite happily rolls along, creating a mildly varying pattern with what even sound like drum fills occasionally. This time I'm going to have the patch download-able because I haven't got time to sort out that GitHub repository yet and there's enough other stuff here that it makes sense to.
+
+
+
+![Generative Drum Sequencer with sounds](/a/2010-11-07-132/07-GenerativeDrums.png)"
+
+So same as yesterday really but I've tacked on the kick, snare, hat and 'blip' objects so I can actually hear what the rhythms are like. The answer is 'pretty naff' but It's a start. The download for the patch is [here](/a/2010-11-07-132/07-GenerativeDrums.zip) so go grab it and have a look around. The drum sounds aren't anything amazing, but I'll probably have a post going over them soon.
+
+Hooray, It's Monday tomorrow, I think tomorrow evening I'll devolve into noise again to celebrate. Come back then.

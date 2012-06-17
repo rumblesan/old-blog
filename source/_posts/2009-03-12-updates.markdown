@@ -1,0 +1,18 @@
+---
+date: '2009-03-12 00:33:00'
+layout: post
+slug: updates
+status: publish
+title: Updates
+wordpress_id: '36'
+---
+
+So yeah, no posts for two months, thats pretty rubbish.  
+  
+It doesnt help much that blogger is blocked from work but thats still not really a good excuse.  
+  
+Anyway, a quick catchup.  
+  
+Currently I'm building a step sequencer on the DS with a view to either having MIDI output from it, or having the sounds played back from the DS as well. Right now I'm mostly just grappling with having a sub par understanding of C but its getting better.  
+  
+I am still to finish the monome, circuit boards are STILL being designed.......this is pretty weak on my part truth be told but it will get done, and when it does I may well have an NDS based step sequencer to hook it into :P
