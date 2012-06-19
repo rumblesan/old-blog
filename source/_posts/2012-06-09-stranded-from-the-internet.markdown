@@ -4,6 +4,7 @@ layout: post
 slug: stranded-from-the-internet
 status: publish
 title: Stranded from the internet!
+comments: true
 wordpress_id: '460'
 ---
 
