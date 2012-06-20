@@ -12,6 +12,7 @@ tags:
 - data structures
 - launchpad
 - sequencer
+comments: true
 ---
 
 I've just noticed I think I missed out a day somewhere.... This patch is patch 25 in my repository, but it's day 24.... Looks like I made a patch titled Improved presets and haven't written it up but oh well. I might go back and slot it in if I think it's missed out anything vital.

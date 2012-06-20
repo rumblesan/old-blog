@@ -12,6 +12,7 @@ tags:
 - NDS
 - Programming
 - sequencing
+comments: true
 ---
 
 So this isn't a SuperCollider post, as may be obvious from the title, but I don't think I'm going to let this be a solely SC based blog when there's plenty of other noisy stuff I do. About 18 months ago I started playing with writing homebrew software for my Nintendo DS. It was a good chance to improve my coding chops and try and learn a bit about the hows and whys of DSP. In the first instance I succeeded, my C/C++ improved pretty dramatically and it very much helped turn me from a hardware based Electronic Engineer into someone much more comfortable and happy with writing code.

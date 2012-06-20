@@ -12,6 +12,7 @@ tags:
 - data structures
 - launchpad
 - sequencer
+comments: true
 ---
 
 Sending output to the launchpad is pretty easy. Sending the right output, in a way that's easily configurable and fits in with the standard is a little trickier. I've had more of a read of the Launchpad programming guide and have a better handle on the double buffering and so on and I'll put some of that into practise here. The updates to the sequencer here are, I feel I should point out, as pretty or high performance as they could be. There's definitely a lot more tweaking needed.

@@ -16,6 +16,7 @@ tags:
 - maths
 - patch-a-day
 - pure data
+comments: true
 ---
 
 Right, this will be the last post in patch-a-day month detailing the ins and outs of the Fourier transform. After this I'm just going to carry on building the patches assuming you can deal with FFT in Pure Data, feel free to ask questions if there are still things that aren't clear tho.

@@ -16,6 +16,7 @@ tags:
 - maths
 - patch-a-day
 - pure data
+comments: true
 ---
 
 OK, so today's entry is going to get a bit heavy on the maths so due warning for those who might not think they're so hot with it. In truth, I'm having to try and dredge an embarrassing amount of knowledge up from my memory. It feels like a long time since learning about this at uni but it's really not, which just shows what happens if you don't use your knowledge. This post will be mostly writing with not so many pictures.

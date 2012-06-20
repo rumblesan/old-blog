@@ -8,6 +8,7 @@ wordpress_id: '43'
 categories:
 - Music
 - NDS Homebrew
+comments: true
 ---
 
 So I've now paid for and received a Novation Bass Station from a very friendly chap on eBay.

@@ -14,6 +14,7 @@ tags:
 - generative
 - pure data
 - random
+comments: true
 ---
 
 So The other night I started playing with delays in Pure Data but was quickly annoyed because they weren't working as I was hoping or expecting. Thankfully, when I came to do some reading today it turns out that it was my fault for using the delread~ object when what i actually wanted was the vd~ object. VD here stands for Variable Delay, and what I wanted to do was to start altering the delay speed with some constantly changing signals. I'm baking up something pretty big that I'll try to have finished soon but for tonight I thought I'd do a brief patch with vd~ and make some noise.

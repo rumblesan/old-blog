@@ -12,6 +12,7 @@ tags:
 - data structure
 - launchpad
 - sequencer
+comments: true
 ---
 
 Just a shortish one today, Yesterday I said that the step sequencer we'd built was mostly working but had a fairly vital flaw, we couldn't actually save values in the data structure because we were getting not on and off messages from the launchpad. There are a few ways to fix this but I think that the way I do it here is the simplest and most flexible.

@@ -12,6 +12,7 @@ tags:
 - algorithmic
 - euclidean rhythms
 - sequencer
+comments: true
 ---
 
 Putting everything together now. This patch will actually output a rhythm sequence from two given input lists. It's using the improved list matching abstraction from last night along with the list interleaving patch and then some extra objects to do routing and element length measurement of the remainder to see if we need to recur any more.

@@ -10,6 +10,7 @@ categories:
 tags:
 - Programming
 - pure data
+comments: true
 ---
 
 So the realisation that coding C++ on the Touch book was going to be tricky has meant I've been looking at better (read as easier) ways to create the sequencer.

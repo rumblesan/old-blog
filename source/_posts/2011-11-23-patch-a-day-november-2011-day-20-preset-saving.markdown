@@ -11,6 +11,7 @@ categories:
 tags:
 - data structures
 - preset control
+comments: true
 ---
 
 Preset saving, done the simple way.

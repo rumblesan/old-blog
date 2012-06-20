@@ -9,6 +9,7 @@ categories:
 - News
 tags:
 - PatchWerk Radio
+comments: true
 ---
 
 PatchWerk Radio is back up and running properly now. I've found a host with much more grunt and it's running alone very merrily at this point.

@@ -16,6 +16,7 @@ tags:
 - patch-a-day
 - pure data
 - sequencing
+comments: true
 ---
 
 So day fifteen is here and I am officially half way through patch a day month. I'm actually quite looking forward to a rest after this but I'm learning a whole bunch so I can't complain. Tonight I've got something fairly complex straight off the bat but it's pretty useful so I'm going to show it off. It's a patch to generate dynamic and interesting rhythms and for me at least, the emphasis is on making complex kick drum patterns for rhythmic noise and heavy industrial music. As an aside, I should point out that a big influence on this has been the generative patches of [Chris McCormick](http://mccormick.cx), who you can fine here. I spent a bit of the weekend pulling apart his [Garage Acid Lab](http://mccormick.cx/projects/GarageAcidLab/) patches and they're excellent. Go check him out. Anyway, on to the kicks.

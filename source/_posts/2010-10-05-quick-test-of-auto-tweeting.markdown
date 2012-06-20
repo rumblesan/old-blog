@@ -5,6 +5,7 @@ slug: quick-test-of-auto-tweeting
 status: publish
 title: Quick Test of Auto Tweeting
 wordpress_id: '98'
+comments: true
 ---
 
 Nothing to see here, busy fixing things in web 2.0

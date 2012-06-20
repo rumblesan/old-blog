@@ -9,6 +9,7 @@ categories:
 - Pure Data
 tags:
 - snippet
+comments: true
 ---
 
 Hey, just a small post, coding some PD and realised that the small snippet I just made to select a random element from a list may well be useful for some people. I think I might start doing more small, code snippet type posts because they're quick and easy to do.

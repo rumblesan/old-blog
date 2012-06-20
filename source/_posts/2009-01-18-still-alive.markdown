@@ -5,6 +5,7 @@ slug: still-alive
 status: publish
 title: Still Alive
 wordpress_id: '35'
+comments: true
 ---
 
 I have a new place that now has reasonable furniture in it. I have internet. I have a 128 homebrew monome thats in need of some circuitry designed and manufactured.

@@ -5,6 +5,7 @@ slug: pure-data-python-and-sequencers
 status: publish
 title: Pure Data, Python and sequencers
 wordpress_id: '52'
+comments: true
 ---
 
 Python is fun and easy, Pure Data is vast and complex, GUI design is not as difficult as it could be, OSC is as of yet untouched but looks to be very usable.

@@ -7,6 +7,7 @@ title: Thread safe logging in Python
 wordpress_id: '60'
 categories:
 - Python
+comments: true
 ---
 
 So the Cluster Farm scripts are coming together nicely and I've been leaning an awful lot about threading over the past three weeks. I'm now at the point where in trying to make the whole thing a little more robust I want to have some log files keeping track of what's going on. For the nodes this will be simple but due to the multi threaded nature of the server script I needed to do something a little more complex. Having multiple threads write to the file at once could potentially cause issues and separate log files is just ugly.

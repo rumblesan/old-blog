@@ -13,6 +13,7 @@ tags:
 - Programming
 - setup
 - SuperCollider
+comments: true
 ---
 
 ...or "How I learnt to stop worrying and get SwingOSC working for SuperCollider on Windows 7"

@@ -17,6 +17,7 @@ tags:
 - patch-a-day
 - pure data
 - sequencing
+comments: true
 ---
 
 So I've extended the patch from last night with a few more sounds and another delay section in the chain. I think I'm going to leave this as it is for now and try to start on something else tomorrow. I've also put some audio up on SoundCloud for those that want to hear this and the extended patch is again download-able. This can turn out some quite interesting sounds sometimes and I'm quite pleased with it.

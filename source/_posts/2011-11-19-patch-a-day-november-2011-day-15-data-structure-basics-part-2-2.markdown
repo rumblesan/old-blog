@@ -10,6 +10,7 @@ categories:
 - Pure Data
 tags:
 - data structures
+comments: true
 ---
 
 I almost think that tonight's patch and last nights should have been rolled together into one post but I've also been thinking that some of these post can suffer from being too long and I'd prefer to have a greater number of smaller, more understandable posts.

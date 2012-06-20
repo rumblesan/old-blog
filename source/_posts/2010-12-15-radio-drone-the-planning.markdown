@@ -7,6 +7,7 @@ title: Radio Drone, the planning
 wordpress_id: '250'
 categories:
 - Pure Data
+comments: true
 ---
 
 For quite a while I've had the idea of making an internet radio station that just plays generative music. By this, I don't mean a station that has a playback of generative music songs, but instead one that plays the output of generative music and noise patches and just keeps streaming them over the internet.

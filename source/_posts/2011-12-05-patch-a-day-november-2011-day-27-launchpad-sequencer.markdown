@@ -12,6 +12,7 @@ tags:
 - data structures
 - launchpad
 - sequencer
+comments: true
 ---
 
 Right, time to hook the launchpad up to the sequencer. I've modified the Launchpad IO abstraction to neaten it up and make it actually deal with output and input. The sequencer patch has been changed so that incomng grid messages are converted to a stop number and the mode buttons select the track number to update and the main clock is now on the outside.

@@ -4,8 +4,8 @@ layout: post
 slug: stranded-from-the-internet
 status: publish
 title: Stranded from the internet!
-comments: true
 wordpress_id: '460'
+comments: true
 ---
 
 Moving house is potentially a lot of hassle and effort, but usually alright. Except when you weren't organised enough to sort out the internet before you moved in..... Then it becomes a serious inconvenience.

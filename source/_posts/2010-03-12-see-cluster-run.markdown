@@ -12,6 +12,7 @@ tags:
 - cluster
 - Povray
 - Programming
+comments: true
 ---
 
 The Render Farm Lives!!

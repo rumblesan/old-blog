@@ -13,6 +13,7 @@ tags:
 - FM synthesis
 - lessons
 - SuperCollider
+comments: true
 ---
 
 So I'm finally writing this up! The code has been sitting around for about a week now and other stuff has just kept getting in the way. But here it is, finally.

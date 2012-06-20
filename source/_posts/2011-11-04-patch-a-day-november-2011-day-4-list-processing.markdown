@@ -13,6 +13,7 @@ tags:
 - list processing
 - maths
 - pure data
+comments: true
 ---
 
 This title may sound a bit dull but I've got some good intentions in mind so keep reading.

@@ -11,6 +11,7 @@ categories:
 tags:
 - data structures
 - presets
+comments: true
 ---
 
 Back on the case finally. Too many things on the go and fairly behind on Patch-a-Day. I'm planning on getting quite a few patches built this weekend so I should be finished with the 30 days by mid way through next week, hopefully.

@@ -14,6 +14,7 @@ tags:
 - Music
 - Programming
 - SuperCollider
+comments: true
 ---
 
 So Part two of the Drum Sounds in SuperCollider series, and we're going to be making a snare and a clap. Not necessarily a realistic snare or clap, but reasonable enough to go with the rest of our kit. It will be mostly the same combinations of simple oscillators, noise sources, filters and envelopes as previously but joining them in slightly different ways. Again, the S[ynth Secrets articles](http://www.soundonsound.com/sos/allsynthsecrets.htm) are  great to read for some in depth info and good ideas on this sort of stuff, so I'll link them again.

@@ -5,6 +5,7 @@ slug: saved
 status: publish
 title: Saved…
 wordpress_id: '6'
+comments: true
 ---
 
 So I almost actually deleted this whole thing the other night.

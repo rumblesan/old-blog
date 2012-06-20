@@ -9,6 +9,7 @@ categories:
 - Music
 - NDS Homebrew
 - Programming
+comments: true
 ---
 
 Well the project that has kept my evenings busy and my girlfriend mildly annoyed is soon to be released...I think. And seeing as I can't remember if I've explained already (and can't check the block thanks to work blocking it) I'll explain everything here.

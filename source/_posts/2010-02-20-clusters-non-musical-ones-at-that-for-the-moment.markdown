@@ -13,6 +13,7 @@ tags:
 - cluster
 - Povray
 - Programming
+comments: true
 ---
 
 So the other week I started getting a bit burnt out on music and decided a change was in order, at least for a while. So I went and started playing around with my friend [PovRay](http://povray.org/) again, a free ray tracing program.

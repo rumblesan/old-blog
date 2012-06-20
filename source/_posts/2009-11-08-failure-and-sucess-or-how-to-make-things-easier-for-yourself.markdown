@@ -7,6 +7,7 @@ title: Failure and Sucess, or "How to make things easier for yourself"
 wordpress_id: '50'
 categories:
 - Pure Data
+comments: true
 ---
 
 It seems that creating your own cross compiling tool chain is somewhat tricky, especially if you're Windows based. It also seems that sometimes you're better of not trying to deal with the heavy stuff and getting bogged down in technical details. To shorten this lesson down, don't try to be more clever than you need to be when other people have kindly done it for you.

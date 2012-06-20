@@ -5,6 +5,7 @@ slug: touchbook-has-arrived
 status: publish
 title: Touchbook has arrived
 wordpress_id: '48'
+comments: true
 ---
 
 So the day has finally come where the touchbook has arrived.  

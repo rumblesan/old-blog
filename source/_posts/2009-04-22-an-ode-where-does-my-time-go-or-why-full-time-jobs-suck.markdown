@@ -5,6 +5,7 @@ slug: an-ode-where-does-my-time-go-or-why-full-time-jobs-suck
 status: publish
 title: An Ode, "Where does my time go?"......or why full time jobs suck
 wordpress_id: '42'
+comments: true
 ---
 
 So even with having a net book with which to work while I'm on the train, I still don't seem to have enough hours in the day.

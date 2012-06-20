@@ -17,6 +17,7 @@ tags:
 - patch-a-day
 - pure data
 - sequencing
+comments: true
 ---
 
 So today we actually get Pure Data making some noise at us by combining patches from days two and three. Since that's not an especially difficult task to complete I've extended the whole thing as well with some extra bits to make everything a bit more musical. The problem with our patch is that we don't actually have any control over what notes are going to be played, just what the interval between them will be. Whilst this makes it easier to have a small number of states have a large range of notes, it doesn't necessarily make for good music.

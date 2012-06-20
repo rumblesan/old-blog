@@ -5,6 +5,7 @@ slug: success-but-many-miles-yet-to-go
 status: publish
 title: SUCCESS!!! But many miles yet to go
 wordpress_id: '260'
+comments: true
 ---
 
 I have literally just managed to get a basic test version of Radio Drone (I really need a better name) working!!

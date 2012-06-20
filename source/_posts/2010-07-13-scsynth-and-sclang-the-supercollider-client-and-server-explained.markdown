@@ -10,6 +10,7 @@ categories:
 tags:
 - audio
 - SuperCollider
+comments: true
 ---
 
 So I'm gradually browsing around the SuperCollider docs and finding where useful information is. One of the gems today has been [this page](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/ServerArchitecture/ClientVsServer.html), which is a simple explanation of the client and server architecture.

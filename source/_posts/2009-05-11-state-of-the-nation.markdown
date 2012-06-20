@@ -5,6 +5,7 @@ slug: state-of-the-nation
 status: publish
 title: State of the nation
 wordpress_id: '45'
+comments: true
 ---
 
 Or more specifically, the DS Sequencer.  

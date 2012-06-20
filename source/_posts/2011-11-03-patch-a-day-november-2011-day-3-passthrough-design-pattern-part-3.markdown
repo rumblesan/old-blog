@@ -12,6 +12,7 @@ tags:
 - design pattern
 - FM synthesis
 - polyphony
+comments: true
 ---
 
 Onto day three, and the last day of talking about design patterns for the moment. I'm going to finish off the synth voice bank patch from yesterday by neatening it up, minimising how much code we actually have and also by making the controls a bit more interactive.

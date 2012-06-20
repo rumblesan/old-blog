@@ -10,6 +10,7 @@ categories:
 - Pure Data
 tags:
 - list processing
+comments: true
 ---
 
 Yesterdays post started with some basic list processing in pure data, the patches showed how you could serialise and interleave the lists but there were a few problems and also some missing functionality that we're after. Specifically :-

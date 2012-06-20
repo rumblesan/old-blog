@@ -14,6 +14,7 @@ tags:
 - Music
 - OSC
 - pure data
+comments: true
 ---
 
 So I've now wrangled with Python enough to get stuff working. PyGame is installed on the touchbook (a horrible learning process similar to the hassle involved with getting Pure Data working) and I have working python scripts putting up a GUI and running quite happily.

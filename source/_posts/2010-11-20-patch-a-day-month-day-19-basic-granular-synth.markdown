@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - synthesis
+comments: true
 ---
 
 I'm just coming to do today's patch and I've realised that I never actually published this yesterday, it got left in the drafts. So here it is I suppose, a bit late but ready. Today's post which I'm just about to write up carries on from this so this is fairly important heh.

@@ -5,6 +5,7 @@ slug: updates
 status: publish
 title: Updates
 wordpress_id: '36'
+comments: true
 ---
 
 So yeah, no posts for two months, thats pretty rubbish.  

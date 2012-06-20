@@ -15,6 +15,7 @@ tags:
 - NDS
 - Programming
 - SuperCollider
+comments: true
 ---
 
 So if you look in the sidebar on the right, you should now see a nice set of links to my Github repositories. Most of it now is now NDS related code but there's a reasonable amount of python in there.

@@ -15,6 +15,7 @@ tags:
 - Markov chains
 - pure data
 - sequencing
+comments: true
 ---
 
 So todays patch is a bit complex straight off the bat but its not too difficult once you see what's going on. I've revisited the Markov chain stuff and this time I'm actually using it to start doing something useful. The whole thing could probably be written better but it was a bit of a rush so I've used a clunky way to solve a timing issue I was having.

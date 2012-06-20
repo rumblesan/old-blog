@@ -16,6 +16,7 @@ tags:
 - pure data
 - sampling
 - synthesis
+comments: true
 ---
 
 So the patch for yesterday is now published. Apologies about that, I went to bed assuming I had done it but must not have. Today's patch will carry it on so if you haven't read the previous entry yet I recommend doing so.

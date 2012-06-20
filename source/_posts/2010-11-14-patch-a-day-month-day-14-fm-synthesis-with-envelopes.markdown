@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - synthesis
+comments: true
 ---
 
 So I'm revisiting the very first patch I made with the FM synthesis stuff. This time I've removed the square wave part of it and I'm adding in some envelopes to control the frequency modulation ratio. With this we can get some really interesting sounds happening with very little extra complexity. If I'm honest, this idea is mostly again pulled from the SimpleFM examples in the Max documentation. This idea is also used in one of the Autechre Max patches kicking about on the internet to synthesise some cool drum sounds. I haven't spent much time making cool presets but this is full of possibilities for extending.

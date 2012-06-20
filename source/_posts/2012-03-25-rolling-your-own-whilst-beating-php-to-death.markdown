@@ -7,6 +7,7 @@ title: Rolling your own whilst beating PHP to death
 wordpress_id: '449'
 categories:
 - News
+comments: true
 ---
 
 So I'm going to be starting a new job soon and one of the many things I'm looking forward to is never having to write PHP again. I want to make a conscious effort to remove it from my life and that means Wordpress is going to go.

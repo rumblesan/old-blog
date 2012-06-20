@@ -13,6 +13,7 @@ tags:
 - euclidean rhythms
 - recursion
 - sequencing
+comments: true
 ---
 
 Right, back on track, mostly recovered from an active weekend and have cracked getting PD Extended running under Lubuntu (might do a post on this at some point)

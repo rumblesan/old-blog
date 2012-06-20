@@ -5,6 +5,7 @@ slug: fans-of-a-sort
 status: publish
 title: Fans......of a sort
 wordpress_id: '33'
+comments: true
 ---
 
 So I'd like to say hello and thank you to the people actually reading this now. I'm pretty sure that people are either coming here from the shameless self publication on Facebook, or from the shameless self publication on Hackaday.

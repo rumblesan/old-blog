@@ -13,6 +13,7 @@ tags:
 - algorithmic
 - euclidean rhythms
 - list processing
+comments: true
 ---
 
 Right, enough list processing for the moment, lets get down to what we were aiming for. Euclidean Rhythms are rhythms generated using an algorithm very similar to [Euclid's Algorithm](http://en.wikipedia.org/wiki/Euclidean_algorithm) for computing the greatest common divisor of two numbers. What it does for us is it means we can evenly distribute a number of hits into a given number of beats and it just so happens that this actually generates some well known drum patterns from various musical styles.

@@ -10,6 +10,7 @@ categories:
 - Pure Data
 tags:
 - data structures
+comments: true
 ---
 
 Starting at the beginning with data structures. There's a lot to take in, but it's pretty cool once you get down to it. I found the old patches I wrote when I was getting to grips with it all the first time round which is pretty helpful but this time I'll actually write things down heh.

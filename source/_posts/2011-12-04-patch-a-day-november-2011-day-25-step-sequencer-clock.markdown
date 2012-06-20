@@ -12,6 +12,7 @@ tags:
 - data structures
 - launchpad
 - sequencer
+comments: true
 ---
 
 OK, carrying on from yesterdays patch, lets get the stepping and clock for the sequencer.

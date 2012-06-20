@@ -15,6 +15,7 @@ tags:
 - PatchWerk Radio
 - Programming
 - pure data
+comments: true
 ---
 
 I know I said I'd write this a few days ago, but I decided I'd rather spend a little bit of extra time getting everything sorted so that everything would be up and running when I wanted to explain it all. The short summary is that Radio Drone is now known as PatchWerk Radio, it's all working and running off a VPS server, all the code and patches are on GitHub and, most importantly, you can listen to it right now by going to [http://radio.rumblesan.com/](http://radio.rumblesan.com/)

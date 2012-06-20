@@ -14,6 +14,7 @@ tags:
 - Programming
 - SuperCollider
 - synthesis
+comments: true
 ---
 
 I feel it's about time I tried to build something useful in SuperCollider since up until now I've mostly just been making examples. Synthesising drum sounds seems like a good place to start and it will also give me something to use when showing how to get Pure Data and SuperCollider interacting over OSC. The focus will be on making the sounds and not so much on how to control them so it will just be single synth instances that make a noise when they're created and then free themselves. This is going to be a two part post again with the Kick and Hat sounds covered here as a starter, and the Clap and Snare sounds covered in a later post since they were marginally more complex and it wouldn't hurt to have a few basics first.

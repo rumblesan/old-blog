@@ -10,6 +10,7 @@ categories:
 - Pure Data
 tags:
 - data structures
+comments: true
 ---
 
 Ok, not quite done with data structures yet. I realised that I should probably go over how you store symbols and arrays in a data structure. Tonight it's a quick post on symbols, I'll try to cover all of arrays tomorrow.

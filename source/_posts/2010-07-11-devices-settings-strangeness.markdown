@@ -10,6 +10,7 @@ categories:
 tags:
 - audio
 - SuperCollider
+comments: true
 ---
 
 So I have SuperCollider working on my laptop, happily running under Windows 7. This in itself has been a bit of a learning curve, however, and this evening whilst helping a friend get his setup working, also on Win7, I discovered another confusing behaviour.

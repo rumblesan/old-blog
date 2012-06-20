@@ -11,6 +11,7 @@ categories:
 tags:
 - generative
 - sequencing
+comments: true
 ---
 
 So for a while I've had an idea about writing a sequencer based on [Befunge](http://en.wikipedia.org/wiki/Befunge). The main mechanics being a moving pointer that affects and is effected by the tiles you place on a two dimensional grid.

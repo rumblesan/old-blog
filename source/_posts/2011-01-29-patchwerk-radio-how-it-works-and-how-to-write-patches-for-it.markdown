@@ -16,6 +16,7 @@ tags:
 - github
 - PatchWerk Radio
 - pure data
+comments: true
 ---
 
 So how exactly does PatchWerk Radio work? What is it doing? How do the loaded patches interact with the main program? How can I write patches that will run on it?

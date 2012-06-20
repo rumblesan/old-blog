@@ -16,6 +16,7 @@ tags:
 - pure data
 - sampling
 - synthesis
+comments: true
 ---
 
 Today I added the LFOs to the granular synth patch, and whilst they're pretty simple, they leave plenty of room for extension. I think that it's useful to show some of the thinking that went into this and that really the patch building is secondary to the designing, but then maybe I'm a little bias, let me know if you think so.

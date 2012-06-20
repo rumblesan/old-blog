@@ -17,6 +17,7 @@ tags:
 - livecoding
 - patch-a-day
 - pure data
+comments: true
 ---
 
 So This might be a bit of a cop out but I'm currently writing this on Tuesday night under the assumption that I'm going to be busy at the pub on Wednesday evening and looking at arty things on Thursday so I'm allowing a bit of leeway due to time constraints. This evening I decided to have a go at practising some Live-Coding and realised that Once Patch-a-Day month is over, it might be a good idea to start semi regular entries on the subject, perhaps with videos as well. I'd like to do it in languages other than PureData but I'll need some time to get up to speed with them first. Anyway, here's a picture of the patch I constructed tonight and a bit of blurb about how it works.

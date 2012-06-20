@@ -9,6 +9,7 @@ categories:
 - Programming
 - Pure Data
 - Python
+comments: true
 ---
 
 I'm definitely going to have to come up with a better name than "Radio Drone". It sells the whole thing a bit short I think. I'll carry on using it as the working name for this project until it's actually ready to publicly unveil but a re-branding is needed.

@@ -5,6 +5,7 @@ slug: bass-station-repairs
 status: publish
 title: Bass Station Repairs
 wordpress_id: '44'
+comments: true
 ---
 
 So it turns out that the Bass Station had a dodgy potentiometer for the frequency control of the filter, a fairly important control. Makes me a sad panda, espescially when it turns out that getting hold of a replacement pot is particularly tricky.

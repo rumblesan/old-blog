@@ -5,6 +5,7 @@ slug: setting-yourself-challenges
 status: publish
 title: Setting yourself challenges....
 wordpress_id: '244'
+comments: true
 ---
 
 I'm finding that all these "Do X in Y days" challenges are pretty good for getting myself to do stuff. Currently I have twelve days to make six rhythmic noise tracks and find someone to release it. It'll be a net label of some sort but I just like the idea of making something very harsh and very heavy, and also of actually having something of mine released.

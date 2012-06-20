@@ -15,6 +15,7 @@ tags:
 - Programming
 - pure data
 - sequencing
+comments: true
 ---
 
 So I said I'd get a post on this sorted and here it is. Nothing too taxing, just a basic intro to creating Markov Chains in pure data. I'll post something another day about some interesting ways they can be used but the intrepid programmer and composer can probably work some of that out themselves.

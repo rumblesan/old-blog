@@ -11,6 +11,7 @@ categories:
 tags:
 - data structures
 - presets
+comments: true
 ---
 
 And now for the patch to load values out of the saved preset and into our settings. This might seem a little under whelming because there's not much to it, but a lot of the work was already done by the infrastructure already in place.

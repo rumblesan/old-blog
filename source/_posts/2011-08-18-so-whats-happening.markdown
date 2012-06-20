@@ -5,6 +5,7 @@ slug: so-whats-happening
 status: publish
 title: So What's Happening?!
 wordpress_id: '296'
+comments: true
 ---
 
 At the moment there's not a huge amount going on. Quite specifically there's been next to no Pure Data. Which is a bit sad, but I'm filling my time with other projects and music. In no specific order..

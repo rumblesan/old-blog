@@ -9,6 +9,7 @@ categories:
 - Povray
 - Processing
 - Programming
+comments: true
 ---
 
 The other night I finally got to sit down with Processing and work out some ideas. The results were pretty cool I feel.

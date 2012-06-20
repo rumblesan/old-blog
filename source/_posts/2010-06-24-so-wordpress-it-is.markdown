@@ -5,6 +5,7 @@ slug: so-wordpress-it-is
 status: publish
 title: So WordPress it is
 wordpress_id: '3'
+comments: true
 ---
 
 After wrangling with creating my own website, I came to the conclusion that I'm pretty good at building the stuff.... but terrible at designing it.

@@ -11,6 +11,7 @@ categories:
 tags:
 - launchpad
 - sequencing
+comments: true
 ---
 
 I said I'd do this once I'd done a bit more work on the sequencer, but I realised that it's probably a better idea to get this done first as it will make testing much easier. This patch is really just taking the MIDI input from the launchpad, formatting it into messages that are easier to deal with, and then translating our simple messages back into correct MIDI for us to send back out to it. As a quick refresher, here's what the Launchpad looks like.

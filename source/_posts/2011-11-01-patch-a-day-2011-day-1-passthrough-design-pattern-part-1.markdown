@@ -12,6 +12,7 @@ categories:
 tags:
 - design pattern
 - pure data
+comments: true
 ---
 
 I'm planning to spend the first few days of this week going over a design pattern I've found myself using in various ways. For anybody who is unsure what a Design Pattern might be I'd recommend checking the [Wikipedia Page](http://en.wikipedia.org/wiki/Design_pattern) which gives a pretty reasonable answer. For those who don't want to make the jump, the first sentence sums it up pretty well.

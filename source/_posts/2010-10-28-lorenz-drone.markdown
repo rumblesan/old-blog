@@ -15,6 +15,7 @@ tags:
 - FM synthesis
 - Lorenz equations
 - noise
+comments: true
 ---
 
 Chatting with a friend the other day, he mentioned that he was currently bored at work waiting to be allowed access to the code he was supposed to be working on. I told him that he should design me an interesting system I could turn into a patch to make generative audio, since I knew that whilst at university he spent some time studying chaos theory and I figured he would know some interesting stuff. He pointed me towards the Lorenz Attractor as an interesting chaotic system that's very easy to implement in code. I've seen pictures of the 3 dimensional plot of the Lorenz equations and they do look pretty cool but I'd never thought to actually do anything with them.

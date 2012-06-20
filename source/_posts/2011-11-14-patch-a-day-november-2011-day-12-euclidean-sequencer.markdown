@@ -12,6 +12,7 @@ tags:
 - algorithmic
 - euclidean rhythms
 - sequencer
+comments: true
 ---
 
 So here's the abstraction for a single Euclidean sequencer. Give it a number of beats and the length of the measure and it will create your pattern. Feed it bangs and it will give you out more bangs in the right sequence. There's even the ability to change the phase of the sequence or reset it with a simple bang.

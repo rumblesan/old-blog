@@ -7,6 +7,7 @@ title: Updates, Websites and Stuff
 wordpress_id: '273'
 categories:
 - PatchWerk-Radio
+comments: true
 ---
 
 So PatchWerk Radio continues to keep me busy. Mostly with back-end stuff which, unfortunately, leaves me with less time for patching. Thankfully it's nearing the point where most of what I want to do with it is done and I can get down to just making noises again.

@@ -11,6 +11,7 @@ categories:
 tags:
 - data structures
 - polygons
+comments: true
 ---
 
 Drawing basic polygon shapes with the data structures is actually pretty easy it turns out. This is one of the things that had confused me the first time I looked at it but having spent the morning reading up, it turns out it's not that tricky. Have a look at the patch below first of all and then I'll run through what it does.

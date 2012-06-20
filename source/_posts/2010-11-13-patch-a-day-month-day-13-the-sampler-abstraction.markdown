@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - sampling
+comments: true
 ---
 
 So here it is, a bit earlier than usual because I'm going out tonight so needed to crack this out now. This patch is an abstraction for playback of samples with variable pitch, start and finish offsets and looping. There are still improvements that could be made to it, making use of abstraction arguments for example, but it's at a stage where it's pretty useful.

@@ -8,6 +8,7 @@ wordpress_id: '454'
 categories:
 - Processing
 - Programming
+comments: true
 ---
 
 So Processing.JS is pretty cool, this much we know. GitHub is also pretty cool, I don't think anybody is going to deny that either.

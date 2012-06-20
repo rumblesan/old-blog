@@ -16,6 +16,7 @@ tags:
 - generative
 - patch-a-day
 - pure data
+comments: true
 ---
 
 And now I come to the final entry in my month of patching. It's been loads of fun but felt a little bit gruelling at some points if I'm honest. I've definitely learnt a huge amount in the last thirty days and my knowledge of Pure Data has improved hugely. I'll not be surprised if I do this again at some point next year.

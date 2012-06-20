@@ -13,6 +13,7 @@ tags:
 - delay
 - design pattern
 - FM synthesis
+comments: true
 ---
 
 On to Day 2! Carrying on from where I left off yesterday I've got two example patches that should give you a good idea of how you can use the passthrough pattern in real situations and how you can extend the idea.

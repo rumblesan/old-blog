@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - sequencing
+comments: true
 ---
 
 Back to some sequencing today, no sounds yet with this, I'll have them tomorrow. This patch is a pretty simple drum sequencer with a bit of randomness in it that should hopefully keep things interesting whilst not being overly complex to modify. One of the things I'm realizing now that I'm trying to do more generative stuff is that randomness is great and all, but it needs to be tempered with a degree of regularity as well, otherwise the results can tend to just be a mess unless you're lucky. Hopefully I'll be able to balance the two nicely as I extend this over the next few weeks.

@@ -9,6 +9,7 @@ categories:
 - Max/MSP
 - Music
 - Programming
+comments: true
 ---
 
 So a considerable amount of Friday night and Sunday afternoon was spent playing with the Go sequencer. It's actually in a reasonable state of working-ness, in-so-much-as I have the camera feeding into Max/MSP/Jitter and using the very excellent CV Jitter externals ([http://www.iamas.ac.jp/~jovan02/cv/](http://www.iamas.ac.jp/%7Ejovan02/cv/) go look) I have the patch finding black and white objects on a wooden board and then updating their co-ordinates into a matrix grid.

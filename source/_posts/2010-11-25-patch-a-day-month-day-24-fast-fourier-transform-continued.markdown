@@ -16,6 +16,7 @@ tags:
 - maths
 - patch-a-day
 - pure data
+comments: true
 ---
 
 Today I'm going to be getting to grips with the idea of windowing when doing FFT processing in Pure Data as well as an example of how we can better view the data we get from the FFT objects. There's going to be a bit of maths and theory sprinkled in as well here again but I'm hoping it should just continue to clarify things.

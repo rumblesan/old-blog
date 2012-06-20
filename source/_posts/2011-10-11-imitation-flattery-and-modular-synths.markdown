@@ -13,6 +13,7 @@ tags:
 - PDRene
 - pure data
 - sequencing
+comments: true
 ---
 
 A friend of mine has recently taken the leap into modular synths and I'm just a tad jelous.

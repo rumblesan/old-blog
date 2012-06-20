@@ -8,6 +8,7 @@ wordpress_id: '49'
 categories:
 - Music
 - NDS Homebrew
+comments: true
 ---
 
 Well currently I'm trying to work out the easiest way to port the code from the DS Seq to the touchbook. That's the big project for the moment, along with all the other musical activities I seem to have. Essentially the DS specific stuff in the code consists of the timers and the graphics.

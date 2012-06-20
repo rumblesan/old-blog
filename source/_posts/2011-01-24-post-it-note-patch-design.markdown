@@ -7,6 +7,7 @@ title: Post-it note patch design
 wordpress_id: '264'
 categories:
 - Pure Data
+comments: true
 ---
 
 ![image](/a/2011-01-24-post-it-note-patch-design/wpid-IMAG01621.jpg)

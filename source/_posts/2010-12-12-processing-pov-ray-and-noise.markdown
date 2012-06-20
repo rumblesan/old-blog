@@ -9,6 +9,7 @@ categories:
 - Povray
 - Processing
 - Pure Data
+comments: true
 ---
 
 The last two weeks have basically been a break from PureData to concentrate more on some of the other things I enjoy doing. The rhythmic noise album in 12 days plan hasn't emerged  quite as well as I had hoped so will remain on the workbench for a little while longer. I have successfully ported the generative beats patch to Max4Live and have extended it some more, there's still plenty of work that needs to go into it and I'm not entirely sure that what I've done has made it better but I expect this to be a long term thing so it's not a worry.

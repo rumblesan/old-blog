@@ -13,6 +13,7 @@ tags:
 - lessons
 - Programming
 - SuperCollider
+comments: true
 ---
 
 So here is part two of the series on Nodes, Graphs, Groups and Positioning which will have a bit more code than the last one but shouldn't be much trickier to follow. I'll specifically be dealing with Positioning here, and how some Nodes need to come after other Nodes to get the results you want.

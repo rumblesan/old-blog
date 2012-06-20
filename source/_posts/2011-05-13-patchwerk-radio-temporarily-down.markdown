@@ -5,6 +5,7 @@ slug: patchwerk-radio-temporarily-down
 status: publish
 title: Patchwerk Radio temporarily down
 wordpress_id: '290'
+comments: true
 ---
 
 Some of you may have noticed that the Patchwerk Radio site is currently down. OneNode, the people I rent the VPS from, have said this is due to the combination of a data centre outage and a DDOS attack. Sounds like they're not having a great time of it right now.

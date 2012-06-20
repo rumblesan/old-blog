@@ -12,6 +12,7 @@ tags:
 - Max/MSP
 - pure data
 - SuperCollider
+comments: true
 ---
 
 So I got an interesting couple of questions in the comments for the last post. Many thanks to Joe for asking some good questions, as well as giving me a reason to get off my arse and write something. I'll repeat it here for everyones ease.

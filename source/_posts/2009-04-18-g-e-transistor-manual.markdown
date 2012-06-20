@@ -5,6 +5,7 @@ slug: g-e-transistor-manual
 status: publish
 title: G.E. Transistor Manual
 wordpress_id: '41'
+comments: true
 ---
 
 Last weekend I was bumbling about town and happened to go into one of the Oxfam bookshops. After perusing the fiction section i found that they had a section entirely devoted to engineering, only 2 shelves worth but the content was amazing.  

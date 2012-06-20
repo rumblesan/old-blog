@@ -17,6 +17,7 @@ tags:
 - noise
 - patch-a-day
 - synthesis
+comments: true
 ---
 
 Finally, I have some interesting FFT based patches for you, and they're pretty cool as it happens. Full disclosure, these are pretty much lifted from the [Fourier Analysis](http://www.pd-tutorial.com/english/ch03s08.html) section on [PD-Tutorial](http://www.pd-tutorial.com) which is really worth a good read. These are the two things that interested me the most because they make all sorts of interesting sounds. I'll be including the patches so you can down load and investigate.

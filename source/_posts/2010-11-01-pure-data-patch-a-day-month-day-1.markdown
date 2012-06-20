@@ -14,6 +14,7 @@ tags:
 - FM synthesis
 - patch-a-day
 - pure data
+comments: true
 ---
 
 So I've decided that November is going to be Patch-a-day month for Pure Data. Every day create a new patch of extend one that I've previously done in the month. I'll aim to use a wide range of the objects available and may even try diving into some of the computer music theory books I have to pull some techniques out. To kick things off I'm going to do some simple FM bells.

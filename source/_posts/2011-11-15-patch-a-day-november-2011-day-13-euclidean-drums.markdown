@@ -15,6 +15,7 @@ tags:
 - drums
 - euclidean rhythms
 - sequencing
+comments: true
 ---
 
 Have some drums! A full, working drum sequencer patch, borrowing liberally from the excellent rjlib for a decent drum synth and hooking it up to the Euclidean sequencers we've made.

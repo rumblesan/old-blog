@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - sampling
+comments: true
 ---
 
 So I started reading up on the Fourier Transform stuff today, and quickly realised that the knowledge I'd learnt at uni had diminished and I was going to have to do a fair bit more reading than I had anticipated. I also realised that to make most of the FFT patches worth while I'd be needing to analyse external sounds so with that in mind, I'm going to be covering sample playback in PureData. Nothing too taxing to start but I need to be asleep in twenty minutes so hopefully this write up won't take long. As our sample source, I've decided on the most sampled sound in existence, the Amen Break, which will feature throughout these examples, even if it will annoy my most loyal reader.

@@ -16,6 +16,7 @@ tags:
 - Max/MSP
 - Music
 - SuperCollider
+comments: true
 ---
 
 One of the things I've always been interested in is the idea of algorithmic, generative music. I think it's stemmed from a love of complex, glitchy music but wanting to be able to create it live instead of just replaying loops or sections and this is still something I struggle with now.

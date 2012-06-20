@@ -12,6 +12,7 @@ tags:
 - algorithmic
 - euclidean rhythms
 - sequencing
+comments: true
 ---
 
 Generating patterns is all well and good, but we actually have to be able to play them back. I'm going to start off with a basic sequencer and combining the Euclidean Sequence generator into a sequencer voice. To begin with I'm just going to do this with tables. I've got a plan for some time next week to start getting into the PD data structures stuff again which will make it possible to create much more powerful sequencers but there's no need to go getting overly complex yet.

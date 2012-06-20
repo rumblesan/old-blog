@@ -5,6 +5,7 @@ slug: lesson-time-off-work-is-good-time-out-of-house-is-productive
 status: publish
 title: 'Lesson: Time off work is good. Time out of house is productive.'
 wordpress_id: '55'
+comments: true
 ---
 
 So Having had Christmas and new years in short succession I was lucky enough to get quite a bit of time off work.  

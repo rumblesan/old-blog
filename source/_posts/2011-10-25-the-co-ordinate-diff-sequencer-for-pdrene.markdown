@@ -13,6 +13,7 @@ tags:
 - PDRene
 - pure data
 - sequencing
+comments: true
 ---
 
 So in the previous post I mentioned I'd do a more in depth look at what's going on inside the Diff Sequencer I've created. For a bit of a recap, [check out what I said there](http://www.rumblesan.com/?p=302).

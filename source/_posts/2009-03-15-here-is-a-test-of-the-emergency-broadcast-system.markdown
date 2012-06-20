@@ -5,6 +5,7 @@ slug: here-is-a-test-of-the-emergency-broadcast-system
 status: publish
 title: Here is a test of the Emergency Broadcast System
 wordpress_id: '38'
+comments: true
 ---
 
 Or something there abouts. seeing as I'll be able to use this to post from work the amount of stuff getting put on here should actually get to be a reasonable level  

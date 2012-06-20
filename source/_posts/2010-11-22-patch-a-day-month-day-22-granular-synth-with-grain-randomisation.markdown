@@ -16,6 +16,7 @@ tags:
 - pure data
 - sampling
 - synthesis
+comments: true
 ---
 
 So the granular synth posts continue as I build up this noisy machine. It's nearing a state of completion now where I'll make the patch down-loadable and put a few examples up on SoundCloud. There are a few bits and pieces that I want to do yet but I think that this will be the last Patch-a-day post about it. Don't want to bore anybody after all.

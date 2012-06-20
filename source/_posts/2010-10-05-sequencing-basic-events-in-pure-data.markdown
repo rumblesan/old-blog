@@ -14,6 +14,7 @@ tags:
 - Programming
 - pure data
 - sequencing
+comments: true
 ---
 
 So one of the things I've been thinking about recently is how to sequence complex musical structures but without everything sounding like a mess. Markov chains can help with this to some extent by making the output a bit more ordered but they can become unwieldy if you're trying to deal with many states and weighting them by hand.

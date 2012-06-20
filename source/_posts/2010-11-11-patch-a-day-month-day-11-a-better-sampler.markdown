@@ -15,6 +15,7 @@ tags:
 - patch-a-day
 - pure data
 - sampling
+comments: true
 ---
 
 So today I'm extending yesterdays patch by adding a few basic controls. Still nothing major but it shows a couple things, speed variation, start offset control and looping. It's pretty crude so tomorrow I'll be rebuilding it in a better form, but have a look at what's here at the moment.

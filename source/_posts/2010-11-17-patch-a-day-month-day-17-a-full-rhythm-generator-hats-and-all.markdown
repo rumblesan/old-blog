@@ -17,6 +17,7 @@ tags:
 - patch-a-day
 - pure data
 - sequencing
+comments: true
 ---
 
 So the hats have now been added on and this patch is nearing a first phase of completion. I took a slightly different approach with the rhythm generation for the hats, a sort of subtractive probability generation sort of thing. Anyway, I wanted to try something slightly different and it's worked pretty well.

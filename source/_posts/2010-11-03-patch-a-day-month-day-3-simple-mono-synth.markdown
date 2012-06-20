@@ -14,6 +14,7 @@ tags:
 - patch-a-day
 - pure data
 - synthesis
+comments: true
 ---
 
 So tonights patch is a small quick one because I'm running late for "Real World Stuff" and probably wont have time later. I decided to do something that I can easily build on later and that also provides a simple jumping off point for other people learning. In the next couple of days this will probably get hooked up to the previous Markov notes patch.

@@ -5,6 +5,7 @@ slug: and-so-here-it-begins
 status: publish
 title: And so here it begins
 wordpress_id: '29'
+comments: true
 ---
 
 Well I very much doubt that anybody will read this, at least for a while. But if I don't put anything on here then nobody will ever read it and that's a pretty sorry state of affairs.

@@ -12,6 +12,7 @@ tags:
 - lessons
 - sequencing
 - SuperCollider
+comments: true
 ---
 
 So I've spent a bit of the last couple of days reading "[A Practical Guide to Patterns](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/Streams-Patterns-Events/A%20Practical%20Guide/PG_01_Introduction.html)" by **H. James Harkins **which is part of the SuperCollider docs and it has really helped me to better understand some of the major ways in which allot of stuff works. Mostly to do with patterns, but also about how synths are actually used within the environment. I definitely recommend it, but don't get worried if you get lost not too far in, it's a bit mind boggling after a while.

@@ -5,6 +5,7 @@ slug: something-approximating-a-release
 status: publish
 title: Something approximating a release
 wordpress_id: '299'
+comments: true
 ---
 
 So I've put together an album/EP looking thing and stuck it on Bandcamp. This was done using the mass of hardware sitting on my coffee table all in one sitting a few nights ago. It's three tracks containing just over 30 minutes of ambient/industrial/noise and I hope that someone at least likes it.

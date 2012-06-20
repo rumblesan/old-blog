@@ -11,6 +11,7 @@ tags:
 - github
 - Programming
 - pure data
+comments: true
 ---
 
 Indeed I now have Git Hub repositories set up for a few of the projects and it is really nice and usable.

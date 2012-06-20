@@ -5,6 +5,7 @@ slug: lack-of-oomph
 status: publish
 title: Lack of OOMPH
 wordpress_id: '288'
+comments: true
 ---
 
 Recently the creative juices haven't been flowing so much, which is a pity but I suppose it happens sometimes. As much as I would love to be constantly artistic and full of ideas, it just doesn't always happen.

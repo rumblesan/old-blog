@@ -14,6 +14,7 @@ tags:
 - patch-a-day
 - pure data
 - synthesis
+comments: true
 ---
 
 So, as regular readers might have noticed, I am not extending my sampler but am instead doing some synthesis. The reason for this is that I just spent an excellent couple of hours at a friends house making noise and discovered how to get my delay pedal to make string sounds. This reminded me of something called [Karplus-Strong synthesis](http://en.wikipedia.org/wiki/Karplus-Strong_string_synthesis) and when I got home I wanted to try it out in Pure Data.

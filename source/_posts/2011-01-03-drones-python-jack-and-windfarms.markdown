@@ -11,6 +11,7 @@ categories:
 - Python
 tags:
 - pure data
+comments: true
 ---
 
 Thanks to a bank holiday today, I was able to swap going to work for other, more productive activities. As well as playing Super Meat Boy and improving my speed runs in Mirror's Edge, I actually sat down to start working out how I can get Radio Drone working. The downside of this was that the only Linux machines I have are my rack mount servers which, while very capable, sound like vacuum cleaners. Thankfully I only needed one of them on but it started grating after an hour or two.

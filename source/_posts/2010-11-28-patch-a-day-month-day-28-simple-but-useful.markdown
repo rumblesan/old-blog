@@ -13,6 +13,7 @@ tags:
 - audio
 - delay
 - patch-a-day
+comments: true
 ---
 
 I wanted to do an interesting post about using periodic  the Mandlebrot fractal to create interesting melodies. Unfortunately a combination of time and the "sheer volume of information I was trying to learn in not much time" conspired to mean that I'm not able to do that. I'll try to get that done soon as well because it looks seriously interesting, (for more info I will point you to [here which has masses of cool stuff](http://claudiusmaximus.goto10.org/cm/) which was posted in the Pure Data IRC room on Freenode).

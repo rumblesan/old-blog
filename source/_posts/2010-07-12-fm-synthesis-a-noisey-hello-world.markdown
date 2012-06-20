@@ -10,6 +10,7 @@ categories:
 tags:
 - audio
 - SuperCollider
+comments: true
 ---
 
 So finally some code, a basic FM synth that turns on to generate screechy noises and doesn't turn off until you tell it to.  This is the beginning part of a grand plan as it happens but I'll explain that later, first, the code. Apologies for lack of syntax highlighting, I'm planning to write or find a Word-press plug-in that will do it for SuperCollider code but until then it will have to look ugly.

@@ -14,6 +14,7 @@ tags:
 - DSP
 - FFT
 - radio
+comments: true
 ---
 
 Over the past two weeks, whilst taking some much needed time off from work, as well as enjoying the festive seasonal cheer I spent some time brushing up on my C skills. Part of the reason for this is because I'm embarking on a long running project involving pic chips, modular synths and actual hardware will need to get back to some good old fashioned embedded C. My other plan was to start on an idea I've had for a while and decided since it would involve quite a bit of DSP, I'd do it in C and use it as a learning exercise.

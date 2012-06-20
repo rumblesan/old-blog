@@ -17,6 +17,7 @@ tags:
 - pure data
 - synthesis
 - Tinkerbell map
+comments: true
 ---
 
 So today I posted a link to my blog on the [Pure Data forum](http://puredata.hurleur.com/) for the purposes of selfless publicity finding other people interested in what I was doing. The response was pretty awesome by my, reasonably small time blogger, standards so to say thank you to those who are visiting and to hopefully keep them coming back for more, I'm finally writing up a bit more about some of my Chaos Theory patches.

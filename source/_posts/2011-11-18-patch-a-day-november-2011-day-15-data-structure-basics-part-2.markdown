@@ -10,6 +10,7 @@ categories:
 - Pure Data
 tags:
 - data structures
+comments: true
 ---
 
 Apologies for missing yesterday, I was at the London Hackspace for the weekly music hackers meetup that's been gathering steam and I find that now I know a few more people there I quickly get sucked in and don't get around to working on the patches like I should be.

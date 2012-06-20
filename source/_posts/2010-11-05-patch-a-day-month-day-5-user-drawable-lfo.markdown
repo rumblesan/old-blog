@@ -13,6 +13,7 @@ tags:
 - audio
 - patch-a-day
 - pure data
+comments: true
 ---
 
 This patch is a pretty simple one, but it's a pretty useful one and introduces a couple of new objects and concepts. A user drawable LFO, the idea being that you can draw the shape of the waveform you want in the graph and set the speed of the playback. At the moment it just gives the output to the snapshot object but it can be built into lots of things. I'll have a go at getting some FM sounds out of it soon but for now, lets keep it simple.

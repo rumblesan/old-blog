@@ -5,6 +5,7 @@ slug: a-few-thoughts
 status: publish
 title: A few thoughts...
 wordpress_id: '172'
+comments: true
 ---
 
 So I've definitely decided that saving this blog was a pretty good idea. The patch-a-day month has forced me to keep up the writing side of things so far and as well as being good for my PureData skills, that's just been good for getting me to do stuff. Otherwise I suspect Minecraft and BioShock would have soaked up a considerable number of my evenings by now. I've been having a couple of thoughts about all this and figure I should put them down here.

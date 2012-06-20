@@ -5,6 +5,7 @@ slug: been-a-bit-quiet-really
 status: publish
 title: Been a bit quiet really
 wordpress_id: '47'
+comments: true
 ---
 
 How unsurprising that my blog has fallen by the wayside a little.  

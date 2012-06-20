@@ -5,6 +5,7 @@ slug: so-what-to-do-next
 status: publish
 title: So what to do next...
 wordpress_id: '281'
+comments: true
 ---
 
 PatchWerk Radio has more fulfilled all my expectations now. It's up and running, it's stable, there are some really talented people contributing to it and it seems to have some number of regular listeners. The other night I sorted out a download and stats page for all the patches and there's a page listing all the contributors as well which finishes all the major functionality stuff I wanted to do. I've got plenty of other ideas, and there are some rough edges in the code that need cleaning up, but for the moment I'm quite content to leave it as it is and just get back to writing patches for it.

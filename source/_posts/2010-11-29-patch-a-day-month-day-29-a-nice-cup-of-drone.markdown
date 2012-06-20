@@ -19,6 +19,7 @@ tags:
 - patch-a-day
 - pure data
 - synthesis
+comments: true
 ---
 
 I continue to wrestle somewhat with the Mandlebrot set but I don't really feel I'm closer to getting anything useful done with it. As I couldn't think of anything else of great use to do tonight I had another live coding practise, this time aiming for some interesting drone scapes, which I reckon I managed pretty well. I'm not really sure how much explanation I can give this tonight so I'll talk a little bit about it and then give you the patch to play with.

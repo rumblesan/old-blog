@@ -11,6 +11,7 @@ tags:
 - audio
 - Programming
 - slow radio
+comments: true
 ---
 
 Reteaching myself C has been a pretty good exercise and, for the most part, has been good fun. A little frustrating at times, but there's lots of stuff that's just falling into place and it's generally making me feel much smarter.

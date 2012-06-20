@@ -11,6 +11,7 @@ categories:
 tags:
 - data structures
 - presets
+comments: true
 ---
 
 The preset loader is working pretty well, but at the moment it's limited to only saving presets within one PD "session". If we close and then reopen the program then all our presets are lost. To make this really useful, you need to be able to save the data structure info and have it loaded up next time you start the program up.

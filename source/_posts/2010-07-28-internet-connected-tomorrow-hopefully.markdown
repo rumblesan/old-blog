@@ -7,6 +7,7 @@ title: Internet Connected Tomorrow……. hopefully
 wordpress_id: '15'
 tags:
 - announcement
+comments: true
 ---
 
 So This has been dead for a week or two now. Mostly due to my moving into a new place and internet taking a while to sort. This is a pretty weak excuse but is hassle-some enough that it got in the way.

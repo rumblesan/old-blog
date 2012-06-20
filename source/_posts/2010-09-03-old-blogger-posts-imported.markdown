@@ -5,6 +5,7 @@ slug: old-blogger-posts-imported
 status: publish
 title: Old Blogger posts imported
 wordpress_id: '61'
+comments: true
 ---
 
 So I decided to move all my posts from my old and slightly defunct Blogger account over to this here WordPress. It will fill in a bit of back story on the NDS sequencer and some of my other past projects.

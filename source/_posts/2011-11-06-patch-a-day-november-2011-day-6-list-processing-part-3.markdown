@@ -11,6 +11,7 @@ categories:
 tags:
 - euclidean rhythms
 - list processing
+comments: true
 ---
 
 More list processing today I'm afraid. I'm still working out how to properly transfer the Euclidean Rhythm equation to vanilla PD and I'm getting closer, but I keep finding there's different problems to do with list parsing to overcome, which is great as far as me having things to write about goes, but I'd quite like to get to the point where I can make some music soon.

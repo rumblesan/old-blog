@@ -8,6 +8,7 @@ wordpress_id: '293'
 categories:
 - Music
 - PatchWerk-Radio
+comments: true
 ---
 
 Maybe finding effort is actually the issue, either way, my fault.

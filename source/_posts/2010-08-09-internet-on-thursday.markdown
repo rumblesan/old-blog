@@ -7,6 +7,7 @@ title: Internet on Thursday
 wordpress_id: '21'
 categories:
 - SuperCollider
+comments: true
 ---
 
 So the initial estimates were wrong and apparently my Internet will be returned to me on Thursday. Until then all I have is access at work and that's not quite sufficient.

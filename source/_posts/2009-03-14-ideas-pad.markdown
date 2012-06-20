@@ -5,6 +5,7 @@ slug: ideas-pad
 status: publish
 title: Ideas Pad
 wordpress_id: '37'
+comments: true
 ---
 
 So in an effort to actually keep me regularly posting I think I'm going to use this place more as a repository for my general ideas. I've found that it's possible to update blogger via email so I will be able to put stuff up here from work so instead of coming home with a backpack full of "post it" notes I'll just be able to check here  

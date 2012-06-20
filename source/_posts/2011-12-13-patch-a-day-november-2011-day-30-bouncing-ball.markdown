@@ -13,6 +13,7 @@ tags:
 - maths
 - modelling
 - physics
+comments: true
 ---
 
 For the last (very late) patch of the month I've decided not to do any more with the sequencer, but to go off on a bit of a tangent and create a simulation of a bouncing ball. It's not the most thorough physical model, and there are a couple of issues with it, but it gives a pretty good idea of how to go about taking mathematical equations and transferring them over to PD.

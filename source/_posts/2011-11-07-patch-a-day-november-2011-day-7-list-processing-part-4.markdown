@@ -11,6 +11,7 @@ categories:
 tags:
 - list processing
 - random
+comments: true
 ---
 
 I had a request from a friend of mine on Google+ the other night for an example patch that would randomise the elements in a list. I was thinking of doing it after the Euclidean Rhythms were finished but I think it fits in well with the rest of the list processing so I decided to write it up this evening. That also gives me a bit more time to neaten up the rhythm generation patch which is nearing completion.

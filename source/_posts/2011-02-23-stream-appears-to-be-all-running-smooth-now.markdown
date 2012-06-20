@@ -5,6 +5,7 @@ slug: stream-appears-to-be-all-running-smooth-now
 status: publish
 title: Stream appears to be all running smooth now
 wordpress_id: '279'
+comments: true
 ---
 
 It seems that there was (perhaps still is) a bug that causes the Python process controlling PureData to crash out. PD will keep running but because all the new patch choosing and cross-fading is controlled by python it will then just keep playing the same patch indefinitely.

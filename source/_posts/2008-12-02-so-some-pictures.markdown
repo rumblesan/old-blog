@@ -9,6 +9,7 @@ categories:
 - Max/MSP
 - Music
 - Programming
+comments: true
 ---
 
 Well I meant to put these up yesterday, but so far no one is reading this blog so it doesn't matter too much at this stage, heh.

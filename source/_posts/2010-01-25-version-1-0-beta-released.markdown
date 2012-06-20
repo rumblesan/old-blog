@@ -9,6 +9,7 @@ categories:
 - Music
 - Pure Data
 - Python
+comments: true
 ---
 
 So the touch sequencer is finally at that point where I feel it's ready to release. Obviously it's been available all this time but now I'm actually going to start poking people about it.

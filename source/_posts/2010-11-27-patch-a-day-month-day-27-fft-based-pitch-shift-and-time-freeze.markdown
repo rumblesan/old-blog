@@ -16,6 +16,7 @@ tags:
 - patch-a-day
 - pure data
 - sampling
+comments: true
 ---
 
 Following on from yesterdays two useful FFT based patches, I have another two for you today. The first is actually really simple but quite useful, an pitch shifter that will shift sounds you send through it up. It's definitely not clean or accurate but it could well make for some cool patches when combined with other things.

@@ -5,6 +5,7 @@ slug: buffer-under-run-error
 status: publish
 title: Buffer under-run error!
 wordpress_id: '360'
+comments: true
 ---
 
 Unfortunately die to technical difficulties and prior engagements (OS update and beer festival) I'm going to be unable to patch until Sunday.  
