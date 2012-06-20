@@ -1,7 +1,7 @@
 ---
 date: '2011-11-01 19:55:00'
 layout: post
-slug: patch-a-day-2011-day-1-passthrough-design-pattern-part-1
+slug: patch-a-day-november-2011-day-1-passthrough-design-pattern-part-1
 status: publish
 title: 'Patch-a-Day November 2011 Day 1: Passthrough Design Pattern (part 1)'
 wordpress_id: '315'
