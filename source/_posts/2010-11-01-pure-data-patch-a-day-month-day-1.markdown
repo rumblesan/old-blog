@@ -1,7 +1,7 @@
 ---
 date: '2010-11-01 20:58:49'
 layout: post
-slug: pure-data-patch-a-day-month-day-1
+slug: patch-a-day-month-day-1-fm-bells
 status: publish
 title: 'Pure Data Patch-a-day Month Day 1: FM Bells'
 wordpress_id: '105'
