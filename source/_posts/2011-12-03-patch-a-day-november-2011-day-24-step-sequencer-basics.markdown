@@ -19,13 +19,13 @@ I've just noticed I think I missed out a day somewhere.... This patch is patch 2
 
 On with the step sequencer for the moment though. I'm designing this to run on my Novation Launchpad, the plan being to have eight tracks with 64steps each. Track selection will be done by the left hand row of function buttons and all track steps displayed on the grid. The first thing to do is work out how the pattern will be stored, and I've decided that the data structures are the right way to go about doing it. Below is the beginnings of the patch.
 
-![Beginning of the data structure sequencer](/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/data-structure-sequencer-beginnings.png)"
+![Beginning of the data structure sequencer](/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/data-structure-sequencer-beginnings.png)
 
 Structure and datawindow patches in the top left corner, struct has eight float fields named **a** to **h**. The central section just clears our window and creates the data for the 64 steps. The section on the right is just to that I can write out the data to a file for debugging and won't be there in the final patch.
 
 The group of daisy chained objects on the left hand side are dealing with saving and loading the data about individual tracks. The left hand inlets/outlets deal with setting individual steps for specific patterns. The middle is so the object can receive a pointer to a specific step and load the value from it, the right hand inlets/outlets are where this data comes from. For the moment only the saving works, though the loading doesn't need much more done.
 
-![Basic track abstraction](/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/track-abstraction.png)"
+![Basic track abstraction](/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/track-abstraction.png)
 
 I've realised that in patch comments are probably a good idea heh, so I've started adding them. As they show, the creation arguments for the abstraction are the name of the data window, the name of the struct and the name of the field to set or get.
 

@@ -23,7 +23,7 @@ The data is stored as an ordered list of scalars, where a scalar would contain a
 
 Lets have a look at a patch to try and clear some of this up.
 
-![Basic data structure](/a/2011-11-16-patch-a-day-november-2011-day-14-data-structure-basics-part-1/basic-structure1.png)"
+![Basic data structure](/a/2011-11-16-patch-a-day-november-2011-day-14-data-structure-basics-part-1/basic-structure1.png)
 
 In the top left are the three objects that make up the data structure. The template1 subpatch contains a single struct object. The struct defines a structure called struct1 with a single field, the float a. The datawindow1 subpatch has no objects in it. One thing to note at this point, the name of the struct has to be unique throughout PD otherwise you'll get an error being thrown, the same goes for the datawindow.
 
@@ -39,6 +39,6 @@ To retrieve them you can use the get object. This works in a similar way to appe
 
 Here's an example of how easy it is to extend this to more float values if you want.
 
-![Data structure with multiple values](/a/2011-11-16-patch-a-day-november-2011-day-14-data-structure-basics-part-1/multiple-values.png)"
+![Data structure with multiple values](/a/2011-11-16-patch-a-day-november-2011-day-14-data-structure-basics-part-1/multiple-values.png)
 
 Not sure I'll be able to get another post out tonight unfortunately, relearning this stuff has been a bit of a crash course and took longer than I expected. Either way, I know the direction I'll be heading with this over the next few days so I shouldn't have any problems working out what I want to patch.

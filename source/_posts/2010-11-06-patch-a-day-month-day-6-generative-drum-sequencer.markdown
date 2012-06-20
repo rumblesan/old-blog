@@ -22,13 +22,13 @@ Back to some sequencing today, no sounds yet with this, I'll have them tomorrow.
 
 
 
-![Generative Sequencer](/a/2010-11-06-patch-a-day-month-day-6-generative-drum-sequencer/06-GenerativeSequencer.png)"
+![Generative Sequencer](/a/2010-11-06-patch-a-day-month-day-6-generative-drum-sequencer/06-GenerativeSequencer.png)
 
 The section at the top is the metro and counter as well as a few other bits so that once the counter hits 32 it resets as well as resetting when the metro is restarted. From here the step number is passed to four different sections. Each section will control a different type of drum sound, Kick, Snare, Open and Closet Hi-Hat and then Clave or Cowbell. The select objects are used to determine which beats the sound should be played, with the hat section (third along) the mod object is used so that the sel object's list doesn't have to be so big.
 
 The BangRand object is a small abstraction I created just to keep things a bit neater.
 
-![Bang Rand Abstraction](/a/2010-11-06-patch-a-day-month-day-6-generative-drum-sequencer/BangRand.png)"
+![Bang Rand Abstraction](/a/2010-11-06-patch-a-day-month-day-6-generative-drum-sequencer/BangRand.png)
 
 All this has is a rand object that feeds a moses object. The argument of the abstraction sets the divide argument of the moses object so that the choice of output is weighted by it. some of the bangs from the select objects will go straight to the sounds, some are fed through this abstraction to create double hits, delayed hits or alternate sounds for the hat section.
 

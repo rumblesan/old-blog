@@ -20,13 +20,13 @@ Tonight's post is a bit of a short one because I'm knackered after the weekend. 
 
 To further complicate matters, the remainder is dependant on the size of the elements we are dealing with so our patch needs to take this into account. Lets start off with the simplest case first.
 
-![List length matching](/a/2011-11-06-patch-a-day-november-2011-day-6-list-processing-part-3/list-length-matching.png)"
+![List length matching](/a/2011-11-06-patch-a-day-november-2011-day-6-list-processing-part-3/list-length-matching.png)
 
 The list length objects calculate the lengths for each list, the min object is used to find which of these is the smallest and then both lists are split by this value. On the list with the smallest length the middle outlet of the split object will send a bang, on the longer list we get the excess elements.
 
 It's still necessary to make this deal with lists where we have different element sizes and at the moment if the two lists are the same length then there won't be anything output for the excess. Both of these need fixing and the following abstraction does just that.
 
-![List length matching with elements](/a/2011-11-06-patch-a-day-november-2011-day-6-list-processing-part-3/list-length-matching-with-elements.png)"
+![List length matching with elements](/a/2011-11-06-patch-a-day-november-2011-day-6-list-processing-part-3/list-length-matching-with-elements.png)
 
 As soon as you start dealing with multi item elements, things get a bit trickier. It's times like this I wish that PD had better data structures for doing this sort of thing. This works in much the same was as the first version, but I've split everything out to make it a bit neater.
 

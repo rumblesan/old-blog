@@ -26,13 +26,13 @@ I continue to wrestle somewhat with the Mandlebrot set but I don't really feel I
 
 
 
-![A drone patch done as live coding practise](/a/2010-11-29-patch-a-day-month-day-29-a-nice-cup-of-drone/29-EveningDrone.png)"
+![A drone patch done as live coding practise](/a/2010-11-29-patch-a-day-month-day-29-a-nice-cup-of-drone/29-EveningDrone.png)
 
 Much of this is pretty rough and ready, and it's very clear in the audio that it was clipping in lots of places. The part that helps to keep this all ticking over is the multiple sample and hold sections at the top. A single bang gets slightly delayed a few times to trigger snapshots off the same noise source. The results of this get multiplied and increased to fit into reasonable ranges and then fed to lines. The metro will cause this to trigger every four seconds and help keep things moving.
 
 The squarevoice abstraction is simply a rough and ready square wave patch with a control to change the duty cycle of the wave.
 
-![A squarewave voice abstraction](/a/2010-11-29-patch-a-day-month-day-29-a-nice-cup-of-drone/29-SquareVoice.png)"
+![A squarewave voice abstraction](/a/2010-11-29-patch-a-day-month-day-29-a-nice-cup-of-drone/29-SquareVoice.png)
 
 I also put a volume control inside to make things a little easier.
 

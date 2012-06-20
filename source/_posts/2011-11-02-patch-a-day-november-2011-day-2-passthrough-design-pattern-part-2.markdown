@@ -22,7 +22,7 @@ In the last post I mentioned that it can be useful when dealing with controllabl
 
 First up, have a look at this abstraction for a delay effect.
 
-![Passthrough delay effect example](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-delay-example.png)"
+![Passthrough delay effect example](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-delay-example.png)
 
 The section in the top centre with the border is the internal of the param abstraction, to the left of them there's the daisy-chained group of them that will parse the mix, time, and feedback parameters. You'll also see that there's a route object routing for delay. If we had a number of effects patches daisy-chained then we'd want to be able to specify parameters in this object and this allows us to do it.
 
@@ -34,7 +34,7 @@ It' worth noting that this patch itself adheres to the passthrough design. There
 
 For a more useful example of that, this next patch has a bank of synth voices which can be independently or collectively controlled and use a poly object to share the incoming notes between them. It's a bit scrappy but should illustrate the point well.
 
-![Passthrough synth bank example](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank.png)"
+![Passthrough synth bank example](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank.png)
 
 The top right has the numboxes that set the values for our four controls as well as the ability to send notes to the voices. All the lists sent out through here get prefixed with the synth voice name. The small section to the left of this with the vertical radio bar is the voice chooser. We can choose a specific voice to send control messages to or we can use "all" to collectively change a single parameter on all the voices at the same time.
 
@@ -44,7 +44,7 @@ Below all of this is the bank of voices and it should be easy to see here how th
 
 Here's the insides of the voice abstraction. It's a pretty basic FM synth that should be familiar to anybody who has looked at many of the patches I've made.
 
-![Synth bank voice abstraction](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank-voice.png)"
+![Synth bank voice abstraction](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank-voice.png)
 
 Like the delay abstraction the message parsing, control value scaling and DSP sections are split apart. The route object that checks for the synth voice also checks for an "all" element at the start of the list which is how we can modify the parameters for all the voices together.
 

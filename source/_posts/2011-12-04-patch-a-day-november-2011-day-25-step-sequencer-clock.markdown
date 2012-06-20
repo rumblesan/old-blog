@@ -17,7 +17,7 @@ comments: true
 
 OK, carrying on from yesterdays patch, lets get the stepping and clock for the sequencer.
 
-![Sequencer clock and output](/a/2011-12-04-patch-a-day-november-2011-day-25-step-sequencer-clock/sequencer-clock-and-output.png)"
+![Sequencer clock and output](/a/2011-12-04-patch-a-day-november-2011-day-25-step-sequencer-clock/sequencer-clock-and-output.png)
 
 The setup here is really pretty simple, but there's a couple small things to note. I'm routing for clock and reset messages, just to make things obvious when you;re controlling the sequencer. The reset message gives the pointer a traverse message which resets it to the head of our list of scalars. The clock message will trigger a next message to be sent to the pointer which will then send it's value to the series of daisy chained objects. This will cause all of them to output their values and they can be seen printed out to the console.
 

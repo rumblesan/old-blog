@@ -25,21 +25,21 @@ The second is a time freezer patch. This has quite a bit in common with the gran
 
 
 
-![A basic pitch shifter based on FFT](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTDirtyShift.png)"
+![A basic pitch shifter based on FFT](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTDirtyShift.png)
 
 The main patch of the pitch shifter is really very basic. The only change is that we have a number box getting 128 added to it, going through an int to make sure it's a whole number and then being passed to a shift object. This patch works by using a very short delay to shift the frequency bins along so that lower bins take the place of higher bins. The +128 is there because the effect doesn't start happening untill the delay is a minimum of 128 samples. I think this might be to do with the minimum delay allowed by delay objects in PD but I'm really not sure.
 
-![FFT based pitch shifter internals](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTDirtyShiftSubPatch.png)"
+![FFT based pitch shifter internals](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTDirtyShiftSubPatch.png)
 
 Really all that is happening here is that the FFT data is delayed going into the inverse FFT object. By delaying by values that are less than a blocksize length we get a shifting up effect.
 
 The time freeze has much more going on with it. What we need to do is store a block of FFT data and continuously replay this back through the inverse fft object. I chose to do this using a tabwrite~ that records the sample block when the freeze is turned on and then switches the input to the inverse fft to be a pair of tabreceive~ objects.
 
-![FFT based Time Freeze sub patch](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTTimeFreezeSubPatch.png)"
+![FFT based Time Freeze sub patch](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTTimeFreezeSubPatch.png)
 
 When the freeze is turned on the sel 1 will bang the tabwrites to record the FFT block. The second toggle chooses between the normal signal or the tabreceives. pretty simple but quite effective.
 
-![FFT based Time Freeze](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTTimeFreeze.png)"
+![FFT based Time Freeze](/a/2010-11-27-patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze/27-FFTTimeFreeze.png)
 
 The main patch is just using a variable delay to turn the freeze on a bit after the FM synth triggers are clicked. Click them once to play the first half of the FM tone and then again to stop the freeze and get the tail run off. On it's own this isn't so great but it's a basic building block of lots of interesting stuff. I plan to implement some stuff like this in the Granular Synth once I get a chance.
 

@@ -26,7 +26,7 @@ To begin with, I'll introduce the four big words I used in the title.
 
 The three of these are all quite strongly tied together but have slightly differing meanings depending on whether you're looking at the maths, or at SuperCollider itself. In the mathematical sense, a Graph (not in an x-y diagram sense) is essentially a number of vertices joined by edges. This creates a network that can be used to do various things, the [wikipedia article](http://en.wikipedia.org/wiki/Graph_%28mathematics%29) is very good at explaining some of this and infact I'll lift a picture from it here quickly.
 
-![Mathematical Graph](http://en.wikipedia.org/wiki/Graph_%28mathematics%29)"
+![Mathematical Graph](http://en.wikipedia.org/wiki/Graph_%28mathematics%29)
 
 SuperCollider uses graphs internally when dealing with Synths that it is running to calculate in what order the functionality of the UGens should be happening. It is doubtful the user will have to deal with this themselves.
 
@@ -44,7 +44,7 @@ To make it easier to control and manage multiple Nodes, they can be collected in
 
 Positioning isn't really that difficult to get your head around. If we have a synth, and the audio from that goes through an effect, then the sound out of the effect is dependant upon the sound out of that synth. We need to make sure that SuperCollider calculates the synth's audio so that the effect can modify it. If we were to create the synth first and then the effect then the effect node would come after the synth node by default but it's not always such a good idea to rely on this, especially not if things get complicated. I'll be covering how you can tell SuperCollider what order things should be in in a later post, I'm just trying to get through the idea that this is important to think about but not too complex. A picture from the documentation on [Order of Execution](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/ServerArchitecture/Order-of-execution.html) might make things a little clearer.
 
-![Order of execution diagram](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/ServerArchitecture/Order-of-execution.html)"
+![Order of execution diagram](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/ServerArchitecture/Order-of-execution.html)
 
 It is also worth mentioning here that ordering works much the same for Groups as it does for Nodes. We can have a group of nodes that all represent synths and this group is positioned before an effect node so that the output from the synths is calculated and mixed together, before going to the effect.
 

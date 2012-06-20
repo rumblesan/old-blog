@@ -27,7 +27,7 @@ Hopefully by the end of this article I will have answered all these questions an
 
 So to start off, a diagram showing roughly what's involved.
 
-![PatchWerk Radio Program Diagram](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/PatchWerk-Radio-Program-Diagram.png)"
+![PatchWerk Radio Program Diagram](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/PatchWerk-Radio-Program-Diagram.png)
 
 The Python script is the heart of the whole thing. It's responsible for starting up a PureData sub-process, getting it to load up the master control patch, sending it all the streaming settings, choosing which patches it will load and then fading between them. All of this is done over a network connection between PD and Python and uses a slightly modified version of the [PyPD](http://mccormick.cx/projects/PyPd/) class written by [Chris McCormick](http://mccormick.cx).
 
@@ -57,11 +57,11 @@ My solution to this was to use the abstraction arguments that PD has, specifical
 
 In each of the loadable patches there is an abstraction called patchComs. The audio from the patch is routed into this (There's also a switch~ object hanging off it, more on that later) where inside the audio is connected to two send objects named $0-l and $0-r. There is also a small section featuring a loadbang, an int with a $0 argument and a "send masterCom" object. Here's a picture for those who don't want to go and load it up. The switch~ is outside of this patch hanging off that outlet.
 
-![patchComs abstraction](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patchComs.png)"
+![patchComs abstraction](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patchComs.png)
 
 When the patch is loaded the unique $0 argument gets sent, via the masterCom send object, to the python-interface in the master patch which sends it on to python. After it loads each new patch python waits for this message and when it receives it, registers that this is the unique id number for the patch. It will then send a registration message back to the master patch which will update one pair of receive~ objects to start getting their audio from the new send~ objects. A similar thing is done with the message sending objects. This is all done inside the patch-interface sections.
 
-![patch-interface abstraction](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patch-interface.png)"
+![patch-interface abstraction](/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patch-interface.png)
 
 Currently the only message from python to the new patch is one that turns on the DSP processing. Initially the switch~ hanging off the patchComs abstraction stops all DSP processing and is there to try and minimise the effects of a CPU usage spike on the audio. Once the patch is fully loaded and registered the DSP gets turned on.
 

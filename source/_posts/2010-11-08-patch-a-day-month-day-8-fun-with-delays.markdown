@@ -21,7 +21,7 @@ So The other night I started playing with delays in Pure Data but was quickly 
 
 
 
-![Fun with Delays](/a/2010-11-08-patch-a-day-month-day-8-fun-with-delays/08-DelayFun.png)"
+![Fun with Delays](/a/2010-11-08-patch-a-day-month-day-8-fun-with-delays/08-DelayFun.png)
 
 So the hats abstraction makes a reappearance and I'm also using one called blip. This generates clicks and pops by having very short sections of sin waves play, subtle but useful in things like this. These get randomly triggered using the BangRands and a metro. The delay part of the patch is a bit of a mess but revolves around the vd~ and the delwrite~ objects.
 

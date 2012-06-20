@@ -17,7 +17,7 @@ comments: true
 
 Putting everything together now. This patch will actually output a rhythm sequence from two given input lists. It's using the improved list matching abstraction from last night along with the list interleaving patch and then some extra objects to do routing and element length measurement of the remainder to see if we need to recur any more.
 
-![Euclidian rhythm generation](/a/2011-11-09-patch-a-day-november-2011-day-9-euclidean-rhythms-part-2/Euclidian-rhythm-generation.png)"
+![Euclidian rhythm generation](/a/2011-11-09-patch-a-day-november-2011-day-9-euclidean-rhythms-part-2/Euclidian-rhythm-generation.png)
 
 When the remainder is output from the lmatch, we check how many elements there are in it. If the number is one or less then we don't need to do any recursion and we can just join the two lists and output our sequence, otherwise the lists need to be sent round again. The routing is done by pre-pending "recur" or "output" to the front of the lists then routing them accordingly. This feels a bit clunky but I think it's better than using pairs of spigots. If we don't need to recur then the remainder is joined to the output of the interleaving and that's the sequence. Otherwise the output becomes the main list and the remainder the sublist.
 

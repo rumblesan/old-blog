@@ -19,15 +19,15 @@ Right, time to hook the launchpad up to the sequencer. I've modified the Launchp
 
 Let's run through them and I'll explain a bit about what's going on.
 
-![First launchpad sequencer](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/first-launchpad-sequencer.png)"
+![First launchpad sequencer](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/first-launchpad-sequencer.png)
 
 The sequencer is now the steps abstraction and the first argument tells it how many steps we want to have. The basic metro clock is still there, entirely unchanged. The launchpad_io abstraction now takes the channel as an argument as well. All simple and a bit dull.
 
-![Improved launchpad IO](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/improved-launchpad-IO.png)"
+![Improved launchpad IO](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/improved-launchpad-IO.png)
 
 The launchpad IO now just deals with outputting the MIDI in messages and sending the MIDI out messages. All IO goes through a single inlet or outlet and all messages are prefixed with either grid, mode or ctl to show where it's from or going to. There's also the reset option available which sends the clear message.
 
-![Updated step sequencer](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/step-sequencer.png)"
+![Updated step sequencer](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/step-sequencer.png)
 
 The step sequencer now has a bit more functionality. It takes the input direct from the launchpad and pulls out the grid and mode button messages. The mode messages control which track we are updating and do that by pre-pending the track name onto the front of the grid message. The tracks then route for this as they do normally. Note the spigot on the mode section, this is there so that only button on messages get through. We don't actually care about button off messages here so we just stop them coming through.
 

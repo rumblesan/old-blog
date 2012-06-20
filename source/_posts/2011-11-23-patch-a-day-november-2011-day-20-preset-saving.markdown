@@ -18,11 +18,11 @@ Preset saving, done the simple way.
 
 Well, maybe not that simple, this isn't some magical system that can be used like MaxMSP's autopattr system, but it should give a fair degree over the saving, loading and control of presets in PD. I've dug out the synth voices patch from Day 3 again and I'm going to be modifying the control abstraction so that that also stores the presets. This should again show that a nicely arranged and abstracted patch is a good thing which allows you to modify and extend without messing things around. Have a look at the main section of it.
 
-![Control abstraction with presets](/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/control-abstraction-with-presets.png)"
+![Control abstraction with presets](/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/control-abstraction-with-presets.png)
 
 All that's actually added here is a couple of extra control, a loadbang to set the preset number and a small subpatch called preset. It's the internals of this that are what's interesting.
 
-![Preset saving patch](/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/preset-saving-patch.png)"
+![Preset saving patch](/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/preset-saving-patch.png)
 
 First things first, the section on the right is there to create the ten scalars we'll be saving our preset values in. At the moment this clears the window on start up and creates ten new scalars. This isn't really that useful if we want to have our presets saved with the patch itself, but this is just temporary while we build it so ignore it for now.
 

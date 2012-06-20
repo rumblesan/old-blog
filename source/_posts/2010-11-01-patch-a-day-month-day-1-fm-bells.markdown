@@ -21,7 +21,7 @@ So I've decided that November is going to be Patch-a-day month for Pure Data. Ev
 
 
 
-![FM Bells](/a/2010-11-01-pure-data-patch-a-day-month-day-1/01-Bells.png)"
+![FM Bells](/a/2010-11-01-pure-data-patch-a-day-month-day-1/01-Bells.png)
 
 This is a pretty simple patch using standard FM stuff but with a bit of a twist. There are three example sounds here, the arguments that get unpacked being:-
 

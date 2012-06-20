@@ -28,7 +28,7 @@ My take on things will be a tad different but the core principle is still going 
 
 So here's a pretty basic patch that gives us somewhere to start from.
 
-![Basic PDRene patch](/a/2011-10-11-imitation-flattery-and-modular-synths/pdrene_basic.png)"
+![Basic PDRene patch](/a/2011-10-11-imitation-flattery-and-modular-synths/pdrene_basic.png)
 
 A quick rundown of the four sections.
 
@@ -81,7 +81,7 @@ Here's the UI of the sequencer, I'll detail the internals in another post.
 
 
 
-![PDRene Diff Sequencer ver 1](/a/2011-10-11-imitation-flattery-and-modular-synths/pdrene_diff_seq.png)"
+![PDRene Diff Sequencer ver 1](/a/2011-10-11-imitation-flattery-and-modular-synths/pdrene_diff_seq.png)
 
 
 

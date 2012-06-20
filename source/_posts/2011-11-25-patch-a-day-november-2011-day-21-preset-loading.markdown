@@ -16,7 +16,7 @@ comments: true
 
 And now for the patch to load values out of the saved preset and into our settings. This might seem a little under whelming because there's not much to it, but a lot of the work was already done by the infrastructure already in place.
 
-![Preset value loading](/a/2011-11-25-patch-a-day-november-2011-day-21-preset-loading/preset-loading.png)"
+![Preset value loading](/a/2011-11-25-patch-a-day-november-2011-day-21-preset-loading/preset-loading.png)
 
 I made a change to the previous section so that the pointer values won't be calculated until you hit the load or save buttons. Otherwise you're just adding in a bit of needless overhead.
 

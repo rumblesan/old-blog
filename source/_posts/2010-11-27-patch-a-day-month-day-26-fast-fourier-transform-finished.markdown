@@ -24,11 +24,11 @@ Finally, I have some interesting FFT based patches for you, and they're pretty c
 
 First up, a graphical EQ using the Fourier Transform to split the incoming signal into multiple frequency bands. The blocksize used is 512 so we have 256 frequency bands to play with. All that we need to do is create an array of 256 values and and then use a tabreceive~ to pull the data out of the EQ array and multiply the frequency data.
 
-![A Fourier transform based Graphical EQ](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTGraphicEQ.png)"
+![A Fourier transform based Graphical EQ](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTGraphicEQ.png)
 
 Here you can see the main patch with the EQ array, which I've cleaned it up a bit so the enveloping and FFT stuff are in subpatches. There's a noise source and I've also used some of the FM synthesis stuff from a patch earlier this month. Here's the subpatch doing the FFT parts but there's really not much of a change.
 
-![FFT based Graphical EQ internals](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTGraphicEQSubPatch.png)"
+![FFT based Graphical EQ internals](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTGraphicEQSubPatch.png)
 
 It literally is as simple as that! I think it's worth spending a moment to point out how the multiplying together of the audio data happens here however.
 
@@ -36,11 +36,11 @@ The data out of the FFT is, as far as PD is really concerned, exactly the same a
 
 So with that bit of basics explained, have a look at the spectral delay. This is very simple as well, the only control is delay time, no feedback or dry/wet but it's really not hard to add them in if you want.
 
-![FFT based Spectral Delay](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTSpectralDelay.png)"
+![FFT based Spectral Delay](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTSpectralDelay.png)
 
 The main part of the patch looks almost exactly the same as the graphical EQ, the only differences being that the big array is now called Delay, and it's values go between 0 and 100. the subpatch is where the new magic happens.
 
-![FFT based Spectral Delay internals](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTSpectralDelaySubPatch.png)"
+![FFT based Spectral Delay internals](/a/2010-11-27-patch-a-day-month-day-26-fast-fourier-transform-finished/26-FFTSpectralDelaySubPatch.png)
 
 The data output from the initial Fourier Transform is written to two delay lines, one for each data stream. The tabreceive this time reads the data from the tab, but it then runs it through some basics maths. We are using it to control the variable delay for each frequency bin, but we want to be making sure that the data for a given frequency bin stays in that frequency bin, otherwise we will get pitch shifting (which could be cool but it's not what we're after right now).
 

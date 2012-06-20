@@ -37,17 +37,17 @@ At this point I feel I should point out the formula of [Euler](http://en.wikiped
 
 Things should get even clearer when I say that what our rfft~ object is actually spitting out are these pairs of Sin and Cos values. This means that we can go back and modify our previous patch and we can get accurate data to show us the magnitude and phase of all our frequency bins.
 
-![FFT Patch correctly displaying Magnitude and Phase data](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTContinued-1.png)"
+![FFT Patch correctly displaying Magnitude and Phase data](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTContinued-1.png)
 
 It's worth pointing out quickly that I'm using the atan~ object from the cyclone library to calculate the phase data here because otherwise there's just too much fiddly coding to get what we need. To try and show this all a little better I've modified it further so that the phase of the oscillator can be changed and the range on the graphs is a little clearer.
 
-![Further modified FFT patch to show phase data more clearly](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTContinued-2.png)"
+![Further modified FFT patch to show phase data more clearly](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTContinued-2.png)
 
 The final thing I will talk about tonight is the idea of windowing and the reasons for it. I've already talked about it and used it with the granular synth so this shouldn't have any surprises. If you look at the frequency plot when you have a frequency that should fit exactly in the bins you can see it spilling over into other bins somewhat. This is because when we pull our 64 bits of data out to analyse we are adding other harmonics into it due to the clipping. The example to give here is that of a square wave, which has many more harmonics than a sine wave. Because we may be taking a sample that is midway through a waveform, we are probably clipping that waveform off at a non zero value, which leads to square wave like edges at the start and end of our sample which can add other harmonics in.
 
 To help counteract this we can envelope the samples as we take them in to smooth off these edges.
 
-![FFT Analysis patch with Hanning Window](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTWithHannWindow.png)"
+![FFT Analysis patch with Hanning Window](/a/2010-11-25-patch-a-day-month-day-24-fast-fourier-transform-continued/24-FFTWithHannWindow.png)
 
 The envelope is exactly one cycle of a sin wave, offset by one and this time it fits into 64 samples, our blocksize. The tabreceive~ object reads exactly one block of data out, matching the 64 sample length, and modulates the output of the oscillator with it. Every block that the rfft object now reads will start and end with a zero value.
 

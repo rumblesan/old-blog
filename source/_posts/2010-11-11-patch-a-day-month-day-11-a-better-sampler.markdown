@@ -22,7 +22,7 @@ So today I'm extending yesterdays patch by adding a few basic controls. Still no
 
 
 
-![Better Sampler](/a/2010-11-11-patch-a-day-month-day-11-a-better-sampler/11-BetterSampler.png)"
+![Better Sampler](/a/2010-11-11-patch-a-day-month-day-11-a-better-sampler/11-BetterSampler.png)
 
 First things first, I've changed to a simple line~ object from the vline~ and now whenever the bang is hit it will automatically set the line~ value to go to zero. Makes things a bit easier to use.
 

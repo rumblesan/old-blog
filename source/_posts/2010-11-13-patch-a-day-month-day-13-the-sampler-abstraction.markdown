@@ -22,7 +22,7 @@ So here it is, a bit earlier than usual because I'm going out tonight so needed 
 
 
 
-![Sampler Abstraction](/a/2010-11-13-patch-a-day-month-day-13-the-sampler-abstraction/13-SamplerAbstraction1.png)"
+![Sampler Abstraction](/a/2010-11-13-patch-a-day-month-day-13-the-sampler-abstraction/13-SamplerAbstraction1.png)
 
 So only a couple changes really from the last version. I'm now using more send and receive objects to keep things neat and using the $0 argument to make sure that messages sent stay within the abstraction. Same goes for the array I'm using to keep the sample data in. The start and finish offsets are done in a similar way, just modifying the number of samples that will get played back, but I'm now having the start point saved in an int object and then sent to the line whenever the sample is reset. Currently it's being a bit funny however. The speed of the playback should stay the same for shortened samples but it isn't, I'll need to improve that once I've figured out why.
 

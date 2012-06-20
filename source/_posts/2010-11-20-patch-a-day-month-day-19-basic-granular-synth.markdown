@@ -26,13 +26,13 @@ Much of today's patch will look like the sampler abstraction and that's because 
 
 
 
-![Basic Granular Synth](/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-BasicGranularSynth.png)"
+![Basic Granular Synth](/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-BasicGranularSynth.png)
 
 So really there's nothing here, the important stuff is in the GrainPlayer abstraction but it's worth pointing out how I'm doing some of the maths here. The start position is specified as a percentage position of the total file length, as is the grain length. (Please note, I've realised that there is a mistake in the patch and there should be a divide by 100 object on the length section. I'll get that fixed later..... probably.)
 
 One of the things I will be adding later are a few LFOs that will modulate the length, speed and position of the grains that are being played. The issue with this is that if you choose a section of the sample to use as a grain that starts or ends too close to the start or end of the sample, the LFOs can end up hitting that limit. To get around this I've decided that a grain cant have a starting position in the first or last five percent of the main sample and it cant be longer than four percent of the sample length.
 
-![Basic Grain Player](/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-GrainPlayer.png)"
+![Basic Grain Player](/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-GrainPlayer.png)
 
 The grain player is really just like our sample player abstraction, except that here we use a phasor~ instead of a line. In truth this is a much better way of doing things and I should revisit the sampler to improve it. The length specified is the length of the grain section to play back. Because this is specified in samples, we need to convert it to a frequency to pass to the phasor~. This is done by dividing 44100 by the length value. This value can also be multiplied by the speed value at this point.
 

@@ -24,7 +24,7 @@ So todays patch is a bit complex straight off the bat but its not too difficult 
 
 The patch looks messy because of all the links going everywhere but really, the middle section is four versions of the same thing.
 
-![Markov Numbers](/a/2010-11-02-patch-a-day-month-day-2-markov-numbers/02-MarkovNumbers.png)"
+![Markov Numbers](/a/2010-11-02-patch-a-day-month-day-2-markov-numbers/02-MarkovNumbers.png)
 
 You can think of each of the four middle sections as separate nodes arranged in a ring. When each node fires, it can chose one of two states, when it transitions to one of these states it sends out a value that will change the current output value, and it triggers either the next or previous node on the ring.
 

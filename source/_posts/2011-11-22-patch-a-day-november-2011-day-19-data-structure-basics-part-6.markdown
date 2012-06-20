@@ -17,7 +17,7 @@ Arrays in data structures are a little tricky it seems. Not too tricky, but they
 
 Anyway, there are three new objects to use with data structure arrays, setsize and getsize should be pretty obvious, element maybe not so much. Have a look at the patch and I'll go through what's going on.
 
-![Array manipulation in data structures](/a/2011-11-22-patch-a-day-november-2011-day-19-data-structure-basics-part-6/array-data-structure.png)"
+![Array manipulation in data structures](/a/2011-11-22-patch-a-day-november-2011-day-19-data-structure-basics-part-6/array-data-structure.png)
 
 There are now two templates in the patch, each of which contains a struct. The first struct is called struct 1, it defines a float field called a, and an array field called array1. When defining an array it's necessary to give a third argument which is the name of a struct that will hold the array information. That second struct is held in the second template, is called testarray and has a single field, y.
 

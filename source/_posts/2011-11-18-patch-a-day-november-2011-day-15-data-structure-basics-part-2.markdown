@@ -19,7 +19,7 @@ I've also realised that, unlike last time I did the patch a day month, I have a 
 
 Anyway, onto the patch for tonight. Getting data from specific positions in a data structure list.
 
-![Getting specific values from a data structure](/a/2011-11-18-patch-a-day-november-2011-day-15-data-structure-basics-part-2/getting-specifics.png)"
+![Getting specific values from a data structure](/a/2011-11-18-patch-a-day-november-2011-day-15-data-structure-basics-part-2/getting-specifics.png)
 
 The left hand side is the template, struct and data window which should be familiar to you now. The right hand section can be used to automatically fill a data structure list with some data. It sets the pointer to the head of the list and sends it to the append object. Then it increments a counter using the until object and gives each of these values to the append as data, quickly filling it up.
 

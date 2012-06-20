@@ -18,13 +18,13 @@ I had a request from a friend of mine on Google+ the other night for an example 
 
 The problem with randomising a list in PD is still that we can't really address specific elements of a list. We can however, split it at arbitrary points, pull out a single element and then rejoin the other sections. If the point at which the list gets split is randomised then we have an effective way of pulling random elements out. Have a look at the below patch to see how this works.
 
-![Random list element chooser](/a/2011-11-07-patch-a-day-november-2011-day-7-list-processing-part-4/random-list-element.png)"
+![Random list element chooser](/a/2011-11-07-patch-a-day-november-2011-day-7-list-processing-part-4/random-list-element.png)
 
 Split the list into two sections at a random point, use another split to pull the first item off the beginning of the second list, then rejoin these two sections of list. This results in a list with one less item and the random item. The randomisation is based off the length of the input list so it will always be in the correct range. If it selects the highest value then the second list section will be 1 element in length and that single element will be popped by the second split. If it selects the lowest, then the first half of the list will be empty (just a bang remember) but it will join fine with the other half.
 
 Now we can do this it's just a matter of returning the smaller list back to the input and storing the randomly chosen item to be joined into a new list.
 
-![Randomise list](/a/2011-11-07-patch-a-day-november-2011-day-7-list-processing-part-4/randomise-list.png)"
+![Randomise list](/a/2011-11-07-patch-a-day-november-2011-day-7-list-processing-part-4/randomise-list.png)
 
 Each of the randomly selected items is send to a section of objects that will recursively add them to the previous output values. This gets reset when a new list is entered to make sure there's nothing stored between parsing lists.
 

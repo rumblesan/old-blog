@@ -23,7 +23,7 @@ Turns out it works, really very well, so I decided I'd write it up for tonight s
 
 
 
-![Karplus-Strong String synthesis](/a/2010-11-13-patch-a-day-month-day-12-karplus-strong-strings/12-KarplusStrongString.png)"
+![Karplus-Strong String synthesis](/a/2010-11-13-patch-a-day-month-day-12-karplus-strong-strings/12-KarplusStrongString.png)
 
 For something surprisingly basic this does a really good job, the principle behind it is that you have a very short delay with a high feedback and a filter in the feedback loop. You send a brief pulse of noise into the delay chain and the output sounds very much like a string. It turns out that this is actually a pretty good model of how a real string behaves and that there are quite a few variables that can be played with to vary the sound.
 

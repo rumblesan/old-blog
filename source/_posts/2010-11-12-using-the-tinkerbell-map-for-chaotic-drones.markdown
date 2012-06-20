@@ -26,7 +26,7 @@ On the [Big List Of Chaotic Maps](http://en.wikipedia.org/wiki/List_of_chaotic_m
 
 
 
-![A 2D plot of the Tinkerbell Map](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerBellMap.gif)"
+![A 2D plot of the Tinkerbell Map](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerBellMap.gif)
 
 So the first thing to do was to create an abstraction with the equations in. This was a bit easier and neater than for the Lorenz Attractors mostly because there's less of it but also because the equations themselves don't get too complex. Also note, I'm trying out the [QuickLatex](http://quicklatex.com/) plug-in here for doing my equations, which hopefully looks OK.
 
@@ -38,13 +38,13 @@ $ y_{n+1}=2x_ny_n+cx_n+dy_n $
 
 These translate pretty easily into this.
 
-![Tinkerbell Map Equation abstraction](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellEquations.png)"
+![Tinkerbell Map Equation abstraction](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellEquations.png)
 
 All the values can be set as creation arguments to make life easier which means that you just need to send a bang in and you get the numbers out. Also having learnt from the Lorenz Equations abstraction just how untidy these things can get I used sends and receives for the feedback. I also added in a reset inlet that just sets the X and Y values back to their original values.
 
 The final patch itself is also pretty simple to look at because all the complex bits are abstracted into here.
 
-![Tinkerbell's Hymn patch](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellsHymn.png)"
+![Tinkerbell's Hymn patch](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellsHymn.png)
 
 I've used the simpleFM abstractions again to keep things neat. The output values from the patches get multiplied and then used for the frequency and modulation ratio of the FM voices. In retrospect I think I need to spend a bit more time choosing better ranges for this and I suspect this is where most of the work with this current patch lies but I'm leaving it as something to investigate in future. Each map actually controls two different voices with alternating outputs and the results of these are panned hard left and hard right. The idea is that by giving the two mappings slightly different values, over the time frequencies and timbres of the left and right channel will begin to differ and the stereo field will become wider and more interesting.
 

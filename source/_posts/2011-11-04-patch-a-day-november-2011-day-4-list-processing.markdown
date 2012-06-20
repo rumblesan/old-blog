@@ -69,7 +69,7 @@ With these things in mind, lets have a look at the first patch that just simply 
 
 
 
-![List serialiser](/a/2011-11-04-patch-a-day-november-2011-day-4-list-processing/list-serialise.png)"
+![List serialiser](/a/2011-11-04-patch-a-day-november-2011-day-4-list-processing/list-serialise.png)
 
 
 
@@ -99,7 +99,7 @@ Nothing spectacular but what we're doing here is pretty important for the rest o
 
 Scaling this idea up a little it can be used to interleave two lists together. By that I mean that we can join two lists so that they are merged into one another, with the single elements from each list following the other. Probably best to explain with an example, if we have **1 2 3 4 5** and **a b c d e** then after the process we would have **1 a 2 b 3 c 4 d 5 e**. That's exactly what the next patch does.
 
-![List interleaver patch](/a/2011-11-04-patch-a-day-november-2011-day-4-list-processing/list-interlever1.png)"
+![List interleaver patch](/a/2011-11-04-patch-a-day-november-2011-day-4-list-processing/list-interlever1.png)
 
 This patch talks about main list and sub list. To follow on from the above example, main list is **1 2 3 4 5** and sub list is **a b c d e**. The top left is just a bit of logic to make sure the sub list is in place before the main list starts the process running. The two groups of objects in the top centre are the list split feedback loops that serialise a list. These are setup so that a bang message can be sent to the get-next receive objects to get the next element. Also there's a route bang and a send $0-done. When there are no more elements in the main list we assume that everything is finished and the lists are interleaved.
 

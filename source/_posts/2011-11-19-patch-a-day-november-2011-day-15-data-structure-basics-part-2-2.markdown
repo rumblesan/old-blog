@@ -17,7 +17,7 @@ I almost think that tonight's patch and last nights should have been rolled toge
 
 This time I'm looking at the set object, but in truth there's really not much too it.
 
-![Setting values for specific data structure items](/a/2011-11-19-patch-a-day-november-2011-day-15-data-structure-basics-part-2-2/setting-specifics.png)"
+![Setting values for specific data structure items](/a/2011-11-19-patch-a-day-november-2011-day-15-data-structure-basics-part-2-2/setting-specifics.png)
 
 The set object is located at the bottom of the patch and is really just a slightly modified version of the get section. The until object gets given a value, it increments the pointer to that position in the data structure list and then the value can easily be updated. This idea of incrementing pointers to get to specific places in a data structure is pretty important to grasp I feel.
 

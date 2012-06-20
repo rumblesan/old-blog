@@ -23,7 +23,7 @@ So day fifteen is here and I am officially half way through patch a day month.
 
 
 
-![Kick Drum Rhythm Generator](/a/2010-11-15-patch-a-day-month-day-15-rhythm-generator/15-RhythmGenerator.png)"
+![Kick Drum Rhythm Generator](/a/2010-11-15-patch-a-day-month-day-15-rhythm-generator/15-RhythmGenerator.png)
 
 So there's quite a bit going on here but it's pretty simple to break down. First things, have a look at the section on the left that starts at the trigger object by "Inner loop start" and ends down by the "Inner loop end" comment. We have an until object with a counter that gets started by a value of 6 which feeds into a tabread a bit further down. We also have the two tables on the right, timeprob1 and timeprob2. Forget for the moment there are two tables, we'll come back to them later, the important thing is that the tabread will read the values from these tables based on the output of the counter.
 

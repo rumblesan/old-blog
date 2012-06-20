@@ -19,11 +19,11 @@ Just a shortish one today, Yesterday I said that the step sequencer we'd built w
 
 First things, we only want note on grid messages, that can be fixed with a spigot in the main sequencer patch.
 
-![Sequencer only accepts note on grid messages](/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/sequencer-nnote-off-grid.png)"
+![Sequencer only accepts note on grid messages](/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/sequencer-nnote-off-grid.png)
 
 Note off messages will now get blocked and won't go through to the track abstractions.
 
-![Track abstraction now checks current value](/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/track-abstraction-that-checks-current-value.png)"
+![Track abstraction now checks current value](/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/track-abstraction-that-checks-current-value.png)
 
 There's a few less objects in the track abstraction now but a few new ones as well. The biggest change is that the input is now actually only a single number. This number is used to calculate the pointer to the step position as normal, but it then gets sent to a get object as well as the set object. The abstraction will now check the current value in the data structure at that step and then update it with the opposite value, so we've successfully toggled the value in the data structure.
 

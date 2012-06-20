@@ -24,7 +24,7 @@ So I've extended the patch from last night with a few more sounds and another de
 
 
 
-![More Delay Fun](/a/2010-11-09-patch-a-day-month-day-9-more-fun-with-delays/09-MoreDelayFun.png)"
+![More Delay Fun](/a/2010-11-09-patch-a-day-month-day-9-more-fun-with-delays/09-MoreDelayFun.png)
 
 The image of the patch is pretty big now so click on it to see everything. I spent some time cleaning it up so it's a bit easier to follow and figure out.
 

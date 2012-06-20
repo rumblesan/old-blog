@@ -24,7 +24,7 @@ So the extension to yesterdays rhythm generator is here, and I'm pretty pleased 
 
 
 
-![Rhythm Generator with Kick and Snare](/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-RhythmGeneratorKickSnare.png)"
+![Rhythm Generator with Kick and Snare](/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-RhythmGeneratorKickSnare.png)
 
 So the first thing to notice is that the patch is a bit clearer thanks to moving most of the code into sub patches. The parts from yesterday that generate the kick patterns are mostly untouched inside the kickgen subpatch. I've moved the messages to clear the pattern tables and the snarechance table into the cleartabs subpatch and the kickgen subpatch itself just outputs the values we need to set to 1 in the pattern table.
 
@@ -32,7 +32,7 @@ When a value is sent out it also gets sent to the group of objects on the right.
 
 The snaregen subpatch holds the rest of the magic here but is probably pretty obvious at this point.
 
-![Snare Pattern Generator](/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-SnareGen.png)"
+![Snare Pattern Generator](/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-SnareGen.png)
 
 This is pretty much reusing code from the kickgen patch. An until object is used to count up from zero to 31, pull the values out of a table and compare them to a random number. If the random number is smaller than the table data then pack a one in with the index value, otherwise pack in a zero. This data gets written directly to the snarepattern table and then the sequencer on the left plays it back.
 

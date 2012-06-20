@@ -24,7 +24,7 @@ So This might be a bit of a cop out but I'm currently writing this on Tuesday ni
 
 
 
-![Live Coding Practise 16-11-2010](/a/2010-11-18-patch-a-day-month-day-18-live-coding-practise/16-11-2010.png)"
+![Live Coding Practise 16-11-2010](/a/2010-11-18-patch-a-day-month-day-18-live-coding-practise/16-11-2010.png)
 
 The first parts to be built were the three counters in the upper left, duplicate three of them and I've got a sequencer of some sort to build off.
 

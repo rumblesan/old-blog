@@ -25,7 +25,7 @@ I've created the LFOs in a subpatch so I'll just show that for today.
 
 
 
-![Granular Synth LFOs](/a/2010-11-21-patch-a-day-month-day-21-granular-synth-lfos/21-GranSynthLFOs.png)"
+![Granular Synth LFOs](/a/2010-11-21-patch-a-day-month-day-21-granular-synth-lfos/21-GranSynthLFOs.png)
 
 So all the LFOs are the same here, a simple sin wave that will modify the values it's patched in to. The important thing to remember is that we can't design these based on knowing what the value they need to modify will be so for this reason the initial values are multiplied by the LFO, instead of having it add its value to them. This raises the new problem that we cant have the LFO reach a zero value, otherwise we end up with a grain that won't play because its speed is zero, or it's trying to play back no samples.
 

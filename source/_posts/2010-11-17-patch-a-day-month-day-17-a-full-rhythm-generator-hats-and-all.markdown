@@ -24,7 +24,7 @@ So the hats have now been added on and this patch is nearing a first phase of co
 
 
 
-![Full Rhythm Generator](/a/2010-11-17-patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/17-FullRhythmGenerator.png)"
+![Full Rhythm Generator](/a/2010-11-17-patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/17-FullRhythmGenerator.png)
 
 So firstly, I'll point out the new stuff. We have two new tables, hatpattern and hat chance, a new message that sets up the hatchance table, a new subpatch called hatgen and then the playback section reading from hatpattern. This should all seem familiar from the snare generation and realistically it's much the same. The difference comes in how the hatchance table is created.
 

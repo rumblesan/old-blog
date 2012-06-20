@@ -27,17 +27,17 @@ When I looked further in to how people have used fractals in music, it seems tha
 
 The result of the first try was this patch.
 
-![A patch to try and create an audio fractal](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal1.png)"
+![A patch to try and create an audio fractal](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal1.png)
 
 A simple FM synth with the output being fed back into the input through a long delay was the starting point I chose. The output is multiplied to get it into a greater range and then used to modulate the initial frequency, the idea being that the system will iterate through this process, possibly arriving at an interesting tone, possibly just carrying creating interesting patterns. I haven't explored this as far as I would like but I feel that the possibilities of finding something surprising are high.
 
 I made two extensions to this, after finding that manually playing with the frequency parameter to generate a quickly changing frequency created more chaotic patterns as it fed back. I also tried playing with the delay size but found that this gave less interesting results.
 
-![An extension to the audio fractal patch](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal2.png)"
+![An extension to the audio fractal patch](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal2.png)
 
 The final extension was to have the original frequency control for the synth be removed after the random tones had been put into the system meaning that the whole thing was running just off the first sounds. This seems to make the output take a bit longer before it turns into a constant drone sound. The examples that I found all eventually become a fairly constant sound but there is quite a bit of movement within it. I don't know if this really qualifies it as the self similarity that you might look for in a fractal but it is interesting to hear the points of equilibrium.
 
-![Final extension to original audio fractal patch](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal3.png)"
+![Final extension to original audio fractal patch](/a/2010-11-30-patch-a-day-month-day-30-audio-fractals/30-AudioFractal3.png)
 
 I want to keep exploring the possibilities here. I'm sure that with a bit more tweaking and experimenting this pretty basic patch will turn up some interesting results. I'm going to be building more patches like this, trying to find a good balance between simplicity of the patch and complexity required to make the sort of sounds I'm hoping for. This will definitely be an ongoing thing.
 

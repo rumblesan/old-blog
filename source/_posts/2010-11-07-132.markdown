@@ -22,7 +22,7 @@ So the extension from yesterday is pretty simple but it helps round it out quite
 
 
 
-![Generative Drum Sequencer with sounds](/a/2010-11-07-132/07-GenerativeDrums.png)"
+![Generative Drum Sequencer with sounds](/a/2010-11-07-132/07-GenerativeDrums.png)
 
 So same as yesterday really but I've tacked on the kick, snare, hat and 'blip' objects so I can actually hear what the rhythms are like. The answer is 'pretty naff' but It's a start. The download for the patch is [here](/a/2010-11-07-132/07-GenerativeDrums.zip) so go grab it and have a look around. The drum sounds aren't anything amazing, but I'll probably have a post going over them soon.
 

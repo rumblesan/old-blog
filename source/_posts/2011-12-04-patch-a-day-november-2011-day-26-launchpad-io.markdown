@@ -16,7 +16,7 @@ comments: true
 
 I said I'd do this once I'd done a bit more work on the sequencer, but I realised that it's probably a better idea to get this done first as it will make testing much easier. This patch is really just taking the MIDI input from the launchpad, formatting it into messages that are easier to deal with, and then translating our simple messages back into correct MIDI for us to send back out to it. As a quick refresher, here's what the Launchpad looks like.
 
-![Novation Launchpad](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad.jpg)"
+![Novation Launchpad](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad.jpg)
 
 During these posts, I'll refer to three sections of the button layout. The eight buttons on the top row are the control buttons, the eight down the right hand side I call the mode buttons, and the 8*8 grid is the grid. Explaining that should make it easier to follow what I'm talking about.
 
@@ -24,7 +24,7 @@ The input from the Launchpad for these is pretty basic, but it's not as easy to 
 
 One other thing to note, the input values from all button presses are either 0 or 127, either as note velocity or controller value. For input I find it much easier to just deal with 0 or 1 for button presses, output we actually need to use certain values to set the colours but that can be simplified easily enough. Here's the patch as it currently looks.
 
-![Launchpad IO](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad-IO.png)"
+![Launchpad IO](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad-IO.png)
 
 Top left is dealing with grid and mode note in values. Straight out of the notein object I've already converted the velocity values to 0 or 1 and the notein object itself is filtering for midi channel 1. This is the channel my Launchpad appears under in PD though it might be different depending upon what's plugged in. When I turn this into an abstraction, all the channel messages will be an abstraction argument to make integration easier.
 
@@ -36,7 +36,7 @@ The output sections basically do this in reverse. One thing to note is that I've
 
 The right hand side is just to take our input messages and convert them into output messages so the patch can be tested with a launchpad. The clr abstraction gives an easy way to set the output velocities/ctl values so we can select the colour we want on the launchpad. Internally they;re pretty simple.
 
-![Launchpad colour abstraction](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/colour-abstraction.png)"
+![Launchpad colour abstraction](/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/colour-abstraction.png)
 
 The creation argument will set a default value, or the right inlet can be used to select and change it. The incoming value gets multiplied by the selected value so note off messages are still zero when they go out. The colours are red low, red full, amber low, amber full, yellow, green low and green full. I've just realised that technically all output to the launchpad should always be the off value (12) due to the internal buffering and so on it has available, I'll need to check that out, but for the moment, have a play around with this if you have a Launchpad and see how it works.
 

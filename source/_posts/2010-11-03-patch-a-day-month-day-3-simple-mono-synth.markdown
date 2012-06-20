@@ -21,7 +21,7 @@ So tonights patch is a small quick one because I'm running late for "Real World 
 
 
 
-![Mono Synth](/a/2010-11-03-patch-a-day-month-day-3-simple-mono-synth/03-MonoSynthVoice.png)"
+![Mono Synth](/a/2010-11-03-patch-a-day-month-day-3-simple-mono-synth/03-MonoSynthVoice.png)
 
 The noise making part of this patch is the line~ object feeding the phasor~ oscillator. The line gets fed a list with a number it needs to reach and a time in which to reach it and this gives us some nice 303 style slides when moving between notes. The phasor~ feeds into a multiplier and then a clip object so we can vary the distortion on it and change the tone of the sound. The envelope generation is another line~ object which gets a bang to trigger the increase and has a variably delayed bang to trigger the decrease.
 

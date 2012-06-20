@@ -23,13 +23,13 @@ So the granular synth posts continue as I build up this noisy machine. It's near
 
 
 
-![Granular Synth with Grain Randomisation](/a/2010-11-22-patch-a-day-month-day-22-granular-synth-with-grain-randomisation/22-GranSynthWithRand.png)"
+![Granular Synth with Grain Randomisation](/a/2010-11-22-patch-a-day-month-day-22-granular-synth-with-grain-randomisation/22-GranSynthWithRand.png)
 
 So I've spent a bit of time just cleaning up the interface, part of that has been using the receive-symbol options in all the number objects so that the loadbang and message on the right can set values for the controls when the patch loads. I've also pulled the LFO controls out of the sub-patch so they're easily accessible.
 
 The new stuff is the Rand controls and the multiple grains that are there now. The GrainPlayer abstraction now has randomising functionality on a per-grain basis. This means that when randomised the grains will be playing slightly different sample sections at slightly different speeds which results in a very interesting sound. This is implemented in a similar way to the LFOs.
 
-![Grain Player with Parameter Randomisation](/a/2010-11-22-patch-a-day-month-day-22-granular-synth-with-grain-randomisation/22-GrainPlayerWithRand.png)"
+![Grain Player with Parameter Randomisation](/a/2010-11-22-patch-a-day-month-day-22-granular-synth-with-grain-randomisation/22-GrainPlayerWithRand.png)
 
 The grain speed and grain start parameters are both being modified but this time our source is a noise~ object. When the startRand or speedRand buttons are pressed we take a snapshot of the noise, this gets multiplied by 0.9 to set the absolute limits, then multiplied by the modulation amount and finally offset to centre around a value of one. This results in all our grains having a differing value for their speed and/or grain starting position, but all centring around the chosen global value.
 

@@ -20,7 +20,7 @@ Right, back on track, mostly recovered from an active weekend and have cracked g
 
 Here, as promised, is an abstraction that will generate Euclidean Rhythmic sequences when given a number of beats and the measure length.
 
-![Euclidean rhythm abstraction](/a/2011-11-13-patch-a-day-november-2011-day-10-euclidean-rhythms-part-3/Euclidian-rhythm-abstraction.png)"
+![Euclidean rhythm abstraction](/a/2011-11-13-patch-a-day-november-2011-day-10-euclidean-rhythms-part-3/Euclidian-rhythm-abstraction.png)
 
 There have been a few changes since the patch earlier this week and I spent a bit of time wrestling to clear up some awkward bugs that were difficult to track down because of all the recursion here.
 

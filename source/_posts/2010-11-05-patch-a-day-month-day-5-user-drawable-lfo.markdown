@@ -20,7 +20,7 @@ This patch is a pretty simple one, but it's a pretty useful one and introduces a
 
 
 
-![User Drawable LFO](/a/2010-11-05-patch-a-day-month-day-5-user-drawable-lfo/05-DrawableLFO.png)"
+![User Drawable LFO](/a/2010-11-05-patch-a-day-month-day-5-user-drawable-lfo/05-DrawableLFO.png)
 
 So the important part here is the tabread4~ object and the graph. The graph has 100 points in it with values ranging between -1 and 1, the tabread is set up to read the values out of the graph. The phasor~ object will output a value between 0 and 1 which we multiply by 100 so that we can plug it straight into the tabread4~ and it will run through all the elements there. the output of the tabread4~ gets run through some maths so that it ends up going between 0 and 1.
 

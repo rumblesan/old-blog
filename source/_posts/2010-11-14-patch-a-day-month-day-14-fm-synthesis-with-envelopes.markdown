@@ -22,7 +22,7 @@ So I'm revisiting the very first patch I made with the FM synthesis stuff. This 
 
 
 
-![FM Synthesis with envelopes](/a/2010-11-14-patch-a-day-month-day-14-fm-synthesis-with-envelopes/14-FMSynthEnvelopes.png)"
+![FM Synthesis with envelopes](/a/2010-11-14-patch-a-day-month-day-14-fm-synthesis-with-envelopes/14-FMSynthEnvelopes.png)
 
 So the obvious addition is the four arrays that are present, easily called env1, env2, env3 and env4. I've removed the clip object for the moment and I've also hard coded the modulation amount to 0.9 just to have less other stuff going on.
 

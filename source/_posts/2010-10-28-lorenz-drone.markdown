@@ -22,7 +22,7 @@ Chatting with a friend the other day, he mentioned that he was currently bored a
 
 
 
-![3D Lorenz Plot](http://en.wikipedia.org/wiki/Lorenz_equations)"
+![3D Lorenz Plot](http://en.wikipedia.org/wiki/Lorenz_equations)
 
 Of course, now I have this blog that I'm trying to keep updated with interesting, algorithmic noise stuff so it seemed like a pretty good chance to spend some time exploring what I could do with the equations.
 
@@ -46,13 +46,13 @@ where the usual values are sigma = 10, rho = 28 and beta = 8/3 if you want to ge
 
 I decided to implement the whole thing in Pure Data because it's the language that I'm most comfortable with but I want to make the same patch again in SuperCollider to help contrast working with the two languages and as a learning exercise. Hopefully I'll have that up soon enough. First I had to create the Lorenz Equations in a patch. I'm trying to just stick to vanilla objects for both portability and learning reasons here so while the expr object available in PD-Extended would have made the resulting abstraction much neater to look at, I've pulled it apart into all the multiplies, adds and subtracts. Here is the abstraction with the equations.
 
-![Lorenz Equations Abstraction](/a/2010-10-28-lorenz-drone/LorenzEquationsAbs.png)"
+![Lorenz Equations Abstraction](/a/2010-10-28-lorenz-drone/LorenzEquationsAbs.png)
 
 It's important to note that these equations calculate the change in position with respect to time, which means we have to pick a time period to use and we then have to add the calculated value onto the original value. It took me a little while to realise that I'd need to calculate the values in small increments because of this. My calculus skills have faded quite a bit in the last few years it seems. For this reason, once we have the values from the equations we have to multiply it by a small value (I chose 0.01 in the example patch) then add on the previous value. The abstraction I created does all of this and the creation arguments make it simple to use and tweak as needed.
 
 This is the main bulk of the patch, other than this the only other abstraction is a patch for doing some basic FM synthesis. It's based on the simpleFM patch from the MaxMSP tutorials with three inputs, one for the carrier frequency, one that's the harmonicity value and one for the modulation amount. There are three Lorenz abstractions, two of which control the FM synths and a third that controls the resonance and frequency of a low pass filter, as well as having control over the speed of the metro that keeps the patch going.
 
-![Lorenz Drone](/a/2010-10-28-lorenz-drone/LorenzDroneMain.png)"
+![Lorenz Drone](/a/2010-10-28-lorenz-drone/LorenzDroneMain.png)
 
 I was hoping that this would help to add some movement to the sound and it exceeded my expectations massively. Listening to it the sound veers between harsh and smooth and the filter and speed variance means that it can crescendo and diminish with little warning. It's very rough around the edges but for a first attempt I'm very pleased. I fully expect that there will be improvements but for the moment I'll leave it.
 

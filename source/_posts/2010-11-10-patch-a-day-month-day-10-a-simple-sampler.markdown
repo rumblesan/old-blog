@@ -22,7 +22,7 @@ So I started reading up on the Fourier Transform stuff today, and quickly reali
 
 
 
-![Simple Sampler](/a/2010-11-10-patch-a-day-month-day-10-a-simple-sampler/10-SimpleSampler.png)"
+![Simple Sampler](/a/2010-11-10-patch-a-day-month-day-10-a-simple-sampler/10-SimpleSampler.png)
 
 So fairly simple but very useful, the new object of note here is the soundfiler. This takes a couple of arguments and then loads the chosen file into the chosen array. Here we have the file "amen.wav" and we read it into the array "amen" which is displayed in the graph on the left. Once loaded, the soundfiler outputs how many samples long the file is. We can see that this, roughly seven second, segment of music has 307202 samples in it, which we store in the int object.
 

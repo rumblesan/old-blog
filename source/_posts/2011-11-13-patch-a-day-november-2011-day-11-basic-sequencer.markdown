@@ -17,7 +17,7 @@ comments: true
 
 Generating patterns is all well and good, but we actually have to be able to play them back. I'm going to start off with a basic sequencer and combining the Euclidean Sequence generator into a sequencer voice. To begin with I'm just going to do this with tables. I've got a plan for some time next week to start getting into the PD data structures stuff again which will make it possible to create much more powerful sequencers but there's no need to go getting overly complex yet.
 
-![Basic sequencer](/a/2011-11-13-patch-a-day-november-2011-day-11-basic-sequencer/Basic-sequencer1.png)"
+![Basic sequencer](/a/2011-11-13-patch-a-day-november-2011-day-11-basic-sequencer/Basic-sequencer1.png)
 
 Starting on the left, I'm reusing the list serialisation patch here from the first list manipulation examples I did. A list comes in, it's length gets stored in a variable and used to resize the table, a counter gets reset to zero and then the list gets serialised. As each list element gets sent out, it triggers the next number from the counter. These are used with the tabwrite object to write the data into the sequence table.
 
@@ -25,7 +25,7 @@ On the right hand side there's the table object which just stores the data. I ha
 
 Adding the Euclidean pattern creator abstraction into this is now really easy.
 
-![Euclidean rhythm sequencer](/a/2011-11-13-patch-a-day-november-2011-day-11-basic-sequencer/Euclidian-rhythm-sequencer.png)"
+![Euclidean rhythm sequencer](/a/2011-11-13-patch-a-day-november-2011-day-11-basic-sequencer/Euclidian-rhythm-sequencer.png)
 
 Really really easy.
 

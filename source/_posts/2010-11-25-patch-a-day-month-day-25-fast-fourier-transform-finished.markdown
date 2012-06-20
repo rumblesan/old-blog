@@ -29,7 +29,7 @@ Last night I mentioned that we would want to change the block size and overlap t
 
 The block object is also responsible for doing the envelope overlapping and we can specify how many envelopes we want to have with the second argument in the block object. I'll be using 4 overlapping envelopes in this patch. Once we have a subpatch with the block, we just move the Fourier transform stuff into the subpatch and everything works.
 
-![Fourier Analysis Subpatch with larger blocksize and enveloping](/a/2010-11-25-patch-a-day-month-day-25-fast-fourier-transform-finished/25-FFTAnlysisSubpatch.png)"
+![Fourier Analysis Subpatch with larger blocksize and enveloping](/a/2010-11-25-patch-a-day-month-day-25-fast-fourier-transform-finished/25-FFTAnlysisSubpatch.png)
 
 So there are three things to point out here, one is that we're actually just doing the inverse transform straight away. I'm not doing any processing of the Fourier data, just turning it straight back into audio for the moment.
 
@@ -39,7 +39,7 @@ The third is that there's a divide by 768 there which possibly isn't expected. T
 
 If you want to see that the output is the same as the input then here is the full patch.
 
-![Complete FFT example patch](/a/2010-11-25-patch-a-day-month-day-25-fast-fourier-transform-finished/25-FFTFinished.png)"
+![Complete FFT example patch](/a/2010-11-25-patch-a-day-month-day-25-fast-fourier-transform-finished/25-FFTFinished.png)
 
 It's actually possible here to see the delay caused by doing the transform if you look at the offset between the waves in the bottom panes.
 

@@ -32,7 +32,7 @@ The second says that the velocity of an object after time $ t $ is equal to its
 
 In the patch below I've broken the model down into three parts, one for the first equation, one for the second and then another part that checks when we've hit the bottom.
 
-![Bouncing ball patch](/a/2011-12-13-patch-a-day-november-2011-day-30-bouncing-ball/bouncing-ball-patch.png)"
+![Bouncing ball patch](/a/2011-12-13-patch-a-day-november-2011-day-30-bouncing-ball/bouncing-ball-patch.png)
 
 At the top there's the metro to run the patch and some setup. There are five variables here and I'm storing them in value objects.
 

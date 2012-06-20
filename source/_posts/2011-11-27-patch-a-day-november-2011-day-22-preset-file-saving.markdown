@@ -18,7 +18,7 @@ The preset loader is working pretty well, but at the moment it's limited to only
 
 Luckily Pure Data allows you to save the data structure information to a file and then read it back in later, and we can use that to make our preset information usable between sessions. Here's the updated preset object.
 
-![Preset data structure files](/a/2011-11-27-patch-a-day-november-2011-day-22-preset-file-saving/preset-file-saving.png)"
+![Preset data structure files](/a/2011-11-27-patch-a-day-november-2011-day-22-preset-file-saving/preset-file-saving.png)
 
 The patch now has a third inlet that can be used to give clear, file load or file save commands. The clear command is just the initial blank patch loadbang setup that has always been in the patch. This means we can clear all the presets and reload ten blank presets if we want.
 

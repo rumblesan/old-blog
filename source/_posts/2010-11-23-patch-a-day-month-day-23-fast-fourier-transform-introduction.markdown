@@ -56,7 +56,7 @@ Parts of the above are a bit of a simplification so far but this should be enoug
 
 So, onto a basic patch, this is purely to show you what sort of an output we get from the FFT objects. Hopefully that will suffice and I've given you enough to mull on until tomorrow.
 
-![Fast Fourier Transform introduction patch](/a/2010-11-23-patch-a-day-month-day-23-fast-fourier-transform-introduction/23-FFTIntro.png)"
+![Fast Fourier Transform introduction patch](/a/2010-11-23-patch-a-day-month-day-23-fast-fourier-transform-introduction/23-FFTIntro.png)
 
 So here we can feed a signal at a chosen frequency into the FFT object. It can either be a freely chosen frequency, or we can pick a frequency that exactly matches one of the frequency bins. The above picture shows a matching frequency which is why there are the exact values for the frequency bins. There may be some confusion as to why there are actually two peaks/troughs on each graph. This is because the Fourier Transform actually gives out twice as many frequency bins as the number of samples we give it but these are actually mirrored about the Nyquist frequency, meaning the upper half aren't any use to us. The rfft~ object will actually get rid of this data and only calculate the parts we want which results in much less CPU loading.
 

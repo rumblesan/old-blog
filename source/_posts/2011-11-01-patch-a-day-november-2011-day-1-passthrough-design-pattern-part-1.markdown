@@ -74,7 +74,7 @@ This idea can be made more useful when combined with send objects as a good way 
 
 
 
-![Passthrough with sends](/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-send.png)"
+![Passthrough with sends](/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-send.png)
 
 
 

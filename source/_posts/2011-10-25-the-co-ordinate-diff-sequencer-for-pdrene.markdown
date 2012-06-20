@@ -22,7 +22,7 @@ So the Diff Sequencer is basically a way of sequencing pairs of numbers that a
 
 Lets jump straight to the internals to pick it all apart.
 
-![Diff Sequencer internals](/a/2011-10-25-the-co-ordinate-diff-sequencer-for-pdrene/pdrene_diff_sequencer1.png)"
+![Diff Sequencer internals](/a/2011-10-25-the-co-ordinate-diff-sequencer-for-pdrene/pdrene_diff_sequencer1.png)
 
 Most of the work is done by the pair of counters in the top left. The upper one counts up to the step number for the current pair and when it overflows it triggers the next counter to move along one more value in the sequence. The groups of objects in the top right are for externally changing the sequencers settings.
 
