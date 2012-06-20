@@ -19,7 +19,7 @@ So I got an interesting couple of questions in the comments for the last post. M
 
 
 > _Hi_
-
+> 
 > I actually came across your blog/web page via various discussions on the Pure Data forum, which naturally I followed up and enjoy reading. However, I noticed in one of your earlier posts (on your own blog) the mention of SuperCollider. Naturally, since I came from the Pure Data forum, I’m a PD fan, like many out there. But reading your remarks about SC I’m interested to ask what is the difference between the two programs? Is it worthwhile (a personal choice of course) looking into both programs, or in fact is one enough and it’s all a matter of interfaces?
 > 
 > Oddly enough I notice that you do your ‘models’ in PD, probably because it’s freely available, or is that not correct.
