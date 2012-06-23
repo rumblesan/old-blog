@@ -1,2 +1,124 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+/**
+ * A lot of this was pulled from Alessandro Melandri and his examples
+ * Go look at his site:
+ *     http://melandri.net/
+ * Specific article is at:
+ *     http://melandri.net/2012/02/14/octopress-theme-customization/
+ */
+
+
+// Get rid of the background lines
+html { background: none }
+
+// Removing the dashed border underneath a bunch of stuff
+#content div article {
+    background: none;
+}
+
+#content div footer {
+    background: none;
+}
+
+#content div header {
+    background: none;
+    border-bottom: solid 1px;
+    border-color: #EEE;
+}
+
+#content div .pagination {
+    background: none;
+}
+
+#content div h2 {
+    background: none;
+}
+
+
+// Sort out the header and nav bar sizes
+body > header h1 {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+body > header h2 {
+  font-size: 0.5em;
+  letter-spacing: 1px;
+}
+
+body > header {
+    border-top: solid 1px;
+    border-left: solid 1px;
+    border-color: #BBB;
+}
+
+body > nav {
+  padding-top: .1em;
+  padding-bottom: .1em;
+}
+
+body > nav a {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+body > nav form .search {
+  padding: .2em .3em;
+}
+
+// articles always have a bottom border
+#content div article {
+    border-color: #BBB;
+    border-bottom: solid 1px;
+}
+
+
+@media only screen and (min-width: 1040px) {
+
+    // Adding a border and padding around each post if the page is wide enough
+    #content div article {
+        border-top: solid 1px;
+        border-left: solid 1px;
+        margin-bottom: 1em;
+    }
+
+    #content div section {
+        border-top: solid 1px;
+        border-left: solid 1px;
+        margin-bottom: 1em;
+    }
+
+    // Specific margin on articles. Lines things up nicely
+    #content + div {
+        margin-top: 27.5px;
+    }
+
+    #content div.blog-index {
+        margin-top: 27.5px;
+    }
+
+    body > header {
+        margin-top: 0.3em;
+    }
+
+    body > nav {
+        -moz-border-radius: 0em 0em 0.4em 0.4em;
+        -webkit-border-radius: 0em 0em 0.4em 0.4em;
+        border-radius:0em 0em 0.4em 0.4em;
+        margin-bottom: 0.3em;
+    }
+
+    body > footer {
+        -moz-border-radius-bottomleft: 0.4em;
+        -moz-border-radius-bottomright: 0.4em;
+        -webkit-border-radius: 0 0 0.4em 0.4em;
+        border-radius: 0 0 0.4em 0.4em;
+    }
+
+}
+
+#content #blog-archives article {
+    border-top: none;
+    border-left: none;
+    border-color: #EEE;
+}
+
