@@ -67,7 +67,10 @@ body > nav form .search {
 
 // articles always have a bottom border
 #content div article {
-    border-color: #BBB;
+    border-bottom: solid 1px;
+}
+
+#content div section {
     border-bottom: solid 1px;
 }
 
@@ -79,12 +82,14 @@ body > nav form .search {
         border-top: solid 1px;
         border-left: solid 1px;
         margin-bottom: 1em;
+        border-color: #BBB;
     }
 
     #content div section {
         border-top: solid 1px;
         border-left: solid 1px;
         margin-bottom: 1em;
+        border-color: #BBB;
     }
 
     // Specific margin on articles. Lines things up nicely
