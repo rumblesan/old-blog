@@ -4,7 +4,6 @@ layout: post
 slug: lorenz-drone
 status: publish
 title: Lorenz Drone
-wordpress_id: '111'
 categories:
 - Music
 - Pure Data
@@ -20,8 +19,6 @@ comments: true
 
 Chatting with a friend the other day, he mentioned that he was currently bored at work waiting to be allowed access to the code he was supposed to be working on. I told him that he should design me an interesting system I could turn into a patch to make generative audio, since I knew that whilst at university he spent some time studying chaos theory and I figured he would know some interesting stuff. He pointed me towards the Lorenz Attractor as an interesting chaotic system that's very easy to implement in code. I've seen pictures of the 3 dimensional plot of the Lorenz equations and they do look pretty cool but I'd never thought to actually do anything with them.
 
-
-
 ![3D Lorenz Plot](http://en.wikipedia.org/wiki/Lorenz_equations)
 
 Of course, now I have this blog that I'm trying to keep updated with interesting, algorithmic noise stuff so it seemed like a pretty good chance to spend some time exploring what I could do with the equations.
@@ -30,17 +27,11 @@ The quick idea I had at work was to have multiple sets of the Lorenz equations w
 
 The equations themselves are:-
 
+  * $ dx/dt = sigma (y-x) $
 
+  * $ dy/dt = x(rho z) y $
 
-	
-  * **dx/dt = sigma (y-x)**
-
-	
-  * **dy/dt = x(rho z) y**
-
-	
-  * ** ****dz/dt = xy beta z**
-
+  * $ dz/dt = xy beta z $
 
 where the usual values are sigma = 10, rho = 28 and beta = 8/3 if you want to get the chaotic behavior, which we obviously do.
 

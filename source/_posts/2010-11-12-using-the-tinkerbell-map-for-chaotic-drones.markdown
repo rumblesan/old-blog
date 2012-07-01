@@ -4,7 +4,6 @@ layout: post
 slug: using-the-tinkerbell-map-for-chaotic-drones
 status: publish
 title: Using the Tinkerbell Map for Chaotic Drones
-wordpress_id: '151'
 categories:
 - Music
 - Pure Data

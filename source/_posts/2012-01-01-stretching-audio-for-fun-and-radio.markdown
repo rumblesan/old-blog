@@ -4,7 +4,6 @@ layout: post
 slug: stretching-audio-for-fun-and-radio
 status: publish
 title: Stretching Audio for Fun and Radio
-wordpress_id: '442'
 categories:
 - C
 - Music

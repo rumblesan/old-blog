@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-13-the-sampler-abstraction
 status: publish
 title: 'Patch-a-Day Month Day 13: The Sampler Abstraction'
-wordpress_id: '161'
 categories:
 - Music
 - Patch-A-Day

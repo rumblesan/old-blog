@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-4-list-processing
 status: publish
 title: 'Patch-a-Day November 2011 Day 4: List Processing'
-wordpress_id: '327'
 categories:
 - Patch-A-Day
 - Pure Data
@@ -26,61 +25,29 @@ For this reason, this post and probably tomorrows will be all about list process
 
 A couple quick things,
 
-
-
-	
   * a list is a collection of data elements that has a **list** element at the front
 
-
-	
     * **list 1 2 c d 5**
 
-	
     * **list a b c**
 
-	
     * **list 1.1 4 c**
 
-
-	
   * if a list starts with a float or int then it doesn't have to have "list" at the front
 
-
-	
     * **1.1 2.2 3.3** is the same as **list 1.1 2.2 3.3**
 
-	
     * **a b c** is not the same as **list a b c**
 
-	
     * **a b c **is undefined. some objects will treat it as a list, some won't
 
-
-	
   * a bang is the same as an empty list
-
-
-
 
 With these things in mind, lets have a look at the first patch that just simply takes a single list and serialises it into separate elements.
 
-
-
-
-
-
 ![List serialiser](/a/2011-11-04-patch-a-day-november-2011-day-4-list-processing/list-serialise.png)
 
-
-
-
 The output from this would look like :-
-
-
-
-
-
-> 
 
 >     
 >     main: 1
@@ -88,12 +55,6 @@ The output from this would look like :-
 >     main: 3
 >     main: 4
 > 
-> 
-
-
-
-
-
 
 Nothing spectacular but what we're doing here is pretty important for the rest of this. The list split object here is used to pull off the first element of the list we feed in. This value comes out the left hand outlet, the rest of the list comes out the middle outlet and is stored in the second list object. When the first element is printed out it sends the rest of the list back into the split and in this manner we recursively pull the next element off the list, eventually printing them all out one by one.
 
@@ -108,17 +69,11 @@ The section in the middle at the bottom joins the main and sub list items into o
 There are a couple of problems with this patch thought, that I'll fix tomorrow night but explain now in case someone wants to try and solve them themselves.
 
 
-
-	
   * if the main list is shorter than the sub list then elements get missed off
 
-	
   * if the sub list is shorter than the main list then the last sub list element is repeated
 
-	
   * we can only join single elements, not pairs or other numbers
 
-
-
-
 I still haven't quite worked out if I will be able to generate Euclidean Rhythms with these objects so if it turns out I can't then these will just be a series of articles on list processing in Pure Data (still useful in places, but maybe not so much fun). I'm hoping though that I can get it all sorted and start making some excellent generative drums. Time will tell I suppose.
+

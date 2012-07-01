@@ -4,7 +4,6 @@ layout: post
 slug: see-cluster-run
 status: publish
 title: See Cluster Run
-wordpress_id: '59'
 categories:
 - Povray
 - Python

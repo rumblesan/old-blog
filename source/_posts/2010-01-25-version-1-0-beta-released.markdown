@@ -4,7 +4,6 @@ layout: post
 slug: version-1-0-beta-released
 status: publish
 title: Version 1.0 Beta released
-wordpress_id: '56'
 categories:
 - Music
 - Pure Data

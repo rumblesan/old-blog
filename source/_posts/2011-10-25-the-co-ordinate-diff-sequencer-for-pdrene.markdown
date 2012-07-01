@@ -4,7 +4,6 @@ layout: post
 slug: the-co-ordinate-diff-sequencer-for-pdrene
 status: publish
 title: The Co-ordinate Diff Sequencer for PDRene
-wordpress_id: '308'
 categories:
 - Pure Data
 tags:

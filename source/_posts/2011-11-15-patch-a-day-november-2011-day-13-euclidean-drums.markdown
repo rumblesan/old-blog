@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-13-euclidean-drums
 status: publish
 title: 'Patch-a-Day November 2011 Day 13: Euclidean Drums'
-wordpress_id: '376'
 categories:
 - Music
 - Patch-A-Day

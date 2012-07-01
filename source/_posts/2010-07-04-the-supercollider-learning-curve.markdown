@@ -4,7 +4,6 @@ layout: post
 slug: the-supercollider-learning-curve
 status: publish
 title: The SuperCollider learning curve....
-wordpress_id: '7'
 categories:
 - SuperCollider
 tags:

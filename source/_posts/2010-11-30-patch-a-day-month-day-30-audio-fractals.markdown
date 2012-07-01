@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-30-audio-fractals
 status: publish
 title: 'Patch-a-Day Month Day 30: Audio Fractals'
-wordpress_id: '238'
 categories:
 - Music
 - Patch-A-Day

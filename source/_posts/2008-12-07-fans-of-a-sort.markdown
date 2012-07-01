@@ -4,7 +4,6 @@ layout: post
 slug: fans-of-a-sort
 status: publish
 title: Fans......of a sort
-wordpress_id: '33'
 comments: true
 ---
 

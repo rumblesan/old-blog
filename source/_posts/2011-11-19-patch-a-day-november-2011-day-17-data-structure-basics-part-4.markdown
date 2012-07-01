@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-17-data-structure-basics-part-4
 status: publish
 title: 'Patch-a-Day November 2011 Day 17: Data Structure Basics (part 4)'
-wordpress_id: '392'
 categories:
 - Patch-A-Day
 - Pure Data
@@ -22,20 +21,13 @@ The top left section with the border is the contents of the template1 subpatch. 
 
 The filled polygon object is what does all the work here. It tells PD that in the datawindow we want to draw a polygon with a certain number of points, a specific centre colour and a border with a specific colour and thickness. The argument order is :-
 
-
-
-	
   1. Internal colour in RGB value. 60 here means 060 which translates to medium green
 
-	
   2. Border colour in RGB. 1 here means very dark blue
 
-	
   3. Border width in pixels
 
-	
   4. List of points to join as (x,y) coordinates
-
 
 In this patch, the coordinates are actually values stored in the struct. This means that any polygons drawn will have three edges, with points at (xa,xb), (ya,yb), (za,zb). Hit the message box with the 5 in it and have a look at the data window. You should see something like this,
 

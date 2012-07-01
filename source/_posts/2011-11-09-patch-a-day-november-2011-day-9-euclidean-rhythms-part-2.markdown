@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-9-euclidean-rhythms-part-2
 status: publish
 title: 'Patch-a-Day November 2011 Day 9: Euclidean Rhythms (part 2)'
-wordpress_id: '357'
 categories:
 - Patch-A-Day
 - Pure Data

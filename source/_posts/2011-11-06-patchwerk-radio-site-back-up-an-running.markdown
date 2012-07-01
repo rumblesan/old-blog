@@ -4,7 +4,6 @@ layout: post
 slug: patchwerk-radio-site-back-up-an-running
 status: publish
 title: PatchWerk Radio site back up an running
-wordpress_id: '339'
 categories:
 - PatchWerk-Radio
 comments: true

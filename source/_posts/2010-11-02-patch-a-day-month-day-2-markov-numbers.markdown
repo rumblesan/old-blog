@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-2-markov-numbers
 status: publish
 title: 'Patch-a-Day Month Day 2: Markov Numbers'
-wordpress_id: '118'
 categories:
 - Music
 - Patch-A-Day

@@ -4,7 +4,6 @@ layout: post
 slug: second-auto-tweeting-test
 status: publish
 title: Second Auto Tweeting test
-wordpress_id: '101'
 comments: true
 ---
 

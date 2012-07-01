@@ -4,7 +4,6 @@ layout: post
 slug: midi-step-sequencer-for-ds
 status: publish
 title: Midi Step Sequencer for DS
-wordpress_id: '40'
 categories:
 - Music
 - NDS Homebrew

@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-7-list-processing-part-4
 status: publish
 title: 'Patch-a-Day November 2011 Day 7: List Processing (part 4)'
-wordpress_id: '349'
 categories:
 - Patch-A-Day
 - Pure Data

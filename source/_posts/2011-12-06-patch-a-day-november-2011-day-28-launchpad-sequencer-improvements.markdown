@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-28-launchpad-sequencer-improvements
 status: publish
 title: 'Patch-a-Day November 2011 Day 28: Launchpad sequencer improvements'
-wordpress_id: '431'
 categories:
 - Patch-A-Day
 - Pure Data

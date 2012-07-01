@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-24-fast-fourier-transform-continued
 status: publish
 title: 'Patch-a-Day Month Day 24: Fast Fourier Transform Continued'
-wordpress_id: '189'
 categories:
 - Music
 - Patch-A-Day

@@ -4,7 +4,6 @@ layout: post
 slug: fungeoid-sequencer
 status: publish
 title: Fungeoid Sequencer
-wordpress_id: '84'
 categories:
 - Music
 - Programming

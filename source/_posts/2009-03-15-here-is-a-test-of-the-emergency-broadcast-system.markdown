@@ -4,7 +4,6 @@ layout: post
 slug: here-is-a-test-of-the-emergency-broadcast-system
 status: publish
 title: Here is a test of the Emergency Broadcast System
-wordpress_id: '38'
 comments: true
 ---
 

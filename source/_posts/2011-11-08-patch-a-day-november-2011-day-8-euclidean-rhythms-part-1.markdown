@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-8-euclidean-rhythms-part-1
 status: publish
 title: 'Patch-a-Day November 2011 Day 8: Euclidean Rhythms (part 1)'
-wordpress_id: '353'
 categories:
 - Music
 - Patch-A-Day
@@ -32,33 +31,19 @@ This works just as well if we started with more ones than zeros as well.
 
 After wrestling for a couple of evenings over how to do this in PD, I decided that the simplest way to do it would be to use a combination of the list length matching abstraction and the interleaving abstraction from the previous two days, and then just keep track of the element size of the main list and remainder. The work flow is pretty simple
 
-
-
-	
   * Start with two lists of single element items, the main list is ones and the sub list is zeros
 
-	
   * Get the excess elements from the longer list, this is the remainder
 
-
-	
     * The element size of the remainder is the same as whichever list it came from
 
-
-	
   * Interleave the main list and the sub list, element by element to get the output list
 
-	
   * Check the number of elements in the remainder
 
-
-	
     * If it's one or less then join the output list and the remainder to get your rhythm pattern
 
-	
     * If it's greater than one, send the output list and the remainder back through the process
-
-
 
 The first thing that's needed for this is a modified list length matching patch and that's what I've built this evening. The previous list matcher would give you out the excess section, but would leave you to externally work out which list it came from and what the element size is. Really, this should be handled inside this patch so that we give it two lists and their element size, and we get out three lists with their element sizes.
 

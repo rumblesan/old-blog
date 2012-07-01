@@ -4,7 +4,6 @@ layout: post
 slug: go-sequencer-update
 status: publish
 title: Go Sequencer Update
-wordpress_id: '30'
 categories:
 - Max/MSP
 - Music

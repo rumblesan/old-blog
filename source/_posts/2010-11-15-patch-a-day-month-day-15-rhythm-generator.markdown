@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-15-rhythm-generator
 status: publish
 title: 'Patch-a-Day Month Day 15: Rhythm Generator'
-wordpress_id: '168'
 categories:
 - Music
 - Patch-A-Day

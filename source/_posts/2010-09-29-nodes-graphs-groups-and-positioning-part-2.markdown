@@ -4,7 +4,6 @@ layout: post
 slug: nodes-graphs-groups-and-positioning-part-2
 status: publish
 title: Nodes, Graphs, Groups and Positioning (part 2)
-wordpress_id: '76'
 categories:
 - Programming
 - SuperCollider

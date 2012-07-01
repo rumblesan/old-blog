@@ -5,7 +5,6 @@ slug: puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i
 status: publish
 title: PureData versus SuperCollider versus MaxMSP (Why I do what I do with what I
   do)
-wordpress_id: '451'
 categories:
 - Musings
 tags:
@@ -46,5 +45,4 @@ The other reason is that I believe that there's less happening in PD, so the lea
 I always liken the PD to Max view as being similar to C vs C++. PD and C are like a subset of Max and C++, they're more minimal, require more building and aren't as nice looking, but the language itself is pretty small and very versatile.
 
 Make of that what you will.
-
 

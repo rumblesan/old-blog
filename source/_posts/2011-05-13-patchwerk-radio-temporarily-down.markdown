@@ -4,7 +4,6 @@ layout: post
 slug: patchwerk-radio-temporarily-down
 status: publish
 title: Patchwerk Radio temporarily down
-wordpress_id: '290'
 comments: true
 ---
 

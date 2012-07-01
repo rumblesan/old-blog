@@ -4,7 +4,6 @@ layout: post
 slug: so-wordpress-it-is
 status: publish
 title: So WordPress it is
-wordpress_id: '3'
 comments: true
 ---
 

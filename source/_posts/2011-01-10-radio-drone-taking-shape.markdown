@@ -4,7 +4,6 @@ layout: post
 slug: radio-drone-taking-shape
 status: publish
 title: Radio Drone taking shape
-wordpress_id: '258'
 categories:
 - Programming
 - Pure Data

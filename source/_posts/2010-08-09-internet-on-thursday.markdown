@@ -4,7 +4,6 @@ layout: post
 slug: internet-on-thursday
 status: publish
 title: Internet on Thursday
-wordpress_id: '21'
 categories:
 - SuperCollider
 comments: true

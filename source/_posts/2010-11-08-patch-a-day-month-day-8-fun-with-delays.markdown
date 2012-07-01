@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-8-fun-with-delays
 status: publish
 title: 'Patch-a-Day Month Day 8: Fun with Delays'
-wordpress_id: '136'
 categories:
 - Music
 - Patch-A-Day

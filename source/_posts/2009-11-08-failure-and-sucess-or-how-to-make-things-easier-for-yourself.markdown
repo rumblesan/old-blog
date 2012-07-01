@@ -4,7 +4,6 @@ layout: post
 slug: failure-and-sucess-or-how-to-make-things-easier-for-yourself
 status: publish
 title: Failure and Sucess, or "How to make things easier for yourself"
-wordpress_id: '50'
 categories:
 - Pure Data
 comments: true

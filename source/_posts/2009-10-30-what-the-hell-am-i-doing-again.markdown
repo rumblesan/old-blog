@@ -4,7 +4,6 @@ layout: post
 slug: what-the-hell-am-i-doing-again
 status: publish
 title: What the hell am I doing again
-wordpress_id: '49'
 categories:
 - Music
 - NDS Homebrew

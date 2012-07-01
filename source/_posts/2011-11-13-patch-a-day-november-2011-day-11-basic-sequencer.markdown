@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-11-basic-sequencer
 status: publish
 title: 'Patch-a-Day November 2011 Day 11: Basic Sequencer'
-wordpress_id: '366'
 categories:
 - Patch-A-Day
 - Pure Data

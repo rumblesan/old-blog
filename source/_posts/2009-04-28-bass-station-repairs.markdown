@@ -4,7 +4,6 @@ layout: post
 slug: bass-station-repairs
 status: publish
 title: Bass Station Repairs
-wordpress_id: '44'
 comments: true
 ---
 

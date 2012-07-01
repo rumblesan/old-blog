@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-28-simple-but-useful
 status: publish
 title: 'Patch-a-Day Month Day 28: Simple But Useful'
-wordpress_id: '229'
 categories:
 - Music
 - Patch-A-Day

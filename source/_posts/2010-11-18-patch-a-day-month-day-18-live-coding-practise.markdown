@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-18-live-coding-practise
 status: publish
 title: 'Patch-a-Day Month Day 18: Live Coding Practise'
-wordpress_id: '184'
 categories:
 - Live-Coding
 - Music

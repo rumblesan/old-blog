@@ -4,9 +4,10 @@ layout: post
 slug: being-lame-and-mad-the-trials-of-deencoding-mp3s
 status: publish
 title: Being LAME and MAD, the trials of de/encoding MP3s
-wordpress_id: '445'
 categories:
 - C
+- Music
+- Programming
 tags:
 - audio
 - Programming

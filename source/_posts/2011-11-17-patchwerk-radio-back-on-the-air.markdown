@@ -4,7 +4,6 @@ layout: post
 slug: patchwerk-radio-back-on-the-air
 status: publish
 title: PatchWerk Radio back on the air
-wordpress_id: '385'
 categories:
 - News
 tags:

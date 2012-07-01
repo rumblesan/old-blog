@@ -4,7 +4,6 @@ layout: post
 slug: drones-python-jack-and-windfarms
 status: publish
 title: Drones, Python, JACK and Windfarms
-wordpress_id: '255'
 categories:
 - Music
 - Pure Data

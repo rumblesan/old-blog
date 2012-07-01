@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-30-bouncing-ball
 status: publish
 title: 'Patch-a-Day November 2011 Day 30: Bouncing Ball'
-wordpress_id: '438'
 categories:
 - Patch-A-Day
 - Pure Data
@@ -36,28 +35,17 @@ In the patch below I've broken the model down into three parts, one for the firs
 
 At the top there's the metro to run the patch and some setup. There are five variables here and I'm storing them in value objects.
 
-
-
-	
   * The time period
 
-	
   * The initial starting height
 
-	
   * The current velocity
 
-	
   * The acceleration due to gravity
 
-	
   * The bounciness
 
-
-
-
 It's worth pointing out here to remember that gravity is a negative value. This patch assumes that positive velocity is up, and as gravity is always pulling down it's negative.
-
 
 This patch works with a relative time model instead of an absolute one. We're calculating the relative change in height since the last calculation, not the overall height since we started. This means that the velocity change also needs to be calculated relative to the last velocity. This is done by the left hand collection of objects which calculate the second equation. The section gets given the sample length and multiplies this by the acceleration to get the change in velocity. This gets added to the current velocity to give us the new value.
 
@@ -71,8 +59,5 @@ Also if the sample time is too large then there is a lot of unstable behaviour�
 
 That said, this serves pretty well as an example so should teach you the basics of doing this sort of physical mechanical modelling.
 
-
-
 But no1 that's it for Patch a Day month 2011. I'll make sure that all the example patches are in the repository for downloading and I'll leave it at that for now. There will be more PD stuff going up here, I'll make sure I;m better about it than last time.
-
 

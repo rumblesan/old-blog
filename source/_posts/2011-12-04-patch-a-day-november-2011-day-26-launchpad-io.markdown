@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-26-launchpad-io
 status: publish
 title: 'Patch-a-Day November 2011 Day 26: Launchpad IO'
-wordpress_id: '421'
 categories:
 - Patch-A-Day
 - Pure Data

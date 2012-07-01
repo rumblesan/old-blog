@@ -4,7 +4,6 @@ layout: post
 slug: a-few-thoughts
 status: publish
 title: A few thoughts...
-wordpress_id: '172'
 comments: true
 ---
 

@@ -4,7 +4,6 @@ layout: post
 slug: algorithmic-experiments
 status: publish
 title: Algorithmic Experiments
-wordpress_id: '63'
 categories:
 - Max/MSP
 - Music

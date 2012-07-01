@@ -4,7 +4,6 @@ layout: post
 slug: ideas-pad
 status: publish
 title: Ideas Pad
-wordpress_id: '37'
 comments: true
 ---
 

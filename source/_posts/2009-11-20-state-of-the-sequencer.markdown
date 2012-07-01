@@ -4,7 +4,6 @@ layout: post
 slug: state-of-the-sequencer
 status: publish
 title: State of the sequencer
-wordpress_id: '51'
 categories:
 - Pure Data
 tags:

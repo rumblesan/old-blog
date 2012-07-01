@@ -4,7 +4,6 @@ layout: post
 slug: prototypes-working-ones-at-that
 status: publish
 title: Prototypes, working ones at that
-wordpress_id: '53'
 categories:
 - Music
 - Python

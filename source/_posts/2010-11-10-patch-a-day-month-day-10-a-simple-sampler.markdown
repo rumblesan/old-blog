@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-10-a-simple-sampler
 status: publish
 title: 'Patch-a-Day Month Day 10: A Simple Sampler'
-wordpress_id: '145'
 categories:
 - Music
 - Patch-A-Day

@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-2-november-2011
 status: publish
 title: Patch-a-Day Month 2, November 2011
-wordpress_id: '313'
 categories:
 - Patch-A-Day
 - Pure Data

@@ -4,7 +4,6 @@ layout: post
 slug: github-project-links
 status: publish
 title: Github project links
-wordpress_id: '28'
 categories:
 - Git
 - NDS Homebrew

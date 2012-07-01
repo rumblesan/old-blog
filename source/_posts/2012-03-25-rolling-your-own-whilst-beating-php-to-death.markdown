@@ -4,7 +4,6 @@ layout: post
 slug: rolling-your-own-whilst-beating-php-to-death
 status: publish
 title: Rolling your own whilst beating PHP to death
-wordpress_id: '449'
 categories:
 - News
 comments: true

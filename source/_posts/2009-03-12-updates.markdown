@@ -4,7 +4,6 @@ layout: post
 slug: updates
 status: publish
 title: Updates
-wordpress_id: '36'
 comments: true
 ---
 

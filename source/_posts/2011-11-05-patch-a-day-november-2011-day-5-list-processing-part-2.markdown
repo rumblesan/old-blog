@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-5-list-processing-part-2
 status: publish
 title: 'Patch-a-Day November 2011 Day 5: List Processing (part 2)'
-wordpress_id: '333'
 categories:
 - Patch-A-Day
 - Pure Data
@@ -15,24 +14,13 @@ comments: true
 
 Yesterdays post started with some basic list processing in pure data, the patches showed how you could serialise and interleave the lists but there were a few problems and also some missing functionality that we're after. Specifically :-
 
-
-
-	
   * when we interleave lists, if one is shorter than the other then the extra elements are still appended
 
-
-	
     * **a b c** and **1 2 3 4** would become **a 1 b 2 c 3 4**
 
-
-	
   * we can have larger sub elements
 
-
-	
     * **a b c d e f** with **1 2 3** could become **a b 1 c d 2 e f 3**
-
-
 
 Both of these problems can be easily solved by checking for the output of the list split objects right hand outlet. This will only output anything when the input list is shorter than the number of elements we want to be splitting. So for example, if we have list split 2 and we send in a single item list, that single item will be output from the right outlet. Importantly, if we're splitting single elements off the list and we send in an empty list (same as a bang remember) then we get a bang from this output. This is a much neater way to check when all our elements have been split out. The below patches shows how this works and how we can extend it to easily deal with multi item elements in the list.
 

@@ -4,7 +4,6 @@ layout: post
 slug: touchbook-has-arrived
 status: publish
 title: Touchbook has arrived
-wordpress_id: '48'
 comments: true
 ---
 

@@ -4,7 +4,6 @@ layout: post
 slug: post-it-note-patch-design
 status: publish
 title: Post-it note patch design
-wordpress_id: '264'
 categories:
 - Pure Data
 comments: true

@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-16-rhythm-generator-with-snares
 status: publish
 title: 'Patch-a-Day Month Day 16: Rhythm Generator with Snares'
-wordpress_id: '173'
 categories:
 - Music
 - Patch-A-Day

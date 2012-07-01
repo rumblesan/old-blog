@@ -4,7 +4,6 @@ layout: post
 slug: scsynth-and-sclang-the-supercollider-client-and-server-explained
 status: publish
 title: SCSynth and SCLang, The SuperCollider Client and Server explained...
-wordpress_id: '14'
 categories:
 - SuperCollider
 tags:
@@ -21,23 +20,15 @@ I will be starting up a separate page where I will be aggregating the useful and
 
 Anyway, a quick set of bullets about what this helps me understand about SuperCollider.
 
-
-
-	
   * SCSynth doesn't care about the client. All it wants are OSC messages telling it what to do.
 
-	
   * SCLang is simply a notepad with an interpreter with a network connection.
 
-	
   * The actual SuperCollider language is simply a nice scripting language, based on SmallTalk that gets turned into OSC messages.
 
-	
   * Anything can control the SCSynth, you just have to know what OSC messages to send it.
 
-	
   * With a lib that does the interpreting and the OSC sending, You can create your own client.
-
 
 Most of this is obvious but, again, I like concise information. I know that the Windows version of SuperCollider involves Psycollider in some way, I'm not yet sure how. Investigation needed, and will report back soon.
 

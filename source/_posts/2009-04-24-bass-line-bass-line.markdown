@@ -4,7 +4,6 @@ layout: post
 slug: bass-line-bass-line
 status: publish
 title: Bass Line Bass Line
-wordpress_id: '43'
 categories:
 - Music
 - NDS Homebrew

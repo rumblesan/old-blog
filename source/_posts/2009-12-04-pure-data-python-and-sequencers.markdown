@@ -4,7 +4,6 @@ layout: post
 slug: pure-data-python-and-sequencers
 status: publish
 title: Pure Data, Python and sequencers
-wordpress_id: '52'
 comments: true
 ---
 

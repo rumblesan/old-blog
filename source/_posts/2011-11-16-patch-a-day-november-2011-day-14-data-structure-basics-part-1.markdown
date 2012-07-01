@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-14-data-structure-basics-part-1
 status: publish
 title: 'Patch-a-Day November 2011 Day 14: Data Structure Basics (part 1)'
-wordpress_id: '380'
 categories:
 - Patch-A-Day
 - Pure Data

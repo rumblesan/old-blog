@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-29-a-nice-cup-of-drone
 status: publish
 title: 'Patch-a-Day Month Day 29: A Nice Cup of Drone'
-wordpress_id: '232'
 categories:
 - Live-Coding
 - Music

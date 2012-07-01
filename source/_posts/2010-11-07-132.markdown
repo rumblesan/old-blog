@@ -4,7 +4,6 @@ layout: post
 slug: '132'
 status: publish
 title: 'Patch-a-Day Month Day 7: Generative Drum Sequencer with Sounds'
-wordpress_id: '132'
 categories:
 - Music
 - Patch-A-Day

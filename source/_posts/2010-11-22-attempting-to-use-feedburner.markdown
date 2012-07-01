@@ -4,7 +4,6 @@ layout: post
 slug: attempting-to-use-feedburner
 status: publish
 title: Attempting to use FeedBurner
-wordpress_id: '195'
 comments: true
 ---
 

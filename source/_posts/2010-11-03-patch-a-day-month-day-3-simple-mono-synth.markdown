@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-3-simple-mono-synth
 status: publish
 title: 'Patch-a-Day Month Day 3: Simple Mono Synth'
-wordpress_id: '121'
 categories:
 - Music
 - Patch-A-Day

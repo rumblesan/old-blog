@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-29-launchpad-lights
 status: publish
 title: 'Patch-a-Day November 2011 Day 29: Launchpad lights'
-wordpress_id: '435'
 categories:
 - Patch-A-Day
 - Pure Data

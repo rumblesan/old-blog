@@ -4,7 +4,6 @@ layout: post
 slug: processing-pov-ray-and-noise
 status: publish
 title: Processing, POV-Ray and Noise
-wordpress_id: '249'
 categories:
 - Povray
 - Processing

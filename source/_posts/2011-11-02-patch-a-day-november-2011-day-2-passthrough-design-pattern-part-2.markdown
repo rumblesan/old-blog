@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2
 status: publish
 title: 'Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (part 2)'
-wordpress_id: '319'
 categories:
 - Music
 - Patch-A-Day

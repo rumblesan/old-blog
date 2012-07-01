@@ -4,7 +4,6 @@ layout: post
 slug: idea-blog-go
 status: publish
 title: Idea Blog GO!!
-wordpress_id: '39'
 comments: true
 ---
 

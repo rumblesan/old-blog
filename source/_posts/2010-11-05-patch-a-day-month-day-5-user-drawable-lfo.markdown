@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-5-user-drawable-lfo
 status: publish
 title: 'Patch-a-Day Month Day 5: User Drawable LFO'
-wordpress_id: '126'
 categories:
 - Music
 - Patch-A-Day

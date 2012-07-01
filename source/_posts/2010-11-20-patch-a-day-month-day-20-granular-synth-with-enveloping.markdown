@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-20-granular-synth-with-enveloping
 status: publish
 title: 'Patch-a-Day Month Day 20: Granular Synth with Enveloping'
-wordpress_id: '190'
 categories:
 - Music
 - Patch-A-Day

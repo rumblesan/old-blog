@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-3-passthrough-design-pattern-part-3
 status: publish
 title: 'Patch-a-Day November 2011 Day 3: Passthrough Design Pattern (part 3)'
-wordpress_id: '323'
 categories:
 - Patch-A-Day
 - Pure Data

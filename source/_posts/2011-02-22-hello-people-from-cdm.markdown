@@ -4,7 +4,6 @@ layout: post
 slug: hello-people-from-cdm
 status: publish
 title: 'Hello people from CDM!! '
-wordpress_id: '276'
 comments: true
 ---
 

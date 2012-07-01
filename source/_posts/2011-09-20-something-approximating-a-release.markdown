@@ -4,7 +4,6 @@ layout: post
 slug: something-approximating-a-release
 status: publish
 title: Something approximating a release
-wordpress_id: '299'
 comments: true
 ---
 

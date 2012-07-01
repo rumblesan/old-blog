@@ -4,7 +4,6 @@ layout: post
 slug: updates-websites-and-stuff
 status: publish
 title: Updates, Websites and Stuff
-wordpress_id: '273'
 categories:
 - PatchWerk-Radio
 comments: true

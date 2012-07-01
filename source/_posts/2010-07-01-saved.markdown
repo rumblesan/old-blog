@@ -4,7 +4,6 @@ layout: post
 slug: saved
 status: publish
 title: Saved…
-wordpress_id: '6'
 comments: true
 ---
 

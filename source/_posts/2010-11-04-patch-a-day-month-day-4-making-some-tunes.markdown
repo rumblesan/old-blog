@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-4-making-some-tunes
 status: publish
 title: 'Patch-a-Day Month Day 4: Making some Tunes'
-wordpress_id: '123'
 categories:
 - Music
 - Patch-A-Day

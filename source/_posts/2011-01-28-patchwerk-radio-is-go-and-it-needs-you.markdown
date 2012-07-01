@@ -4,7 +4,6 @@ layout: post
 slug: patchwerk-radio-is-go-and-it-needs-you
 status: publish
 title: PatchWerk Radio is Go, and it needs YOU!!
-wordpress_id: '265'
 categories:
 - Music
 - PatchWerk-Radio

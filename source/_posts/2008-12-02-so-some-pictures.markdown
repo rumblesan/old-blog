@@ -4,7 +4,6 @@ layout: post
 slug: so-some-pictures
 status: publish
 title: So some pictures
-wordpress_id: '31'
 categories:
 - Max/MSP
 - Music

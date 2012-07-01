@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-12-karplus-strong-strings
 status: publish
 title: 'Patch-a-Day Month Day 12: Karplus Strong Strings'
-wordpress_id: '158'
 categories:
 - Music
 - Patch-A-Day

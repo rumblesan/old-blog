@@ -4,7 +4,6 @@ layout: post
 slug: its-all-happening
 status: publish
 title: It's all happening.....
-wordpress_id: '34'
 comments: true
 ---
 

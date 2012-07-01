@@ -4,7 +4,6 @@ layout: post
 slug: old-blogger-posts-imported
 status: publish
 title: Old Blogger posts imported
-wordpress_id: '61'
 comments: true
 ---
 

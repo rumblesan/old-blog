@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-23-fast-fourier-transform-introduction
 status: publish
 title: 'Patch-a-Day Month Day 23: Fast Fourier Transform Introduction'
-wordpress_id: '202'
 categories:
 - Music
 - Patch-A-Day
@@ -27,20 +26,13 @@ So the idea of the Fourier Transform is that we take a section of samples from a
 
 A few terms that will keep cropping up:-
 
-
-
-	
   1. Nyquist frequency
 
-	
   2. Block size
 
-	
   3. Imaginary/complex numbers
 
-	
   4. Frequency bin
-
 
 The Nyquist frequency is the maximum frequency that we can analyse. In digital audio, the maximum frequency that you can playback is half of the sampling frequency. Our sample rate is the standard 44.1 KHz, so our Nyquist frequency is 22.05 KHz. For more of an explanation [Wikipedia gives a good run-down](http://en.wikipedia.org/wiki/Nyquist_frequency).
 

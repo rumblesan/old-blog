@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-21-preset-loading
 status: publish
 title: 'Patch-a-Day November 2011 Day 21: Preset loading'
-wordpress_id: '405'
 categories:
 - Patch-A-Day
 - Pure Data

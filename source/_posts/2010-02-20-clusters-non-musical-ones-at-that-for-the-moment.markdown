@@ -4,7 +4,6 @@ layout: post
 slug: clusters-non-musical-ones-at-that-for-the-moment
 status: publish
 title: Clusters, non musical ones at that (for the moment)
-wordpress_id: '58'
 categories:
 - Povray
 - Programming

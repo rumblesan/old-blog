@@ -4,7 +4,6 @@ layout: post
 slug: still-alive
 status: publish
 title: Still Alive
-wordpress_id: '35'
 comments: true
 ---
 

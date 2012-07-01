@@ -4,7 +4,6 @@ layout: post
 slug: pure-data-snippets-random-list-element
 status: publish
 title: Pure Data snippets Random list element
-wordpress_id: '456'
 categories:
 - Pure Data
 tags:

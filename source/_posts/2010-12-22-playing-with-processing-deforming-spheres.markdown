@@ -4,7 +4,6 @@ layout: post
 slug: playing-with-processing-deforming-spheres
 status: publish
 title: Playing with Processing Deforming Spheres
-wordpress_id: '252'
 categories:
 - Povray
 - Processing

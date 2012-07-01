@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-22-preset-file-saving
 status: publish
 title: 'Patch-a-Day November 2011 Day 22: Preset file saving'
-wordpress_id: '408'
 categories:
 - Patch-A-Day
 - Pure Data

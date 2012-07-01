@@ -4,7 +4,6 @@ layout: post
 slug: internet-connected-tomorrow-hopefully
 status: publish
 title: Internet Connected Tomorrow……. hopefully
-wordpress_id: '15'
 tags:
 - announcement
 comments: true

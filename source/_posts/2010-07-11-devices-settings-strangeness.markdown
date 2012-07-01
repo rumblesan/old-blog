@@ -4,7 +4,6 @@ layout: post
 slug: devices-settings-strangeness
 status: publish
 title: Devices Settings Strangeness
-wordpress_id: '11'
 categories:
 - SuperCollider
 tags:

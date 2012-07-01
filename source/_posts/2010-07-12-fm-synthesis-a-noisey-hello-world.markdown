@@ -4,7 +4,6 @@ layout: post
 slug: fm-synthesis-a-noisey-hello-world
 status: publish
 title: FM Synthesis, a Noisey Hello World
-wordpress_id: '12'
 categories:
 - SuperCollider
 tags:

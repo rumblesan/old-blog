@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-11-a-better-sampler
 status: publish
 title: 'Patch-a-Day Month Day 11: A Better Sampler'
-wordpress_id: '148'
 categories:
 - Music
 - Patch-A-Day

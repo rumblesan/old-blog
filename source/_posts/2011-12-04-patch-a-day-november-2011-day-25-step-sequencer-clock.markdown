@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-25-step-sequencer-clock
 status: publish
 title: 'Patch-a-Day November 2011 Day 25: Step Sequencer Clock'
-wordpress_id: '418'
 categories:
 - Patch-A-Day
 - Pure Data

@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-12-euclidean-sequencer
 status: publish
 title: 'Patch-a-Day November 2011 Day 12: Euclidean Sequencer'
-wordpress_id: '371'
 categories:
 - PatchWerk-Radio
 - Pure Data

@@ -4,7 +4,6 @@ layout: post
 slug: sequencing-basic-events-in-pure-data
 status: publish
 title: Sequencing Basic Events in Pure Data
-wordpress_id: '86'
 categories:
 - Music
 - Pure Data

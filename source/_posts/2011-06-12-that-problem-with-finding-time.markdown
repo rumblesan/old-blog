@@ -4,7 +4,6 @@ layout: post
 slug: that-problem-with-finding-time
 status: publish
 title: That problem with finding time...
-wordpress_id: '293'
 categories:
 - Music
 - PatchWerk-Radio

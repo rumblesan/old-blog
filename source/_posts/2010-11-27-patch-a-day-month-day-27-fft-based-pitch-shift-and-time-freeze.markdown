@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-27-fft-based-pitch-shift-and-time-freeze
 status: publish
 title: 'Patch-a-Day Month Day 27: FFT based Pitch Shift and Time Freeze'
-wordpress_id: '223'
 categories:
 - Music
 - Patch-A-Day

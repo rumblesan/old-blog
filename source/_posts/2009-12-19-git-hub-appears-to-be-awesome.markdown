@@ -4,7 +4,6 @@ layout: post
 slug: git-hub-appears-to-be-awesome
 status: publish
 title: Git Hub appears to be awesome
-wordpress_id: '54'
 categories:
 - Git
 tags:

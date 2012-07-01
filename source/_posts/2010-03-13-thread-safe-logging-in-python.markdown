@@ -4,7 +4,6 @@ layout: post
 slug: thread-safe-logging-in-python
 status: publish
 title: Thread safe logging in Python
-wordpress_id: '60'
 categories:
 - Python
 comments: true

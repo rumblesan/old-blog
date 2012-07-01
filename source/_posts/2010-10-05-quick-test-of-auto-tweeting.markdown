@@ -4,7 +4,6 @@ layout: post
 slug: quick-test-of-auto-tweeting
 status: publish
 title: Quick Test of Auto Tweeting
-wordpress_id: '98'
 comments: true
 ---
 

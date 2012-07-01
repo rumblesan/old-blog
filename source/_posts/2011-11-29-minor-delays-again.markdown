@@ -4,7 +4,6 @@ layout: post
 slug: minor-delays-again
 status: publish
 title: Minor delays again!
-wordpress_id: '410'
 categories:
 - News
 comments: true

@@ -4,7 +4,6 @@ layout: post
 slug: lesson-time-off-work-is-good-time-out-of-house-is-productive
 status: publish
 title: 'Lesson: Time off work is good. Time out of house is productive.'
-wordpress_id: '55'
 comments: true
 ---
 

@@ -4,7 +4,6 @@ layout: post
 slug: a-basic-intro-to-markov-chains
 status: publish
 title: A Basic Intro to Markov Chains
-wordpress_id: '77'
 categories:
 - Programming
 - Pure Data

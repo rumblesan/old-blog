@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-22-granular-synth-with-grain-randomisation
 status: publish
 title: 'Patch-a-Day Month Day 22: Granular Synth with Grain Randomisation'
-wordpress_id: '197'
 categories:
 - Music
 - Patch-A-Day

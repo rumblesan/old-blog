@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-23-generic-preset-abstractions
 status: publish
 title: 'Patch-a-Day November 2011 Day 23: Generic Preset abstractions'
-wordpress_id: '411'
 categories:
 - Patch-A-Day
 - Pure Data

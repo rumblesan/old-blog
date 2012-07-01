@@ -4,7 +4,6 @@ layout: post
 slug: processing-js-and-github-hosting
 status: publish
 title: Processing JS and GitHub hosting
-wordpress_id: '454'
 categories:
 - Processing
 - Programming

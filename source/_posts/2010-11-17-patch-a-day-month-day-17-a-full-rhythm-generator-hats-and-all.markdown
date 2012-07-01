@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all
 status: publish
 title: 'Patch-a-Day Month Day 17: A Full Rhythm Generator, Hats and all'
-wordpress_id: '179'
 categories:
 - Music
 - Patch-A-Day

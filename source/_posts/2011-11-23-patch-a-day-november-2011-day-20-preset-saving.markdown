@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-november-2011-day-20-preset-saving
 status: publish
 title: 'Patch-a-Day November 2011 Day 20: Preset saving'
-wordpress_id: '401'
 categories:
 - Patch-A-Day
 - Pure Data

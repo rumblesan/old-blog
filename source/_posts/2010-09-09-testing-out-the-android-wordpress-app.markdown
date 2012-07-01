@@ -4,7 +4,6 @@ layout: post
 slug: testing-out-the-android-wordpress-app
 status: publish
 title: Testing out the android wordpress app
-wordpress_id: '67'
 tags:
 - android
 comments: true

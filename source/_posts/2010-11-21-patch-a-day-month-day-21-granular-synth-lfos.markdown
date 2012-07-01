@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-21-granular-synth-lfos
 status: publish
 title: 'Patch-a-Day Month Day 21: Granular Synth LFOs'
-wordpress_id: '193'
 categories:
 - Music
 - Patch-A-Day

@@ -4,7 +4,6 @@ layout: post
 slug: an-evening-with-go
 status: publish
 title: An evening with Go
-wordpress_id: '447'
 comments: true
 ---
 

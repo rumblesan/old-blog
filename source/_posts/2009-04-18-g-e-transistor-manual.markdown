@@ -4,7 +4,6 @@ layout: post
 slug: g-e-transistor-manual
 status: publish
 title: G.E. Transistor Manual
-wordpress_id: '41'
 comments: true
 ---
 

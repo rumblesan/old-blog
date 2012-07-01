@@ -4,7 +4,6 @@ layout: post
 slug: lack-of-oomph
 status: publish
 title: Lack of OOMPH
-wordpress_id: '288'
 comments: true
 ---
 

@@ -4,7 +4,6 @@ layout: post
 slug: setting-yourself-challenges
 status: publish
 title: Setting yourself challenges....
-wordpress_id: '244'
 comments: true
 ---
 

@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-6-generative-drum-sequencer
 status: publish
 title: 'Patch-a-Day Month Day 6: Generative Drum Sequencer'
-wordpress_id: '129'
 categories:
 - Music
 - Patch-A-Day

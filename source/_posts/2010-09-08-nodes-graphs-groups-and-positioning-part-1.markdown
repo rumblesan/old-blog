@@ -4,7 +4,6 @@ layout: post
 slug: nodes-graphs-groups-and-positioning-part-1
 status: publish
 title: Nodes, Graphs, Groups and Positioning (part 1)
-wordpress_id: '24'
 categories:
 - SuperCollider
 tags:
@@ -18,8 +17,6 @@ So I've been reading up more on this, as I feel it's one of the last major thing
 
 The basics is where we'll start and, thankfully, they aren't to taxing. There won't be much code in this post but there should be a fair few diagrams to help visualise everything.
 
-
-
 To begin with, I'll introduce the four big words I used in the title.
 
 **Nodes, Graphs, Groups and Positioning.**
@@ -32,11 +29,9 @@ SuperCollider uses graphs internally when dealing with Synths that it is running
 
 Nodes and Groups are something that you will deal with often if you use SuperCollider. A Node can be a single Synth or a Group on the server. A Group can be a collection of Synth Nodes and/or more Group Nodes.
 
-    
-    
-    t = Synth('basic-FM',['freq2', 200, 'amp1', 300]);
-    
-
+```
+t = Synth('basic-FM',['freq2', 200, 'amp1', 300]);
+```
 
 The above code for example is us creating a Synth and storing a reference to it in the variable t. The reference we are actually storing is the ID of the Node on the Server so when we run commands that refer to a synth, we're actually just sending messages to that Node.
 
@@ -50,22 +45,15 @@ It is also worth mentioning here that ordering works much the same for Groups as
 
 So, to round everything up, a quick overview in bullet point format.
 
-
-
-	
   * The SuperCollider server keeps track of Synths and Groups as Nodes
 
-	
   * A Group is a collection of Nodes itself
 
-	
   * The internals of a Synth Node will be a Graph of UGens created from the SynthDef
 
-	
   * The Nodes will have an order and this can be set and changed
 
-	
   * A Node that is dependant upon the audio from another Node must be placed after it
 
-
 Part two should have some more code examples, probably something simple involving a synth and an effect and I'll aim to start getting the code examples up on Github.
+

@@ -4,7 +4,6 @@ layout: post
 slug: so-what-to-do-next
 status: publish
 title: So what to do next...
-wordpress_id: '281'
 comments: true
 ---
 

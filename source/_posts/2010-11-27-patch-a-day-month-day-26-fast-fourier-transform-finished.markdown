@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-26-fast-fourier-transform-finished
 status: publish
 title: 'Patch-a-Day Month Day 26: FFT based EQ and Delay'
-wordpress_id: '215'
 categories:
 - Music
 - Patch-A-Day

@@ -4,7 +4,6 @@ layout: post
 slug: drum-sounds-in-supercollider-part-2
 status: publish
 title: Drum Sounds in SuperCollider (part 2)
-wordpress_id: '104'
 categories:
 - Music
 - SuperCollider

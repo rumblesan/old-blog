@@ -4,7 +4,6 @@ layout: post
 slug: patch-a-day-month-day-19-basic-granular-synth
 status: publish
 title: 'Patch-a-Day Month Day 19: Basic Granular Synth'
-wordpress_id: '186'
 categories:
 - Music
 - Patch-A-Day

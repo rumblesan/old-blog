@@ -4,7 +4,6 @@ layout: post
 slug: and-so-here-it-begins
 status: publish
 title: And so here it begins
-wordpress_id: '29'
 comments: true
 ---
 
