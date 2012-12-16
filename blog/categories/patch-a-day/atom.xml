@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Patch-A-Day | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/patch-a-day/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 30: Bouncing Ball]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/13/patch-a-day-november-2011-day-30-bouncing-ball/"/>
+    <updated>2011-12-13T22:07:31+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/13/patch-a-day-november-2011-day-30-bouncing-ball</id>
+    <content type="html"><![CDATA[<p>For the last (very late) patch of the month I’ve decided not to do any more with the sequencer, but to go off on a bit of a tangent and create a simulation of a bouncing ball. It’s not the most thorough physical model, and there are a couple of issues with it, but it gives a pretty good idea of how to go about taking mathematical equations and transferring them over to PD.</p>
+
+<p>This patch will model dropping a ball from a chosen height and simulating how far it falls or rises within fractional lengths of time. The downwards direction gets changed to an upwards direction on the bounce but the co-efficient of elasticity (bounciness) can be changed to decide how much energy is lost when this happens.</p>
+
+<p>I’ll be using two equations here.</p>
+
+<p>$ x = \tfrac{1}{2} at^2 + v_ot + x_o $</p>
+
+<p>$ v = at + v_o $</p>
+
+<p>These are two of the standard <em>suvat</em> equations of motion. The first says that in a given amount of time $ t $, the position of an object will be its current position $ x<em>0 $ plus its velocity at the beginning of that period $ v</em>0 $ multiplied by the time, plus half its acceleration $ a $ multiplied by the time period squared.</p>
+
+<p>The second says that the velocity of an object after time $ t $ is equal to its velocity at the start of that period $ v_0 $, plus its acceleration multiplied by time.</p>
+
+<p>In the patch below I’ve broken the model down into three parts, one for the first equation, one for the second and then another part that checks when we’ve hit the bottom.</p>
+
+<p><img src="/a/2011-12-13-patch-a-day-november-2011-day-30-bouncing-ball/bouncing-ball-patch.png" alt="Bouncing ball patch" /></p>
+
+<p>At the top there’s the metro to run the patch and some setup. There are five variables here and I’m storing them in value objects.</p>
+
+<ul>
+  <li>
+    <p>The time period</p>
+  </li>
+  <li>
+    <p>The initial starting height</p>
+  </li>
+  <li>
+    <p>The current velocity</p>
+  </li>
+  <li>
+    <p>The acceleration due to gravity</p>
+  </li>
+  <li>
+    <p>The bounciness</p>
+  </li>
+</ul>
+
+<p>It’s worth pointing out here to remember that gravity is a negative value. This patch assumes that positive velocity is up, and as gravity is always pulling down it’s negative.</p>
+
+<p>This patch works with a relative time model instead of an absolute one. We’re calculating the relative change in height since the last calculation, not the overall height since we started. This means that the velocity change also needs to be calculated relative to the last velocity. This is done by the left hand collection of objects which calculate the second equation. The section gets given the sample length and multiplies this by the acceleration to get the change in velocity. This gets added to the current velocity to give us the new value.</p>
+
+<p>The middle section calculates the values for the first equation. It takes the current velocity and multiples this by the sample length then adds on the $ \tfrac{1}{2} at^2  $ part. It adds this to the current height value to get the new height value. When the patch starts, the velocity will be negative as the ball is travelling down, so decreasing the height.</p>
+
+<p>The final part on the right hand side checks to see when the ball hits the ground. When the height is &lt; 0 it reverses the velocity and multiplies it by the bouncyness. On the way back up the velocity will gradually decrease due to the effects of the negative gravity, and eventually it will stop and come back down. Assuming the bouncyness was a less that 1 value, the ball won’t reach the same height, so the time until it hits will decrease.</p>
+
+<p>There are a few issues with this model, mostly around the the section that checks for the bounce. The height will actually go negative for one iteration and only go back up again on the next calculation, after the velocity has been reversed. This can cause issues when the height gets very small and ideally there needs to be something smarter here to work it out.</p>
+
+<p>Also if the sample time is too large then there is a lot of unstable behaviour so it’s best to keep it to values around or below 0.1.</p>
+
+<p>That said, this serves pretty well as an example so should teach you the basics of doing this sort of physical mechanical modelling.</p>
+
+<p>But no1 that’s it for Patch a Day month 2011. I’ll make sure that all the example patches are in the repository for downloading and I’ll leave it at that for now. There will be more PD stuff going up here, I’ll make sure I;m better about it than last time.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 29: Launchpad lights]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/07/patch-a-day-november-2011-day-29-launchpad-lights/"/>
+    <updated>2011-12-07T23:16:57+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/07/patch-a-day-november-2011-day-29-launchpad-lights</id>
+    <content type="html"><![CDATA[<p>Sending output to the launchpad is pretty easy. Sending the right output, in a way that’s easily configurable and fits in with the standard is a little trickier. I’ve had more of a read of the Launchpad programming guide and have a better handle on the double buffering and so on and I’ll put some of that into practise here. The updates to the sequencer here are, I feel I should point out, as pretty or high performance as they could be. There’s definitely a lot more tweaking needed.</p>
+
+<p>One of the things I’ve found a bit of a problem is sending the large number of update messages to the launchpad. There’s a slow down in PD whilst it’s going. I don’t know if it’s due to the MIDI output, or just trying to send a mass list of 64 messages and needing to make the process more efficient but more investigation is needed.</p>
+
+<p><img src="/a/2011-12-07-patch-a-day-november-2011-day-29-launchpad-lights/step-sequencer-with-lights.png" alt="Step sequencer track with light output" /></p>
+
+<p>This is the updated track abstraction with the output for the light states. The left hand section that updates the data structure will now also send out a message with the new value of the updated step. The right hand sections are for dumping out the state of all the steps in the data structure. This is used when changing tracks as we want to update the launchpad with the new values and clear the old ones. By dumping out the state of all on or off steps we clear the old data and fill the grid with the new. This could be made more efficient by first clearing the grid, then just sending the steps that are on but i decided this is initially simpler to deal with.</p>
+
+<p><img src="/a/2011-12-07-patch-a-day-november-2011-day-29-launchpad-lights/full-sequencer-with-light-state-output.png" alt="Full sequencer with light state output" /></p>
+
+<p>The main sequencer section has been updated as well to parse the data now being output by the tracks. The objects right at the bottom will take the step messages, convert the step number back into the XY coordinate and change the 1 or 0 value into the correct note velocity for the colour we want. The clr abstraction works differently now just to point out. It takes two arguments, one is the colour value to send out when it gets a 1 input, the second for when it gets a 0 input. I’m following the Launchpad programming guide by sending out a value of 12 for off. This apparently makes it easier to add in double buffering later which might well be necessary.</p>
+
+<p>There’s also a small section in the middle at the top that sends out the light on/off messages for the mode lights. The tracklight patch just keeps track of the current track number and, when the track changes, will send out an off message for the old button and an on for the new one.</p>
+
+<p>As I said, there’s actually a fair bit of work that needs to happen on this to make it fast enough but it’s not bad as a start. I’ll probably concentrate on tacking on the drum sounds for the next patch-a-day and then call it finished for the moment.</p>
+
+<p>That will also actually be my last patch-a-day patch for this round. I’m going to be continuing work on this sequencer and I’ll be writing more of it up, just not worrying about doing it once a night though heh.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 28: Launchpad sequencer improvements]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/06/patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/"/>
+    <updated>2011-12-06T21:01:27+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/06/patch-a-day-november-2011-day-28-launchpad-sequencer-improvements</id>
+    <content type="html"><![CDATA[<p>Just a shortish one today, Yesterday I said that the step sequencer we’d built was mostly working but had a fairly vital flaw, we couldn’t actually save values in the data structure because we were getting not on and off messages from the launchpad. There are a few ways to fix this but I think that the way I do it here is the simplest and most flexible.</p>
+
+<p>First things, we only want note on grid messages, that can be fixed with a spigot in the main sequencer patch.</p>
+
+<p><img src="/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/sequencer-nnote-off-grid.png" alt="Sequencer only accepts note on grid messages" /></p>
+
+<p>Note off messages will now get blocked and won’t go through to the track abstractions.</p>
+
+<p><img src="/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/track-abstraction-that-checks-current-value.png" alt="Track abstraction now checks current value" /></p>
+
+<p>There’s a few less objects in the track abstraction now but a few new ones as well. The biggest change is that the input is now actually only a single number. This number is used to calculate the pointer to the step position as normal, but it then gets sent to a get object as well as the set object. The abstraction will now check the current value in the data structure at that step and then update it with the opposite value, so we’ve successfully toggled the value in the data structure.</p>
+
+<p>It’s easy to change this behaviour if needed, you might want to increment it or do something else, that’s up to you. Obviously we cant just send in a value for the abstraction to store now but that’s also easy to change, or just use the old version.</p>
+
+<p>Anyway, the launchpad can now update the data structure and the sequencer actually sequences if you turn the clock on. Of course some lights on the Launchpad would be good, but that’s a task for next time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 27: Launchpad sequencer]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/05/patch-a-day-november-2011-day-27-launchpad-sequencer/"/>
+    <updated>2011-12-05T21:41:41+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/05/patch-a-day-november-2011-day-27-launchpad-sequencer</id>
+    <content type="html"><![CDATA[<p>Right, time to hook the launchpad up to the sequencer. I’ve modified the Launchpad IO abstraction to neaten it up and make it actually deal with output and input. The sequencer patch has been changed so that incomng grid messages are converted to a stop number and the mode buttons select the track number to update and the main clock is now on the outside.</p>
+
+<p>Let’s run through them and I’ll explain a bit about what’s going on.</p>
+
+<p><img src="/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/first-launchpad-sequencer.png" alt="First launchpad sequencer" /></p>
+
+<p>The sequencer is now the steps abstraction and the first argument tells it how many steps we want to have. The basic metro clock is still there, entirely unchanged. The launchpad_io abstraction now takes the channel as an argument as well. All simple and a bit dull.</p>
+
+<p><img src="/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/improved-launchpad-IO.png" alt="Improved launchpad IO" /></p>
+
+<p>The launchpad IO now just deals with outputting the MIDI in messages and sending the MIDI out messages. All IO goes through a single inlet or outlet and all messages are prefixed with either grid, mode or ctl to show where it’s from or going to. There’s also the reset option available which sends the clear message.</p>
+
+<p><img src="/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/step-sequencer.png" alt="Updated step sequencer" /></p>
+
+<p>The step sequencer now has a bit more functionality. It takes the input direct from the launchpad and pulls out the grid and mode button messages. The mode messages control which track we are updating and do that by pre-pending the track name onto the front of the grid message. The tracks then route for this as they do normally. Note the spigot on the mode section, this is there so that only button on messages get through. We don’t actually care about button off messages here so we just stop them coming through.</p>
+
+<p>The grid messages are converted from their XY format into a single value that gives the step position. At this point it may be clear that there is a problem with the current setup. The grid buttons also have button up and down messages coming through, so when we press a button the <strong>1</strong> value gets stored, but as soon as it’s released the <strong>0</strong> is stored over the top of it.</p>
+
+<p>For the moment I’ll let you think about how you might solve this, tomorrow I’ll show you how I do it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 26: Launchpad IO]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-26-launchpad-io/"/>
+    <updated>2011-12-04T18:24:56+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-26-launchpad-io</id>
+    <content type="html"><![CDATA[<p>I said I’d do this once I’d done a bit more work on the sequencer, but I realised that it’s probably a better idea to get this done first as it will make testing much easier. This patch is really just taking the MIDI input from the launchpad, formatting it into messages that are easier to deal with, and then translating our simple messages back into correct MIDI for us to send back out to it. As a quick refresher, here’s what the Launchpad looks like.</p>
+
+<p><img src="/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad.jpg" alt="Novation Launchpad" /></p>
+
+<p>During these posts, I’ll refer to three sections of the button layout. The eight buttons on the top row are the control buttons, the eight down the right hand side I call the mode buttons, and the 8*8 grid is the grid. Explaining that should make it easier to follow what I’m talking about.</p>
+
+<p>The input from the Launchpad for these is pretty basic, but it’s not as easy to deal with as it could be, the grid and eight mode buttons all have MIDI note numbers assigned to them, but they’re essentially mixed together. Ideally I want to separate the mode button messages from the grid messages, and have the grid messages be in a simple <strong>(X Y value)</strong> format. The control button input is all as midi control messages, which is easy enough to deal with, but they start at value 104 and it’s much easier just to deal with 0 to 7.</p>
+
+<p>One other thing to note, the input values from all button presses are either 0 or 127, either as note velocity or controller value. For input I find it much easier to just deal with 0 or 1 for button presses, output we actually need to use certain values to set the colours but that can be simplified easily enough. Here’s the patch as it currently looks.</p>
+
+<p><img src="/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad-IO.png" alt="Launchpad IO" /></p>
+
+<p>Top left is dealing with grid and mode note in values. Straight out of the notein object I’ve already converted the velocity values to 0 or 1 and the notein object itself is filtering for midi channel 1. This is the channel my Launchpad appears under in PD though it might be different depending upon what’s plugged in. When I turn this into an abstraction, all the channel messages will be an abstraction argument to make integration easier.</p>
+
+<p>The route object specifically selects for the eight note values of the mode buttons and then uses a fairly cludgy way to turn these into 0 to 7 numbers with the on/off value. Anything that isn’t one of these numbers is from the grid which can be turned into the XY coordinates I’m after using some basic maths. The layout of the note numbers on the launchpad follows the equation (row * 16) + column, so by dividing by 16 we can get the row number, and finding the modulo remainder of  8 we get the column. These get packed with the note on/off and that’s the grid message.</p>
+
+<p>The control messages come from the ctl in object, situated middle top, and the channel filter has to be done externally because of the way ctlin works. The values also come in in the format (value, ctlnumber) which we want to be the other way round, the swap object handles that, then the ctl number has 104 subtracted from it and the data gets packed into a nice simple format to deal with.</p>
+
+<p>The output sections basically do this in reverse. One thing to note is that I’ve added in a reset control. Sending the launchpad a zero value on control zero will turn off all the LEDs, a useful function to have.</p>
+
+<p>The right hand side is just to take our input messages and convert them into output messages so the patch can be tested with a launchpad. The clr abstraction gives an easy way to set the output velocities/ctl values so we can select the colour we want on the launchpad. Internally they;re pretty simple.</p>
+
+<p><img src="/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/colour-abstraction.png" alt="Launchpad colour abstraction" /></p>
+
+<p>The creation argument will set a default value, or the right inlet can be used to select and change it. The incoming value gets multiplied by the selected value so note off messages are still zero when they go out. The colours are red low, red full, amber low, amber full, yellow, green low and green full. I’ve just realised that technically all output to the launchpad should always be the off value (12) due to the internal buffering and so on it has available, I’ll need to check that out, but for the moment, have a play around with this if you have a Launchpad and see how it works.</p>
+
+<p>This kind of input filtering and manipulation helps to make life much easier when creating larger apps that interface with MIDI controllers and I hop this abstraction will be pretty useful in future.</p>
+]]></content>
+  </entry>
+  
+</feed>

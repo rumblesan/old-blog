@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Processing | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/processing/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Processing JS and GitHub hosting]]></title>
+    <link href="http://rumblesan.com/blog/2012/04/29/processing-js-and-github-hosting/"/>
+    <updated>2012-04-29T22:30:42+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/04/29/processing-js-and-github-hosting</id>
+    <content type="html"><![CDATA[<p>So Processing.JS is pretty cool, this much we know. GitHub is also pretty cool, I don’t think anybody is going to deny that either.</p>
+
+<p>It turns out that the two work really, really well together and because of this I decided to throw up a gallery of my Processing.JS sketches that’s hosted using githubs pages.</p>
+
+<p>Check it out here <a href="http://rumblesan.github.com/ProcessingJS-Gallery/">http://rumblesan.github.com/ProcessingJS-Gallery/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Playing with Processing Deforming Spheres]]></title>
+    <link href="http://rumblesan.com/blog/2010/12/22/playing-with-processing-deforming-spheres/"/>
+    <updated>2010-12-22T18:14:35+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/12/22/playing-with-processing-deforming-spheres</id>
+    <content type="html"><![CDATA[<p>The other night I finally got to sit down with Processing and work out some ideas. The results were pretty cool I feel.</p>
+
+<p>There will probably be some PovRay renders of this scene, maybe even some animations.</p>
+
+<p>EDIT: Hmm, seems that my pages don’t stretch correctly and this is messing with the layout a bit. I’ll leave this here for the moment, because at least then people will see it, but I do reckon that I need to do something about the layout soon. something to do over christmas time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Processing, POV-Ray and Noise]]></title>
+    <link href="http://rumblesan.com/blog/2010/12/12/processing-pov-ray-and-noise/"/>
+    <updated>2010-12-12T19:48:17+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/12/12/processing-pov-ray-and-noise</id>
+    <content type="html"><![CDATA[<p>The last two weeks have basically been a break from PureData to concentrate more on some of the other things I enjoy doing. The rhythmic noise album in 12 days plan hasn’t emerged  quite as well as I had hoped so will remain on the workbench for a little while longer. I have successfully ported the generative beats patch to Max4Live and have extended it some more, there’s still plenty of work that needs to go into it and I’m not entirely sure that what I’ve done has made it better but I expect this to be a long term thing so it’s not a worry.</p>
+
+<p>What I have started doing for most of today is playing around with processing to make interesting shapes again. More importantly I’ve gone and had a play with the POV-Ray exporting code from <a href="http://www.davebollinger.com/works/p5povray/">Dave Bollinger</a> (who makes some very cool art) and I can now prototype scenes in Processing and then export the basics to POV-Ray. I’ve started putting up pictures on my Flickr profile which I’m sure I’ll find some natty, web2.0 way to link to this site.</p>
+
+<p>Next week will hopefully feature some more PD, probably with more extensions to the granular synth tho perhaps also with some cool PD plus Processing visuals. Depends on how I feel.</p>
+]]></content>
+  </entry>
+  
+</feed>

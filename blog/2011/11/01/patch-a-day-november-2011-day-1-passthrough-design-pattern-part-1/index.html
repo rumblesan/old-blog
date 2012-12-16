@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Patch-a-Day November 2011 Day 1: Passthrough Design Pattern (part 1) - RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="I’m planning to spend the first few days of this week going over a design pattern I’ve found myself using in various ways. For anybody who is unsure &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/2011/11/01/patch-a-day-november-2011-day-1-passthrough-design-pattern-part-1/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Patch-a-Day November 2011 Day 1: Passthrough Design Pattern (Part 1)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-01T19:55:00+00:00" pubdate data-updated="true">Nov 1<span>st</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I’m planning to spend the first few days of this week going over a design pattern I’ve found myself using in various ways. For anybody who is unsure what a Design Pattern might be I’d recommend checking the <a href="http://en.wikipedia.org/wiki/Design_pattern">Wikipedia Page</a> which gives a pretty reasonable answer. For those who don’t want to make the jump, the first sentence sums it up pretty well.</p>
+
+<blockquote>
+  <p>A design pattern in architecture and computer science is a formal way of documenting a solution to a design problem in a particular field of expertise.</p>
+</blockquote>
+
+<p>So what I’m going to be explaining here is just a simple idea you can use in your pure data patches that can help solve a variety of problems. One of the major problems (at least in my opinion) with patching languages like PD is that things can get pretty cluttered and hard to follow. This may be how you like to work and it’s certainly not a bad thing but I prefer to try to keep things neat and to compartmentalize sections of a patch in a logical fashion.</p>
+
+<p>At this point I want to mention this article from <a href="http://www.creativeapplications.net/theory/patch-schematics-%E2%80%93-the-aesthetics-of-constraint-best-practices-theory/">Creative Applications</a> which talks a lot about this and covers a bit of the same ground. I’m planning to go more in-depth but this is a really good article for getting your head around some of this.</p>
+
+<p>Anyway, onto the first example. The design pattern I want to talk about is one that I call the Passthrough. The above article mentions daisy chaining patches together vertically, so the data output of one flows into the next and the passthrough is sort of a logical extension of this.</p>
+
+<p>Each patch has a control bus and a data bus:-</p>
+
+<ul>
+  <li>
+    <p>Control messages flow through the patches and are routed into the correct patches using a route object with abstraction arguments.</p>
+  </li>
+  <li>
+    <p>Data output from a patch will flow into the main data bus and the messages will all be output from the outlet of the last patch</p>
+  </li>
+</ul>
+
+<p>A Diagram will make this a bit easier to understand.</p>
+
+<p><a href="/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-basic.png"><img src="/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-basic.png" alt="basic passthrough design" /></a>
+    Basic Passthrough example</p>
+
+<p>The section on the left, surrounded by the black border, is the internals of the passthrough-abs abstraction. The right inlet/outlet is the control bus and the left inlet/outlet the data bus. Each abstraction has two arguments, one sets what the route object is looking for, the other is its output value. When a number is sent into the right inlet it will be sent to the route object in all of the abstractions. If the number sent matches the route argument then a bang will be sent out its inlet. This will cause the value in the symbol object to be sent out the data bus outlet. This data will pass through all the abstractions below the one triggered, but it will not affect them, eventually going to the list trim (to remove the symbol element at the front of the message) and then get printed.</p>
+
+<p>If we send in multiple numbers then all the relevant abstractions will be triggered but the data will still only come out one outlet. This sort of pattern can help simplify the data routing of a patch. A simple extension to this is to add an “all” option that will output the value of every abstraction.</p>
+
+<p><a href="/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-all.png"><img src="/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-all.png" alt="basic passthrough with all option" /></a>
+    Basic Passthrough with all option</p>
+
+<p>This idea can be made more useful when combined with send objects as a good way of getting control data to where it’s needed in a patch without having lots of patch chords all over the place. This is something I’ve seen used in the <a href="http://puredata.hurleur.com/sujet-1531-sssad-save-module">SSSAD patch save module</a> and also the <a href="https://github.com/rjdj/rjlib">rjlib libraries</a> and is originally what made me start thinking about this pattern.</p>
+
+<p><img src="/a/2011-11-01-patch-a-day-2011-day-1-passthrough-design-pattern-part-1/passthrough-send.png" alt="Passthrough with sends" /></p>
+
+<p>In this case, the s-passthrough-abs only has the control bus with the data bus having been replaced by a send object. The value that we are routing for is in this case being used both in the route object and the send object and we are also passing in the main patches $0 value as an argument. The $0 value is prefixed onto the send name so that it stays within the scope of just this patch. When a list in the form of “name value” is sent down the control bus it will be routed by the correct abstraction and the value will be sent to the corresponding receive object.</p>
+
+<p>This may seem a little confusing to begin with, but imagine if this patch was part of a delay effect, and that instead of the names one, two, three and four, we instead had delay, feedback, mix and pan. We could use the abstractions to parse the input control messages and then send the values to the correct place in our patch. The section of the code dealing with the audio processing could be kept separate from this and would just need receive objects in the correct places. This would result in much neater and more logically structured code.</p>
+
+<p>So I’m going to leave it there for tonight. I’m planning on spending the next two nights going into this in greater detail and with some more “real world” examples of how this can be pretty useful. After that I intend to get back into the algorithmic stuff so come back then if that’s what you’re after.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">guy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-01T19:55:00+00:00" pubdate data-updated="true">Nov 1<span>st</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/patch-a-day/'>Patch-A-Day</a>, <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/pure-data/'>Pure Data</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/01/patch-a-day-month-2-november-2011/" title="Previous Post: Patch-a-Day Month 2, November 2011">&laquo; Patch-a-Day Month 2, November 2011</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/" title="Next Post: Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (part 2)">Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (part 2) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rumblesan.com/blog/2011/11/01/patch-a-day-november-2011-day-1-passthrough-design-pattern-part-1/';
+        var disqus_url = 'http://rumblesan.com/blog/2011/11/01/patch-a-day-november-2011-day-1-passthrough-design-pattern-part-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

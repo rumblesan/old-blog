@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cuttr is now live and running]]></title>
+    <link href="http://rumblesan.com/blog/2012/09/11/cuttr-is-now-live-and-running/"/>
+    <updated>2012-09-11T21:55:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/09/11/cuttr-is-now-live-and-running</id>
+    <content type="html"><![CDATA[<p>So a second additing to the auto updating <a href="http://rumblesan.tumblr.com">Tumblr</a> is now live.</p>
+
+<p><a href="https://github.com/rumblesan/cuttr">Cuttr</a> is written in scala and will apply randomised (but hopefully interesting) mathematically defined processes to the RGB values of an image.</p>
+
+<p>Usual, <em>found on Tumblr, shown on Tumblr</em> rules apply.</p>
+
+<p>I’m planning on adding a few more glitching possibilities to it but the early results are already pretty promising. Much of the time with this was actually spend wrestling with the OAuth stuff, made significantly easier due to the <a href="https://github.com/fernandezpablo85/scribe-java">Scribe</a> library. Also, I still don’t quite get reading of binary data in Scala. Should be easy, but never seems to be.</p>
+
+<p>Anyway enjoy the results</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Programming is good for the soul]]></title>
+    <link href="http://rumblesan.com/blog/2012/08/30/programming-is-good-for-the-soul/"/>
+    <updated>2012-08-30T22:00:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/08/30/programming-is-good-for-the-soul</id>
+    <content type="html"><![CDATA[<p>In the past couple of months I’ve found I’m drifting away from my usual audio hacking and concentrating more on just programming for the sake of programming.
+Speculation leads me to believe this is down to me having a chance to learn a bunch of cool new stuff and generally just wanting to be a better software engineer.
+This is just a quick roundup of what I’ve been up to and the projects I’ve been creating.</p>
+
+<h2 id="diddy-vmhttprumblesancomdiddy-vm"><a href="http://rumblesan.com/diddy-vm/">Diddy-VM</a></h2>
+
+<p>This is just a really basic Virtual Machine I wrote because I’ve not written one before. Eleven instructions, very basic memory model, no stack or registers and both Python and C implementations. I’ve written a simple assembler program so writing code for it can be done more easily but it’s really very limited. Did the job as a learning exercise though.</p>
+
+<h2 id="dotfileshttpsgithubcomrumblesandotfiles"><a href="https://github.com/rumblesan/dotfiles">dotfiles</a></h2>
+
+<p>Not really a programming project, but I’ve started having an active go at improving my workflow and an important part of that was to sort out a good bash environment. Having it on github means I can easily share it between home, work and any remote servers and I can keep track of what I’m testing out with it.</p>
+
+<h2 id="cuttrhttpsgithubcomrumblesancuttr"><a href="https://github.com/rumblesan/cuttr">Cuttr</a></h2>
+
+<p>Having gotten Glitchr working I decided to have a go at using Scala for some image processing. Cuttr will (once it’s all finished) allow you do define mathematical functions and apply them to the image, either as a whole or as separate colour layers.
+It started with the idea being just to algorithmically cut them up but extended somewhat once I realised how simple it was.</p>
+
+<h2 id="mandelbrothttpsgithubcomrumblesanmandelbrot"><a href="https://github.com/rumblesan/mandelbrot">Mandelbrot</a></h2>
+
+<p>Every programmer should be able to render a Mandelbrot fractal, this is mine. Written in C, using SDL to display it and allows zooming and outputting to PNG. The code is actually reasonably neat as well!</p>
+
+<h2 id="notestxthttpsgithubcomrumblesannotestxt"><a href="https://github.com/rumblesan/notes.txt">notes.txt</a></h2>
+
+<p>Based along the same lines as the very minimal and very cool <a href="http://todotxt.com/">todo.txt</a>, this is a tiny command line app written in bash that allows me to quickly take notes. It’s pretty much functioning at the moment but I’m wanting to extend it with the ability to upload the notes to Evernote as well, once I’ve figured out what the hell their API is doing.</p>
+
+<p>So that’s some of what’s been consuming my time recently, there are a handful of other smaller projects but none are in the sort of state where they’re of much interest. I do have some plans to start some SDL + OpenGL graphical experiments but there’s a bunch of maths I need to relearn first. Better get my nose in some good books.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Organising Domains and migrating sites]]></title>
+    <link href="http://rumblesan.com/blog/2012/07/08/organising-domains-and-migrating-sites/"/>
+    <updated>2012-07-08T11:56:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/07/08/organising-domains-and-migrating-sites</id>
+    <content type="html"><![CDATA[<p>So after having succesfully migrated my main Wordpress over to Octopress I’m not in the process of changing the PatchWerk Radio site to use a jekyll based site hosted on github. having a full blog for it was a bit overkill and really it’s just a handful of static pages.</p>
+
+<p>I started with <a href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a> and then created my own theme for it that essentially mimics the old look of the PatchWerk site. A few moments of confusion as to how to use liquid tags but it’s all up and running now. The new site is up at <a href="http://rumblesan.com/PatchWerk-Radio/">http://rumblesan.com/PatchWerk-Radio/</a> and hopefully it will use the old <a href="http://patchwerk.rumblesan.com">http://patchwerk.rumblesan.com</a> domain as soon as I have the DNS settings all sorted.</p>
+
+<p>The Author, Patch and Currently Playing info will all also be available with the plan being to create an api on the server that can deal with JSONP. Gives me an excuse to learn something new.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Glitchr up and running]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/30/glitchr-up-and-running/"/>
+    <updated>2012-06-30T23:14:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/30/glitchr-up-and-running</id>
+    <content type="html"><![CDATA[<p>A little while ago I wrote a python script that opened up JPEG files, parsed the binary data, messed around with it a bit and gave you back some really interestingly glitched images. I’d intended to do some other things with it but it just got put on the back burner.</p>
+
+<p>I resurrected it about a week ago and thanks to Michael Helmick’s <a href="https://github.com/michaelhelmick/python-tumblpy">TumblPy</a> library I’ve now got it pulling images from and then re-uploading to Tumblr.</p>
+
+<p>You can check out the images at <a href="http://rumblesan.tumblr.com/">rumblesan.tumblr.com</a> and the project site is at <a href="http://rumblesan.com/glitchr">rumblesan.com/glitchr</a></p>
+
+<p>I want to improve the way the glitching happens at the moment. Currently it’s just the quantization tables that get played with but there’s plenty of other things that can be done. Also it tends to be quite aggresive glitching and I’d like to make it a bit subtler.</p>
+
+<p>Something to play with either way. At least now it’s running it’ll be easier to mess around with</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress Customisation]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/24/octopress-customisation/"/>
+    <updated>2012-06-24T17:04:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/24/octopress-customisation</id>
+    <content type="html"><![CDATA[<p>So a short, quick post about customising my octopress install. As has been pointed out in a few places on the internet, Octopress is great but people have a tendancy to keep the defaults once they’ve got everything running. Whilst it’s a really good theme, it’s not that great if your blog looks like everybody elses.</p>
+
+<p>So using a base custom colors.scss file from <a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/">Zachary Maril</a> and a style.scss file from <a href="http://melandri.net/2012/02/14/octopress-theme-customization/">Alessandro Melandri</a> I was able to rejig Rumblesan into something a little different. Pobablly a few things that need further tweaking, but it’s looking good already.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rumblesan moved to Octopress]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/20/rumblesan-moved-to-octopress/"/>
+    <updated>2012-06-20T11:29:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/20/rumblesan-moved-to-octopress</id>
+    <content type="html"><![CDATA[<p>There’s been a bit of a change to the site, which hopefully people will have noticed. I’m now using the excellent <a href="http://octopress.org">Octopress</a> and hosting everything on github. The comments have been moved over to <a href="http://disqus.com">Disqus</a> and should all be migrated soon.</p>
+
+<p>What this means for me is that</p>
+
+<ul>
+  <li>I don’t pay dreamhost for my hosting</li>
+  <li>It’s easier to integrate stuff from github</li>
+  <li>I get to write all my posts in markdown</li>
+  <li>I get to use Vim for everything</li>
+</ul>
+
+<p>In other words, good times. There’s still a few things I need to sort out but hopefully I’ll have them done in the next couple of days.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stranded from the internet!]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/09/stranded-from-the-internet/"/>
+    <updated>2012-06-09T12:58:55+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/09/stranded-from-the-internet</id>
+    <content type="html"><![CDATA[<p>Moving house is potentially a lot of hassle and effort, but usually alright. Except when you weren’t organised enough to sort out the internet before you moved in….. Then it becomes a serious inconvenience.</p>
+
+<p>Everything will get sorted in a week or so but updates may be even more sporadic than they have been.</p>
+
+<p>The good news is that I’ve thought of something new to keep me busy and entertained with Pure Data. More on that in a week</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pure Data snippets Random list element]]></title>
+    <link href="http://rumblesan.com/blog/2012/05/18/pure-data-snippets-random-list-element/"/>
+    <updated>2012-05-18T21:48:48+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/05/18/pure-data-snippets-random-list-element</id>
+    <content type="html"><![CDATA[<p>Hey, just a small post, coding some PD and realised that the small snippet I just made to select a random element from a list may well be useful for some people. I think I might start doing more small, code snippet type posts because they’re quick and easy to do.</p>
+
+<p><a href="http://rumblesan.com/a/2012-05-18-pure-data-snippets-random-list-element/Screen-Shot-2012-05-18-at-21.43.10.png"><img src="http://rumblesan.com/a/2012-05-18-pure-data-snippets-random-list-element/Screen-Shot-2012-05-18-at-21.43.10.png" alt="random list element" /></a></p>
+
+<p>So the section on the right, after the first trigger, takes the list length then calculates a random number between 0 and length 1. The list goes to the split which will send the first section of the split out the left inlet, and the latter section out the middle inlet. This middle output list will have a random element at the beginning so we just trim that off with another split.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Processing JS and GitHub hosting]]></title>
+    <link href="http://rumblesan.com/blog/2012/04/29/processing-js-and-github-hosting/"/>
+    <updated>2012-04-29T22:30:42+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/04/29/processing-js-and-github-hosting</id>
+    <content type="html"><![CDATA[<p>So Processing.JS is pretty cool, this much we know. GitHub is also pretty cool, I don’t think anybody is going to deny that either.</p>
+
+<p>It turns out that the two work really, really well together and because of this I decided to throw up a gallery of my Processing.JS sketches that’s hosted using githubs pages.</p>
+
+<p>Check it out here <a href="http://rumblesan.github.com/ProcessingJS-Gallery/">http://rumblesan.github.com/ProcessingJS-Gallery/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PureData versus SuperCollider versus MaxMSP (Why I do what I do with what I do)]]></title>
+    <link href="http://rumblesan.com/blog/2012/04/22/puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i-do/"/>
+    <updated>2012-04-22T01:08:03+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/04/22/puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i-do</id>
+    <content type="html"><![CDATA[<p>So I got an interesting couple of questions in the comments for the last post. Many thanks to Joe for asking some good questions, as well as giving me a reason to get off my arse and write something. I’ll repeat it here for everyones ease.</p>
+
+<blockquote>
+  <p><em>Hi</em></p>
+
+  <p>I actually came across your blog/web page via various discussions on the Pure Data forum, which naturally I followed up and enjoy reading. However, I noticed in one of your earlier posts (on your own blog) the mention of SuperCollider. Naturally, since I came from the Pure Data forum, I’m a PD fan, like many out there. But reading your remarks about SC I’m interested to ask what is the difference between the two programs? Is it worthwhile (a personal choice of course) looking into both programs, or in fact is one enough and it’s all a matter of interfaces?</p>
+
+  <p>Oddly enough I notice that you do your ‘models’ in PD, probably because it’s freely available, or is that not correct.</p>
+
+  <p>Thanks for the posts, I’m trying to hang in there, but since there’s no real order easy to complicated etc I often find myself out of my own depth. I also have to say I sometimes try to understand the importance of certain ideas in connection with the results. But in the final picture who cares, it’s very interesting and I’m learning as I read your posts.</p>
+
+  <p><em>Thanks in advance</em>.</p>
+
+  <p>Joe</p>
+</blockquote>
+
+<p>I wrote a reply back in the comments but I think it’s worth expanding on some of these questions with a bit more space to talk. Also on Thursday night at the London Hackspace I got to hear two members of the Birmingham Laptop Ensemble (<em>BiLE</em>) give a talk about the work they did and their thoughts on working with SuperCollider.</p>
+
+<p>So, what do I feel the differences between SC and PD/Max are and why have I gone down the visual patching route.</p>
+
+<p>Essentially, it does just boil down to being typed code versus visually patched code. Both have their strengths and weaknesses but really for me it’s just that I prefer the do audio work in a visual language. I generally think that it can be much easier to see the flow of data through a patch, especially if you’re not a programmer which is why I think that Pure Data has a much nicer learning curve that SuperCollider. That said, if you find yourself wanting to do anything involving dynamic object creation or needing large banks of voices then SC does make it much just because it is written code.</p>
+
+<p>My advice? Try both. and as many other programs as you can. They’re all good for something and ultimately, it’s more about work flow than anything else in my opinion.</p>
+
+<p>So as to why I do everything in PD and not Max/MSP, partly, yes the cost is one reason. Not because I don’t think that Max is worth it because it really is, more just because I want to make the barrier for entry as low as possible.</p>
+
+<p>The other reason is that I believe that there’s less happening in PD, so the learning curve is again that bit shallower. You’ll generally find yourself having to build abstractions for things that come as built in objects in Max but I think it’s an advantage in some ways. The less objects you have to remember, the quicker you can get going and if you need something regularly then it’s good practise to turn it into an abstraction.</p>
+
+<p>I always liken the PD to Max view as being similar to C vs C++. PD and C are like a subset of Max and C++, they’re more minimal, require more building and aren’t as nice looking, but the language itself is pretty small and very versatile.</p>
+
+<p>Make of that what you will.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rolling your own whilst beating PHP to death]]></title>
+    <link href="http://rumblesan.com/blog/2012/03/25/rolling-your-own-whilst-beating-php-to-death/"/>
+    <updated>2012-03-25T20:39:31+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/03/25/rolling-your-own-whilst-beating-php-to-death</id>
+    <content type="html"><![CDATA[<p>So I’m going to be starting a new job soon and one of the many things I’m looking forward to is never having to write PHP again. I want to make a conscious effort to remove it from my life and that means Wordpress is going to go.</p>
+
+<p>Now, I know that PHP isn’t quite as bad as some people make out, it’s certainly got its flaws and can be a bit of a pig sometimes, but if you don’t do anything stupid or obtuse then it does the job and does it without too many problems. My reason for moving is just that I want to put it totally behing me. There’s plenty of much more interesting, powerful and fun things I could be doing, and if I want to learn more about them then starting fresh feels like the best way to go about it.</p>
+
+<p>So, what are these new shiny things I want to play with. The short answer is <a href="http://www.scala-lang.org/">Scala</a>. It’s one of the languages I’ll be using in my new job and it looks pretty cool. The longer answer is <a href="http://www.scalatra.org/">Scalatra</a>, <a href="http://jetty.codehaus.org/">Jetty</a>, <a href="http://www.mongodb.org/">MongoDB</a> and a host of other web tech which I’ll be using to rewrite this blog from the ground up.</p>
+
+<p>Keep watching I guess</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[An evening with Go]]></title>
+    <link href="http://rumblesan.com/blog/2012/03/20/an-evening-with-go/"/>
+    <updated>2012-03-20T18:35:03+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/03/20/an-evening-with-go</id>
+    <content type="html"><![CDATA[<p>Currently sitting in a swanky office near Camden waiting for a lecture on Go to start. Language, not the game. Let’s see what this holds.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Being LAME and MAD, the trials of de/encoding MP3s]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s/"/>
+    <updated>2012-01-31T22:08:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s</id>
+    <content type="html"><![CDATA[<p>Reteaching myself C has been a pretty good exercise and, for the most part, has been good fun. A little frustrating at times, but there’s lots of stuff that’s just falling into place and it’s generally making me feel much smarter.</p>
+
+<p>This feeling stopped when I started trying to deal with MP3s….</p>
+
+<p>Encoding with libLAME isn’t too taxing thankfully. It took me a little bit of getting used to but I’m now happily reading WAV files, stretching samples and then pumping out MP3 files at the end. Encoding, however, is a different matter.</p>
+
+<p>I’m using libMAD and I’m still finding it more than just a bit taxing to understand. I suspect that this is more likely my lack of knowledge than the library itself’s fault but to be honest, that just makes it that little bit more annoying.  On the plus side, it really does make me appreciate how easy all these high level scripting languages make things.</p>
+
+<p>Anyway, enough of my whining, As far as SlowRadio is concerned, the project is steadily cruising along and things are looking pretty good. Thanks to some help from Paul I’ve been able to get a program that mostly recreates his algorithm. I haven’t put in any of the onset detection but tbh I’m saving that for a bit later when the other sticky bits are done.</p>
+
+<p>Once I can successfully read in MP3s the next step will be to wrestle with libshout and libcurl so I can go spreading my merry noise across the InterBlag.</p>
+
+<p>Just got to keep moseying along, and keep track of all these buffers right?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stretching Audio for Fun and Radio]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio/"/>
+    <updated>2012-01-01T21:57:44+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio</id>
+    <content type="html"><![CDATA[<p>Over the past two weeks, whilst taking some much needed time off from work, as well as enjoying the festive seasonal cheer I spent some time brushing up on my C skills. Part of the reason for this is because I’m embarking on a long running project involving pic chips, modular synths and actual hardware will need to get back to some good old fashioned embedded C. My other plan was to start on an idea I’ve had for a while and decided since it would involve quite a bit of DSP, I’d do it in C and use it as a learning exercise.</p>
+
+<p>By now most people should have heard the <a href="http://www.youtube.com/watch?v=QspuCt1FM9M">Justin Bieber 800% slower</a> ”remix” that flew around the internet a little over a year ago. It uses <a href="http://hypermammut.sourceforge.net/paulstretch/">Paul’s Extreme Sound Stretch</a> to slow the song down without affecting the pitch, turning a fairly trite pop song into a truly amazing slab of monolithic, ambient noise. Essentially the program just takes many overlapping windows of audio, calculates the frequency spectrum using an FFT, randomizes the phase value for each frequency bin and then does the inverse FFT. There’s a little bit more magic to it than that, but that’s essentially it.</p>
+
+<p>I’ve decided to create a radio station, much like PatchWerk Radio, that will download CC licensed audio from the internet at large, stretch the songs, and then stream them back out. To help matters along, Paul’s Stretch is <a href="https://github.com/paulnasca/paulstretch_cpp">open source software</a> so I’ve been able to dig into the internals and find out how it all fits together. At the moment the code is up on github and can be used to stretch audio and write it out to a new file. It doesn’t sound quite as good as Paul’s version because there’s a bit more DSP voodoo in his that I haven’t yet implemented but I’ll be getting on with that in the next couple of days.</p>
+
+<p>Once I have that sounding good, the next step will be to get on with the audio finding and downloading, then interfacing it with shoutcast/oggcast. Given how quickly I’ve managed to hammer everything out so far I don’t think it’s too far off.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 30: Bouncing Ball]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/13/patch-a-day-november-2011-day-30-bouncing-ball/"/>
+    <updated>2011-12-13T22:07:31+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/13/patch-a-day-november-2011-day-30-bouncing-ball</id>
+    <content type="html"><![CDATA[<p>For the last (very late) patch of the month I’ve decided not to do any more with the sequencer, but to go off on a bit of a tangent and create a simulation of a bouncing ball. It’s not the most thorough physical model, and there are a couple of issues with it, but it gives a pretty good idea of how to go about taking mathematical equations and transferring them over to PD.</p>
+
+<p>This patch will model dropping a ball from a chosen height and simulating how far it falls or rises within fractional lengths of time. The downwards direction gets changed to an upwards direction on the bounce but the co-efficient of elasticity (bounciness) can be changed to decide how much energy is lost when this happens.</p>
+
+<p>I’ll be using two equations here.</p>
+
+<p>$ x = \tfrac{1}{2} at^2 + v_ot + x_o $</p>
+
+<p>$ v = at + v_o $</p>
+
+<p>These are two of the standard <em>suvat</em> equations of motion. The first says that in a given amount of time $ t $, the position of an object will be its current position $ x<em>0 $ plus its velocity at the beginning of that period $ v</em>0 $ multiplied by the time, plus half its acceleration $ a $ multiplied by the time period squared.</p>
+
+<p>The second says that the velocity of an object after time $ t $ is equal to its velocity at the start of that period $ v_0 $, plus its acceleration multiplied by time.</p>
+
+<p>In the patch below I’ve broken the model down into three parts, one for the first equation, one for the second and then another part that checks when we’ve hit the bottom.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-13-patch-a-day-november-2011-day-30-bouncing-ball/bouncing-ball-patch.png" alt="Bouncing ball patch" /></p>
+
+<p>At the top there’s the metro to run the patch and some setup. There are five variables here and I’m storing them in value objects.</p>
+
+<ul>
+  <li>
+    <p>The time period</p>
+  </li>
+  <li>
+    <p>The initial starting height</p>
+  </li>
+  <li>
+    <p>The current velocity</p>
+  </li>
+  <li>
+    <p>The acceleration due to gravity</p>
+  </li>
+  <li>
+    <p>The bounciness</p>
+  </li>
+</ul>
+
+<p>It’s worth pointing out here to remember that gravity is a negative value. This patch assumes that positive velocity is up, and as gravity is always pulling down it’s negative.</p>
+
+<p>This patch works with a relative time model instead of an absolute one. We’re calculating the relative change in height since the last calculation, not the overall height since we started. This means that the velocity change also needs to be calculated relative to the last velocity. This is done by the left hand collection of objects which calculate the second equation. The section gets given the sample length and multiplies this by the acceleration to get the change in velocity. This gets added to the current velocity to give us the new value.</p>
+
+<p>The middle section calculates the values for the first equation. It takes the current velocity and multiples this by the sample length then adds on the $ \tfrac{1}{2} at^2  $ part. It adds this to the current height value to get the new height value. When the patch starts, the velocity will be negative as the ball is travelling down, so decreasing the height.</p>
+
+<p>The final part on the right hand side checks to see when the ball hits the ground. When the height is &lt; 0 it reverses the velocity and multiplies it by the bouncyness. On the way back up the velocity will gradually decrease due to the effects of the negative gravity, and eventually it will stop and come back down. Assuming the bouncyness was a less that 1 value, the ball won’t reach the same height, so the time until it hits will decrease.</p>
+
+<p>There are a few issues with this model, mostly around the the section that checks for the bounce. The height will actually go negative for one iteration and only go back up again on the next calculation, after the velocity has been reversed. This can cause issues when the height gets very small and ideally there needs to be something smarter here to work it out.</p>
+
+<p>Also if the sample time is too large then there is a lot of unstable behaviour so it’s best to keep it to values around or below 0.1.</p>
+
+<p>That said, this serves pretty well as an example so should teach you the basics of doing this sort of physical mechanical modelling.</p>
+
+<p>But no1 that’s it for Patch a Day month 2011. I’ll make sure that all the example patches are in the repository for downloading and I’ll leave it at that for now. There will be more PD stuff going up here, I’ll make sure I;m better about it than last time.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 29: Launchpad lights]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/07/patch-a-day-november-2011-day-29-launchpad-lights/"/>
+    <updated>2011-12-07T23:16:57+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/07/patch-a-day-november-2011-day-29-launchpad-lights</id>
+    <content type="html"><![CDATA[<p>Sending output to the launchpad is pretty easy. Sending the right output, in a way that’s easily configurable and fits in with the standard is a little trickier. I’ve had more of a read of the Launchpad programming guide and have a better handle on the double buffering and so on and I’ll put some of that into practise here. The updates to the sequencer here are, I feel I should point out, as pretty or high performance as they could be. There’s definitely a lot more tweaking needed.</p>
+
+<p>One of the things I’ve found a bit of a problem is sending the large number of update messages to the launchpad. There’s a slow down in PD whilst it’s going. I don’t know if it’s due to the MIDI output, or just trying to send a mass list of 64 messages and needing to make the process more efficient but more investigation is needed.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-07-patch-a-day-november-2011-day-29-launchpad-lights/step-sequencer-with-lights.png" alt="Step sequencer track with light output" /></p>
+
+<p>This is the updated track abstraction with the output for the light states. The left hand section that updates the data structure will now also send out a message with the new value of the updated step. The right hand sections are for dumping out the state of all the steps in the data structure. This is used when changing tracks as we want to update the launchpad with the new values and clear the old ones. By dumping out the state of all on or off steps we clear the old data and fill the grid with the new. This could be made more efficient by first clearing the grid, then just sending the steps that are on but i decided this is initially simpler to deal with.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-07-patch-a-day-november-2011-day-29-launchpad-lights/full-sequencer-with-light-state-output.png" alt="Full sequencer with light state output" /></p>
+
+<p>The main sequencer section has been updated as well to parse the data now being output by the tracks. The objects right at the bottom will take the step messages, convert the step number back into the XY coordinate and change the 1 or 0 value into the correct note velocity for the colour we want. The clr abstraction works differently now just to point out. It takes two arguments, one is the colour value to send out when it gets a 1 input, the second for when it gets a 0 input. I’m following the Launchpad programming guide by sending out a value of 12 for off. This apparently makes it easier to add in double buffering later which might well be necessary.</p>
+
+<p>There’s also a small section in the middle at the top that sends out the light on/off messages for the mode lights. The tracklight patch just keeps track of the current track number and, when the track changes, will send out an off message for the old button and an on for the new one.</p>
+
+<p>As I said, there’s actually a fair bit of work that needs to happen on this to make it fast enough but it’s not bad as a start. I’ll probably concentrate on tacking on the drum sounds for the next patch-a-day and then call it finished for the moment.</p>
+
+<p>That will also actually be my last patch-a-day patch for this round. I’m going to be continuing work on this sequencer and I’ll be writing more of it up, just not worrying about doing it once a night though heh.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 28: Launchpad sequencer improvements]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/06/patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/"/>
+    <updated>2011-12-06T21:01:27+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/06/patch-a-day-november-2011-day-28-launchpad-sequencer-improvements</id>
+    <content type="html"><![CDATA[<p>Just a shortish one today, Yesterday I said that the step sequencer we’d built was mostly working but had a fairly vital flaw, we couldn’t actually save values in the data structure because we were getting not on and off messages from the launchpad. There are a few ways to fix this but I think that the way I do it here is the simplest and most flexible.</p>
+
+<p>First things, we only want note on grid messages, that can be fixed with a spigot in the main sequencer patch.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/sequencer-nnote-off-grid.png" alt="Sequencer only accepts note on grid messages" /></p>
+
+<p>Note off messages will now get blocked and won’t go through to the track abstractions.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/track-abstraction-that-checks-current-value.png" alt="Track abstraction now checks current value" /></p>
+
+<p>There’s a few less objects in the track abstraction now but a few new ones as well. The biggest change is that the input is now actually only a single number. This number is used to calculate the pointer to the step position as normal, but it then gets sent to a get object as well as the set object. The abstraction will now check the current value in the data structure at that step and then update it with the opposite value, so we’ve successfully toggled the value in the data structure.</p>
+
+<p>It’s easy to change this behaviour if needed, you might want to increment it or do something else, that’s up to you. Obviously we cant just send in a value for the abstraction to store now but that’s also easy to change, or just use the old version.</p>
+
+<p>Anyway, the launchpad can now update the data structure and the sequencer actually sequences if you turn the clock on. Of course some lights on the Launchpad would be good, but that’s a task for next time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 27: Launchpad sequencer]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/05/patch-a-day-november-2011-day-27-launchpad-sequencer/"/>
+    <updated>2011-12-05T21:41:41+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/05/patch-a-day-november-2011-day-27-launchpad-sequencer</id>
+    <content type="html"><![CDATA[<p>Right, time to hook the launchpad up to the sequencer. I’ve modified the Launchpad IO abstraction to neaten it up and make it actually deal with output and input. The sequencer patch has been changed so that incomng grid messages are converted to a stop number and the mode buttons select the track number to update and the main clock is now on the outside.</p>
+
+<p>Let’s run through them and I’ll explain a bit about what’s going on.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/first-launchpad-sequencer.png" alt="First launchpad sequencer" /></p>
+
+<p>The sequencer is now the steps abstraction and the first argument tells it how many steps we want to have. The basic metro clock is still there, entirely unchanged. The launchpad_io abstraction now takes the channel as an argument as well. All simple and a bit dull.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/improved-launchpad-IO.png" alt="Improved launchpad IO" /></p>
+
+<p>The launchpad IO now just deals with outputting the MIDI in messages and sending the MIDI out messages. All IO goes through a single inlet or outlet and all messages are prefixed with either grid, mode or ctl to show where it’s from or going to. There’s also the reset option available which sends the clear message.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/step-sequencer.png" alt="Updated step sequencer" /></p>
+
+<p>The step sequencer now has a bit more functionality. It takes the input direct from the launchpad and pulls out the grid and mode button messages. The mode messages control which track we are updating and do that by pre-pending the track name onto the front of the grid message. The tracks then route for this as they do normally. Note the spigot on the mode section, this is there so that only button on messages get through. We don’t actually care about button off messages here so we just stop them coming through.</p>
+
+<p>The grid messages are converted from their XY format into a single value that gives the step position. At this point it may be clear that there is a problem with the current setup. The grid buttons also have button up and down messages coming through, so when we press a button the <strong>1</strong> value gets stored, but as soon as it’s released the <strong>0</strong> is stored over the top of it.</p>
+
+<p>For the moment I’ll let you think about how you might solve this, tomorrow I’ll show you how I do it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 26: Launchpad IO]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-26-launchpad-io/"/>
+    <updated>2011-12-04T18:24:56+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-26-launchpad-io</id>
+    <content type="html"><![CDATA[<p>I said I’d do this once I’d done a bit more work on the sequencer, but I realised that it’s probably a better idea to get this done first as it will make testing much easier. This patch is really just taking the MIDI input from the launchpad, formatting it into messages that are easier to deal with, and then translating our simple messages back into correct MIDI for us to send back out to it. As a quick refresher, here’s what the Launchpad looks like.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad.jpg" alt="Novation Launchpad" /></p>
+
+<p>During these posts, I’ll refer to three sections of the button layout. The eight buttons on the top row are the control buttons, the eight down the right hand side I call the mode buttons, and the 8*8 grid is the grid. Explaining that should make it easier to follow what I’m talking about.</p>
+
+<p>The input from the Launchpad for these is pretty basic, but it’s not as easy to deal with as it could be, the grid and eight mode buttons all have MIDI note numbers assigned to them, but they’re essentially mixed together. Ideally I want to separate the mode button messages from the grid messages, and have the grid messages be in a simple <strong>(X Y value)</strong> format. The control button input is all as midi control messages, which is easy enough to deal with, but they start at value 104 and it’s much easier just to deal with 0 to 7.</p>
+
+<p>One other thing to note, the input values from all button presses are either 0 or 127, either as note velocity or controller value. For input I find it much easier to just deal with 0 or 1 for button presses, output we actually need to use certain values to set the colours but that can be simplified easily enough. Here’s the patch as it currently looks.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/launchpad-IO.png" alt="Launchpad IO" /></p>
+
+<p>Top left is dealing with grid and mode note in values. Straight out of the notein object I’ve already converted the velocity values to 0 or 1 and the notein object itself is filtering for midi channel 1. This is the channel my Launchpad appears under in PD though it might be different depending upon what’s plugged in. When I turn this into an abstraction, all the channel messages will be an abstraction argument to make integration easier.</p>
+
+<p>The route object specifically selects for the eight note values of the mode buttons and then uses a fairly cludgy way to turn these into 0 to 7 numbers with the on/off value. Anything that isn’t one of these numbers is from the grid which can be turned into the XY coordinates I’m after using some basic maths. The layout of the note numbers on the launchpad follows the equation (row * 16) + column, so by dividing by 16 we can get the row number, and finding the modulo remainder of  8 we get the column. These get packed with the note on/off and that’s the grid message.</p>
+
+<p>The control messages come from the ctl in object, situated middle top, and the channel filter has to be done externally because of the way ctlin works. The values also come in in the format (value, ctlnumber) which we want to be the other way round, the swap object handles that, then the ctl number has 104 subtracted from it and the data gets packed into a nice simple format to deal with.</p>
+
+<p>The output sections basically do this in reverse. One thing to note is that I’ve added in a reset control. Sending the launchpad a zero value on control zero will turn off all the LEDs, a useful function to have.</p>
+
+<p>The right hand side is just to take our input messages and convert them into output messages so the patch can be tested with a launchpad. The clr abstraction gives an easy way to set the output velocities/ctl values so we can select the colour we want on the launchpad. Internally they;re pretty simple.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-04-patch-a-day-november-2011-day-26-launchpad-io/colour-abstraction.png" alt="Launchpad colour abstraction" /></p>
+
+<p>The creation argument will set a default value, or the right inlet can be used to select and change it. The incoming value gets multiplied by the selected value so note off messages are still zero when they go out. The colours are red low, red full, amber low, amber full, yellow, green low and green full. I’ve just realised that technically all output to the launchpad should always be the off value (12) due to the internal buffering and so on it has available, I’ll need to check that out, but for the moment, have a play around with this if you have a Launchpad and see how it works.</p>
+
+<p>This kind of input filtering and manipulation helps to make life much easier when creating larger apps that interface with MIDI controllers and I hop this abstraction will be pretty useful in future.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 25: Step Sequencer Clock]]></title>
+    <link href="http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-25-step-sequencer-clock/"/>
+    <updated>2011-12-04T14:02:05+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/12/04/patch-a-day-november-2011-day-25-step-sequencer-clock</id>
+    <content type="html"><![CDATA[<p>OK, carrying on from yesterdays patch, lets get the stepping and clock for the sequencer.</p>
+
+<p><img src="http://rumblesan.com/a/2011-12-04-patch-a-day-november-2011-day-25-step-sequencer-clock/sequencer-clock-and-output.png" alt="Sequencer clock and output" /></p>
+
+<p>The setup here is really pretty simple, but there’s a couple small things to note. I’m routing for clock and reset messages, just to make things obvious when you;re controlling the sequencer. The reset message gives the pointer a traverse message which resets it to the head of our list of scalars. The clock message will trigger a next message to be sent to the pointer which will then send it’s value to the series of daisy chained objects. This will cause all of them to output their values and they can be seen printed out to the console.</p>
+
+<p>The trigger object is there because of how the pointer deals with coming to the end of a list. The pointer will output a bang, upon receiving a next message once it has already output the last list element. we want that final bang to send it back to the beginning, and then immediately output the first list element. To do that, when the pointer sends out its bang, it first triggers a new traverse message, and then triggers another next message, meaning the first step values get sent out.</p>
+
+<p>Next I’m planning to neaten this up a bit, and then we can start dealing with Launchpad input.</p>
+]]></content>
+  </entry>
+  
+</feed>

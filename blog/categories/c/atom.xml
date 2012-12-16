@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/c/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Being LAME and MAD, the trials of de/encoding MP3s]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s/"/>
+    <updated>2012-01-31T22:08:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s</id>
+    <content type="html"><![CDATA[<p>Reteaching myself C has been a pretty good exercise and, for the most part, has been good fun. A little frustrating at times, but there’s lots of stuff that’s just falling into place and it’s generally making me feel much smarter.</p>
+
+<p>This feeling stopped when I started trying to deal with MP3s….</p>
+
+<p>Encoding with libLAME isn’t too taxing thankfully. It took me a little bit of getting used to but I’m now happily reading WAV files, stretching samples and then pumping out MP3 files at the end. Encoding, however, is a different matter.</p>
+
+<p>I’m using libMAD and I’m still finding it more than just a bit taxing to understand. I suspect that this is more likely my lack of knowledge than the library itself’s fault but to be honest, that just makes it that little bit more annoying.  On the plus side, it really does make me appreciate how easy all these high level scripting languages make things.</p>
+
+<p>Anyway, enough of my whining, As far as SlowRadio is concerned, the project is steadily cruising along and things are looking pretty good. Thanks to some help from Paul I’ve been able to get a program that mostly recreates his algorithm. I haven’t put in any of the onset detection but tbh I’m saving that for a bit later when the other sticky bits are done.</p>
+
+<p>Once I can successfully read in MP3s the next step will be to wrestle with libshout and libcurl so I can go spreading my merry noise across the InterBlag.</p>
+
+<p>Just got to keep moseying along, and keep track of all these buffers right?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stretching Audio for Fun and Radio]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio/"/>
+    <updated>2012-01-01T21:57:44+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio</id>
+    <content type="html"><![CDATA[<p>Over the past two weeks, whilst taking some much needed time off from work, as well as enjoying the festive seasonal cheer I spent some time brushing up on my C skills. Part of the reason for this is because I’m embarking on a long running project involving pic chips, modular synths and actual hardware will need to get back to some good old fashioned embedded C. My other plan was to start on an idea I’ve had for a while and decided since it would involve quite a bit of DSP, I’d do it in C and use it as a learning exercise.</p>
+
+<p>By now most people should have heard the <a href="http://www.youtube.com/watch?v=QspuCt1FM9M">Justin Bieber 800% slower</a> ”remix” that flew around the internet a little over a year ago. It uses <a href="http://hypermammut.sourceforge.net/paulstretch/">Paul’s Extreme Sound Stretch</a> to slow the song down without affecting the pitch, turning a fairly trite pop song into a truly amazing slab of monolithic, ambient noise. Essentially the program just takes many overlapping windows of audio, calculates the frequency spectrum using an FFT, randomizes the phase value for each frequency bin and then does the inverse FFT. There’s a little bit more magic to it than that, but that’s essentially it.</p>
+
+<p>I’ve decided to create a radio station, much like PatchWerk Radio, that will download CC licensed audio from the internet at large, stretch the songs, and then stream them back out. To help matters along, Paul’s Stretch is <a href="https://github.com/paulnasca/paulstretch_cpp">open source software</a> so I’ve been able to dig into the internals and find out how it all fits together. At the moment the code is up on github and can be used to stretch audio and write it out to a new file. It doesn’t sound quite as good as Paul’s version because there’s a bit more DSP voodoo in his that I haven’t yet implemented but I’ll be getting on with that in the next couple of days.</p>
+
+<p>Once I have that sounding good, the next step will be to get on with the audio finding and downloading, then interfacing it with shoutcast/oggcast. Given how quickly I’ve managed to hammer everything out so far I don’t think it’s too far off.</p>
+]]></content>
+  </entry>
+  
+</feed>

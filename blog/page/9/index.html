@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="Today I added the LFOs to the granular synth patch, and whilst they’re pretty simple, they leave plenty of room for extension. I think that it’s &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/page/9/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/21/patch-a-day-month-day-21-granular-synth-lfos/">Patch-a-Day Month Day 21: Granular Synth LFOs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-21T17:32:28+00:00" pubdate data-updated="true">Nov 21<span>st</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/21/patch-a-day-month-day-21-granular-synth-lfos/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I added the LFOs to the granular synth patch, and whilst they’re pretty simple, they leave plenty of room for extension. I think that it’s useful to show some of the thinking that went into this and that really the patch building is secondary to the designing, but then maybe I’m a little bias, let me know if you think so.</p>
+
+<p>I’ve created the LFOs in a subpatch so I’ll just show that for today.</p>
+
+<p><img src="/a/2010-11-21-patch-a-day-month-day-21-granular-synth-lfos/21-GranSynthLFOs.png" alt="Granular Synth LFOs" /></p>
+
+<p>So all the LFOs are the same here, a simple sin wave that will modify the values it’s patched in to. The important thing to remember is that we can’t design these based on knowing what the value they need to modify will be so for this reason the initial values are multiplied by the LFO, instead of having it add its value to them. This raises the new problem that we cant have the LFO reach a zero value, otherwise we end up with a grain that won’t play because its speed is zero, or it’s trying to play back no samples.</p>
+
+<p>The other thing to remember is that we want to vary the amount that the LFO affects the parameter, but we don’t want to be causing the zeroing problem if we set the modulation amount to zero as explained above. The answer is to move the center point around which the LFO moves. If we add one onto the value then when we set the modulation value to zero, the incoming parameter is multiplied by one and there is no change. It’s also important to note that even if we add one to the signal value, when the LFO hits minus one we would still be having the zeroing problem. Multiplying the signal by 0.9 and then adding the one gets around this.</p>
+
+<p>To have the LFOs affect the grains, I’ve changed the names of the send and receive objects so that the grains only get the output of the LFOs, not the signals direct form the controls.</p>
+
+<p>Today’s post is a bit light if I’m honest, but a substantial headache has settled and listening to the output of the grain synth isn’t really helping. Hopefully I can make up for it tomorrow.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/20/patch-a-day-month-day-20-granular-synth-with-enveloping/">Patch-a-Day Month Day 20: Granular Synth With Enveloping</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-20T19:13:02+00:00" pubdate data-updated="true">Nov 20<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/20/patch-a-day-month-day-20-granular-synth-with-enveloping/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So the patch for yesterday is now published. Apologies about that, I went to bed assuming I had done it but must not have. Today’s patch will carry it on so if you haven’t read the previous entry yet I recommend doing so.</p>
+
+<p>The code for this piece is pretty much lifted from the PureData help files, which is a bit cheeky but it’s useful stuff so I think it’s a good idea to draw your attention to it. As well as that it just makes for a better synth. Enveloping and grain phase are the plan for today.</p>
+
+<p><img src="/a/2010-11-20-patch-a-day-month-day-20-granular-synth-with-enveloping/20-GranSynthWithEnvelope.png" alt="Granular Synth with volume envelope" /></p>
+
+<p>So the only change to the main section of the patch is the addition of the envelope array and some objects that write into it. The array is 44100 samples long and the collection of objects next to it will write in one cycle of a sin wave. The sin wave frequency is set to 100 Hz so that it exactly fills up our array with 441 samples, we also set the phase to zero and add on 0.5 so that it will begin and end at zero. This way it ramps smoothly up and then back down.</p>
+
+<p><img src="/a/2010-11-20-patch-a-day-month-day-20-granular-synth-with-enveloping/20-GrainPlayerWithEnvelope.png" alt="Grain player with envelope" /></p>
+
+<p>The major changes are to the Grainplayer abstraction. For a start the patch now has two grains playing at 180 degrees out of phase. This is done by adding 0.5 to the output of the phasor and then running it through the wrap~ object. Wrap~ will output the modulus of the input signal so that it stays between 0 and 1. By adding 0.5 and wrapping it, the signal to the second grain will always be 180 degrees ahead of the first meaning that they will overlap and keep a more constant tone.</p>
+
+<p>The volume envelope is created by reading data out of the envelope tab and multiplying this with the audio output. the zero to one value of the phasor is multiplied by 441 so that it matches the number of samples in the table. This means that the volume envelope will exactly match the length of the grain being played back.</p>
+
+<p>So there we go, short and pretty simple. Tomorrow I’m going to spend a bit of time working on the LFOs and then start adding multiple grain players to try and get some interesting audio going.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/20/patch-a-day-month-day-19-basic-granular-synth/">Patch-a-Day Month Day 19: Basic Granular Synth</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-20T18:54:34+00:00" pubdate data-updated="true">Nov 20<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/20/patch-a-day-month-day-19-basic-granular-synth/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I’m just coming to do today’s patch and I’ve realised that I never actually published this yesterday, it got left in the drafts. So here it is I suppose, a bit late but ready. Today’s post which I’m just about to write up carries on from this so this is fairly important heh.</p>
+
+<p>So I’m planning on spending the next couple of days rebuilding a granular synthesis patch I wrote in MaxMSP a while ago. This will partly be so I can extend and improve it, but also because this patch was actually my initial reason for learning SuperCollider so I’m going to spend some time prototyping what I do to it with an aim to port it over once I’m done.</p>
+
+<p>Much of today’s patch will look like the sampler abstraction and that’s because really it is. The stuff here is actually a pretty big improvement on the sampler abstraction so consider it a follow on from that.</p>
+
+<p><img src="/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-BasicGranularSynth.png" alt="Basic Granular Synth" /></p>
+
+<p>So really there’s nothing here, the important stuff is in the GrainPlayer abstraction but it’s worth pointing out how I’m doing some of the maths here. The start position is specified as a percentage position of the total file length, as is the grain length. (Please note, I’ve realised that there is a mistake in the patch and there should be a divide by 100 object on the length section. I’ll get that fixed later….. probably.)</p>
+
+<p>One of the things I will be adding later are a few LFOs that will modulate the length, speed and position of the grains that are being played. The issue with this is that if you choose a section of the sample to use as a grain that starts or ends too close to the start or end of the sample, the LFOs can end up hitting that limit. To get around this I’ve decided that a grain cant have a starting position in the first or last five percent of the main sample and it cant be longer than four percent of the sample length.</p>
+
+<p><img src="/a/2010-11-20-patch-a-day-month-day-19-basic-granular-synth/19-GrainPlayer.png" alt="Basic Grain Player" /></p>
+
+<p>The grain player is really just like our sample player abstraction, except that here we use a phasor~ instead of a line. In truth this is a much better way of doing things and I should revisit the sampler to improve it. The length specified is the length of the grain section to play back. Because this is specified in samples, we need to convert it to a frequency to pass to the phasor~. This is done by dividing 44100 by the length value. This value can also be multiplied by the speed value at this point.</p>
+
+<p>The output from the phasor~ is then multiplied by the desired length of the grain and a starting offset added. Pump it into a tabread and everything is go.</p>
+
+<p>As well as adding some LFOs to this I’m also going to be doing some volume envelope control as well as showing how to play grains out of phase to help thicken the sound and also to do some interesting stereo panning. Until tomorrow, I leave you with a piece I made with the previous patch.</p>
+
+<p><a href="http://soundcloud.com/tasteforreality/compulsion">Compulsion</a></p>
+
+<p>[soundcloud]<a href="http://soundcloud.com/tasteforreality/compulsion">http://soundcloud.com/tasteforreality/compulsion</a>[/soundcloud]</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/18/patch-a-day-month-day-18-live-coding-practise/">Patch-a-Day Month Day 18: Live Coding Practise</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-18T20:51:19+00:00" pubdate data-updated="true">Nov 18<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/18/patch-a-day-month-day-18-live-coding-practise/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So This might be a bit of a cop out but I’m currently writing this on Tuesday night under the assumption that I’m going to be busy at the pub on Wednesday evening and looking at arty things on Thursday so I’m allowing a bit of leeway due to time constraints. This evening I decided to have a go at practising some Live-Coding and realised that Once Patch-a-Day month is over, it might be a good idea to start semi regular entries on the subject, perhaps with videos as well. I’d like to do it in languages other than PureData but I’ll need some time to get up to speed with them first. Anyway, here’s a picture of the patch I constructed tonight and a bit of blurb about how it works.</p>
+
+<p><img src="/a/2010-11-18-patch-a-day-month-day-18-live-coding-practise/16-11-2010.png" alt="Live Coding Practise 16-11-2010" /></p>
+
+<p>The first parts to be built were the three counters in the upper left, duplicate three of them and I’ve got a sequencer of some sort to build off.</p>
+
+<p>The contents of the click subpatch are shown at the bottom of the picture, just a noise source feeding a vcf~ object which gets triggered by a vline~. Inside the click patches there is a select that triggers of about eight numbers I picked out, roughly spread between 0 and 99. The two click patches also have slightly different frequency peaks and envelope times to get a bit more variation.</p>
+
+<p>The third counter is controlling the drum subpatch. The sound is made by having the envelope from the vline~ control the frequency of the filter, it’s not great but it does a reasonably good job of being percussive. I need more practise at making these on the fly I think.</p>
+
+<p>The other bits around here are some more counters which will periodically change the length of some of the first counters. It didn’t work quite as well as I’d hoped but the idea is one I’ll try to reuse.</p>
+
+<p>The other half of the patch is two delay chains which helped to fill in quite a bit. These were simple to make and I’ll be practising making these for future use. I realised when writing this up that i should have set the values in the delwrite~ objects much higher but that’s something to remember for next time.</p>
+
+<p>So there’s the basis of what I did. I’ll keep practising and try to find some videos of other people’s performances to show and learn from and eventually start putting my own up.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/17/patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/">Patch-a-Day Month Day 17: A Full Rhythm Generator, Hats and All</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-17T21:33:55+00:00" pubdate data-updated="true">Nov 17<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/17/patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So the hats have now been added on and this patch is nearing a first phase of completion. I took a slightly different approach with the rhythm generation for the hats, a sort of subtractive probability generation sort of thing. Anyway, I wanted to try something slightly different and it’s worked pretty well.</p>
+
+<p><img src="/a/2010-11-17-patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/17-FullRhythmGenerator.png" alt="Full Rhythm Generator" /></p>
+
+<p>So firstly, I’ll point out the new stuff. We have two new tables, hatpattern and hat chance, a new message that sets up the hatchance table, a new subpatch called hatgen and then the playback section reading from hatpattern. This should all seem familiar from the snare generation and realistically it’s much the same. The difference comes in how the hatchance table is created.</p>
+
+<p>The setup message doesn’t set the table to all zeros, but instead fills it with alternating values of 0.5 and 0.7. The outputs of the kickgen and snare are also being written to the hatchance table, the important thing to note being that whenever they generate a value that would play a kick or a snare they will write a zero out to hatchance. In this way we seed hatchance with some values to generate from, but make sure that it can’t sequence any hatsounds to play at the same time a kick or a snare will play. Later I may change this so that there can be some overlap but I’m unsure yet. The contents of hatgen are exactly the same as those in snaregen, just reading and writing to different tables.</p>
+
+<p>At the playback section I’ve got a random object and a moses object set up so that about a third of the hat triggers will play an open hat and the rest a closed. I thought about having separate rhythms for each of these but this is much simpler and still gives some good results.</p>
+
+<p>I still want to extend this patch further but from here the plan is really just going to be to add in extra small things. I want to have some way of sequencing re-triggers on the kicks and some way of adding a bit of swing in would be nice. If I am going to keep this solely in PureData then I really want to improve the drum sounds. I might spend some time making a better general purpose drum machine and general sampler soon. Would be a good patch of the day I suppose.</p>
+
+<p>Patch available here</p>
+
+<p><a href="/a/2010-11-17-patch-a-day-month-day-17-a-full-rhythm-generator-hats-and-all/17-FullRhythmGenerator.zip">Full Rhythm Generator patch</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/16/a-few-thoughts/">A Few Thoughts&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-16T21:19:05+00:00" pubdate data-updated="true">Nov 16<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/16/a-few-thoughts/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I’ve definitely decided that saving this blog was a pretty good idea. The patch-a-day month has forced me to keep up the writing side of things so far and as well as being good for my PureData skills, that’s just been good for getting me to do stuff. Otherwise I suspect Minecraft and BioShock would have soaked up a considerable number of my evenings by now. I’ve been having a couple of thoughts about all this and figure I should put them down here.</p>
+
+<ol>
+  <li>
+    <p>The layout of this site was always meant to be minimal. This is because I like minimal designs, but also because I lack the skills necessary to make something that doesn’t look ugly. I am thinking that the page design might be _too _minimal however, so I’m going to try and do something about it.</p>
+  </li>
+  <li>
+    <p>I have my GitHub account and the badge in the corner proudly displays what I have on there. I do need to use it a bit more, specifically for putting up PD and SuperCollider patches so that people can grab them.</p>
+  </li>
+  <li>
+    <p>Visitor numbers are something I have only a vague sense of, doubly so with feed numbers. I’m planning on getting around to doing the Google Analytics and Feedburner stats tracking stuff because whilst the standard wordpress stats are ok, I’d like to know a bit more. Incidentally, if you are reading this, feel free to ask questions and send me emails.</p>
+  </li>
+  <li>
+    <p>Someone has come back to me in the comments saying that videos of some of the PD patches would be welcome. I’ll see what I can do about this as it’s a pretty good idea and I need to put my Vimeo account to better use.</p>
+  </li>
+  <li>
+    <p>I want to do more stuff with OSC and having multiple programs and hardware communication to each other. I’ve got a bit of know-how with Processing and I’ve made projects using PyGame on a Linux tablet talking to Pure Data so I should carry on combining them.</p>
+  </li>
+</ol>
+
+<p>That’s probably all for the moment but there will probably be more in future. I’ll try to get started on some of this stuff soon.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/16/patch-a-day-month-day-16-rhythm-generator-with-snares/">Patch-a-Day Month Day 16: Rhythm Generator With Snares</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-16T20:18:05+00:00" pubdate data-updated="true">Nov 16<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/16/patch-a-day-month-day-16-rhythm-generator-with-snares/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So the extension to yesterdays rhythm generator is here, and I’m pretty pleased with it. It uses the same sort of techniques as yesterday but with a new way of generating the chance data. It’s probably easier to just look at it first of all.</p>
+
+<p><img src="/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-RhythmGeneratorKickSnare.png" alt="Rhythm Generator with Kick and Snare" /></p>
+
+<p>So the first thing to notice is that the patch is a bit clearer thanks to moving most of the code into sub patches. The parts from yesterday that generate the kick patterns are mostly untouched inside the kickgen subpatch. I’ve moved the messages to clear the pattern tables and the snarechance table into the cleartabs subpatch and the kickgen subpatch itself just outputs the values we need to set to 1 in the pattern table.</p>
+
+<p>When a value is sent out it also gets sent to the group of objects on the right. These use it to write some data to the snare chance table, and by adding to the index value it can write data to multiple points after where the kick will trigger. In this way we can have some variation as to where the snares might occur after each kick is played. The values for position and chance here need to be tuned but the results at the moment aren’t too bad. I’m going to be fixing this up to hopefully use as a live patch so I’ll work on choosing better numbers later.</p>
+
+<p>The snaregen subpatch holds the rest of the magic here but is probably pretty obvious at this point.</p>
+
+<p><img src="/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-SnareGen.png" alt="Snare Pattern Generator" /></p>
+
+<p>This is pretty much reusing code from the kickgen patch. An until object is used to count up from zero to 31, pull the values out of a table and compare them to a random number. If the random number is smaller than the table data then pack a one in with the index value, otherwise pack in a zero. This data gets written directly to the snarepattern table and then the sequencer on the left plays it back.</p>
+
+<p>Patch is available below for those that want it. Tomorrow I intend to add functionality for hi-hats and maybe some other sounds. I’m not yet sure how I’ll end up using this, whether a stand alone PD thing or maybe with other sound sources but I’ve got plenty of time to decide.</p>
+
+<p><a href="/a/2010-11-16-patch-a-day-month-day-16-rhythm-generator-with-snares/16-RhythmGeneratorKickSnare.zip">Kick and Snare Rhythm Generator</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/15/patch-a-day-month-day-15-rhythm-generator/">Patch-a-Day Month Day 15: Rhythm Generator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-15T23:13:22+00:00" pubdate data-updated="true">Nov 15<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/15/patch-a-day-month-day-15-rhythm-generator/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So day fifteen is here and I am officially half way through patch a day month. I’m actually quite looking forward to a rest after this but I’m learning a whole bunch so I can’t complain. Tonight I’ve got something fairly complex straight off the bat but it’s pretty useful so I’m going to show it off. It’s a patch to generate dynamic and interesting rhythms and for me at least, the emphasis is on making complex kick drum patterns for rhythmic noise and heavy industrial music. As an aside, I should point out that a big influence on this has been the generative patches of <a href="http://mccormick.cx">Chris McCormick</a>, who you can fine here. I spent a bit of the weekend pulling apart his <a href="http://mccormick.cx/projects/GarageAcidLab/">Garage Acid Lab</a> patches and they’re excellent. Go check him out. Anyway, on to the kicks.</p>
+
+<p><img src="/a/2010-11-15-patch-a-day-month-day-15-rhythm-generator/15-RhythmGenerator.png" alt="Kick Drum Rhythm Generator" /></p>
+
+<p>So there’s quite a bit going on here but it’s pretty simple to break down. First things, have a look at the section on the left that starts at the trigger object by “Inner loop start” and ends down by the “Inner loop end” comment. We have an until object with a counter that gets started by a value of 6 which feeds into a tabread a bit further down. We also have the two tables on the right, timeprob1 and timeprob2. Forget for the moment there are two tables, we’ll come back to them later, the important thing is that the tabread will read the values from these tables based on the output of the counter.</p>
+
+<p>The tables have values between zero and one and when one is read out it’s compared to a random number, also between zero and one. If the random number is smaller than the value from the table then the less than object sends out a 1 which the select object turns into a bang. This bang is used to stop the until if its still counting (thanks to the send and receive intstop objects) and it also makes the int object send out the counter value. The until here is responsible for sending out the bangs necessary to move through all these table values up to the maximum of 6 bangs needed. It will be stopped early once we have a hit, however, by the bang in its right inlet.</p>
+
+<p>What this section basically gives us is a way of choosing values between zero and 5, but giving them a weighting of our choice. The final value in the table is greater than 1 so that if nothing else has previously matched then a value of 5 is always sent out. The two timeprob tables give us the ability to change the weighting of the numbers on the fly. The output from this section is then passed to a select statement which has a number of messages with values connected to it.</p>
+
+<p>The idea with this patch is that we are creating rhythms by selecting time intervals as a number of 32nd notes. This is where the tables are being switched so that any time an interval of less than four 32nds is chosen, the weighting of probabilities moves towards the longer intervals and vice versa.</p>
+
+<p>So now go right to the top of that column of objects where we have another bang, trigger, until setup. This time when we bang, the first thing that this all does is to send a message to the drumpattern array. This array is 32 elements long and we set all of them to zero to begin with. The bang will also trigger a message to store a value of zero in the int object to the right of all this. Once this is done we start the until going which will keep going until we tell it to stop because it was started with a bang. The until bangs will send the current stored value in the int out to use as an index when writing to the drumpattern array and also down to be added on to the next selected time interval. This means we have an increasing value as the intervals are added together which, when it reaches thirty-two or greater, will stop the main until.</p>
+
+<p>Hopefully, you’ve managed to follow all of that. I suspect that in future for large complex patches such as these I should break it down into more pictures to make things more obvious, but not tonight. The result of all this is that the data written to the drumpattern array can be read out by the tabread and whenever there’s a once we trigger the drum. I have plans to extend this to add a snare pattern linked with the kick and that may well be tomorrow’s patch. We’ll see later I suppose.</p>
+
+<p>I’m attaching this patch because it’s complex enough that I think it’s worth while making it available.</p>
+
+<p><a href="/a/2010-11-15-patch-a-day-month-day-15-rhythm-generator/15-RhythmGenerator.zip">Rhythm Generator</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/14/patch-a-day-month-day-14-fm-synthesis-with-envelopes/">Patch-a-Day Month Day 14: FM Synthesis With Envelopes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-14T20:07:07+00:00" pubdate data-updated="true">Nov 14<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/14/patch-a-day-month-day-14-fm-synthesis-with-envelopes/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I’m revisiting the very first patch I made with the FM synthesis stuff. This time I’ve removed the square wave part of it and I’m adding in some envelopes to control the frequency modulation ratio. With this we can get some really interesting sounds happening with very little extra complexity. If I’m honest, this idea is mostly again pulled from the SimpleFM examples in the Max documentation. This idea is also used in one of the Autechre Max patches kicking about on the internet to synthesise some cool drum sounds. I haven’t spent much time making cool presets but this is full of possibilities for extending.</p>
+
+<p><img src="/a/2010-11-14-patch-a-day-month-day-14-fm-synthesis-with-envelopes/14-FMSynthEnvelopes.png" alt="FM Synthesis with envelopes" /></p>
+
+<p>So the obvious addition is the four arrays that are present, easily called env1, env2, env3 and env4. I’ve removed the clip object for the moment and I’ve also hard coded the modulation amount to 0.9 just to have less other stuff going on.</p>
+
+<p>The envelope arrays are all 400 samples long and the values are all between 0 and 1. When the message is unpacked, the first argument will set the envelope that the tabread4~ is to read from. The second will bang a message into the vline~ that just tells it to run from zero to 400 over 400 milliseconds. This can be lengthened and the arrays made larger so that longer lasting sounds can be created if need be.</p>
+
+<p>Other than that, the rest of the patch is pretty much the same. The modulation index will change over time now which can lead to some pretty cool and interesting effects. I’d like to turn this into an abstraction with the ability to have a few more modulation envelopes and some other interesting things. Then I can just drop it into other patches I make for some good sounds possibilities. Until then, I leave it to you to investigate as I need food.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/13/patch-a-day-month-day-13-the-sampler-abstraction/">Patch-a-Day Month Day 13: The Sampler Abstraction</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-13T12:52:10+00:00" pubdate data-updated="true">Nov 13<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/13/patch-a-day-month-day-13-the-sampler-abstraction/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So here it is, a bit earlier than usual because I’m going out tonight so needed to crack this out now. This patch is an abstraction for playback of samples with variable pitch, start and finish offsets and looping. There are still improvements that could be made to it, making use of abstraction arguments for example, but it’s at a stage where it’s pretty useful.</p>
+
+<p><img src="/a/2010-11-13-patch-a-day-month-day-13-the-sampler-abstraction/13-SamplerAbstraction1.png" alt="Sampler Abstraction" /></p>
+
+<p>So only a couple changes really from the last version. I’m now using more send and receive objects to keep things neat and using the $0 argument to make sure that messages sent stay within the abstraction. Same goes for the array I’m using to keep the sample data in. The start and finish offsets are done in a similar way, just modifying the number of samples that will get played back, but I’m now having the start point saved in an int object and then sent to the line whenever the sample is reset. Currently it’s being a bit funny however. The speed of the playback should stay the same for shortened samples but it isn’t, I’ll need to improve that once I’ve figured out why.</p>
+
+<p>The looping is now much neater as well. When the sample gets started, as well as the line~ object playing back the samples there is another line feeding an equals object. This equals gets the value of where the line is aiming for so when the sample has finished playback line output equals the final value and the equals sends out a 1. The select picks this up and then sends out a bang. Open the spigot and this bang will get sent to re-trigger the sample. It’s nice, easy and neat.</p>
+
+<p>The file loading is a little more complex now. I wanted it to be possible to just send a filename to the abstraction and for it just to load it. To do this I had to build the message for the soundfiler up using list append and prepend objects. The route list object is there because after using the list objects there is a “list” element at the beginning so the route strips this off.</p>
+
+<p>That’s really all there is to it, not quite finished but a pretty good start. I’ll be using this for stuff in the future most likely so it will get updated as and when. Now, off to a friends birthday for me.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/8/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

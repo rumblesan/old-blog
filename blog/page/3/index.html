@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="I’ve just noticed I think I missed out a day somewhere…. This patch is patch 25 in my repository, but it’s day 24…. Looks like I made a patch titled &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/03/patch-a-day-november-2011-day-24-step-sequencer-basics/">Patch-a-Day November 2011 Day 24: Step Sequencer Basics</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-03T23:37:32+00:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2011</time>
+        
+         | <a href="/blog/2011/12/03/patch-a-day-november-2011-day-24-step-sequencer-basics/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I’ve just noticed I think I missed out a day somewhere…. This patch is patch 25 in my repository, but it’s day 24…. Looks like I made a patch titled Improved presets and haven’t written it up but oh well. I might go back and slot it in if I think it’s missed out anything vital.</p>
+
+<p>On with the step sequencer for the moment though. I’m designing this to run on my Novation Launchpad, the plan being to have eight tracks with 64steps each. Track selection will be done by the left hand row of function buttons and all track steps displayed on the grid. The first thing to do is work out how the pattern will be stored, and I’ve decided that the data structures are the right way to go about doing it. Below is the beginnings of the patch.</p>
+
+<p><img src="/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/data-structure-sequencer-beginnings.png" alt="Beginning of the data structure sequencer" /></p>
+
+<p>Structure and datawindow patches in the top left corner, struct has eight float fields named <strong>a</strong> to <strong>h</strong>. The central section just clears our window and creates the data for the 64 steps. The section on the right is just to that I can write out the data to a file for debugging and won’t be there in the final patch.</p>
+
+<p>The group of daisy chained objects on the left hand side are dealing with saving and loading the data about individual tracks. The left hand inlets/outlets deal with setting individual steps for specific patterns. The middle is so the object can receive a pointer to a specific step and load the value from it, the right hand inlets/outlets are where this data comes from. For the moment only the saving works, though the loading doesn’t need much more done.</p>
+
+<p><img src="/a/2011-12-03-patch-a-day-november-2011-day-24-step-sequencer-basics/track-abstraction.png" alt="Basic track abstraction" /></p>
+
+<p>I’ve realised that in patch comments are probably a good idea heh, so I’ve started adding them. As they show, the creation arguments for the abstraction are the name of the data window, the name of the struct and the name of the field to set or get.</p>
+
+<p>One of the things I decided for this was that the functionality for getting the right pointer when setting a value should be inside the abstraction, but when getting the value the pointer should come from outside. My reasoning was that when getting the value from a step we’re actually going to want to get the value from all the steps and, because they would all use the same pointer, it would be wasteful to repeat that functionality. When we’re setting a value we’re usually just doing it for one track so it’s simpler to contain that inside the abstraction.</p>
+
+<p>The abstractions all use the passthrough design so when a message comes into the left hand inlet it is routed to the correct place by checking for the field name. From here the step position triggers a standard traverse-&gt;until&gt;next style setup and then the value is set using the set object. Try sending some messages in and then saving the data to a file so you can have a look. This works pretty well and should mean the entire sequencer itself will be pretty compact.</p>
+
+<p>Tomorrow I’ll get the the retrieving side of it done, then time to start on interfacing it with the launchpad.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/02/patch-a-day-november-2011-day-23-generic-preset-abstractions/">Patch-a-Day November 2011 Day 23: Generic Preset Abstractions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-02T23:19:03+00:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2011</time>
+        
+         | <a href="/blog/2011/12/02/patch-a-day-november-2011-day-23-generic-preset-abstractions/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Back on the case finally. Too many things on the go and fairly behind on Patch-a-Day. I’m planning on getting quite a few patches built this weekend so I should be finished with the 30 days by mid way through next week, hopefully.</p>
+
+<p>Anyway, this evenings patch is an extension of the preset saving that we’ve been looking at. I realised that actually it was very easy to move the get and set objects into their own abstractions for each preset value you’re interested in saving. It’s using the same sort of passthrough design I’ve talked about and it results in much less clutter and much more useful code I feel.</p>
+
+<p><img src="/a/2011-12-02-patch-a-day-november-2011-day-23-generic-preset-abstractions/improved-preset-abstractions.png" alt="Individual preset parameter abstractions" /></p>
+
+<p>The bottom section is what’s actually in the preset-param abstraction. This time the loading and saving are being triggered by a pointer sent into either the left side for saving, or the right side for loading. The param objects still get and set their values using the send and receive objects and now it’s very simple to add more parameters to store in our preset.</p>
+
+<p>I’m probably going to turn the file loading/saving and structure clearing section into an abstraction as well, at which point this should all work as a fairly generic solution. There are a few other things I think could be added but I’m probablly going to be leaving this for the time being.</p>
+
+<p>I’ve decided over the weekend I’m going to build up a sequencer based on my Novation launchpad and using the data structure and preset stuff I’ve been learning. Tomorrow is a new day, full of patching!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/29/minor-delays-again/">Minor Delays Again!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-29T23:32:38+00:00" pubdate data-updated="true">Nov 29<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/29/minor-delays-again/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Becoming a bit of a busy week again, probably won’t have a chance to write any more patches until Friday unfortunately, but I have been granted an entirely free weekend, which makes a nice change. November has almost finished, but I will get to patch 30, never fear!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/27/patch-a-day-november-2011-day-22-preset-file-saving/">Patch-a-Day November 2011 Day 22: Preset File Saving</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-27T22:39:47+00:00" pubdate data-updated="true">Nov 27<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/27/patch-a-day-november-2011-day-22-preset-file-saving/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The preset loader is working pretty well, but at the moment it’s limited to only saving presets within one PD “session”. If we close and then reopen the program then all our presets are lost. To make this really useful, you need to be able to save the data structure info and have it loaded up next time you start the program up.</p>
+
+<p>Luckily Pure Data allows you to save the data structure information to a file and then read it back in later, and we can use that to make our preset information usable between sessions. Here’s the updated preset object.</p>
+
+<p><img src="/a/2011-11-27-patch-a-day-november-2011-day-22-preset-file-saving/preset-file-saving.png" alt="Preset data structure files" /></p>
+
+<p>The patch now has a third inlet that can be used to give clear, file load or file save commands. The clear command is just the initial blank patch loadbang setup that has always been in the patch. This means we can clear all the presets and reload ten blank presets if we want.</p>
+
+<p>The fileload and filesave commands will give a symbol to a makefilename object. This will give us a filename in the format **preset_<name>.pdc** actually saving or loading the data to and from the file is as simple as sending a read or write command to the data window patch. Here I&#8217;ve had to get the $0 value worked into the setup but that&#8217;s only necessary if your data window uses it.</name></p>
+
+<p>So now we can save presets between sessions, have multiple abstractions load and save to a single file and can start making some much easier to use performance patches.</p>
+
+<p>One thing to note that I’ve found. In the file containing the data structure data it has the name of the data window it was saved from. When you reload the data from the file, if the name inside the file matches the data window you load into you’ll get a “multiply defined” error. This doesn’t seem to cause any issues, but I mention it to stop any confusion.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/25/patch-a-day-november-2011-day-21-preset-loading/">Patch-a-Day November 2011 Day 21: Preset Loading</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-25T23:35:01+00:00" pubdate data-updated="true">Nov 25<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/25/patch-a-day-november-2011-day-21-preset-loading/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>And now for the patch to load values out of the saved preset and into our settings. This might seem a little under whelming because there’s not much to it, but a lot of the work was already done by the infrastructure already in place.</p>
+
+<p><img src="/a/2011-11-25-patch-a-day-november-2011-day-21-preset-loading/preset-loading.png" alt="Preset value loading" /></p>
+
+<p>I made a change to the previous section so that the pointer values won’t be calculated until you hit the load or save buttons. Otherwise you’re just adding in a bit of needless overhead.</p>
+
+<p>The loading is even simpler than the saving, the preset patch number is selected, the load button pressed and the until object is used to calculate the pointer position. This pointer then gets sent to a get object which retrieves the values we want from our data structure scalar. The values then get sent straight to the gui elements in the above patch.</p>
+
+<p>Simple, but pretty effective.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/23/patch-a-day-november-2011-day-20-preset-saving/">Patch-a-Day November 2011 Day 20: Preset Saving</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-23T22:29:19+00:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/23/patch-a-day-november-2011-day-20-preset-saving/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Preset saving, done the simple way.</p>
+
+<p>Well, maybe not that simple, this isn’t some magical system that can be used like MaxMSP’s autopattr system, but it should give a fair degree over the saving, loading and control of presets in PD. I’ve dug out the synth voices patch from Day 3 again and I’m going to be modifying the control abstraction so that that also stores the presets. This should again show that a nicely arranged and abstracted patch is a good thing which allows you to modify and extend without messing things around. Have a look at the main section of it.</p>
+
+<p><img src="/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/control-abstraction-with-presets.png" alt="Control abstraction with presets" /></p>
+
+<p>All that’s actually added here is a couple of extra control, a loadbang to set the preset number and a small subpatch called preset. It’s the internals of this that are what’s interesting.</p>
+
+<p><img src="/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/preset-saving-patch.png" alt="Preset saving patch" /></p>
+
+<p>First things first, the section on the right is there to create the ten scalars we’ll be saving our preset values in. At the moment this clears the window on start up and creates ten new scalars. This isn’t really that useful if we want to have our presets saved with the patch itself, but this is just temporary while we build it so ignore it for now.</p>
+
+<p>The data template and data window patches are contained here, both with names to make sure they’re unique throughout the patch. The data structure has a float field for each of the settings we’re saving (and an extra one here called number which isn’t actually needed, I just forgot to take it out). The right hand inlet of the patch takes in the preset number, i.e., the position we want to save our values at. This value gets sent to a trusty bang into until into next into pointer setup so that as the preset number choice changes, the set object will always be saving to the correct place.</p>
+
+<p>The clever bit here is that we’re able to reuse the param objects from the previous patch. As values on the controls are updated in the control abstraction, those values are now also sent into these param objects as well. When the save button is pressed, it makes these objects dump out their values, these are fed into the set object making sure to keep the order of execution right. Hey presto, preset saving! Really not much to it.</p>
+
+<p>Tomorrow (or maybe Friday night) I’ll show how the presets can be loaded back out.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/22/patch-a-day-november-2011-day-19-data-structure-basics-part-6/">Patch-a-Day November 2011 Day 19: Data Structure Basics (Part 6)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-22T22:20:49+00:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/22/patch-a-day-november-2011-day-19-data-structure-basics-part-6/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Arrays in data structures are a little tricky it seems. Not too tricky, but they require a couple of extra objects and like symbols, it seems that you can’t have a scalar with just arrays. This is because to modify an array field in a data structure scalar, you need to first create that scalar, and you can apparently only create a scalar using a float sent into an append object. If I’ve got this wrong then someone feel free to tell me.</p>
+
+<p>Anyway, there are three new objects to use with data structure arrays, setsize and getsize should be pretty obvious, element maybe not so much. Have a look at the patch and I’ll go through what’s going on.</p>
+
+<p><img src="/a/2011-11-22-patch-a-day-november-2011-day-19-data-structure-basics-part-6/array-data-structure.png" alt="Array manipulation in data structures" /></p>
+
+<p>There are now two templates in the patch, each of which contains a struct. The first struct is called struct 1, it defines a float field called a, and an array field called array1. When defining an array it’s necessary to give a third argument which is the name of a struct that will hold the array information. That second struct is held in the second template, is called testarray and has a single field, y.</p>
+
+<p>Two things worth pointing out here. First, you can draw arrays in data windows like we did with the polygons, and like with the polygons, the field y is special. This is the value that will be used to draw the height of the polygon. This actually leads into the second point, the struct that’s used to define the array is really just a normal struct, and so can store data in the same way. If you download the repository then there’s a second patch called nested structures, where this second array has another float field and a symbol field. This should explain somewhat why the y field is special, because it’s just the same as with regular polygons and data structures. In short, a data structure array is actually just an array of other nested data structures.</p>
+
+<p>In the top right of the patch there’s an append setup. This is just there so that when the patch loads a new scalar object is created in struct 1. This needs to be done because to operate on the array, we have to have an array in the first place.</p>
+
+<p>Below this is the interesting stuff. First a pointer object is told to traverse the datawindow and then increment onto the first scalar element, the one created above. This goes to a setsize and getsize object which, unsurprisingly, set and get the size of the array. All arrays have a minimum of one scalar element.</p>
+
+<p>The pointer also goes to the element object, which has arguments pointing it to the data structure struct1, and the field array1. This object takes a float in the left inlet and will send out a pointer to that position in the array. It plays the role of the until + counter setup we’ve previously used to get to specific scalars in a data structure. Bear in mind that you can only get a pointer to a scalar in the array that exists, so better increase the size of the field using setsize.</p>
+
+<p>The pointer from element can be passed to set and get objects which work exactly like they do with normal data structure scalars.</p>
+
+<p>Have a play and investigate, it’s pretty much the best way to get a grasp of what’s going on here. Once you have it however it should be pretty useful, especially with the preset patches that I will get to tomorrow.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/21/patch-a-day-november-2011-day-18-data-structure-basics-part-5/">Patch-a-Day November 2011 Day 18: Data Structure Basics (Part 5)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-21T21:15:56+00:00" pubdate data-updated="true">Nov 21<span>st</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/21/patch-a-day-november-2011-day-18-data-structure-basics-part-5/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ok, not quite done with data structures yet. I realised that I should probably go over how you store symbols and arrays in a data structure. Tonight it’s a quick post on symbols, I’ll try to cover all of arrays tomorrow.</p>
+
+<p>The first thing to know is that storing symbols in a data structure is almost, but not quite like, storing floats. You can’t actually use the append objects to create a new scalar with a symbol directly. You instead have to create the scalar, then set the symbol element once it’s made. This feels really kludgy to me and I’m going to be doing some investigating to see if there’s something I’ve missed. But this appears to be the way it’s done.</p>
+
+<p><img src="/a/2011-11-21-patch-a-day-november-2011-day-18-data-structure-basics-part-5/storing-symbols.png" alt="Storing symbols in a data structure" /></p>
+
+<p>The struct we’re dealing with defines a float and a symbol. I realised that you need to have a float as an element in the struct because otherwise I can’t see a way to create a new scalar. The set object can only update values, not create new scalars. So the append object is used to create some scalar entries in our data structure. The set object can then be used to update the values for our symbol.</p>
+
+<p>Notice that there’s now a -symbol flag there. This means the set object will accept symbols BUT can only accept symbols. There would need to be two different set objects now, one to set the value of a, the other for b.</p>
+
+<p>The get object still works exactly the same, the outlet for a sends out its float, b sends out it’s symbol.</p>
+
+<p>I realised that symbol storage is actually pretty important, mostly just so in a preset storage system you can give names to the presets. The array storage I’m still working on at the moment though it’s not too much more complex. Patches will be with you tomorrow.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/19/patch-a-day-november-2011-day-17-data-structure-basics-part-4/">Patch-a-Day November 2011 Day 17: Data Structure Basics (Part 4)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-19T14:05:38+00:00" pubdate data-updated="true">Nov 19<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/19/patch-a-day-november-2011-day-17-data-structure-basics-part-4/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Drawing basic polygon shapes with the data structures is actually pretty easy it turns out. This is one of the things that had confused me the first time I looked at it but having spent the morning reading up, it turns out it’s not that tricky. Have a look at the patch below first of all and then I’ll run through what it does.</p>
+
+<p><img src="/a/2011-11-19-patch-a-day-november-2011-day-17-data-structure-basics-part-4/drawing-polygons.png" alt="Drawing polygons with data structures" /></p>
+
+<p>The top left section with the border is the contents of the template1 subpatch. There’s a struct which defines eight float values, and a filledpolygon object with a bunch of arguments, most of which match values in the struct. Looking at the main patch, the collection of objects here will fill the data window with some number of struct1 objects. These objects will have random numbers for six of their eight values, with the other two, x and y, defaulting to zero.</p>
+
+<p>The filled polygon object is what does all the work here. It tells PD that in the datawindow we want to draw a polygon with a certain number of points, a specific centre colour and a border with a specific colour and thickness. The argument order is :-</p>
+
+<ol>
+  <li>
+    <p>Internal colour in RGB value. 60 here means 060 which translates to medium green</p>
+  </li>
+  <li>
+    <p>Border colour in RGB. 1 here means very dark blue</p>
+  </li>
+  <li>
+    <p>Border width in pixels</p>
+  </li>
+  <li>
+    <p>List of points to join as (x,y) coordinates</p>
+  </li>
+</ol>
+
+<p>In this patch, the coordinates are actually values stored in the struct. This means that any polygons drawn will have three edges, with points at (xa,xb), (ya,yb), (za,zb). Hit the message box with the 5 in it and have a look at the data window. You should see something like this,</p>
+
+<p><img src="/a/2011-11-19-patch-a-day-november-2011-day-17-data-structure-basics-part-4/polygons-in-data-window.png" alt="Polygons in data window" /></p>
+
+<p>Five green triangles with black borders, each of them representing a scalar in our data structure. The cool part about this is that if the patch is locked, when you can select one of the points on a triangle and move it around this will affect the data in the struct. Using this it’s possible to create some quite interesting user interfaces and ways of more simply manipulating complex data sets. To see the values of the scalar that defines the shape, right click on it and select properties.</p>
+
+<p>One last thing to point out. In the struct there are two float values called x and y. These are actually special and are used to set the overall position of the shape. Unlock the patch, select a shape and then move it around. This will only affect the x and y values, not the position values.</p>
+
+<p>Hopefully you’ve grasped everything that’s happened so far with the data structures, if not go back and have a read of the previous posts. I’ve actually found learning the polygon drawing stuff to be quite interesting so I might come back to it at some point. For the next couple of days though I want to start building a data storage and preset system. It’s something that should end up being pretty useful and I’ve been meaning to get to it for a while.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/19/patch-a-day-november-2011-day-15-data-structure-basics-part-2-2/">Patch-a-Day November 2011 Day 16: Data Structure Basics (Part 3)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-19T00:16:41+00:00" pubdate data-updated="true">Nov 19<span>th</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/19/patch-a-day-november-2011-day-15-data-structure-basics-part-2-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I almost think that tonight’s patch and last nights should have been rolled together into one post but I’ve also been thinking that some of these post can suffer from being too long and I’d prefer to have a greater number of smaller, more understandable posts.</p>
+
+<p>This time I’m looking at the set object, but in truth there’s really not much too it.</p>
+
+<p><img src="/a/2011-11-19-patch-a-day-november-2011-day-15-data-structure-basics-part-2-2/setting-specifics.png" alt="Setting values for specific data structure items" /></p>
+
+<p>The set object is located at the bottom of the patch and is really just a slightly modified version of the get section. The until object gets given a value, it increments the pointer to that position in the data structure list and then the value can easily be updated. This idea of incrementing pointers to get to specific places in a data structure is pretty important to grasp I feel.</p>
+
+<p>I’m going to do one post on using the graphical capabilities of the data structures next but I’m only planning to spend a single post on it for the moment. Other possibilities to play with I think.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

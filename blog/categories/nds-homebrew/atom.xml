@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NDS Homebrew | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/nds-homebrew/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Github project links]]></title>
+    <link href="http://rumblesan.com/blog/2010/09/08/github-project-links/"/>
+    <updated>2010-09-08T11:18:54+01:00</updated>
+    <id>http://rumblesan.com/blog/2010/09/08/github-project-links</id>
+    <content type="html"><![CDATA[<p>So if you look in the sidebar on the right, you should now see a nice set of links to my Github repositories. Most of it now is now NDS related code but there’s a reasonable amount of python in there.</p>
+
+<p>Eventually there will be some SuperCollider projects to be found but I still have plenty of learning to do before its anything other than the code examples from the site so far.</p>
+
+<p>Feel free to have a browse.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Nintendo DS Drum Machine]]></title>
+    <link href="http://rumblesan.com/blog/2010/09/02/a-nintendo-ds-drum-machine/"/>
+    <updated>2010-09-02T21:25:09+01:00</updated>
+    <id>http://rumblesan.com/blog/2010/09/02/a-nintendo-ds-drum-machine</id>
+    <content type="html"><![CDATA[<p>So this isn’t a SuperCollider post, as may be obvious from the title, but I don’t think I’m going to let this be a solely SC based blog when there’s plenty of other noisy stuff I do. About 18 months ago I started playing with writing homebrew software for my Nintendo DS. It was a good chance to improve my coding chops and try and learn a bit about the hows and whys of DSP. In the first instance I succeeded, my C/C++ improved pretty dramatically and it very much helped turn me from a hardware based Electronic Engineer into someone much more comfortable and happy with writing code.</p>
+
+<p>Unfortunately things mostly stalled on the second front after I got my Midi sequencer working and then found other things to pursue. However, I’m now revisiting the whole affair and having a reasonable amount of success.</p>
+
+<p>Part of the reason for making a MIDI sequencer was because I had no idea how to use the built in NDS audio libraries, nor how to read WAV files, nor really at that point much idea about how digital audio worked in anything other than a round about way. So offloading the sound generating bits onto Akai, Novation and Waldorf whilst I just got the DS to spit out the notes in the right order seemed a much better idea. I ended up with a fairly versatile and quite fun touch screen sequencer with multiple tracks, multiple patterns per track, the ability to sequence these patterns and also being able to draw Midi CC curves. The final product got a gig at a night a friend of mine put on, where I ended up playing for four hours due to the inability of some other DJs to show up. Thankfully I found that other people were so interested I could simply ask them to watch my stuff in return for letting them play with the DS.</p>
+
+<p>This is the point where the whole thing collapsed because I wanted a bigger screen for more buttons. I built a version for my<a href="http://www.alwaysinnovating.com/touchbook/"> Always Innovating Touchbook</a>, that was written as a Python GUI controlling a Pure Data sequencer patch over OSC. It also worked rather well but lost some of the magic present in the original and so the whole thing gradually died out. At some point in this time I did learn how to read WAV files in C++ and made a small loader but the momentum was gone and not coming back.</p>
+
+<p>Fast forward approximately a year and I found myself wanting a simple drum machine sampler again. Given my considerably improved coding skills I decided now was the time to finish what I had originally started!! I pulled the Midi parts out of the sequencer to give me a bit less clutter, shoe horned in the wave loader code and then got to work wrangling with <a href="http://maxmod.org/">MaxMod</a>, the homebrewed NDS sound library (which I now find out is a bit of a masterpiece of coding, I feel I should also give props to the whole <a href="http://devkitpro.org/">devkitPro</a> team for making the toolchains and NDS libraries to do all this). Last Saturday was going to be something of an all nighter in which I hoped to get a proof of concept working and actually have some drum sounds coming out of the little white hand-held.</p>
+
+<p>I had it working by about 10:30 pm…… which is awesome as it’s now working, but it didn’t make for much of a marathon. I implemented a basic voice assignment and stealing system and tested the whole thing by leaving it running for half an hour to see if it was stable. It carried on churning out its little distorted drum sounds merrily and I knew I was onto a winner.</p>
+
+<p>There are a few more steps that need to be finished before the whole thing is ready and part of the reason for writing this post is to list them to help get me to do them.</p>
+
+<ul>
+  <li>
+    <p>Memory management for tracks. Currently there are no limits, which isn’t a good idea.</p>
+  </li>
+  <li>
+    <p>Correct reloading of sound files. Tied to memory management really.</p>
+  </li>
+  <li>
+    <p>Make it reject Stereo samples. It will only play mono samples and playing stereo samples just makes it sound bad.</p>
+  </li>
+  <li>
+    <p>Make changing panning and volume of samples available. I might just have hard left and hard right here to make a 2 channel, mono sampler.</p>
+  </li>
+  <li>
+    <p>Saving a tracks samples as a soundbank that can be reloaded easily.</p>
+  </li>
+  <li>
+    <p>Saving a tracks samples and patterns as a song.</p>
+  </li>
+  <li>
+    <p>Add the Midi sequencer code back in.</p>
+  </li>
+</ul>
+
+<p>The code for the original sequencer is up on my GitHub and once this bit is done it will be there as well. I should probably have done the proper thing and made a branch for this version but I didn’t think about it when I did it. Will sort it out soon.</p>
+
+<p>Note: In the time between me writing the first draft of this post and me actually posting it I’ve crossed the first three items off the list. Turns out they were simpler to implement than I thought. Onwards!!!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What the hell am I doing again]]></title>
+    <link href="http://rumblesan.com/blog/2009/10/30/what-the-hell-am-i-doing-again/"/>
+    <updated>2009-10-30T01:38:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2009/10/30/what-the-hell-am-i-doing-again</id>
+    <content type="html"><![CDATA[<p>Well currently I’m trying to work out the easiest way to port the code from the DS Seq to the touchbook. That’s the big project for the moment, along with all the other musical activities I seem to have. Essentially the DS specific stuff in the code consists of the timers and the graphics.</p>
+
+<p>Everything else is fairly well abstracted so should just invole some slight rewriting to make it bigger and better. C++ is C++ after all and I actually feel I put the concepts of Object Orientated programming into practise pretty well.</p>
+
+<p>The timers and graphics are a problem tho….</p>
+
+<p>The DS has nice interrupt timers that are very accurate and very fast. I could have a timer running at 2000Hz plus and it would do exactly what I wanted. Turns out that normal computers don’t do that and I’m going to be having to do Real Time Clock shenanigans. Should be reasonably easy however. Again, the timers were abstracted well enough that I just need to trigger a single command. The timing itself is just a small, all be it vital, part.</p>
+
+<p>The graphics was always going to be a bigger challenge. So far SDL looks like the best candidate, it’s not too tricky, it,s multi platform, the touchbook comes with the libs (perhaps not all but its still a good sign) and it seems to be the most like the DS graphics layout that I’ve found so far.</p>
+
+<p>So the next plan is to get learning. Oh and also sort out a git hub/google code repository for this. I figure if I just open it up from the start then it will make working on it from anywhere that much easier.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bass Line Bass Line]]></title>
+    <link href="http://rumblesan.com/blog/2009/04/24/bass-line-bass-line/"/>
+    <updated>2009-04-24T11:57:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2009/04/24/bass-line-bass-line</id>
+    <content type="html"><![CDATA[<p>So I’ve now paid for and received a Novation Bass Station from a very friendly chap on eBay.</p>
+
+<p>This thing is lots of fun. Lots of knob tweaking, squelch making, bass vibrating, booty shaking fun.</p>
+
+<p>I’m going to grab a couple cheapish rack mount synths and samplers I think. And then I just need to finish the DS Grid Sequencer……..I’ll have to come up with a better name for it than that.</p>
+
+<p>On that front actually, I’ve gotten a fair bit of the DSBrut/DSMI integration work done, the whole thing should be finished soon. I’m still cleaning up the code for SeqGrid and I’m pretty sure I have all the necessary know how to do the MIDI CC output stuff.</p>
+
+<p>Good times all around</p>
+
+<p>Guy</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Midi Step Sequencer for DS]]></title>
+    <link href="http://rumblesan.com/blog/2009/04/03/midi-step-sequencer-for-ds/"/>
+    <updated>2009-04-03T13:01:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2009/04/03/midi-step-sequencer-for-ds</id>
+    <content type="html"><![CDATA[<p>Well the project that has kept my evenings busy and my girlfriend mildly annoyed is soon to be released…I think. And seeing as I can’t remember if I’ve explained already (and can’t check the block thanks to work blocking it) I’ll explain everything here.</p>
+
+<p>A MIDI enabled Nintendo DS based sequencer.</p>
+
+<p>Currently featuring 4 tracks, each track with 7 patterns and a pattern sequencer. Patterns are 8 notes by 16 steps.</p>
+
+<p>Specific midi notes can be set for each pattern note, patterns and midi settings can be loaded and saved and there is a follow mode displaying the pattern currently being played for a particular channel so you can edit it as its playing.</p>
+
+<p>Top DS screen is used to display information on playing/active tracks, BPM, global step position and which notes are being triggered.</p>
+
+<p>MIDI output is done via the DSBrut serial card currently.</p>
+
+<p>There are still some things that need to be sorted, I want to add the DS Midi Interface library so people dont have to have the DSBrut, I need to come up with a reasonable way of handling sending midi note off messages and having a variable note length. There are a few GUI bits to properly sort as well but most of the needed functionality is done.</p>
+
+<p>I’ll update a bit later with more stuff and hopefully some idea of when it will arrive. All the code will be freely available as well so people will be free to mess with it and improve.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

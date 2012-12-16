@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: News | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/news/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Organising Domains and migrating sites]]></title>
+    <link href="http://rumblesan.com/blog/2012/07/08/organising-domains-and-migrating-sites/"/>
+    <updated>2012-07-08T11:56:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/07/08/organising-domains-and-migrating-sites</id>
+    <content type="html"><![CDATA[<p>So after having succesfully migrated my main Wordpress over to Octopress I’m not in the process of changing the PatchWerk Radio site to use a jekyll based site hosted on github. having a full blog for it was a bit overkill and really it’s just a handful of static pages.</p>
+
+<p>I started with <a href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a> and then created my own theme for it that essentially mimics the old look of the PatchWerk site. A few moments of confusion as to how to use liquid tags but it’s all up and running now. The new site is up at <a href="http://rumblesan.com/PatchWerk-Radio/">http://rumblesan.com/PatchWerk-Radio/</a> and hopefully it will use the old <a href="http://patchwerk.rumblesan.com">http://patchwerk.rumblesan.com</a> domain as soon as I have the DNS settings all sorted.</p>
+
+<p>The Author, Patch and Currently Playing info will all also be available with the plan being to create an api on the server that can deal with JSONP. Gives me an excuse to learn something new.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress Customisation]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/24/octopress-customisation/"/>
+    <updated>2012-06-24T17:04:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/24/octopress-customisation</id>
+    <content type="html"><![CDATA[<p>So a short, quick post about customising my octopress install. As has been pointed out in a few places on the internet, Octopress is great but people have a tendancy to keep the defaults once they’ve got everything running. Whilst it’s a really good theme, it’s not that great if your blog looks like everybody elses.</p>
+
+<p>So using a base custom colors.scss file from <a href="http://zacharymaril.com/blog/2012/02/24/please-please-octopress/">Zachary Maril</a> and a style.scss file from <a href="http://melandri.net/2012/02/14/octopress-theme-customization/">Alessandro Melandri</a> I was able to rejig Rumblesan into something a little different. Pobablly a few things that need further tweaking, but it’s looking good already.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rolling your own whilst beating PHP to death]]></title>
+    <link href="http://rumblesan.com/blog/2012/03/25/rolling-your-own-whilst-beating-php-to-death/"/>
+    <updated>2012-03-25T20:39:31+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/03/25/rolling-your-own-whilst-beating-php-to-death</id>
+    <content type="html"><![CDATA[<p>So I’m going to be starting a new job soon and one of the many things I’m looking forward to is never having to write PHP again. I want to make a conscious effort to remove it from my life and that means Wordpress is going to go.</p>
+
+<p>Now, I know that PHP isn’t quite as bad as some people make out, it’s certainly got its flaws and can be a bit of a pig sometimes, but if you don’t do anything stupid or obtuse then it does the job and does it without too many problems. My reason for moving is just that I want to put it totally behing me. There’s plenty of much more interesting, powerful and fun things I could be doing, and if I want to learn more about them then starting fresh feels like the best way to go about it.</p>
+
+<p>So, what are these new shiny things I want to play with. The short answer is <a href="http://www.scala-lang.org/">Scala</a>. It’s one of the languages I’ll be using in my new job and it looks pretty cool. The longer answer is <a href="http://www.scalatra.org/">Scalatra</a>, <a href="http://jetty.codehaus.org/">Jetty</a>, <a href="http://www.mongodb.org/">MongoDB</a> and a host of other web tech which I’ll be using to rewrite this blog from the ground up.</p>
+
+<p>Keep watching I guess</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Minor delays again!]]></title>
+    <link href="http://rumblesan.com/blog/2011/11/29/minor-delays-again/"/>
+    <updated>2011-11-29T23:32:38+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/11/29/minor-delays-again</id>
+    <content type="html"><![CDATA[<p>Becoming a bit of a busy week again, probably won’t have a chance to write any more patches until Friday unfortunately, but I have been granted an entirely free weekend, which makes a nice change. November has almost finished, but I will get to patch 30, never fear!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PatchWerk Radio back on the air]]></title>
+    <link href="http://rumblesan.com/blog/2011/11/17/patchwerk-radio-back-on-the-air/"/>
+    <updated>2011-11-17T00:31:36+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/11/17/patchwerk-radio-back-on-the-air</id>
+    <content type="html"><![CDATA[<p>PatchWerk Radio is back up and running properly now. I’ve found a host with much more grunt and it’s running alone very merrily at this point.</p>
+
+<p>Tune in at <a href="http://radio.rumblesan.com:8000/radio.ogg">http://radio.rumblesan.com:8000/radio.ogg</a></p>
+
+<p>Feels like I’m actually getting on top of everything a bit now</p>
+]]></content>
+  </entry>
+  
+</feed>

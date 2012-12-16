@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PatchWerk Radio: How it works and how to write patches for it]]></title>
+    <link href="http://rumblesan.com/blog/2011/01/29/patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/"/>
+    <updated>2011-01-29T17:35:39+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/01/29/patchwerk-radio-how-it-works-and-how-to-write-patches-for-it</id>
+    <content type="html"><![CDATA[<p>So how exactly does PatchWerk Radio work? What is it doing? How do the loaded patches interact with the main program? How can I write patches that will run on it?</p>
+
+<p>Hopefully by the end of this article I will have answered all these questions and given you all you need to know to go about writing your own patches for PatchWerk Radio. These instructions will probably be updated in the future as more things get added and neatened up, but for the moment they should be fine.</p>
+
+<p>So to start off, a diagram showing roughly what’s involved.</p>
+
+<p><img src="/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/PatchWerk-Radio-Program-Diagram.png" alt="PatchWerk Radio Program Diagram" /></p>
+
+<p>The Python script is the heart of the whole thing. It’s responsible for starting up a PureData sub-process, getting it to load up the master control patch, sending it all the streaming settings, choosing which patches it will load and then fading between them. All of this is done over a network connection between PD and Python and uses a slightly modified version of the <a href="http://mccormick.cx/projects/PyPd/">PyPD</a> class written by <a href="http://mccormick.cx">Chris McCormick</a>.</p>
+
+<p>The masterPatch is just an ordinary PD patch that deals with the cross fading, the streaming, the dynamic patch loading and the routing of messages between these sections. It has a number of sub sections each of which handle their different tasks.</p>
+
+<ul>
+  <li>
+    <p>The python-interface sub-patch deals with the network communications between the patch and Python.</p>
+  </li>
+  <li>
+    <p>The volume-control sub-patch just does the cross fading between the audio of the loaded patches.</p>
+  </li>
+  <li>
+    <p>The patch-control section is responsible for loading and closing the chosen patches using the dynamic messaging properties of PD.</p>
+  </li>
+  <li>
+    <p>The patch-interfaces are the important ones. This is where the audio from the dynamically loaded patches comes into the master patch and then gets routed to the streaming section. It contains two receive~ objects for left and right channels and the logic to change where these will get their data from. It’s also where the messages to the loaded patches from the master patch are routed through.</p>
+  </li>
+  <li>
+    <p>The streaming sub-patch contains the oggcast~ object and all the routing to get the settings messages from python and format them correctly. The audio from the loaded patches gets routed to here from where it is streamed to the internet at large.</p>
+  </li>
+</ul>
+
+<p>The audio patches themselves are treated by PD exactly as if the patch were opened from the file menu. This is good because it means that messages and audio data can easily be sent between it and the master without having to do any routing external with JACK for example. The drawback is that we cant just have an object and connect it up using patch cords, nor can we just give it a pre-defined set of send~ objects at the output because PD doesn’t like that. As well as that, we have to be careful with how we name objects such as send and receives in case patches interfere with one another.</p>
+
+<p>My solution to this was to use the abstraction arguments that PD has, specifically the $0 arg that gives the unique object number of the encompassing sub-patch/abstraction.</p>
+
+<p>In each of the loadable patches there is an abstraction called patchComs. The audio from the patch is routed into this (There’s also a switch~ object hanging off it, more on that later) where inside the audio is connected to two send objects named $0-l and $0-r. There is also a small section featuring a loadbang, an int with a $0 argument and a “send masterCom” object. Here’s a picture for those who don’t want to go and load it up. The switch~ is outside of this patch hanging off that outlet.</p>
+
+<p><img src="/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patchComs.png" alt="patchComs abstraction" /></p>
+
+<p>When the patch is loaded the unique $0 argument gets sent, via the masterCom send object, to the python-interface in the master patch which sends it on to python. After it loads each new patch python waits for this message and when it receives it, registers that this is the unique id number for the patch. It will then send a registration message back to the master patch which will update one pair of receive~ objects to start getting their audio from the new send~ objects. A similar thing is done with the message sending objects. This is all done inside the patch-interface sections.</p>
+
+<p><img src="/a/2011-01-29-patchwerk-radio-how-it-works-and-how-to-write-patches-for-it/patch-interface.png" alt="patch-interface abstraction" /></p>
+
+<p>Currently the only message from python to the new patch is one that turns on the DSP processing. Initially the switch~ hanging off the patchComs abstraction stops all DSP processing and is there to try and minimise the effects of a CPU usage spike on the audio. Once the patch is fully loaded and registered the DSP gets turned on.</p>
+
+<p>Once the patch is making noise, Python gets the master patch to fade over to the new output channel, waits until this is done, then it closes the old patch. There are a few other housekeeping things done here such as turning off the DSP in the old patch and changing the receive~ objects to get their input from the dummy sends~. Once this is done it will sleep for ten minutes until it needs to choose the next patch to load. There are a few checks in place to make sure the same patch isn’t loaded and that patches register themselves properly, but really everything is pretty simple.</p>
+
+<p>There are a few things that need to be noted before making a patch for PatchWerk Radio. Because the patches are loaded under the same instance of PD, they could possibly interfere with each other, This means that sends and receives should ideally have arguments to make sure that they will be unique within your patch and that abstractions themselves should have fairly specific names if you’re using them in your patch.</p>
+
+<ol>
+  <li>
+    <p>When the Python script is choosing the next patch to load it will pick a random folder from it’s given patch directory. Once it has a folder it will <em>*check inside this folder for a patch named main-</em>.pd **and then load this if it finds it. If it doesn’t find it then it will try again so make sure the patch you want loaded follows this naming convention.</p>
+  </li>
+  <li>
+    <p>Because of the way that the close message in PD works, <strong>each main patch must have a unique name</strong>. Currently I’m just naming everything with incrementing numbers in folder names and main patch names and that should be fine for the moment. If it becomes an issue then I’ll come up with something else.</p>
+  </li>
+  <li>
+    <p><strong>Patches need to be totally stand-alone</strong>. They need to start on their own and play on their own. In the future I hope to add the ability for information (weather, stock prices, music scales etc) to be requested from the master patch but for the moment your patch has to do everything by itself.</p>
+  </li>
+  <li>
+    <p><strong>Patches play for about ten minutes</strong> so bear this in mind. Again, in future I hope to have this be specifiable on a per patch basis bit it’s not here yet.</p>
+  </li>
+  <li>
+    <p><strong>Objects such as send, receive, delay chains and buffers need to use $0 arguments to make sure they’re unique.</strong> Otherwise there might be inter patch interference. I need to fix this in some of the patches already in the repository so it’s not a horrendous problem so far but better not to do it.</p>
+  </li>
+</ol>
+
+<p>That’s really everything there is to it. I still want to do work on the basic infrastructure of the system but that shouldn’t affect the design of the patches. For those who are interested in getting involved, I’ll point your towards the <a href="https://github.com/notesandvolts/Radio-Patches">patch repository on GitHub</a>. You can either fork it on there and then send me pull requests, or get in contact with me and send me the patches so I can put them in.</p>
+
+<p>Ask questions in the comments in case I’ve missed anything out. Now I’m just going to spend some time writing more patches, hope you’ll come and join me.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Github project links]]></title>
+    <link href="http://rumblesan.com/blog/2010/09/08/github-project-links/"/>
+    <updated>2010-09-08T11:18:54+01:00</updated>
+    <id>http://rumblesan.com/blog/2010/09/08/github-project-links</id>
+    <content type="html"><![CDATA[<p>So if you look in the sidebar on the right, you should now see a nice set of links to my Github repositories. Most of it now is now NDS related code but there’s a reasonable amount of python in there.</p>
+
+<p>Eventually there will be some SuperCollider projects to be found but I still have plenty of learning to do before its anything other than the code examples from the site so far.</p>
+
+<p>Feel free to have a browse.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Hub appears to be awesome]]></title>
+    <link href="http://rumblesan.com/blog/2009/12/19/git-hub-appears-to-be-awesome/"/>
+    <updated>2009-12-19T14:38:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2009/12/19/git-hub-appears-to-be-awesome</id>
+    <content type="html"><![CDATA[<p>Indeed I now have Git Hub repositories set up for a few of the projects and it is really nice and usable.</p>
+
+<p>The Touch Sequencer is up on there as well as a simpler Python based OSC touch interface and the final load of NDS Sequencer code. The NDS sequencer isn’t being worked on but may be at some point.</p>
+
+<p>Everything can now be found here, <a href="http://github.com/rumblesan">http://github.com/rumblesan</a></p>
+]]></content>
+  </entry>
+  
+</feed>

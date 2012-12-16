@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (part 2) - RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="On to Day 2! Carrying on from where I left off yesterday I’ve got two example patches that should give you a good idea of how you can use the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (Part 2)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-02T20:24:47+00:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>On to Day 2! Carrying on from where I left off yesterday I’ve got two example patches that should give you a good idea of how you can use the passthrough pattern in real situations and how you can extend the idea.</p>
+
+<p>In the last post I mentioned that it can be useful when dealing with controllable parameters within a patch. We want to separate the part of the patch that deals with parsing the input control data, and the part of the patch that actually does the processing.</p>
+
+<p>First up, have a look at this abstraction for a delay effect.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-delay-example.png" alt="Passthrough delay effect example" /></p>
+
+<p>The section in the top centre with the border is the internal of the param abstraction, to the left of them there’s the daisy-chained group of them that will parse the mix, time, and feedback parameters. You’ll also see that there’s a route object routing for delay. If we had a number of effects patches daisy-chained then we’d want to be able to specify parameters in this object and this allows us to do it.</p>
+
+<p>Below that we’ve got the part of the abstraction that deals with limiting our values between our chosen max and min and also use the line~ object to convert them to audio rate messages. The mix parameter we’re actually converting into two separate audio rate signals, one that controls the dry audio volume and the other to control the wet audio volume. These will crossfade between the two giving us good control.</p>
+
+<p>Finally the section on the right is the delay effect itself. It’s actually pretty minimal and this is helped by having separated out all the control signal parsing and creation. Instead there are just a handful of send~ objects which makes more much neater code.</p>
+
+<p>It’ worth noting that this patch itself adheres to the passthrough design. There is a data bus for all the control data, with anything not routed to the delay being passed onto the next object in the chain, and the audio itself passing through as well. it would be very easy to chain a number of these together and control them with not much effort, which is of course the idea here.</p>
+
+<p>For a more useful example of that, this next patch has a bank of synth voices which can be independently or collectively controlled and use a poly object to share the incoming notes between them. It’s a bit scrappy but should illustrate the point well.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank.png" alt="Passthrough synth bank example" /></p>
+
+<p>The top right has the numboxes that set the values for our four controls as well as the ability to send notes to the voices. All the lists sent out through here get prefixed with the synth voice name. The small section to the left of this with the vertical radio bar is the voice chooser. We can choose a specific voice to send control messages to or we can use “all” to collectively change a single parameter on all the voices at the same time.</p>
+
+<p>The far left group of objects uses a poly object to spread any incoming notes amongst the four voices. There are extra objects here that are pretty much just to deal with how poly works, it might be better to use a counter here but it servers well for illustrative purposes and is probably more flexible if you want to do more complex stuff.</p>
+
+<p>Below all of this is the bank of voices and it should be easy to see here how this design pattern results in a lot of flexibility whilst having very neat code.</p>
+
+<p>Here’s the insides of the voice abstraction. It’s a pretty basic FM synth that should be familiar to anybody who has looked at many of the patches I’ve made.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank-voice.png" alt="Synth bank voice abstraction" /></p>
+
+<p>Like the delay abstraction the message parsing, control value scaling and DSP sections are split apart. The route object that checks for the synth voice also checks for an “all” element at the start of the list which is how we can modify the parameters for all the voices together.</p>
+
+<p>These two patches should have given you a good indication of how the passthrough design can be used to make concise, neat and logical patches that make problems like dealing with control messages or voice sharing easier.</p>
+
+<p>Here it’s been used for both the control parameter parsing and organising the voices. Tomorrows post is going to neaten this synth bank patch up a lot and also show how continued use of the passthrough design can make it easier to make an interactive control interface where the values displayed will change to reflect the voice chosen.</p>
+
+<p>Also I’ll point out that all the patches for this Patch-a-Day month will again be going into a Github repository. You can find it all at <a href="https://github.com/rumblesan/PatchaDay-Nov-2011">https://github.com/rumblesan/PatchaDay-Nov-2011</a></p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">guy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-02T20:24:47+00:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/music/'>Music</a>, <a class='category' href='/blog/categories/patch-a-day/'>Patch-A-Day</a>, <a class='category' href='/blog/categories/pure-data/'>Pure Data</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/01/patch-a-day-november-2011-day-1-passthrough-design-pattern-part-1/" title="Previous Post: Patch-a-Day November 2011 Day 1: Passthrough Design Pattern (part 1)">&laquo; Patch-a-Day November 2011 Day 1: Passthrough Design Pattern (part 1)</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/11/03/patch-a-day-november-2011-day-3-passthrough-design-pattern-part-3/" title="Next Post: Patch-a-Day November 2011 Day 3: Passthrough Design Pattern (part 3)">Patch-a-Day November 2011 Day 3: Passthrough Design Pattern (part 3) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rumblesan.com/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/';
+        var disqus_url = 'http://rumblesan.com/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

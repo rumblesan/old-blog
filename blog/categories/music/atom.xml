@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Music | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/music/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Being LAME and MAD, the trials of de/encoding MP3s]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s/"/>
+    <updated>2012-01-31T22:08:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/31/being-lame-and-mad-the-trials-of-deencoding-mp3s</id>
+    <content type="html"><![CDATA[<p>Reteaching myself C has been a pretty good exercise and, for the most part, has been good fun. A little frustrating at times, but there’s lots of stuff that’s just falling into place and it’s generally making me feel much smarter.</p>
+
+<p>This feeling stopped when I started trying to deal with MP3s….</p>
+
+<p>Encoding with libLAME isn’t too taxing thankfully. It took me a little bit of getting used to but I’m now happily reading WAV files, stretching samples and then pumping out MP3 files at the end. Encoding, however, is a different matter.</p>
+
+<p>I’m using libMAD and I’m still finding it more than just a bit taxing to understand. I suspect that this is more likely my lack of knowledge than the library itself’s fault but to be honest, that just makes it that little bit more annoying.  On the plus side, it really does make me appreciate how easy all these high level scripting languages make things.</p>
+
+<p>Anyway, enough of my whining, As far as SlowRadio is concerned, the project is steadily cruising along and things are looking pretty good. Thanks to some help from Paul I’ve been able to get a program that mostly recreates his algorithm. I haven’t put in any of the onset detection but tbh I’m saving that for a bit later when the other sticky bits are done.</p>
+
+<p>Once I can successfully read in MP3s the next step will be to wrestle with libshout and libcurl so I can go spreading my merry noise across the InterBlag.</p>
+
+<p>Just got to keep moseying along, and keep track of all these buffers right?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stretching Audio for Fun and Radio]]></title>
+    <link href="http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio/"/>
+    <updated>2012-01-01T21:57:44+00:00</updated>
+    <id>http://rumblesan.com/blog/2012/01/01/stretching-audio-for-fun-and-radio</id>
+    <content type="html"><![CDATA[<p>Over the past two weeks, whilst taking some much needed time off from work, as well as enjoying the festive seasonal cheer I spent some time brushing up on my C skills. Part of the reason for this is because I’m embarking on a long running project involving pic chips, modular synths and actual hardware will need to get back to some good old fashioned embedded C. My other plan was to start on an idea I’ve had for a while and decided since it would involve quite a bit of DSP, I’d do it in C and use it as a learning exercise.</p>
+
+<p>By now most people should have heard the <a href="http://www.youtube.com/watch?v=QspuCt1FM9M">Justin Bieber 800% slower</a> ”remix” that flew around the internet a little over a year ago. It uses <a href="http://hypermammut.sourceforge.net/paulstretch/">Paul’s Extreme Sound Stretch</a> to slow the song down without affecting the pitch, turning a fairly trite pop song into a truly amazing slab of monolithic, ambient noise. Essentially the program just takes many overlapping windows of audio, calculates the frequency spectrum using an FFT, randomizes the phase value for each frequency bin and then does the inverse FFT. There’s a little bit more magic to it than that, but that’s essentially it.</p>
+
+<p>I’ve decided to create a radio station, much like PatchWerk Radio, that will download CC licensed audio from the internet at large, stretch the songs, and then stream them back out. To help matters along, Paul’s Stretch is <a href="https://github.com/paulnasca/paulstretch_cpp">open source software</a> so I’ve been able to dig into the internals and find out how it all fits together. At the moment the code is up on github and can be used to stretch audio and write it out to a new file. It doesn’t sound quite as good as Paul’s version because there’s a bit more DSP voodoo in his that I haven’t yet implemented but I’ll be getting on with that in the next couple of days.</p>
+
+<p>Once I have that sounding good, the next step will be to get on with the audio finding and downloading, then interfacing it with shoutcast/oggcast. Given how quickly I’ve managed to hammer everything out so far I don’t think it’s too far off.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 13: Euclidean Drums]]></title>
+    <link href="http://rumblesan.com/blog/2011/11/15/patch-a-day-november-2011-day-13-euclidean-drums/"/>
+    <updated>2011-11-15T18:29:20+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/11/15/patch-a-day-november-2011-day-13-euclidean-drums</id>
+    <content type="html"><![CDATA[<p>Have some drums! A full, working drum sequencer patch, borrowing liberally from the excellent rjlib for a decent drum synth and hooking it up to the Euclidean sequencers we’ve made.</p>
+
+<p><img src="/a/2011-11-15-patch-a-day-november-2011-day-13-euclidean-drums/Euclidean-drums.png" alt="Euclidean drums" /></p>
+
+<p>I modified the sequencers a bit more so they contain their own controls, makes the whole thing look a bit better and makes it easier to patch. The clock is primitive but functional and the sounds are minimal but suitable. I’m going to leave it at this for the Euclidean stuff, I’m pretty chuffed that I managed to get it all working in vanilla PD but it’s time to move on. Tomorrow night I have a spare evening so I’m going to concentrate on the data structures and should be able to catch up the days I owe. You can grab the patches from the repository, or here’s a download instead. Happy tweaking</p>
+
+<p><a href="/a/2011-11-15-patch-a-day-november-2011-day-13-euclidean-drums/Day-13_Euclidean_Drums.tar">Pure Data Euclidean Drums Patch</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 8: Euclidean Rhythms (part 1)]]></title>
+    <link href="http://rumblesan.com/blog/2011/11/08/patch-a-day-november-2011-day-8-euclidean-rhythms-part-1/"/>
+    <updated>2011-11-08T23:51:46+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/11/08/patch-a-day-november-2011-day-8-euclidean-rhythms-part-1</id>
+    <content type="html"><![CDATA[<p>Right, enough list processing for the moment, lets get down to what we were aiming for. Euclidean Rhythms are rhythms generated using an algorithm very similar to <a href="http://en.wikipedia.org/wiki/Euclidean_algorithm">Euclid’s Algorithm</a> for computing the greatest common divisor of two numbers. What it does for us is it means we can evenly distribute a number of hits into a given number of beats and it just so happens that this actually generates some well known drum patterns from various musical styles.</p>
+
+<p>It’s worth going and reading <a href="http://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf">this paper by Godfried Toussaint</a> and this <a href="http://ruinwesen.com/blog?id=216">blog post from Ruin and Wesen</a> for more in depth discussion but I hope to explain how this works in a fairly simple manner. First up, lets have an example.</p>
+
+<p>We want to evenly spread 3 hits into an 8 beat space, this means there will be 3 beats and 5 spaces. The sequence will be described as lists of ones for hits and zeros for spaces and we’ll start off with two separate lists. The diagram below should easily show how the lists are interleaved together until the remained reaches zero or one. This diagram uses columns to denote elements of multiple items.</p>
+
+<p><img src="/a/2011-11-08-patch-a-day-november-2011-day-8-euclidean-rhythms-part-1/Euclidian-Rhythm-38.png" alt="Euclidian Rhythm (3,8)" /></p>
+
+<p>At each step, you take the current remainder, interleave it with the main list and take any remainder left. You keep interleaving the two lists until the length of the remainder list is one or less, then just read out the list. So above, When we interleave the list of five zeros into the list of three ones, we have a remainder of two. This is greater than one so we interleave this into the main list again and the remainder this time is a single element.</p>
+
+<p>This works just as well if we started with more ones than zeros as well.</p>
+
+<p><img src="/a/2011-11-08-patch-a-day-november-2011-day-8-euclidean-rhythms-part-1/Euclidian-Rhythm-58.png" alt="Euclidian Rhythm (5,8)" /></p>
+
+<p>After wrestling for a couple of evenings over how to do this in PD, I decided that the simplest way to do it would be to use a combination of the list length matching abstraction and the interleaving abstraction from the previous two days, and then just keep track of the element size of the main list and remainder. The work flow is pretty simple</p>
+
+<ul>
+  <li>
+    <p>Start with two lists of single element items, the main list is ones and the sub list is zeros</p>
+  </li>
+  <li>
+    <p>Get the excess elements from the longer list, this is the remainder</p>
+
+    <ul>
+      <li>The element size of the remainder is the same as whichever list it came from</li>
+    </ul>
+  </li>
+  <li>
+    <p>Interleave the main list and the sub list, element by element to get the output list</p>
+  </li>
+  <li>
+    <p>Check the number of elements in the remainder</p>
+
+    <ul>
+      <li>
+        <p>If it’s one or less then join the output list and the remainder to get your rhythm pattern</p>
+      </li>
+      <li>
+        <p>If it’s greater than one, send the output list and the remainder back through the process</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>The first thing that’s needed for this is a modified list length matching patch and that’s what I’ve built this evening. The previous list matcher would give you out the excess section, but would leave you to externally work out which list it came from and what the element size is. Really, this should be handled inside this patch so that we give it two lists and their element size, and we get out three lists with their element sizes.</p>
+
+<p><img src="/a/2011-11-08-patch-a-day-november-2011-day-8-euclidean-rhythms-part-1/improved-list-splitting.png" alt="Improved list length matching" /></p>
+
+<p>The patch here does much the same as the previous version but I’ve moved around the logic a little to try and make things more understandable. I’m using the PD value objects which I discovered the other night and I wish I’d used them sooner. The major change to the behaviour is the section in the middle/right where we compare the number of elements in each list. If the main list is greater in length than the sub list then that’s where the remainder will come from, meaning the remainder’s element size will match the main lists. If the sub list is longer then the remainder will come from here so it’s element size will match the sub list’s.</p>
+
+<p>In this way, we now get out the three lists and their element sizes. Tomorrow night I’ll tie this into the interleaving and recursion and generate the patterns themselves.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Patch-a-Day November 2011 Day 2: Passthrough Design Pattern (part 2)]]></title>
+    <link href="http://rumblesan.com/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/"/>
+    <updated>2011-11-02T20:24:47+00:00</updated>
+    <id>http://rumblesan.com/blog/2011/11/02/patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2</id>
+    <content type="html"><![CDATA[<p>On to Day 2! Carrying on from where I left off yesterday I’ve got two example patches that should give you a good idea of how you can use the passthrough pattern in real situations and how you can extend the idea.</p>
+
+<p>In the last post I mentioned that it can be useful when dealing with controllable parameters within a patch. We want to separate the part of the patch that deals with parsing the input control data, and the part of the patch that actually does the processing.</p>
+
+<p>First up, have a look at this abstraction for a delay effect.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-delay-example.png" alt="Passthrough delay effect example" /></p>
+
+<p>The section in the top centre with the border is the internal of the param abstraction, to the left of them there’s the daisy-chained group of them that will parse the mix, time, and feedback parameters. You’ll also see that there’s a route object routing for delay. If we had a number of effects patches daisy-chained then we’d want to be able to specify parameters in this object and this allows us to do it.</p>
+
+<p>Below that we’ve got the part of the abstraction that deals with limiting our values between our chosen max and min and also use the line~ object to convert them to audio rate messages. The mix parameter we’re actually converting into two separate audio rate signals, one that controls the dry audio volume and the other to control the wet audio volume. These will crossfade between the two giving us good control.</p>
+
+<p>Finally the section on the right is the delay effect itself. It’s actually pretty minimal and this is helped by having separated out all the control signal parsing and creation. Instead there are just a handful of send~ objects which makes more much neater code.</p>
+
+<p>It’ worth noting that this patch itself adheres to the passthrough design. There is a data bus for all the control data, with anything not routed to the delay being passed onto the next object in the chain, and the audio itself passing through as well. it would be very easy to chain a number of these together and control them with not much effort, which is of course the idea here.</p>
+
+<p>For a more useful example of that, this next patch has a bank of synth voices which can be independently or collectively controlled and use a poly object to share the incoming notes between them. It’s a bit scrappy but should illustrate the point well.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank.png" alt="Passthrough synth bank example" /></p>
+
+<p>The top right has the numboxes that set the values for our four controls as well as the ability to send notes to the voices. All the lists sent out through here get prefixed with the synth voice name. The small section to the left of this with the vertical radio bar is the voice chooser. We can choose a specific voice to send control messages to or we can use “all” to collectively change a single parameter on all the voices at the same time.</p>
+
+<p>The far left group of objects uses a poly object to spread any incoming notes amongst the four voices. There are extra objects here that are pretty much just to deal with how poly works, it might be better to use a counter here but it servers well for illustrative purposes and is probably more flexible if you want to do more complex stuff.</p>
+
+<p>Below all of this is the bank of voices and it should be easy to see here how this design pattern results in a lot of flexibility whilst having very neat code.</p>
+
+<p>Here’s the insides of the voice abstraction. It’s a pretty basic FM synth that should be familiar to anybody who has looked at many of the patches I’ve made.</p>
+
+<p><img src="/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank-voice.png" alt="Synth bank voice abstraction" /></p>
+
+<p>Like the delay abstraction the message parsing, control value scaling and DSP sections are split apart. The route object that checks for the synth voice also checks for an “all” element at the start of the list which is how we can modify the parameters for all the voices together.</p>
+
+<p>These two patches should have given you a good indication of how the passthrough design can be used to make concise, neat and logical patches that make problems like dealing with control messages or voice sharing easier.</p>
+
+<p>Here it’s been used for both the control parameter parsing and organising the voices. Tomorrows post is going to neaten this synth bank patch up a lot and also show how continued use of the passthrough design can make it easier to make an interactive control interface where the values displayed will change to reflect the voice chosen.</p>
+
+<p>Also I’ll point out that all the patches for this Patch-a-Day month will again be going into a Github repository. You can find it all at <a href="https://github.com/rumblesan/PatchaDay-Nov-2011">https://github.com/rumblesan/PatchaDay-Nov-2011</a></p>
+
+]]></content>
+  </entry>
+  
+</feed>

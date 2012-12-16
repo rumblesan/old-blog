@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Glitch | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/glitch/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Glitchr up and running]]></title>
+    <link href="http://rumblesan.com/blog/2012/06/30/glitchr-up-and-running/"/>
+    <updated>2012-06-30T23:14:00+01:00</updated>
+    <id>http://rumblesan.com/blog/2012/06/30/glitchr-up-and-running</id>
+    <content type="html"><![CDATA[<p>A little while ago I wrote a python script that opened up JPEG files, parsed the binary data, messed around with it a bit and gave you back some really interestingly glitched images. I’d intended to do some other things with it but it just got put on the back burner.</p>
+
+<p>I resurrected it about a week ago and thanks to Michael Helmick’s <a href="https://github.com/michaelhelmick/python-tumblpy">TumblPy</a> library I’ve now got it pulling images from and then re-uploading to Tumblr.</p>
+
+<p>You can check out the images at <a href="http://rumblesan.tumblr.com/">rumblesan.tumblr.com</a> and the project site is at <a href="http://rumblesan.com/glitchr">rumblesan.com/glitchr</a></p>
+
+<p>I want to improve the way the glitching happens at the moment. Currently it’s just the quantization tables that get played with but there’s plenty of other things that can be done. Also it tends to be quite aggresive glitching and I’d like to make it a bit subtler.</p>
+
+<p>Something to play with either way. At least now it’s running it’ll be easier to mess around with</p>
+
+]]></content>
+  </entry>
+  
+</feed>

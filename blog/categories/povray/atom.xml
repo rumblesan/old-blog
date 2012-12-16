@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Povray | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/povray/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Playing with Processing Deforming Spheres]]></title>
+    <link href="http://rumblesan.com/blog/2010/12/22/playing-with-processing-deforming-spheres/"/>
+    <updated>2010-12-22T18:14:35+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/12/22/playing-with-processing-deforming-spheres</id>
+    <content type="html"><![CDATA[<p>The other night I finally got to sit down with Processing and work out some ideas. The results were pretty cool I feel.</p>
+
+<p>There will probably be some PovRay renders of this scene, maybe even some animations.</p>
+
+<p>EDIT: Hmm, seems that my pages don’t stretch correctly and this is messing with the layout a bit. I’ll leave this here for the moment, because at least then people will see it, but I do reckon that I need to do something about the layout soon. something to do over christmas time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Processing, POV-Ray and Noise]]></title>
+    <link href="http://rumblesan.com/blog/2010/12/12/processing-pov-ray-and-noise/"/>
+    <updated>2010-12-12T19:48:17+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/12/12/processing-pov-ray-and-noise</id>
+    <content type="html"><![CDATA[<p>The last two weeks have basically been a break from PureData to concentrate more on some of the other things I enjoy doing. The rhythmic noise album in 12 days plan hasn’t emerged  quite as well as I had hoped so will remain on the workbench for a little while longer. I have successfully ported the generative beats patch to Max4Live and have extended it some more, there’s still plenty of work that needs to go into it and I’m not entirely sure that what I’ve done has made it better but I expect this to be a long term thing so it’s not a worry.</p>
+
+<p>What I have started doing for most of today is playing around with processing to make interesting shapes again. More importantly I’ve gone and had a play with the POV-Ray exporting code from <a href="http://www.davebollinger.com/works/p5povray/">Dave Bollinger</a> (who makes some very cool art) and I can now prototype scenes in Processing and then export the basics to POV-Ray. I’ve started putting up pictures on my Flickr profile which I’m sure I’ll find some natty, web2.0 way to link to this site.</p>
+
+<p>Next week will hopefully feature some more PD, probably with more extensions to the granular synth tho perhaps also with some cool PD plus Processing visuals. Depends on how I feel.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[See Cluster Run]]></title>
+    <link href="http://rumblesan.com/blog/2010/03/12/see-cluster-run/"/>
+    <updated>2010-03-12T19:42:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/03/12/see-cluster-run</id>
+    <content type="html"><![CDATA[<p>The Render Farm Lives!!</p>
+
+<p>After two weeks of coding Python and learning a considerable amount in the process I have scripts that allow me to split rendering jobs between the nodes. There was a slight change in the layout, the cluster now consists of four nodes and one head, and this helps to make the whole thing significantly more compact and means I don’t have to go hunting for other machines.</p>
+
+<p>The scripts are still in need of a bit of work to make them more robust but as always everything can be found on my Git-hub repository <a href="http://github.com/rumblesan/ClusterRay">http://github.com/rumblesan/ClusterRay</a></p>
+
+<p>There is code for the server and node scripts as well as a simple client used to send jobs to the server. It’s all a bit inefficient since it relies on sending around Tarred folders with the server running an FTP server as well but it works. Overall the time spent transferring small files over the network is minuscule given that the rendering takes minutes to hours.</p>
+
+<p>Despite protestations from friends that it was far more complex than it needed to be I’m quite pleased with the design.</p>
+
+<p>The server starts up and immediately creates another two threads, one to run the FTP server (using the excellent <a href="http://code.google.com/p/pyftpdlib/">pyftpdlib</a>) and the second to manage splitting up the task. It then sits and waits for connections over the network. The nodes all connect to the server and then wait until they are told they have a job to do. The server creates a new thread for each node that connects. Upon the client connecting to the server, a thread is created which will sit around waiting for the client to send data over the socket.</p>
+
+<p>Simple enough so far I hope, the threading took a bit of time for me to get my head around but it certainly feels much easier follow.</p>
+
+<p>The client is pretty simple; you pass it the name of a folder which contains the necessary Povray files as well as a config file which details the job information and command line settings. This gets Tarred up and uploaded to the ftp server. The client then tells the server the name of the tar file.</p>
+
+<p>The server gets this and adds it to a queue; the task thread gets the job, reads the config file, creates the specified number of jobs with the defined command line parameters and then adds these to a job queue. The node threads will grab their jobs from here and send them to the node scripts running on the networked machines.</p>
+
+<p>The nodes get the job info which contains the tar file name, the command line parameters and the output file name (this could all be done better but it works for the moment). From here they download the tar file, untar it and then run the job in ovary. Once it’s done they upload the output file to the FTP server, and tell the node thread they’re done. If there are more jobs in the queue then the node thread grabs one and sends it off again.</p>
+
+<p>Once the job queue is empty the task manager thread joins all the output pictures together into a whole image. It will then check to see if there are any more tasks in the task queue. This way it is possible to send multiple tasks over with the client and have the cluster just run them all through one after the other.</p>
+
+<p>I’m currently wrangling with getting the python scripts to run as daemons on Linux so that they will start up as soon as I bring the servers up. I successfully managed to do it last night with the main server using the bash script in the repository and the Ubuntu forums.</p>
+
+<p>There’s still plenty of code to do and realistically I’m more interested in doing movies than single images so that’s the next step. There’s some code in the misc folder which contains a python class to interpolate values frame by frame for a variable, just a question of squeezing this together and getting it to successfully create jobs now.</p>
+
+<p>Onwards and upwards I suppose</p>
+
+<p>Guy</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clusters, non musical ones at that (for the moment)]]></title>
+    <link href="http://rumblesan.com/blog/2010/02/20/clusters-non-musical-ones-at-that-for-the-moment/"/>
+    <updated>2010-02-20T15:01:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2010/02/20/clusters-non-musical-ones-at-that-for-the-moment</id>
+    <content type="html"><![CDATA[<p>So the other week I started getting a bit burnt out on music and decided a change was in order, at least for a while. So I went and started playing around with my friend <a href="http://povray.org/">PovRay</a> again, a free ray tracing program.</p>
+
+<p>After getting to grips with it and realising that, thanks to a lot of new maths knowledge since I last used it 5 or so years ago, it was an awful lot of fun. The only issue is that I very quickly started creating images that took quite a while to render. This event quite happily coincided with my finding a source of surprisingly cheap rack-mount servers so I decided that the obvious thing to do would be to make a render farm!!</p>
+
+<p>I realise that this is perhaps overkill, and the answer is really to just make images at smaller resolutions and put up with the time it takes, but I like the idea of having a big bank of servers that are my own, and if I want to do animations (which I do, more on this later) then a bank of servers is a good investment.</p>
+
+<p>The plan is now very much in motion and sitting on the coffee table in front of me I have 5 2U rack mount servers, each with an AMD64 3000+ CPU and a gig of RAM. Not the highest spec machines but cheap and useful. These are now encased in a nice 10U ABS plastic rack case and looking very swish. After some failed attempts to install Ubuntu Server on them the other night (Always MD5 check your ISO files, or at least the important ones) I’ll be re attempting later today. I also have a LinkSys WRT54G router with the open <a href="http://www.dd-wrt.com/site/index">DD-WRT</a> firmware. this will be used to hook the cluster up to my home network with some <a href="http://www.dd-wrt.com/wiki/index.php/Client_Mode_Wireless">client mode</a> magic.</p>
+
+<p>Ideally I’d like to have another box to sit on the subnet with the cluster to act as a master task giver and file storage area but I’ve not yet found a suitable device for a cheap price. I may well pick-up a broken net-book soonish however.</p>
+
+<p>As far as how I’m going to split the tasks up, there’s really not going to be much magic. Povray can be run via the command line and has the useful ability to only render part of an image.
+This means that a simple python script can SCP the .POV files over to each node in the cluster, get them to render a section, SCP the section of the image back and put the image together once all the pieces are done. With animations the process is even simpler because individual frames can be rendered by each machine, meaning the script doesn’t have to go about splitting and joining images.</p>
+
+<p>Python scripting will start properly next week, for the moment I’ll just have my work cut out for me getting Ubuntu installed and checking all the servers work. Unfortunately in the process of delivery, DHL gave the package a hefty bump and some of the cases were warped where the handles on the front dented. A bit annoying but not too much of an issue.</p>
+
+<p>As you can see, everything looks fine from the front.</p>
+
+<p><a href="http://3.bp.blogspot.com/_AvMGnA-mpis/S3_oNkSbkbI/AAAAAAAAACE/--OINm3r71c/s1600-h/DSCN4739.JPG"><img src="http://3.bp.blogspot.com/_AvMGnA-mpis/S3_oNkSbkbI/AAAAAAAAACE/--OINm3r71c/s400/DSCN4739.JPG" alt="" /></a></p>
+
+<p>The bits of tape on the front are the node names, Horse-Head, Crab, Eagle, Pelican and Tarantula. In keeping with my Star themed network naming convention I named them all after different nebulae. It seemed appropriate.</p>
+
+<p>Guy</p>
+]]></content>
+  </entry>
+  
+</feed>

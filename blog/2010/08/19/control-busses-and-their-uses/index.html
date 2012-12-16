@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Control Busses and their uses - RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="So I’m finally writing this up! The code has been sitting around for about a week now and other stuff has just kept getting in the way. But here it &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/2010/08/19/control-busses-and-their-uses/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Control Busses and Their Uses</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-19T20:43:14+01:00" pubdate data-updated="true">Aug 19<span>th</span>, 2010</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So I’m finally writing this up! The code has been sitting around for about a week now and other stuff has just kept getting in the way. But here it is, finally.</p>
+
+<p>So the first thing I should point out is my new found liking for the SuperCollider documentation. Whilst the parts that fly about on the internet are a bit hassle-some to sift through and can make it difficult to find the answer to the questions you want, the help functionality and documentation within the actual program is really great and very nicely laid out. Many of my questions are now being answered there. And don’t I feel like a muppet for doubting it to begin with.</p>
+
+<p>Anyway, onto the code.</p>
+
+<p>Nothing especially complex, a couple of synth defs and then modifying some parameters.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">SynthDef('test-Mod',{
+</span><span class="line">
+</span><span class="line">arg freq1, amp1, modBus;
+</span><span class="line">
+</span><span class="line">var output;
+</span><span class="line">
+</span><span class="line">output = {SinOsc.ar(freq1 + In.ar(modBus)) * amp1};
+</span><span class="line">
+</span><span class="line">Out.ar(0,
+</span><span class="line">    Pan2.ar(output, 0)
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">
+</span><span class="line">SynthDef('Simple-LFO',{
+</span><span class="line">
+</span><span class="line">arg freq1, amp1, outBus;
+</span><span class="line">
+</span><span class="line">var output;
+</span><span class="line">
+</span><span class="line">output = {SinOsc.ar(freq1) * amp1};
+</span><span class="line">
+</span><span class="line">Out.ar(outBus,
+</span><span class="line">    output
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">c = Synth('test-Mod',['freq1', 500, 'amp1', 0.5, 'modBus', 3]);
+</span><span class="line">
+</span><span class="line">b = Synth('Simple-LFO',['freq1', 200, 'amp1', 100, 'outBus', 3]);
+</span><span class="line">
+</span><span class="line">b.set('amp1', 0);
+</span><span class="line">b.set('amp1', 30);
+</span><span class="line">b.set('freq1', 1257, 'amp1', 1000);
+</span><span class="line">b.set('amp1',500);
+</span><span class="line">b.set('freq1',100);
+</span><span class="line">
+</span><span class="line">b.free;
+</span><span class="line">c.free;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The obvious thing to notice is that we’re using In.ar(modBus) in the frequency definition of the first synth’s SinOsc. This means that the signal coming in through that audio rate bus gets added to the value of the freq1 variable and then the SinOsc spits out what it’s told. The second synth is just a simple SinOsc but the bus that its audio is coming out from can be set when we create it. I’m sure the trick here is pretty obvious, when we create the synths we tell the test-Mod that its input modBus is audio bus 3 and we tell the Simple-LFO synth that its output bus is number 3 as well. The output from Simple-LFO will then modulate the frequency of test-Mod.  Quick note, bus 3 was chosen at random, it just needs to be greater than 1, or whatever the last audio output on your system is.</p>
+
+<p>When test-Mod is initially created we get a sine wave at 500Hz, but as soon as Simple-LFO is created we can hear it being modulated and a more dissonant sound is there. The commands after that will either set different amplitudes for the lfo creating differing amounts of modulation or change the lfo frequency resulting in different timbres.</p>
+
+<p>This is a pretty simple way of doing things, it should be noted that there is actually some important stuff I’m missing out, namely the ordering of nodes on the server, but for the moment we won’t worry about it. (Also I don’t yet understand it, that’s probably tackled next.)</p>
+
+<p>Right, next step up. Clearly we can define what buses we want to use manually, but if we’re doing it allot then it could become messy to keep track of, thankfully SuperCollider has useful functionality for automating this.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">SynthDef('test-Mod',{
+</span><span class="line">
+</span><span class="line">    arg freq1, amp1, modBus;
+</span><span class="line">
+</span><span class="line">    var output;
+</span><span class="line">
+</span><span class="line">    output = {SinOsc.ar(freq1 + In.ar(modBus)) * amp1};
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">    Pan2.ar(output, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">
+</span><span class="line">SynthDef('Simple-LFO',{
+</span><span class="line">
+</span><span class="line">    arg freq1, amp1, outBus;
+</span><span class="line">
+</span><span class="line">    var output;
+</span><span class="line">
+</span><span class="line">    output = {SinOsc.ar(freq1) * amp1};
+</span><span class="line">
+</span><span class="line">    Out.ar(outBus,
+</span><span class="line">    output
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">d = Bus.audio(s, 1);
+</span><span class="line">
+</span><span class="line">c = Synth('test-Mod',['freq1', 500, 'amp1', 0.5, 'modBus', d]);
+</span><span class="line">
+</span><span class="line">b = Synth('Simple-LFO',['freq1', 200, 'amp1', 100, 'outBus', d]);
+</span><span class="line">
+</span><span class="line">b.set('amp1', 0);
+</span><span class="line">b.set('amp1', 30);
+</span><span class="line">b.set('freq1', 1257, 'amp1', 1000);
+</span><span class="line">b.set('amp1',500);
+</span><span class="line">b.set('freq1',100);
+</span><span class="line">
+</span><span class="line">b.free;
+</span><span class="line">c.free;
+</span><span class="line">d.free;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>This time very little has really changed, just the addition of variable d and the Bus.audio method. All that happens here is a one channel audio bus is created on the default server. This then gets passed to the synth constructors instead of us stating we’re using audio bus 3. SuperCollider will keep track of what buses are in use and which have been freed up and assign what it needs to. We just have to make sure we don’t hit the limit of how many buses we’re allowed. Simple eh?</p>
+
+<p>The commands are all the same as are the sounds, we just have one less thing to worry about.</p>
+
+<p>The final example will show both, how to assign control buses to synth parameters without having to pass them as arguments, as well as where the limits of control rate buses lie.</p>
+
+<p>This time the code has all changed a little bit.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">SynthDef('test-Mod',{
+</span><span class="line">
+</span><span class="line">    arg freq1, amp1;
+</span><span class="line">
+</span><span class="line">    var output;
+</span><span class="line">
+</span><span class="line">    output = {SinOsc.ar(freq1) * amp1};
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">    Pan2.ar(output, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">
+</span><span class="line">SynthDef('Simple-LFO',{
+</span><span class="line">
+</span><span class="line">    arg freq1, amp1, outBus;
+</span><span class="line">
+</span><span class="line">    var output;
+</span><span class="line">
+</span><span class="line">    output = {SinOsc.ar(freq1) * amp1};
+</span><span class="line">
+</span><span class="line">    Out.kr(outBus,
+</span><span class="line">    output
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).store;
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">d = Bus.control(s, 1);
+</span><span class="line">d.set(700);
+</span><span class="line">
+</span><span class="line">c = Synth('test-Mod',['freq1', 500, 'amp1', 0.5]);
+</span><span class="line">
+</span><span class="line">c.map('freq1', d);
+</span><span class="line">d.set(600);
+</span><span class="line">d.set(300);
+</span><span class="line">
+</span><span class="line">b = Synth('Simple-LFO',['freq1', 200, 'amp1', 100, 'outBus', d]);
+</span><span class="line">
+</span><span class="line">b.set('freq1', 1257, 'amp1', 1000);
+</span><span class="line">
+</span><span class="line">b.free;
+</span><span class="line">c.free;
+</span><span class="line">d.free;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The first major thing is that the test-Mod synth def now no longer has an argument for the mod-bus. The reason for this is because we can use the map method of a synth object. In this case we map bus d to the freq1 argument of the test-mod synth. Once we’ve done this we can use the set method of the bus to change the synth’s frequency.</p>
+
+<p>If we carry on and create the Simple-LFO synth and tell that to send its output down bus d then we get the FM synthesis again……</p>
+
+<p>But it’s not quite the same this time….</p>
+
+<p>The signal is distorted and doesn’t sound like the clean FM tones we have gotten in the previous examples. That’s because if you look, the bus is actually a control rate bus and not an audio rate. This means that because of the way that control rate signals are calculated within SuperCollider, we are going to get aliasing distortion. Control rate signals are evaluated once per signal block, the default of which is every 64 samples, so we now no longer get the smooth FM synthesis. To map a bus to a synth control the bus needs to be at control rate, (Or at least that’s how it appears to me, I’m still learning this) so for slow moving stuff its fine, but for any high frequency changes, unless you want distortion, it’s not what you;re after.</p>
+
+<p>Anyway, hopefully that’s all been useful, I’m going to start digging into node ordering and stuff in the next few days so the next blog post will likely be about that, once that’s done I’ve decided that I know enough to start going after that granular synth patch I want.</p>
+
+<p>Hooray!!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">guy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-19T20:43:14+01:00" pubdate data-updated="true">Aug 19<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/supercollider/'>SuperCollider</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/08/09/internet-on-thursday/" title="Previous Post: Internet on Thursday">&laquo; Internet on Thursday</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/09/02/a-nintendo-ds-drum-machine/" title="Next Post: A Nintendo DS Drum Machine">A Nintendo DS Drum Machine &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rumblesan.com/blog/2010/08/19/control-busses-and-their-uses/';
+        var disqus_url = 'http://rumblesan.com/blog/2010/08/19/control-busses-and-their-uses/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

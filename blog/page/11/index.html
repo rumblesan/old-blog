@@ -1,0 +1,1132 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="So tonights patch is a small quick one because I’m running late for “Real World Stuff” and probably wont have time later. I decided to do something &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/page/11/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/03/patch-a-day-month-day-3-simple-mono-synth/">Patch-a-Day Month Day 3: Simple Mono Synth</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-03T18:50:50+00:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/03/patch-a-day-month-day-3-simple-mono-synth/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So tonights patch is a small quick one because I’m running late for “Real World Stuff” and probably wont have time later. I decided to do something that I can easily build on later and that also provides a simple jumping off point for other people learning. In the next couple of days this will probably get hooked up to the previous Markov notes patch.</p>
+
+<p><img src="/a/2010-11-03-patch-a-day-month-day-3-simple-mono-synth/03-MonoSynthVoice.png" alt="Mono Synth" /></p>
+
+<p>The noise making part of this patch is the line~ object feeding the phasor~ oscillator. The line gets fed a list with a number it needs to reach and a time in which to reach it and this gives us some nice 303 style slides when moving between notes. The phasor~ feeds into a multiplier and then a clip object so we can vary the distortion on it and change the tone of the sound. The envelope generation is another line~ object which gets a bang to trigger the increase and has a variably delayed bang to trigger the decrease.</p>
+
+<p>I didn’t add a multiply object to this because I forgot and by the time I’d taken the screen cap it was already later than I wanted, I’ll do that tomorrow. There are lots more variables and control stuff that we could add here but time is short, and I cant do everything for you.</p>
+
+<p>Come back tomorrow for more</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/02/patch-a-day-month-day-2-markov-numbers/">Patch-a-Day Month Day 2: Markov Numbers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-02T22:59:35+00:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/02/patch-a-day-month-day-2-markov-numbers/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So todays patch is a bit complex straight off the bat but its not too difficult once you see what’s going on. I’ve revisited the Markov chain stuff and this time I’m actually using it to start doing something useful. The whole thing could probably be written better but it was a bit of a rush so I’ve used a clunky way to solve a timing issue I was having.</p>
+
+<p>The patch looks messy because of all the links going everywhere but really, the middle section is four versions of the same thing.</p>
+
+<p><img src="/a/2010-11-02-patch-a-day-month-day-2-markov-numbers/02-MarkovNumbers.png" alt="Markov Numbers" /></p>
+
+<p>You can think of each of the four middle sections as separate nodes arranged in a ring. When each node fires, it can chose one of two states, when it transitions to one of these states it sends out a value that will change the current output value, and it triggers either the next or previous node on the ring.</p>
+
+<p>The metro will send out a bang which will be sent first to the **gate **receive objects, on the node that has just been triggered, this bang will go through the spigot and open the second spigot. The bang from the metro will then go to the **clock **receive object where if the node had the spigot opened, the bang will go through and trigger the random object to give out a number between 0 and 99. The moses object will see if this is higher or lower than it’s threshold and send the number out the corresponding inlet. It gets converted to a bang where it will make the message box send the change value, and it will also trigger the next node.</p>
+
+<p>The change value goes to a simple patch where it will get added on to the current number. This can be fed into plenty of other stuff, but thats for later. I’ll definitely be revisiting this soon and hopefully by then I will have cleaned it up a bit.</p>
+
+<p>See you tomorrow.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/01/patch-a-day-month-day-1-fm-bells/">Pure Data Patch-a-day Month Day 1: FM Bells</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-01T20:58:49+00:00" pubdate data-updated="true">Nov 1<span>st</span>, 2010</time>
+        
+         | <a href="/blog/2010/11/01/patch-a-day-month-day-1-fm-bells/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I’ve decided that November is going to be Patch-a-day month for Pure Data. Every day create a new patch of extend one that I’ve previously done in the month. I’ll aim to use a wide range of the objects available and may even try diving into some of the computer music theory books I have to pull some techniques out. To kick things off I’m going to do some simple FM bells.</p>
+
+<p><img src="/a/2010-11-01-pure-data-patch-a-day-month-day-1/01-Bells.png" alt="FM Bells" /></p>
+
+<p>This is a pretty simple patch using standard FM stuff but with a bit of a twist. There are three example sounds here, the arguments that get unpacked being:-</p>
+
+<ol>
+  <li>
+    <p>Base frequency</p>
+  </li>
+  <li>
+    <p>Frequency Modulation ratio</p>
+  </li>
+  <li>
+    <p>Modulation amount</p>
+  </li>
+  <li>
+    <p>Squareness</p>
+  </li>
+</ol>
+
+<p>We chose the initial signal frequency and then multiply this by the frequency ratio, this feeds an oscillator which is then amplified and clipped. We can set the value of the amplification meaning that we can make the signal more like a square wave if we want. Because of the extra harmonics in the square wave the output signal will be more complex and interesting. The Modulation amount controls how much the base frequency is modulated. By carefully choosing values for our Modulation ratio we can get some interesting bell like tones.</p>
+
+<p>The Envelop of this sound is created using the vline object. The output value starts at zero, goes up to one in ten milliseconds and then goes back down to zero over the next eight hundred milliseconds. using the multiple object this envelope signal is actually squared so that the curve is more exponential and sounds a bit better.</p>
+
+<p>So that’s one down, 29 left to go. I’m actually going to try and stick to this, seems a good way to just learn a whole bunch of stuff. I’m also going to try and improve the stuff in the separate resource pages. Two links in each is pretty pitiful. Better pull my finger out.</p>
+
+<p>Until tomorrow.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/28/lorenz-drone/">Lorenz Drone</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-28T21:37:21+01:00" pubdate data-updated="true">Oct 28<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/28/lorenz-drone/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Chatting with a friend the other day, he mentioned that he was currently bored at work waiting to be allowed access to the code he was supposed to be working on. I told him that he should design me an interesting system I could turn into a patch to make generative audio, since I knew that whilst at university he spent some time studying chaos theory and I figured he would know some interesting stuff. He pointed me towards the Lorenz Attractor as an interesting chaotic system that’s very easy to implement in code. I’ve seen pictures of the 3 dimensional plot of the Lorenz equations and they do look pretty cool but I’d never thought to actually do anything with them.</p>
+
+<p><img src="http://en.wikipedia.org/wiki/Lorenz_equations" alt="3D Lorenz Plot" /></p>
+
+<p>Of course, now I have this blog that I’m trying to keep updated with interesting, algorithmic noise stuff so it seemed like a pretty good chance to spend some time exploring what I could do with the equations.</p>
+
+<p>The quick idea I had at work was to have multiple sets of the Lorenz equations with slightly different starting positions so that their chaotic nature and tendency for paths to drift greatly over time could be used. I also chose to have these control some FM synthesis, because even small changes to the modulation parameters and frequencies can have very noticeable effects on the sounds produced. The final thought was that having a filter present would help to give some more movement to the sounds and that if I was having to iterate through the values with a clock then that itself could be controlled for some interesting effects.</p>
+
+<p>The equations themselves are:-</p>
+
+<ul>
+  <li>
+    <p>$ dx/dt = sigma (y-x) $</p>
+  </li>
+  <li>
+    <p>$ dy/dt = x(rho z) y $</p>
+  </li>
+  <li>
+    <p>$ dz/dt = xy beta z $</p>
+  </li>
+</ul>
+
+<p>where the usual values are sigma = 10, rho = 28 and beta = 8/3 if you want to get the chaotic behavior, which we obviously do.</p>
+
+<p>I decided to implement the whole thing in Pure Data because it’s the language that I’m most comfortable with but I want to make the same patch again in SuperCollider to help contrast working with the two languages and as a learning exercise. Hopefully I’ll have that up soon enough. First I had to create the Lorenz Equations in a patch. I’m trying to just stick to vanilla objects for both portability and learning reasons here so while the expr object available in PD-Extended would have made the resulting abstraction much neater to look at, I’ve pulled it apart into all the multiplies, adds and subtracts. Here is the abstraction with the equations.</p>
+
+<p><img src="/a/2010-10-28-lorenz-drone/LorenzEquationsAbs.png" alt="Lorenz Equations Abstraction" /></p>
+
+<p>It’s important to note that these equations calculate the change in position with respect to time, which means we have to pick a time period to use and we then have to add the calculated value onto the original value. It took me a little while to realise that I’d need to calculate the values in small increments because of this. My calculus skills have faded quite a bit in the last few years it seems. For this reason, once we have the values from the equations we have to multiply it by a small value (I chose 0.01 in the example patch) then add on the previous value. The abstraction I created does all of this and the creation arguments make it simple to use and tweak as needed.</p>
+
+<p>This is the main bulk of the patch, other than this the only other abstraction is a patch for doing some basic FM synthesis. It’s based on the simpleFM patch from the MaxMSP tutorials with three inputs, one for the carrier frequency, one that’s the harmonicity value and one for the modulation amount. There are three Lorenz abstractions, two of which control the FM synths and a third that controls the resonance and frequency of a low pass filter, as well as having control over the speed of the metro that keeps the patch going.</p>
+
+<p><img src="/a/2010-10-28-lorenz-drone/LorenzDroneMain.png" alt="Lorenz Drone" /></p>
+
+<p>I was hoping that this would help to add some movement to the sound and it exceeded my expectations massively. Listening to it the sound veers between harsh and smooth and the filter and speed variance means that it can crescendo and diminish with little warning. It’s very rough around the edges but for a first attempt I’m very pleased. I fully expect that there will be improvements but for the moment I’ll leave it.</p>
+
+<p>The audio from it can be heard here</p>
+
+<p>[soundcloud]<a href="http://soundcloud.com/tasteforreality/lorenzdrone">http://soundcloud.com/tasteforreality/lorenzdrone</a>[/soundcloud]</p>
+
+<p>if the sound cloud player is working for you, otherwise grab it here, <a href="http://www.rumblesan.com/wp-content/uploads/2010/10/LorenzDrone.mp3">Lorenz Drone Audio</a></p>
+
+<p>and the patch is available here for those that want it. <a href="/a/2010-10-28-lorenz-drone/LorenzDrone.zip">Lorenz Drone Patch</a></p>
+
+<p>Guy</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/15/drum-sounds-in-supercollider-part-2/">Drum Sounds in SuperCollider (Part 2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-15T17:54:06+01:00" pubdate data-updated="true">Oct 15<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/15/drum-sounds-in-supercollider-part-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So Part two of the Drum Sounds in SuperCollider series, and we’re going to be making a snare and a clap. Not necessarily a realistic snare or clap, but reasonable enough to go with the rest of our kit. It will be mostly the same combinations of simple oscillators, noise sources, filters and envelopes as previously but joining them in slightly different ways. Again, the S<a href="http://www.soundonsound.com/sos/allsynthsecrets.htm">ynth Secrets articles</a> are  great to read for some in depth info and good ideas on this sort of stuff, so I’ll link them again.</p>
+
+<p>The snare circuit for the 808 actually functions in a similar way to our full kick drum. There are the same two parts, one a resonant filter based drum sound and the other an enveloped noise source. Obviously the drums are tuned to a higher frequency and the noise is differently filtered to give a better snare effect, but otherwise we could take our full kick, change some of the frequencies we chose and we’d be in the right area.</p>
+
+<p>But reusing the same concepts would be a little boring so I’ve decided on another route. When a real drum is hit, the actual sound of it is a spectrum of different frequencies, some of which die out very quickly and others that sound for longer. In many ways it could be thought of as a bell, the difference being that with a drum the higher frequencies die out almost straight away and its the much lower register tones that carry on longer. That burst of higher frequencies at the beginning are what’s responsible for the attack of the drum sound, which is why our full kick has the brief noise burst.</p>
+
+<p>So what we really want in a drum sound is a brief hit of higher frequencies with the lower frequencies taking longer to decay. And to do it, we’re going to use a simple envelope to modify the frequency cutoff of a filter. We need a sound source with a wide frequency content and whilst we could use a noise source for this, choosing a square wave will give us more options for tuning and shaping the sound later. Low Pass Filter sweeping down with a Pulse UGen as the source is the plan.</p>
+
+<p>Again, a Line UGen will work fine as our envelope but this time we need it to control a frequency with a large range, not the volume with a 1 to 0 range. SuperCollider makes everything pretty easy for us in this respect because we can just plug UGens in where we want and use them like we would other variables. Our Low Pass filter wants to know what it’s filtering and at what frequency, we want the sweep to start around 1 KHz and decrease to something just above 0 Hz. We just plug our Line UGen in where the LPF frequency argument is, multiply it by 1000 and add 30 to the result. We’ll put a volume envelope around this as well which will have a longer decay so that the lower frequencies can carry on a bit. That will also have a doneAction so that the synth frees up after it’s played and then we’re basically finished. The code for the complete drum sound looks like this.</p>
+
+<pre><code>(
+SynthDef('snaredrum', {
+
+var drumosc, filterenv, drumoutput, volenv;
+
+filterenv = {Line.ar(1, 0, 0.2, doneAction: 0)};
+volenv = {Line.ar(1, 0, 0.6, doneAction: 2)};
+
+drumosc = {Pulse.ar(100)};
+drumoutput = {LPF.ar(drumosc,(filterenv *1000) + 30)};
+
+Out.ar(0,
+Pan2.ar(drumoutput * volenv, 0)
+)
+
+}).send(s);
+)
+
+t = Synth('snaredrum');
+</code></pre>
+
+<p>Reasonable enough sounding I think for what we need, I’ve picked the values by ear but change them if you want.</p>
+
+<p>The snare part of the sound is again going to be similar to the high hat, but I’m filtering the noise with a bandpass filter to get the right range for a snare and a low pass filter to differentiate it from the hats a bit more. A relatively simple volume envelope used and then mixing that with the drum sound gives us our finished snare.</p>
+
+<pre><code>(
+SynthDef('snaredrum', {
+
+var drumosc, filterenv, volenv, drumoutput, snaposc, snapenv, fulloutput;
+
+drumosc = {Pulse.ar(100)};
+filterenv = {Line.ar(1, 0, 0.2, doneAction: 0)};
+volenv = {Line.ar(1, 0, 0.6, doneAction: 2)};
+drumoutput = {LPF.ar(drumosc,(filterenv *1000) + 30)};
+
+snaposc = {BPF.ar(HPF.ar(WhiteNoise.ar(1),500),1500)};
+snapenv = {Line.ar(1, 0, 0.2, doneAction: 0)};
+
+fulloutput = (drumoutput * volenv) + (snaposc * snapenv);
+//fulloutput = (drumoutput * volenv);
+
+Out.ar(0,
+Pan2.ar(fulloutput, 0)
+)
+
+}).send(s);
+)
+
+t = Synth('snaredrum');
+</code></pre>
+
+<p>Finally, it’s on to the clap. I’m not so pleased with how this one has turned out, but it shows off what I wanted so I feel that I’ll finish this article and then improve it later. A clap sound is much like the snare sound we had earlier but a single clap on it’s own can sound a bit drab. When recording claps, it’s much better if they can be layered, and better still if there is a slight timing difference between all the claps to help it sound fuller. Roland tackled the problem by having a volume envelope that had multiple peaks in quick succession and then modulated a noise source with this but I couldn’t get that to sound quite right. Instead I’m using the Fill functionality of the Mix UGen with an EnvGen to effectively mix multiple single clap sounds with different start offsets.</p>
+
+<p>The EnvGen takes an array of envelope values and another array that has the times required to move between them. If we have the first two values set to zero then we can use a variable for the change time and control the time it takes for the clap to sound. We can create some quite complex envelopes using this but here we will just use it to have an offset before a simple line envelope.</p>
+
+<p>When using the Mix UGens Fill functionality, we give it a number and then a function. It will fill an array of however many elements we specify with the results of the function and then mix that array down into one channel. If we specify an argument within this function, then the Mix will automatically increment it by one every time it goes to fill a new array element. What this means is that we can have the first time value in the EnvGen be multiplied by this arg, and each array element will have a slightly longer start offset than the last. In this way we can mix multiple single clap sounds and give them a degree of time separation. I think they’re should be a neater way to do the code but I’ve not quite gotten to grips with all the syntax. Another thing to learn and update in future i guess.</p>
+
+<pre><code>(
+SynthDef('clap', {
+
+var claposc, clapenv, clapnoise, clapoutput;
+
+clapnoise = {BPF.ar(LPF.ar(WhiteNoise.ar(1),7500),1500)};
+clapenv = {Line.ar(1, 0, 0.6, doneAction: 2)};
+
+clapoutput = {Mix.arFill(7,
+{arg i;
+EnvGen.ar(
+Env.new(
+[0,0,1,0],
+[0.01 * i,0,0.04]
+)
+) * clapnoise * 0.5
+}
+)};
+
+Out.ar(0,
+Pan2.ar(clapoutput * clapenv, 0)
+)
+
+}).send(s);
+)
+
+t = Synth('clap');
+</code></pre>
+
+<p>I’ve chosen different frequencies for filtering the noise source again to make it sound different from the other noise used in the rest of the kit. I still think the clap sound needs to most work but it gave me a chance to show how the Mix Fill and EnvGen can be used together so it’s OK for now.</p>
+
+<p>So that finishes our basic set of drum sounds for the moment. The next step is going to be integrating Pure Data and SuperCollider over OSC so that we can have one control the other and actually make some music. I’ll need to do a bit of investigation on the best way to make that happen</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/12/drum-sounds-in-supercollider-part-1/">Drum Sounds in SuperCollider (Part 1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-12T16:03:53+01:00" pubdate data-updated="true">Oct 12<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/12/drum-sounds-in-supercollider-part-1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I feel it’s about time I tried to build something useful in SuperCollider since up until now I’ve mostly just been making examples. Synthesising drum sounds seems like a good place to start and it will also give me something to use when showing how to get Pure Data and SuperCollider interacting over OSC. The focus will be on making the sounds and not so much on how to control them so it will just be single synth instances that make a noise when they’re created and then free themselves. This is going to be a two part post again with the Kick and Hat sounds covered here as a starter, and the Clap and Snare sounds covered in a later post since they were marginally more complex and it wouldn’t hurt to have a few basics first.</p>
+
+<p>I’ll be sticking to the basic and obvious electronic drum sounds for the most part. It isn’t pushing any boundaries for new and innovative methods but I’m more interested in learning the necessary skills to get SuperCollider to do what I want. I plan to create these now and then revise them gradually later down the line so with that in mind, I’ll be creating 808 and 909 style sounds where the main focus will be on a kick, a snare, open and closed hi hats and a clap, probably with a couple of other bits thrown in for good measure. These won’t be accurate reproductions of Roland’s drum sounds, just taking some basic techniques for analogue synthesis and applying them to SuperCollider. Some of the info here has come from the Sound on Sound synth secrets articles which are a really amazing source of knowledge and deserve a good read.</p>
+
+<p>So, first up we have the kick, which has two parts to it that are both very similar. The obvious bass section of the sound as well as the percussive click at the beginning. We will generate the drum sound and the initial click separately using a sine oscillator and a noise source respectively which are each modified by separate envelope generators. This is a fairly simplistic way of synthesising drum sounds but this serves well enough to be useful.
+The bass portion of the sound will be handled by a SinOsc tuned to 60 Hertz. Obviously we need to shape this so that it dies out relatively quickly and a Line UGen will serve as a volume envelope. The Line has a doneAction so that once the envelope has finished the synth will free itself and we can trigger it again if needed. The below code shows how all of this fits together. It’s quite verbose but should be easily understandable, Oscillator multiplied by Volume envelope.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">SynthDef('kickdrum', {
+</span><span class="line">
+</span><span class="line">    var osc, env, output;
+</span><span class="line">
+</span><span class="line">    osc = {SinOsc.ar(60)};
+</span><span class="line">    env = {Line.ar(1, 0, 1, doneAction: 2)};
+</span><span class="line">
+</span><span class="line">    output = osc * env;
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">        Pan2.ar(output, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).send(s);
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">t = Synth('kickdrum');</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Adding the click at the beginning involves basically the same process but with a noise source. We’ll put a Noise UGen through a Low Pass Filter UGen to make it sound more like a thump and then use a second Line UGen with a much quicker decay. It’s important to note that there isn’t a doneAction here, we don’t want the synth to free itself up before the bass envelope has finished otherwise the sound will be clipped off. If in future we have variable length envelopes involved here then we’re going to need to change how this works but it will do for the moment.
+We combine both of these and the end result is a reasonable bass drum sound that while not great, works well and can easily be improved later.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">    SynthDef('fullkickdrum', {
+</span><span class="line">
+</span><span class="line">    var subosc, subenv, suboutput, clickosc, clickenv, clickoutput;
+</span><span class="line">
+</span><span class="line">    subosc = {SinOsc.ar(60)};
+</span><span class="line">    subenv = {Line.ar(1, 0, 1, doneAction: 2)};
+</span><span class="line">
+</span><span class="line">    clickosc = {LPF.ar(WhiteNoise.ar(1),1500)};
+</span><span class="line">    clickenv = {Line.ar(1, 0, 0.02)};
+</span><span class="line">
+</span><span class="line">    suboutput = (subosc * subenv);
+</span><span class="line">    clickoutput = (clickosc * clickenv);
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">        Pan2.ar(suboutput + clickoutput, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).send(s);
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">t = Synth('fullkickdrum');</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>With that done it’s on to the Hi Hats. This works much the same as the click sound from the bass drum but we have a slightly different volume envelope decays and different filtering on the noise. The difference between an open and a closed hat here will just be the length of the decay, everything else remains the same for each. Again the Noise UGen is low pass filtered but this time we let more of the higher frequencies through. We also filter it through a High Pass Filter UGen after that so that we get less thump and more of a mid range emphasis. I’ve chosen some values that I feel are fine here but there’s plenty of scope for tuning. We could probably just use a single Band Pass Filter but I feel this gives a degree more control over the sound. The volume envelope is again created using a Line UGen, with the open hat having a longer decay than the closed hat. I’ve created the two as separate synths here but they could easily be combined into a single one with controls.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">(
+</span><span class="line">SynthDef('openhat', {
+</span><span class="line">
+</span><span class="line">    var hatosc, hatenv, hatnoise, hatoutput;
+</span><span class="line">
+</span><span class="line">    hatnoise = {LPF.ar(WhiteNoise.ar(1),6000)};
+</span><span class="line">
+</span><span class="line">    hatosc = {HPF.ar(hatnoise,2000)};
+</span><span class="line">    hatenv = {Line.ar(1, 0, 0.3)};
+</span><span class="line">
+</span><span class="line">    hatoutput = (hatosc * hatenv);
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">    Pan2.ar(hatoutput, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).send(s);
+</span><span class="line">
+</span><span class="line">SynthDef('closedhat', {
+</span><span class="line">
+</span><span class="line">    var hatosc, hatenv, hatnoise, hatoutput;
+</span><span class="line">
+</span><span class="line">    hatnoise = {LPF.ar(WhiteNoise.ar(1),6000)};
+</span><span class="line">
+</span><span class="line">    hatosc = {HPF.ar(hatnoise,2000)};
+</span><span class="line">    hatenv = {Line.ar(1, 0, 0.1)};
+</span><span class="line">
+</span><span class="line">    hatoutput = (hatosc * hatenv);
+</span><span class="line">
+</span><span class="line">    Out.ar(0,
+</span><span class="line">    Pan2.ar(hatoutput, 0)
+</span><span class="line">    )
+</span><span class="line">
+</span><span class="line">}).send(s);
+</span><span class="line">)
+</span><span class="line">
+</span><span class="line">o = Synth('openhat');
+</span><span class="line">c = Synth('closedhat');</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>So that’s it for this part like I said, the next part will be the Clap and the Snare sounds at which point we’ll have most of the stuff we need for a basic drum kit. This will be an ongoing thing, gradually having more sounds added and existing ones improved so it should become a genuinely useful piece of code. Part 2 coming soon</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/07/second-auto-tweeting-test/">Second Auto Tweeting Test</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-07T01:02:56+01:00" pubdate data-updated="true">Oct 7<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/07/second-auto-tweeting-test/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying this again, hopefully with results</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/05/quick-test-of-auto-tweeting/">Quick Test of Auto Tweeting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-05T22:55:48+01:00" pubdate data-updated="true">Oct 5<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/05/quick-test-of-auto-tweeting/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Nothing to see here, busy fixing things in web 2.0</p>
+
+<p>EDIT: not working unfortunately will try again with a different plugin this evening</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/05/sequencing-basic-events-in-pure-data/">Sequencing Basic Events in Pure Data</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-05T21:41:22+01:00" pubdate data-updated="true">Oct 5<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/05/sequencing-basic-events-in-pure-data/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So one of the things I’ve been thinking about recently is how to sequence complex musical structures but without everything sounding like a mess. Markov chains can help with this to some extent by making the output a bit more ordered but they can become unwieldy if you’re trying to deal with many states and weighting them by hand.
+The solution I’d like to try is to have multiple, higher order Markov chains with a smaller number of states which won’t sequence single events, but groups of events.</p>
+
+<p>In this case a single event would be a note or a drum sound, whereas the group could be a chord, a drum fill or a tune. For my purposes, I’m going to concentrate on drum patterns and our group of events is going to be a sequence of hits that could be anything from a single hit up to a full bar of sequenced drums. This system is going to involve two things, the first will involve showing how we can sequence events simply in Pure Data, the second will be the addition of the second order Markov chain from previously so we can use that to control everything.</p>
+
+<p>To do our sequencing I’ve decided to use the pipe object in PD in combination with a list held in a message box. The message takes the form of event and delay time pairs. The pipe object is used to delay any message passed into the left inlet by a number of milliseconds specified, either as an object creation argument, or a float passed into the right inlet. In our case, the event/delay pairs go through an unpack object so the event goes in through the left and the delay value in the right. This patch is a very simple example.</p>
+
+<p><img src="/a/2010-10-05-sequencing-basic-events-in-pure-data/Basic1.png" alt="Basic1" /></p>
+
+<p>I chose to modify this slightly more so that within a group events are scheduled with respect to the previous events. Have a look at the following patch.</p>
+
+<p><img src="/a/2010-10-05-sequencing-basic-events-in-pure-data/Basic2.png" alt="Basic2" /></p>
+
+<p>As an event/delay pair is unpacked, the delay value gets added to the previous delay value. in our example patch, the list is “1 0, 2 100, 3 100” meaning the 1 will fire through straight away, the 2 will be delayed 100ms and the 3 will be delayed 100ms after the 2. The pipe just thinks of it as being delayed by 200ms in total. I decided to do this because I feel it makes more sense to me to create everything relative to each other, maybe you feel the opposite so change as needed. It certainly makes the patch a little more complex and requires more design decisions in future so it might be worth it.</p>
+
+<p>I’m going to edit this patch a little more to add in multiple event groups and make sure things run correctly. The two main problems with the current system are that the delay needs to be reset to zero at the beginning of each group, and we need to have a way of signalling that the group has finished. The first is important, the second we can work around in a couple of ways. To start, here is the patch with multiple groups.</p>
+
+<p><img src="/a/2010-10-05-sequencing-basic-events-in-pure-data/ThreeGroups.png" alt="ThreeGroups" /></p>
+
+<p>The three message boxes at the top can be used for selecting either group 0, 1 or 2. The float from these is passed to a trigger object which sends out a bang to reset the delay, then sends the float out to a route object which bangs the relevant group. the event/delay messages then pass through the system in the usual way. Simple.</p>
+
+<p>To signal when the group finishes I cheated a little bit, basically by just not bothering. Here I’ve joined the second order Markov chain to the event sequencer.</p>
+
+<p><img src="/a/2010-10-05-sequencing-basic-events-in-pure-data/MarkovControlled.png" alt="MarkovControlled" /></p>
+
+<p>The metro on the Markov chain is set to 300ms and since none of our audio events are longer than that, there isn’t really a need to say when we’ve finished. In fact we don’t really have to keep all the event groups under 300ms, the pipe object can deal with them overlapping but we’ll keep things simple for the moment. A further modification to this could be to have a specific event number that would be a re-trigger for the Markov chain. In this way we could set it going ourselves, and then once an event has finished, it would cause the Markov chain to move to the next state. This would mean that the timing of the state changes would not have to be regular, possibly leading to some interesting results. I might come back to this at a later date once we have some sound being generated.</p>
+
+<p>So one final change I’ll make is being able to change the tempo and keep everything relatively in time. In this case all we do is replace the delay values in the event group messages with fractional float values. We then have a number box which sends its value both to the delay and (via send/receive objects) to a multiply object. The fractional values coming out of the unpack will get multiplied by this and then get sent to the pipe.</p>
+
+<p><img src="/a/2010-10-05-sequencing-basic-events-in-pure-data/TempoRelative.png" alt="TempoRelative" /></p>
+
+<p>This won’t change the delay given to events already in the pipe, but otherwise everything will keep in time after it’s settled. It’s also worth noting that if people have access to Max MSP then you can use the nice timing system within to do this more neatly. I might port this patch over as well just to show some of the extra useful things Max gives. All of these patches can be found in <a href="/a/2010-10-05-sequencing-basic-events-in-pure-data/Event-Sequencing.zip">this zip file</a> for those who want to play around.</p>
+
+<p>I’m planning on going back to SuperCollider for the next tutorial and I’ll be using that to build some drum sounds with the intention of then doing a further post on how to get PureData controlling SuperCollider over OSC. It’s going to be a bit of learning for me so I’ll aim for the end of the week. There’s also a plan to create a single page with links to other useful Algorithmic and Generative composition stuff, as well as general PureData and SuperCollider information. I’ll try to get that started sooner and it will just update as and when.</p>
+
+<p>All the best</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/29/nodes-graphs-groups-and-positioning-part-2/">Nodes, Graphs, Groups and Positioning (Part 2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-29T10:58:02+01:00" pubdate data-updated="true">Sep 29<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/09/29/nodes-graphs-groups-and-positioning-part-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So here is part two of the series on Nodes, Graphs, Groups and Positioning which will have a bit more code than the last one but shouldn’t be much trickier to follow. I’ll specifically be dealing with Positioning here, and how some Nodes need to come after other Nodes to get the results you want.</p>
+
+<p>We’ll start off with the Simple-FM synth that I’ve used previously, it’s very uninteresting but will be good for explaining what we’re doing.</p>
+
+<pre><code>(
+SynthDef('basic-FM',{
+
+arg freq1 = 440, amp1 = 30,
+freq2 = 150, amp2 = 0.5;
+
+var osc1, osc2;
+
+osc1 = {SinOsc.ar(freq1) * amp1};
+osc2 = {SinOsc.ar(freq2 + osc1)};
+
+Out.ar(0,
+Pan2.ar(osc2, 0)
+)
+
+}).send(s)
+
+t = Synth('basic-FM',['freq2', 200, 'amp1', 100]);
+
+)
+</code></pre>
+
+<p>It’s fairly dissonant because we’re going to be putting this through a Low Pass filter and I want it to be obvious when the sound is changing.</p>
+
+<p>Our Low Pass filter code looks like this:-</p>
+
+<pre><code>(
+
+SynthDef('LPFilter',{
+
+arg freq = 1000, inBus, outBus = 0;
+var filter;
+
+filter = {LPF.ar(In.ar(inBus), freq)};
+
+Out.ar(outBus,
+Pan2.ar(filter, 0)
+)
+})
+
+)
+</code></pre>
+
+<p>There isn’t really much to it, we have a Low Pass filter UGen around an In UGen so it will filter whatever comes in through the audio bus with the cutoff frequency set by the freq variable. Lets put it all together to start things working. We need to modify the FM synth to send its output to an audio bus so we can pipe it into the filter but otherwise not much changes.</p>
+
+<pre><code>(
+SynthDef('basic-FM',{
+
+arg freq1 = 440, amp1 = 30,
+freq2 = 150, amp2 = 0.5,
+outBus = 0;
+
+var osc1, osc2;
+
+osc1 = {SinOsc.ar(freq1) * amp1};
+osc2 = {SinOsc.ar(freq2 + osc1)};
+
+Out.ar(outBus,
+Pan2.ar(osc2, 0)
+)
+
+}).send(s)
+
+SynthDef('LPFilter',{
+
+arg freq = 1000, inBus, outBus = 0;
+var filter;
+
+filter = {LPF.ar(In.ar(inBus), freq)};
+
+Out.ar(outBus,
+Pan2.ar(filter, 0)
+)
+}).send(s)
+
+)
+
+d = Bus.audio(s, 1);
+t = Synth('basic-FM',['freq2', 200, 'amp1', 100, 'outBus' d]);
+f = Synth('LPFilter',['freq', 1000, 'inBus', d]);
+
+f.set('freq', 300);
+</code></pre>
+
+<p>…….. if you run and you don’t hear anything, don’t worry, you shouldn’t be.  Let’s go through what’s happening here. We have two Nodes, the basic-FM synth and the LPFilter, and the references to these Nodes are stored in the <strong>t</strong> and <strong>f</strong> variables. Both of these Nodes are in the Global Group because we haven’t told the server to put them anywhere else. We would probably expect that, as we create the filter node after the synth node, everything would be peachy but clearly it’s not quite that simple.</p>
+
+<p>When we create a new synth, there are a few arguments that we miss out, so they take their default values. One of these is called the <em>addAction</em> and we can use it to specify the position in the group that new Nodes take in relation to other Nodes. The default for this is <em>addToHead</em>, so despite us creating the nodes in the order we want, because the Filter Node is created after the synth Node, it will be added to the head of the group it’s in.</p>
+
+<p>There are a couple of ways we can fix this. Obviously we can change the addAction and I’ll get to this in a moment.</p>
+
+<p>A simple solution would be to reverse the order that the nodes are created in, and if you try it out you’ll hear that it works. Have a play with changing the frequency of the filter as well once its working.</p>
+
+<p>We can also manually change the ordering of the nodes. After running the above code with the synth first, use</p>
+
+<pre><code>t.moveBefore(f);
+</code></pre>
+
+<p>or</p>
+
+<pre><code>f.moveAfter(t);
+</code></pre>
+
+<p>to reorder the nodes. There are a number of messages for node reordering. Have a scour through the docs for more on this.</p>
+
+<p>In the long run, the addActions seem to be the best way to create and keep the order of nodes once we start getting complex. The syntax doesn’t really add much into what we have and it means that we can easily set the order of lots of Nodes with relation to each other. The full list of arguments for the Synth.new method are:-</p>
+
+<p><strong>Synth.new(defName, args, target, addAction)</strong></p>
+
+<p>Where target is a synth or server and add action specifies what we want to do. In this case, we can update the section of code where we create our synths and the audio bus and enclose the whole lot in brackets so we can create it in one go and have the addAction correctly specify the ordering.</p>
+
+<pre><code>(
+d = Bus.audio(s, 1);
+t = Synth('basic-FM',['freq2', 200, 'amp1', 100, 'outBus', d]);
+f = Synth('LPFilter',['freq', 10000, 'inBus', d], t, 'addAfter');
+)
+</code></pre>
+
+<p>The addAction for the filter synth tells it to position it after node t which means our signal chain is in the correct order and we get sound.</p>
+
+<p>For more info on this, the place to check out is the documentation on <a href="http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/ServerArchitecture/Order-of-execution.html">Order of Execution</a>. It gives more examples and expands on the add actions and some of the other things I’ve shown. The next and possibly final instalment of this series of posts will be about direct Node messaging where we do away with the niceties that the SuperCollider language functions give us and just send direct OSC to Nodes.</p>
+
+<p>Keep playing</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/12/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

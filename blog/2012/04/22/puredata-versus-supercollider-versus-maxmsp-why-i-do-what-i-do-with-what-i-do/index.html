@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>PureData versus SuperCollider versus MaxMSP (Why I do what I do with what I do) - RumbleSan Heavy Noise Industries</title>
+  <meta name="author" content="guy">
+
+  
+  <meta name="description" content="So I got an interesting couple of questions in the comments for the last post. Many thanks to Joe for asking some good questions, as well as giving &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rumblesan.com/blog/2012/04/22/puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i-do/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="RumbleSan Heavy Noise Industries" type="application/atom+xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19842221-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">RumbleSan Heavy Noise Industries</a></h1>
+  
+    <h2>Noise with weight</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rumblesan.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="http://patchwerk.rumblesan.com">PatchWerk</a></li>
+  <li><a href="http://rumblesan.tumblr.com">Glitchr</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">PureData Versus SuperCollider Versus MaxMSP (Why I Do What I Do With What I Do)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-22T01:08:03+01:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So I got an interesting couple of questions in the comments for the last post. Many thanks to Joe for asking some good questions, as well as giving me a reason to get off my arse and write something. I’ll repeat it here for everyones ease.</p>
+
+<blockquote>
+  <p><em>Hi</em></p>
+
+  <p>I actually came across your blog/web page via various discussions on the Pure Data forum, which naturally I followed up and enjoy reading. However, I noticed in one of your earlier posts (on your own blog) the mention of SuperCollider. Naturally, since I came from the Pure Data forum, I’m a PD fan, like many out there. But reading your remarks about SC I’m interested to ask what is the difference between the two programs? Is it worthwhile (a personal choice of course) looking into both programs, or in fact is one enough and it’s all a matter of interfaces?</p>
+
+  <p>Oddly enough I notice that you do your ‘models’ in PD, probably because it’s freely available, or is that not correct.</p>
+
+  <p>Thanks for the posts, I’m trying to hang in there, but since there’s no real order easy to complicated etc I often find myself out of my own depth. I also have to say I sometimes try to understand the importance of certain ideas in connection with the results. But in the final picture who cares, it’s very interesting and I’m learning as I read your posts.</p>
+
+  <p><em>Thanks in advance</em>.</p>
+
+  <p>Joe</p>
+</blockquote>
+
+<p>I wrote a reply back in the comments but I think it’s worth expanding on some of these questions with a bit more space to talk. Also on Thursday night at the London Hackspace I got to hear two members of the Birmingham Laptop Ensemble (<em>BiLE</em>) give a talk about the work they did and their thoughts on working with SuperCollider.</p>
+
+<p>So, what do I feel the differences between SC and PD/Max are and why have I gone down the visual patching route.</p>
+
+<p>Essentially, it does just boil down to being typed code versus visually patched code. Both have their strengths and weaknesses but really for me it’s just that I prefer the do audio work in a visual language. I generally think that it can be much easier to see the flow of data through a patch, especially if you’re not a programmer which is why I think that Pure Data has a much nicer learning curve that SuperCollider. That said, if you find yourself wanting to do anything involving dynamic object creation or needing large banks of voices then SC does make it much just because it is written code.</p>
+
+<p>My advice? Try both. and as many other programs as you can. They’re all good for something and ultimately, it’s more about work flow than anything else in my opinion.</p>
+
+<p>So as to why I do everything in PD and not Max/MSP, partly, yes the cost is one reason. Not because I don’t think that Max is worth it because it really is, more just because I want to make the barrier for entry as low as possible.</p>
+
+<p>The other reason is that I believe that there’s less happening in PD, so the learning curve is again that bit shallower. You’ll generally find yourself having to build abstractions for things that come as built in objects in Max but I think it’s an advantage in some ways. The less objects you have to remember, the quicker you can get going and if you need something regularly then it’s good practise to turn it into an abstraction.</p>
+
+<p>I always liken the PD to Max view as being similar to C vs C++. PD and C are like a subset of Max and C++, they’re more minimal, require more building and aren’t as nice looking, but the language itself is pretty small and very versatile.</p>
+
+<p>Make of that what you will.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">guy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-22T01:08:03+01:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/musings/'>Musings</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/25/rolling-your-own-whilst-beating-php-to-death/" title="Previous Post: Rolling your own whilst beating PHP to death">&laquo; Rolling your own whilst beating PHP to death</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/29/processing-js-and-github-hosting/" title="Next Post: Processing JS and GitHub hosting">Processing JS and GitHub hosting &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/09/11/cuttr-is-now-live-and-running/">Cuttr is now live and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/programming-is-good-for-the-soul/">Programming is good for the soul</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/08/organising-domains-and-migrating-sites/">Organising Domains and migrating sites</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/30/glitchr-up-and-running/">Glitchr up and running</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/24/octopress-customisation/">Octopress Customisation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rumblesan">@rumblesan</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rumblesan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rumblesan", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rumblesan" class="twitter-follow-button" data-show-count="false">Follow @rumblesan</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - guy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rumblesan';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rumblesan.com/blog/2012/04/22/puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i-do/';
+        var disqus_url = 'http://rumblesan.com/blog/2012/04/22/puredata-versus-supercollider-versus-maxmsp-why-i-do-what-i-do-with-what-i-do/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

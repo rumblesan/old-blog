@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Max/MSP | RumbleSan Heavy Noise Industries]]></title>
+  <link href="http://rumblesan.com/blog/categories/max-msp/atom.xml" rel="self"/>
+  <link href="http://rumblesan.com/"/>
+  <updated>2012-12-16T21:40:44+00:00</updated>
+  <id>http://rumblesan.com/</id>
+  <author>
+    <name><![CDATA[guy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Algorithmic Experiments]]></title>
+    <link href="http://rumblesan.com/blog/2010/09/16/algorithmic-experiments/"/>
+    <updated>2010-09-16T10:53:19+01:00</updated>
+    <id>http://rumblesan.com/blog/2010/09/16/algorithmic-experiments</id>
+    <content type="html"><![CDATA[<p>One of the things I’ve always been interested in is the idea of algorithmic, generative music. I think it’s stemmed from a love of complex, glitchy music but wanting to be able to create it live instead of just replaying loops or sections and this is still something I struggle with now.</p>
+
+<p>I think I’m going to start expanding this blog somewhat based on this. Initially I was just going to be using it as a place to post SuperCollider stuff as I learnt more about the program, but that itself just seems to be a small part of the whole.</p>
+
+<p>So, here is my plan. Each week I will come up with an idea, build an example of it, learn about it, try and explain my thoughts about it and post up the code for anybody to use. Sometimes I might be expanding on a previous idea, sometimes I will try and come up with something new, sometimes I might just wholesale take someone else’s idea and try to modify it in my own way or maybe just learn about it. I am also going to try and have a weekly post on a SuperCollider, PureData or Max/MSP lesson. Looking back at the previous SuperCollider stuff I’m already seeing mistakes so these might only be of use to me but so be it.</p>
+
+<p>As a heads up, I can say that the first example is going to be based on Markov Chains, since I’ve already spent some time playing about with them and I want to investigate them more.</p>
+
+<p>Hopefully I’ll be able to get hat and an SC lesson done by the end of the weekend.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[So some pictures]]></title>
+    <link href="http://rumblesan.com/blog/2008/12/02/so-some-pictures/"/>
+    <updated>2008-12-02T19:50:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2008/12/02/so-some-pictures</id>
+    <content type="html"><![CDATA[<p>Well I meant to put these up yesterday, but so far no one is reading this blog so it doesn’t matter too much at this stage, heh.</p>
+
+<p>As was previously said, the system is currently picking up black and white objects on the wooden board and translating their positions onto a matrix. I’ve built a very basic sequencer section but haven’t gotten round to hooking it up to anything to make noises. one of the unfortunate problems at the moment is that picking up objects at the edge of the field of vision is difficult. For the moment have a look at the screen caps and marvel at how, despite Max 5 having features to make patches look nice, the interface is pretty gash.</p>
+
+<p>Both show the basic interface, top one with object coordinates overlaid over normal web cam feeds, bottom one with monochrome feeds.</p>
+
+<p><a href="http://s461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/?action=view&amp;current=gosequencernormal.jpg"><img src="http://i461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/th_gosequencernormal.jpg" alt="Go Sequencer Normal View" /></a></p>
+
+<p><a href="http://s461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/?action=view&amp;current=gosequencerbnw.jpg"><img src="http://i461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/th_gosequencerbnw.jpg" alt="Go Sequencer Monochrome View" /></a></p>
+
+<p>Currently the setup isn’t especially great and is basically just a web cam taped to a wall above the board…….it’s not even a Go board at the moment. This will all be fixed eventually and I’m currently thinking out how the rig for holding the web cam will work.</p>
+
+<p><a href="http://s461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/?action=view&amp;current=boardsetup.jpg"><img src="http://i461.photobucket.com/albums/qq338/notesandvolts/go%20sequencer/th_boardsetup.jpg" alt="Current Sequencer Testing Setup" /></a></p>
+
+<p>Part of the problem with the whole thing at the moment is due to the lighting. For this reason the rig will hold some form of decent lighting system as well as the camera.</p>
+
+<p>I’m not sure how well this sequencer could be used live and I’m leaning towards it not really being suitable, but I’m still willing to give it a go and even if the sequencing isn’t great it doesn’t really matter. If the drumming is out of time and the melodies are dissonant I’ll just pass it off as break-core. The whole thing will look awesome anyway.</p>
+
+<p>I might well be putting the patch up once I’ve done a bit more tweaking to this so people can have a play and maybe do this themselves.Will let you know.</p>
+
+<p>Guy</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Go Sequencer Update]]></title>
+    <link href="http://rumblesan.com/blog/2008/12/01/go-sequencer-update/"/>
+    <updated>2008-12-01T14:00:00+00:00</updated>
+    <id>http://rumblesan.com/blog/2008/12/01/go-sequencer-update</id>
+    <content type="html"><![CDATA[<p>So a considerable amount of Friday night and Sunday afternoon was spent playing with the Go sequencer. It’s actually in a reasonable state of working-ness, in-so-much-as I have the camera feeding into Max/MSP/Jitter and using the very excellent CV Jitter externals (<a href="http://www.iamas.ac.jp/%7Ejovan02/cv/">http://www.iamas.ac.jp/~jovan02/cv/</a> go look) I have the patch finding black and white objects on a wooden board and then updating their co-ordinates into a matrix grid.</p>
+
+<p>There are (obviously) a few problems. The web-cam isn’t great as its only a cheapo USB affair and so the grainy-ness of the image leads to coordinates of the objects moving around a bit too much. This can probably be fixed with some amount of calibration and tweaking but I’m not going to do that until I’ve built some sort of proper rig to hold the camera and lighting above the board.</p>
+
+<p>Also, some minor form of movement detection needs to be done so that when I put stones on the board the matrix won’t be updated with coordinates caused by my hand. In fairness I’ll probably use the random data generated by putting my hand in the way for something later, but let’s just get the basics done first, eh?</p>
+
+<p>There will be pictures when I get home (currently on my lunch break, the man has ceased his flogging in order to let me go and get ham sandwiches), as well as some basic design flow diagrams and probably the patch as well.</p>
+
+<p>So far the greatest lesson I have learnt, is that any project that doesn’t require building anything complicated gets reasonable results a lot quicker. Computer Scientists have it easy I tells ya.</p>
+
+<p>Until later</p>
+
+<p>Guy</p>
+]]></content>
+  </entry>
+  
+</feed>
