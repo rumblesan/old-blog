@@ -62,7 +62,7 @@ MIDI output is done via the DSBrut serial card currently.
 
 
 
-There are still some things that need to be sorted, I want to add the DS Midi Interface library so people dont have to have the DSBrut, I need to come up with a reasonable way of handling sending midi note off messages and having a variable note length. There are a few GUI bits to properly sort as well but most of the needed functionality is done.
+There are still some things that need to be sorted, I want to add the DS Midi Interface library so people dont have to have the DSBrut, I need to come up with a reasonable way of handling sending midi note off messages and having a variable note length. There are a few GUI bits to properly sort as well but most of the needed functionality is done.
 
 
 

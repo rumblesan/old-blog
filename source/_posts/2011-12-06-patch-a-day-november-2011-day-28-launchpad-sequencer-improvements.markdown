@@ -24,8 +24,8 @@ Note off messages will now get blocked and won't go through to the track abstrac
 
 ![Track abstraction now checks current value](/a/2011-12-06-patch-a-day-november-2011-day-28-launchpad-sequencer-improvements/track-abstraction-that-checks-current-value.png)
 
-There's a few less objects in the track abstraction now but a few new ones as well. The biggest change is that the input is now actually only a single number. This number is used to calculate the pointer to the step position as normal, but it then gets sent to a get object as well as the set object. The abstraction will now check the current value in the data structure at that step and then update it with the opposite value, so we've successfully toggled the value in the data structure.
+There's a few less objects in the track abstraction now but a few new ones as well. The biggest change is that the input is now actually only a single number. This number is used to calculate the pointer to the step position as normal, but it then gets sent to a get object as well as the set object. The abstraction will now check the current value in the data structure at that step and then update it with the opposite value, so we've successfully toggled the value in the data structure.
 
-It's easy to change this behaviour if needed, you might want to increment it or do something else, that's up to you. Obviously we cant just send in a value for the abstraction to store now but that's also easy to change, or just use the old version.
+It's easy to change this behaviour if needed, you might want to increment it or do something else, that's up to you. Obviously we cant just send in a value for the abstraction to store now but that's also easy to change, or just use the old version.
 
 Anyway, the launchpad can now update the data structure and the sequencer actually sequences if you turn the clock on. Of course some lights on the Launchpad would be good, but that's a task for next time.

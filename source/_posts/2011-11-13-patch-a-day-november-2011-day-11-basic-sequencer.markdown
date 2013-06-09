@@ -20,7 +20,7 @@ Generating patterns is all well and good, but we actually have to be able to pla
 
 Starting on the left, I'm reusing the list serialisation patch here from the first list manipulation examples I did. A list comes in, it's length gets stored in a variable and used to resize the table, a counter gets reset to zero and then the list gets serialised. As each list element gets sent out, it triggers the next number from the counter. These are used with the tabwrite object to write the data into the sequence table.
 
-On the right hand side there's the table object which just stores the data. I haven't bothered using $0arguments here to make this abstraction safe yet but I'll do that later. Below that there's a pretty typical metro/counter setup that reads the values out of the table. At the moment the counter will just keep going and reset itself once it hits the length of the current sequence and the sequence can be changed whilst it's running. This may not be desired behaviour, depends on what you're doing.
+On the right hand side there's the table object which just stores the data. I haven't bothered using $0arguments here to make this abstraction safe yet but I'll do that later. Below that there's a pretty typical metro/counter setup that reads the values out of the table. At the moment the counter will just keep going and reset itself once it hits the length of the current sequence and the sequence can be changed whilst it's running. This may not be desired behaviour, depends on what you're doing.
 
 Adding the Euclidean pattern creator abstraction into this is now really easy.
 

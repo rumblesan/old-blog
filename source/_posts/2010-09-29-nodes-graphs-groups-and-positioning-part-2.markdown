@@ -42,7 +42,7 @@ We'll start off with the Simple-FM synth that I've used previously, it's very un
     )
 
 
-It's fairly dissonant because we're going to be putting this through a Low Pass filter and I want it to be obvious when the sound is changing.
+It's fairly dissonant because we're going to be putting this through a Low Pass filter and I want it to be obvious when the sound is changing.
 
 Our Low Pass filter code looks like this:-
 
@@ -106,7 +106,7 @@ There isn't really much to it, we have a Low Pass filter UGen around an In UGen 
     f.set('freq', 300);
 
 
-........ if you run and you don't hear anything, don't worry, you shouldn't be.  Let's go through what's happening here. We have two Nodes, the basic-FM synth and the LPFilter, and the references to these Nodes are stored in the **t** and **f** variables. Both of these Nodes are in the Global Group because we haven't told the server to put them anywhere else. We would probably expect that, as we create the filter node after the synth node, everything would be peachy but clearly it's not quite that simple.
+........ if you run and you don't hear anything, don't worry, you shouldn't be.  Let's go through what's happening here. We have two Nodes, the basic-FM synth and the LPFilter, and the references to these Nodes are stored in the **t** and **f** variables. Both of these Nodes are in the Global Group because we haven't told the server to put them anywhere else. We would probably expect that, as we create the filter node after the synth node, everything would be peachy but clearly it's not quite that simple.
 
 When we create a new synth, there are a few arguments that we miss out, so they take their default values. One of these is called the _addAction_ and we can use it to specify the position in the group that new Nodes take in relation to other Nodes. The default for this is _addToHead_, so despite us creating the nodes in the order we want, because the Filter Node is created after the synth Node, it will be added to the head of the group it's in.
 
@@ -114,7 +114,7 @@ There are a couple of ways we can fix this. Obviously we can change the addActio
 
 A simple solution would be to reverse the order that the nodes are created in, and if you try it out you'll hear that it works. Have a play with changing the frequency of the filter as well once its working.
 
-We can also manually change the ordering of the nodes. After running the above code with the synth first, use
+We can also manually change the ordering of the nodes. After running the above code with the synth first, use
 
     
     t.moveBefore(f);

@@ -14,7 +14,7 @@ comments: true
 
 Starting at the beginning with data structures. There's a lot to take in, but it's pretty cool once you get down to it. I found the old patches I wrote when I was getting to grips with it all the first time round which is pretty helpful but this time I'll actually write things down heh.
 
-First up, you can think of Data Structures in PD as lists of items, where each list has a specific name, and the items they contain can be floats, symbols, arrays, or a list of other data structures. To navigate around these lists you use pointers, which literally just point to a position on the list.
+First up, you can think of Data Structures in PD as lists of items, where each list has a specific name, and the items they contain can be floats, symbols, arrays, or a list of other data structures. To navigate around these lists you use pointers, which literally just point to a position on the list.
 
 When creating a patch that uses data structures, there are three parts that really make the structure. These are a template, a struct and a datawindow. The template is a subpatch that contains a struct. The struct defines what data the structure contains and the datawindow will contain the data.
 
@@ -28,7 +28,7 @@ In the top left are the three objects that make up the data structure. The templ
 
 Now that the data object has been constructed, we need to add some data to it and we can do this using the append object. This takes a pointer into its rightmost inlet and then the values to store are entered using the other inlet. Append is given the name of the struct that it will be modifying and also an argument for each value in the struct we want to modify. If you have a struct with multiple values then you don't need to modify all of them.
 
-The pointer object gets given a message to tell it which datawindow it's pointing to and then a bang to get it to output the value of its current pointer. When we first initialise it with a traverse message the pointer will point to the head of the list. This isn't actually a scalar but is the position in front of the first scalar element so any value appended to it will get added after this. The pointer goes to the append object to tell it where it will be appending the values.
+The pointer object gets given a message to tell it which datawindow it's pointing to and then a bang to get it to output the value of its current pointer. When we first initialise it with a traverse message the pointer will point to the head of the list. This isn't actually a scalar but is the position in front of the first scalar element so any value appended to it will get added after this. The pointer goes to the append object to tell it where it will be appending the values.
 
 Sending the pointer a next message will get it to move to the next scalar in the list, to begin with that will result in an error because there aren't any other values, but if there were it would mean we could append after any position in the list.
 

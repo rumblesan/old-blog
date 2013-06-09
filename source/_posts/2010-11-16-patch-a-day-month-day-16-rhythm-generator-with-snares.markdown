@@ -19,7 +19,7 @@ tags:
 comments: true
 ---
 
-So the extension to yesterdays rhythm generator is here, and I'm pretty pleased with it. It uses the same sort of techniques as yesterday but with a new way of generating the chance data. It's probably easier to just look at it first of all.
+So the extension to yesterdays rhythm generator is here, and I'm pretty pleased with it. It uses the same sort of techniques as yesterday but with a new way of generating the chance data. It's probably easier to just look at it first of all.
 
 
 

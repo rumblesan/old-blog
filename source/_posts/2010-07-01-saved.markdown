@@ -3,7 +3,7 @@ date: '2010-07-01 15:01:07'
 layout: post
 slug: saved
 status: publish
-title: Saved…
+title: Saved 
 comments: true
 ---
 
@@ -13,7 +13,7 @@ I wasn't too sure that I actually wanted another blog seeing as the other one ha
 
 Also, the knowledge that my Boss was reading at points didn't do much to help.
 
-I'm planning to use this space not only to disseminate my brand of noise, but also to talk about some of the techniques and processes I use and create.  Having my own hosted space on which I can put Max/MSP patches and the like for download will be pretty helpful.
+I'm planning to use this space not only to disseminate my brand of noise, but also to talk about some of the techniques and processes I use and create.  Having my own hosted space on which I can put Max/MSP patches and the like for download will be pretty helpful.
 
 Anyway, tonight I have to finish off a remix for a friend that's long overdue, but I'll try and squeeze in a post about something interesting. Possibly a first foray into Granular Synthesis in SuperCollider, a subject I've been looking for an excuse to cover for a while.
 

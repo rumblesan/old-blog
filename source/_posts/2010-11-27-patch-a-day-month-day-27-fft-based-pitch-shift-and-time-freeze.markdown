@@ -18,7 +18,7 @@ tags:
 comments: true
 ---
 
-Following on from yesterdays two useful FFT based patches, I have another two for you today. The first is actually really simple but quite useful, an pitch shifter that will shift sounds you send through it up. It's definitely not clean or accurate but it could well make for some cool patches when combined with other things.
+Following on from yesterdays two useful FFT based patches, I have another two for you today. The first is actually really simple but quite useful, an pitch shifter that will shift sounds you send through it up. It's definitely not clean or accurate but it could well make for some cool patches when combined with other things.
 
 The second is a time freezer patch. This has quite a bit in common with the granular synth stuff from before but this time we're replaying a block of FFT data. It's possibly more interesting just to see the implementation, which is by no means necessarily the right way to do this, but it works pretty well.
 

@@ -23,7 +23,7 @@ Chatting with a friend the other day, he mentioned that he was currently bored a
 
 Of course, now I have this blog that I'm trying to keep updated with interesting, algorithmic noise stuff so it seemed like a pretty good chance to spend some time exploring what I could do with the equations.
 
-The quick idea I had at work was to have multiple sets of the Lorenz equations with slightly different starting positions so that their chaotic nature and tendency for paths to drift greatly over time could be used. I also chose to have these control some FM synthesis, because even small changes to the modulation parameters and frequencies can have very noticeable effects on the sounds produced. The final thought was that having a filter present would help to give some more movement to the sounds and that if I was having to iterate through the values with a clock then that itself could be controlled for some interesting effects.
+The quick idea I had at work was to have multiple sets of the Lorenz equations with slightly different starting positions so that their chaotic nature and tendency for paths to drift greatly over time could be used. I also chose to have these control some FM synthesis, because even small changes to the modulation parameters and frequencies can have very noticeable effects on the sounds produced. The final thought was that having a filter present would help to give some more movement to the sounds and that if I was having to iterate through the values with a clock then that itself could be controlled for some interesting effects.
 
 The equations themselves are:-
 
@@ -33,7 +33,7 @@ The equations themselves are:-
 
   * $ dz/dt = xy beta z $
 
-where the usual values are sigma = 10, rho = 28 and beta = 8/3 if you want to get the chaotic behavior, which we obviously do.
+where the usual values are sigma = 10, rho = 28 and beta = 8/3 if you want to get the chaotic behavior, which we obviously do.
 
 I decided to implement the whole thing in Pure Data because it's the language that I'm most comfortable with but I want to make the same patch again in SuperCollider to help contrast working with the two languages and as a learning exercise. Hopefully I'll have that up soon enough. First I had to create the Lorenz Equations in a patch. I'm trying to just stick to vanilla objects for both portability and learning reasons here so while the expr object available in PD-Extended would have made the resulting abstraction much neater to look at, I've pulled it apart into all the multiplies, adds and subtracts. Here is the abstraction with the equations.
 
@@ -45,7 +45,7 @@ This is the main bulk of the patch, other than this the only other abstraction i
 
 ![Lorenz Drone](/a/2010-10-28-lorenz-drone/LorenzDroneMain.png)
 
-I was hoping that this would help to add some movement to the sound and it exceeded my expectations massively. Listening to it the sound veers between harsh and smooth and the filter and speed variance means that it can crescendo and diminish with little warning. It's very rough around the edges but for a first attempt I'm very pleased. I fully expect that there will be improvements but for the moment I'll leave it.
+I was hoping that this would help to add some movement to the sound and it exceeded my expectations massively. Listening to it the sound veers between harsh and smooth and the filter and speed variance means that it can crescendo and diminish with little warning. It's very rough around the edges but for a first attempt I'm very pleased. I fully expect that there will be improvements but for the moment I'll leave it.
 
 The audio from it can be heard here
 
@@ -53,6 +53,6 @@ The audio from it can be heard here
 
 if the sound cloud player is working for you, otherwise grab it here, [Lorenz Drone Audio](http://www.rumblesan.com/wp-content/uploads/2010/10/LorenzDrone.mp3)
 
-and the patch is available here for those that want it. [Lorenz Drone Patch](/a/2010-10-28-lorenz-drone/LorenzDrone.zip)
+and the patch is available here for those that want it. [Lorenz Drone Patch](/a/2010-10-28-lorenz-drone/LorenzDrone.zip)
 
 Guy

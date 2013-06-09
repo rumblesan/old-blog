@@ -15,7 +15,7 @@ Well.....
 
 ...... hows about a modular sequencing and live performance environment built in PD and for use with the Novation Launchpad?
 
-Sounds pretty good to me which is why I've already started it. I realise that there are already plenty of things like this about for the Monome, and certainly quite a few of the ideas I'll be using will be inspired by some of the excellent software those guys are creating, but I think that the Launchpads extra buttons and multiple colours could really add something to it. As well as that I like the idea of having a fairly generic control framework into which multiple tools can be dropped and swapped around without having to recode large sections.
+Sounds pretty good to me which is why I've already started it. I realise that there are already plenty of things like this about for the Monome, and certainly quite a few of the ideas I'll be using will be inspired by some of the excellent software those guys are creating, but I think that the Launchpads extra buttons and multiple colours could really add something to it. As well as that I like the idea of having a fairly generic control framework into which multiple tools can be dropped and swapped around without having to recode large sections.
 
 The whole thing is going to be aimed at live use because I want to get back to playing gigs again and be able to do it with something much more like an instrument that I can play and improvise with.
 

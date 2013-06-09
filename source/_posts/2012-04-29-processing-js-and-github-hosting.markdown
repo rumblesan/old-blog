@@ -14,4 +14,4 @@ So Processing.JS is pretty cool, this much we know. GitHub is also pretty cool, 
 
 It turns out that the two work really, really well together and because of this I decided to throw up a gallery of my Processing.JS sketches that's hosted using githubs pages.
 
-Check it out here [http://rumblesan.github.com/ProcessingJS-Gallery/](http://rumblesan.github.com/ProcessingJS-Gallery/)
+Check it out here [http://rumblesan.github.com/ProcessingJS-Gallery/](http://rumblesan.github.com/ProcessingJS-Gallery/)

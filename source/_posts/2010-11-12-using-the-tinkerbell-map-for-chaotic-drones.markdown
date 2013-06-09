@@ -55,6 +55,6 @@ The rest of the patch is really just a volume control and recording to a file. T
 
 The stereo separation happens pretty quickly in this version but I'm guessing that with the correct values this could easily be a piece that takes a long time to evolve if you wanted it to.
 
-The patch can be downloaded from here [Tinkerbell's Hymn Patch](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellsHymn.zip)
+The patch can be downloaded from here [Tinkerbell's Hymn Patch](/a/2010-11-12-using-the-tinkerbell-map-for-chaotic-drones/TinkerbellsHymn.zip)
 
 The Patch-a-day patch for today will be a bit late. I'm off for an evening of noise with a friend, hopefully this will keep people amused for the moment.

@@ -18,7 +18,7 @@ Onto day three, and the last day of talking about design patterns for the moment
 
 By interactive, what I mean here is that when we switch between different voices, the values that the controls display will change to reflect the current settings of that voice. Without this it can become a bit tricky to make changes and will result in value jumps when a control starts from a different value to the one currently in use.
 
-To do this I'll first modify the param abstraction that's used within the synth voice. It needs to be able to return the value for that parameter when we want it, which in this situation will be when it receives a "dump" message. You can think of it a bit like getters and setters in a class object. Have a look below.
+To do this I'll first modify the param abstraction that's used within the synth voice. It needs to be able to return the value for that parameter when we want it, which in this situation will be when it receives a "dump" message. You can think of it a bit like getters and setters in a class object. Have a look below.
 
 ![Synth voice with getters and setters](/a/2011-11-03-patch-a-day-november-2011-day-3-passthrough-design-pattern-part-3/synth-voice-control-params.png)
 

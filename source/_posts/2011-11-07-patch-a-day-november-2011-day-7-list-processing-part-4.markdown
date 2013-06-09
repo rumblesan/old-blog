@@ -15,7 +15,7 @@ comments: true
 
 I had a request from a friend of mine on Google+ the other night for an example patch that would randomise the elements in a list. I was thinking of doing it after the Euclidean Rhythms were finished but I think it fits in well with the rest of the list processing so I decided to write it up this evening. That also gives me a bit more time to neaten up the rhythm generation patch which is nearing completion.
 
-The problem with randomising a list in PD is still that we can't really address specific elements of a list. We can however, split it at arbitrary points, pull out a single element and then rejoin the other sections. If the point at which the list gets split is randomised then we have an effective way of pulling random elements out. Have a look at the below patch to see how this works.
+The problem with randomising a list in PD is still that we can't really address specific elements of a list. We can however, split it at arbitrary points, pull out a single element and then rejoin the other sections. If the point at which the list gets split is randomised then we have an effective way of pulling random elements out. Have a look at the below patch to see how this works.
 
 ![Random list element chooser](/a/2011-11-07-patch-a-day-november-2011-day-7-list-processing-part-4/random-list-element.png)
 

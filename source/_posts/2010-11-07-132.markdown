@@ -17,7 +17,7 @@ tags:
 comments: true
 ---
 
-So the extension from yesterday is pretty simple but it helps round it out quite a bit. I've taken some basic drum synthesis patches I've made and tacked them on so that now this thing creates rhythms. It's not great to be honest and it reminds me an awful lot of  the sort of drum sounds and patterns on old Casio keyboards. But it quite happily rolls along, creating a mildly varying pattern with what even sound like drum fills occasionally. This time I'm going to have the patch download-able because I haven't got time to sort out that GitHub repository yet and there's enough other stuff here that it makes sense to.
+So the extension from yesterday is pretty simple but it helps round it out quite a bit. I've taken some basic drum synthesis patches I've made and tacked them on so that now this thing creates rhythms. It's not great to be honest and it reminds me an awful lot of  the sort of drum sounds and patterns on old Casio keyboards. But it quite happily rolls along, creating a mildly varying pattern with what even sound like drum fills occasionally. This time I'm going to have the patch download-able because I haven't got time to sort out that GitHub repository yet and there's enough other stuff here that it makes sense to.
 
 
 

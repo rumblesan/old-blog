@@ -13,7 +13,7 @@ tags:
 comments: true
 ---
 
-So I've been reading up more on this, as I feel it's one of the last major things to get my head around before fully understanding SuperCollider.  The premise is pretty simple but I found there's an awful lot of depth to it if you start diving in. For this reason there will be a couple of parts to this, I'm guessing two or three.
+So I've been reading up more on this, as I feel it's one of the last major things to get my head around before fully understanding SuperCollider.  The premise is pretty simple but I found there's an awful lot of depth to it if you start diving in. For this reason there will be a couple of parts to this, I'm guessing two or three.
 
 The basics is where we'll start and, thankfully, they aren't to taxing. There won't be much code in this post but there should be a fair few diagrams to help visualise everything.
 

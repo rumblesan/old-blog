@@ -25,7 +25,7 @@ So today I'm extending yesterdays patch by adding a few basic controls. Still no
 
 First things first, I've changed to a simple line~ object from the vline~ and now whenever the bang is hit it will automatically set the line~ value to go to zero. Makes things a bit easier to use.
 
-The speed control changes the value we give the line as its second argument. Making this time longer or shorter will make the speed faster or slower respectively.
+The speed control changes the value we give the line as its second argument. Making this time longer or shorter will make the speed faster or slower respectively.
 
 For the start offset we need to do two things, firstly decrease the number of samples played which we do right at the top. Secondly we actually have to increase the sample number that the playback will start from. This is done by adding a signal to the output of the line at the bottom. Tomorrow I'll go about adding length of playback functionality but I left it out for tonight.
 

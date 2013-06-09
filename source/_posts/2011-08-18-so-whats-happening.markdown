@@ -19,6 +19,6 @@ At the moment there's not a huge amount going on. Quite specifically there's bee
 
   * Other sundry socialising type activities
 
-It's not necessarily the most thrilling stuff but it's keeping me busy and meaning that I'm not doing that much audio programming currently. These things ebb and flow so I'm not too worried. I'm pretty sure some thoughts will crystallise soon enough and I'll be patching again.
+It's not necessarily the most thrilling stuff but it's keeping me busy and meaning that I'm not doing that much audio programming currently. These things ebb and flow so I'm not too worried. I'm pretty sure some thoughts will crystallise soon enough and I'll be patching again.
 
 Keep an eye open

@@ -12,7 +12,7 @@ tags:
 comments: true
 ---
 
-Apologies for missing yesterday, I was at the London Hackspace for the weekly music hackers meetup that's been gathering steam and I find that now I know a few more people there I quickly get sucked in and don't get around to working on the patches like I should be.
+Apologies for missing yesterday, I was at the London Hackspace for the weekly music hackers meetup that's been gathering steam and I find that now I know a few more people there I quickly get sucked in and don't get around to working on the patches like I should be.
 
 I've also realised that, unlike last time I did the patch a day month, I have a lot more projects and a fair bit more socialising going on. So I think I'm going to not worry too heavily about getting a new patch done every evening and instead just concentrate on getting them done in a timely manner and making them good. That said, "Patch-a-day-ish Month plus some days" doesn't have the same ring to it.
 

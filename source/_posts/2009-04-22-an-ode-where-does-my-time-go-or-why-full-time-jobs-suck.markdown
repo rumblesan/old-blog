@@ -15,9 +15,9 @@ I'll list all the stuff that still needs doing here, partly as a matter of inter
 
   2. I've discovered that it should be easily within my grasp to add drawable Midi CC curves to my sequencer. Obviously this means I now have to do it.
 
-  3. I need to find out if it's possible to use the SCSI to IDE interface I bought from eBay to get a SCSI SD card reader working, and if that can then be used to connect to my sampler.
+  3. I need to find out if it's possible to use the SCSI to IDE interface I bought from eBay to get a SCSI SD card reader working, and if that can then be used to connect to my sampler.
 
-  4. Somewhere along the line I need to build the dub siren I promised to a friend
+  4. Somewhere along the line I need to build the dub siren I promised to a friend
 
   5. And finish the circuit boards for my monome128
 

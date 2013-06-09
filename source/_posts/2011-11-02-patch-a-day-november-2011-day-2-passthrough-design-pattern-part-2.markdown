@@ -31,7 +31,7 @@ Finally the section on the right is the delay effect itself. It's actually prett
 
 It' worth noting that this patch itself adheres to the passthrough design. There is a data bus for all the control data, with anything not routed to the delay being passed onto the next object in the chain, and the audio itself passing through as well. it would be very easy to chain a number of these together and control them with not much effort, which is of course the idea here.
 
-For a more useful example of that, this next patch has a bank of synth voices which can be independently or collectively controlled and use a poly object to share the incoming notes between them. It's a bit scrappy but should illustrate the point well.
+For a more useful example of that, this next patch has a bank of synth voices which can be independently or collectively controlled and use a poly object to share the incoming notes between them. It's a bit scrappy but should illustrate the point well.
 
 ![Passthrough synth bank example](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank.png)
 
@@ -41,7 +41,7 @@ The far left group of objects uses a poly object to spread any incoming notes am
 
 Below all of this is the bank of voices and it should be easy to see here how this design pattern results in a lot of flexibility whilst having very neat code.
 
-Here's the insides of the voice abstraction. It's a pretty basic FM synth that should be familiar to anybody who has looked at many of the patches I've made.
+Here's the insides of the voice abstraction. It's a pretty basic FM synth that should be familiar to anybody who has looked at many of the patches I've made.
 
 ![Synth bank voice abstraction](/a/2011-11-02-patch-a-day-november-2011-day-2-passthrough-design-pattern-part-2/passthrough-synth-bank-voice.png)
 
@@ -53,6 +53,6 @@ Here it's been used for both the control parameter parsing and organising the vo
 
 
 
-Also I'll point out that all the patches for this Patch-a-Day month will again be going into a Github repository. You can find it all at [https://github.com/rumblesan/PatchaDay-Nov-2011](https://github.com/rumblesan/PatchaDay-Nov-2011)
+Also I'll point out that all the patches for this Patch-a-Day month will again be going into a Github repository. You can find it all at [https://github.com/rumblesan/PatchaDay-Nov-2011](https://github.com/rumblesan/PatchaDay-Nov-2011)
 
 

@@ -15,7 +15,7 @@ tags:
 comments: true
 ---
 
-I wanted to do an interesting post about using periodic  the Mandlebrot fractal to create interesting melodies. Unfortunately a combination of time and the "sheer volume of information I was trying to learn in not much time" conspired to mean that I'm not able to do that. I'll try to get that done soon as well because it looks seriously interesting, (for more info I will point you to [here which has masses of cool stuff](http://claudiusmaximus.goto10.org/cm/) which was posted in the Pure Data IRC room on Freenode).
+I wanted to do an interesting post about using periodic  the Mandlebrot fractal to create interesting melodies. Unfortunately a combination of time and the "sheer volume of information I was trying to learn in not much time" conspired to mean that I'm not able to do that. I'll try to get that done soon as well because it looks seriously interesting, (for more info I will point you to [here which has masses of cool stuff](http://claudiusmaximus.goto10.org/cm/) which was posted in the Pure Data IRC room on Freenode).
 
 Anyway, since I'm not able to do that tonight and it's getting late. I'm going to throw together a couple useful little effects with a bit of a run down of how they work. Nothing ground breaking but fairly useful I hope. A basic flanger and a sample and hold controlled filter.
 
@@ -25,7 +25,7 @@ The Sample and Hold filter is a pretty standard piece of kit, used for making al
 
 The metro periodically bangs the snapshot and we get our noise sample. This gets scaled to a zero to one range and then the bit of maths to the right means we can choose upper and lower bounds for what frequencies we want it to choose. The chosen frequency gets packed into a list so we can feed it to a line to control the band pass filter.
 
-The variables are all easily changeable, I just chose a noise source so the filtering can be easily heard.
+The variables are all easily changeable, I just chose a noise source so the filtering can be easily heard.
 
 The flanger has a little bit more maths to it in so much as we need to generate a triangle wave to control the delay amount.
 

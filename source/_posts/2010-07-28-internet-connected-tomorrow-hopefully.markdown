@@ -3,7 +3,7 @@ date: '2010-07-28 12:54:48'
 layout: post
 slug: internet-connected-tomorrow-hopefully
 status: publish
-title: Internet Connected Tomorrow……. hopefully
+title: Internet Connected Tomorrow  . hopefully
 tags:
 - announcement
 comments: true

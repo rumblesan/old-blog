@@ -16,7 +16,7 @@ tags:
 comments: true
 ---
 
-So Part two of the Drum Sounds in SuperCollider series, and we're going to be making a snare and a clap. Not necessarily a realistic snare or clap, but reasonable enough to go with the rest of our kit. It will be mostly the same combinations of simple oscillators, noise sources, filters and envelopes as previously but joining them in slightly different ways. Again, the S[ynth Secrets articles](http://www.soundonsound.com/sos/allsynthsecrets.htm) are  great to read for some in depth info and good ideas on this sort of stuff, so I'll link them again.
+So Part two of the Drum Sounds in SuperCollider series, and we're going to be making a snare and a clap. Not necessarily a realistic snare or clap, but reasonable enough to go with the rest of our kit. It will be mostly the same combinations of simple oscillators, noise sources, filters and envelopes as previously but joining them in slightly different ways. Again, the S[ynth Secrets articles](http://www.soundonsound.com/sos/allsynthsecrets.htm) are  great to read for some in depth info and good ideas on this sort of stuff, so I'll link them again.
 
 
 
@@ -52,7 +52,7 @@ Again, a Line UGen will work fine as our envelope but this time we need it to co
 
 Reasonable enough sounding I think for what we need, I've picked the values by ear but change them if you want.
 
-The snare part of the sound is again going to be similar to the high hat, but I'm filtering the noise with a bandpass filter to get the right range for a snare and a low pass filter to differentiate it from the hats a bit more. A relatively simple volume envelope used and then mixing that with the drum sound gives us our finished snare.
+The snare part of the sound is again going to be similar to the high hat, but I'm filtering the noise with a bandpass filter to get the right range for a snare and a low pass filter to differentiate it from the hats a bit more. A relatively simple volume envelope used and then mixing that with the drum sound gives us our finished snare.
 
     
     (

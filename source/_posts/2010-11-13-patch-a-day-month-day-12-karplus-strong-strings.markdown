@@ -24,7 +24,7 @@ Turns out it works, really very well, so I decided I'd write it up for tonight s
 
 ![Karplus-Strong String synthesis](/a/2010-11-13-patch-a-day-month-day-12-karplus-strong-strings/12-KarplusStrongString.png)
 
-For something surprisingly basic this does a really good job, the principle behind it is that you have a very short delay with a high feedback and a filter in the feedback loop. You send a brief pulse of noise into the delay chain and the output sounds very much like a string. It turns out that this is actually a pretty good model of how a real string behaves and that there are quite a few variables that can be played with to vary the sound.
+For something surprisingly basic this does a really good job, the principle behind it is that you have a very short delay with a high feedback and a filter in the feedback loop. You send a brief pulse of noise into the delay chain and the output sounds very much like a string. It turns out that this is actually a pretty good model of how a real string behaves and that there are quite a few variables that can be played with to vary the sound.
 
 With the patch above, there are a number of messages that you can click. When the message is sent into the trigger object a bang is sent out to turn on the noise source and a delayed bang is set up to turn it off. At the same time, the float value sets the output of a signal which in turn sets the delay of the vd~ object. The noise passes into the delwrite~ object and the chain starts itself off.
 

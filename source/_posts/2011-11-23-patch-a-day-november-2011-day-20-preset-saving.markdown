@@ -15,7 +15,7 @@ comments: true
 
 Preset saving, done the simple way.
 
-Well, maybe not that simple, this isn't some magical system that can be used like MaxMSP's autopattr system, but it should give a fair degree over the saving, loading and control of presets in PD. I've dug out the synth voices patch from Day 3 again and I'm going to be modifying the control abstraction so that that also stores the presets. This should again show that a nicely arranged and abstracted patch is a good thing which allows you to modify and extend without messing things around. Have a look at the main section of it.
+Well, maybe not that simple, this isn't some magical system that can be used like MaxMSP's autopattr system, but it should give a fair degree over the saving, loading and control of presets in PD. I've dug out the synth voices patch from Day 3 again and I'm going to be modifying the control abstraction so that that also stores the presets. This should again show that a nicely arranged and abstracted patch is a good thing which allows you to modify and extend without messing things around. Have a look at the main section of it.
 
 ![Control abstraction with presets](/a/2011-11-23-patch-a-day-november-2011-day-20-preset-saving/control-abstraction-with-presets.png)
 

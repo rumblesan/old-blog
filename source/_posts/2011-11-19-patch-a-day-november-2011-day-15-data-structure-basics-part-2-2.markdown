@@ -12,7 +12,7 @@ tags:
 comments: true
 ---
 
-I almost think that tonight's patch and last nights should have been rolled together into one post but I've also been thinking that some of these post can suffer from being too long and I'd prefer to have a greater number of smaller, more understandable posts.
+I almost think that tonight's patch and last nights should have been rolled together into one post but I've also been thinking that some of these post can suffer from being too long and I'd prefer to have a greater number of smaller, more understandable posts.
 
 This time I'm looking at the set object, but in truth there's really not much too it.
 
@@ -20,4 +20,4 @@ This time I'm looking at the set object, but in truth there's really not much to
 
 The set object is located at the bottom of the patch and is really just a slightly modified version of the get section. The until object gets given a value, it increments the pointer to that position in the data structure list and then the value can easily be updated. This idea of incrementing pointers to get to specific places in a data structure is pretty important to grasp I feel.
 
-I'm going to do one post on using the graphical capabilities of the data structures next but I'm only planning to spend a single post on it for the moment. Other possibilities to play with I think.
+I'm going to do one post on using the graphical capabilities of the data structures next but I'm only planning to spend a single post on it for the moment. Other possibilities to play with I think.

@@ -24,11 +24,11 @@ The sequencer is now the steps abstraction and the first argument tells it how m
 
 ![Improved launchpad IO](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/improved-launchpad-IO.png)
 
-The launchpad IO now just deals with outputting the MIDI in messages and sending the MIDI out messages. All IO goes through a single inlet or outlet and all messages are prefixed with either grid, mode or ctl to show where it's from or going to. There's also the reset option available which sends the clear message.
+The launchpad IO now just deals with outputting the MIDI in messages and sending the MIDI out messages. All IO goes through a single inlet or outlet and all messages are prefixed with either grid, mode or ctl to show where it's from or going to. There's also the reset option available which sends the clear message.
 
 ![Updated step sequencer](/a/2011-12-05-patch-a-day-november-2011-day-27-launchpad-sequencer/step-sequencer.png)
 
-The step sequencer now has a bit more functionality. It takes the input direct from the launchpad and pulls out the grid and mode button messages. The mode messages control which track we are updating and do that by pre-pending the track name onto the front of the grid message. The tracks then route for this as they do normally. Note the spigot on the mode section, this is there so that only button on messages get through. We don't actually care about button off messages here so we just stop them coming through.
+The step sequencer now has a bit more functionality. It takes the input direct from the launchpad and pulls out the grid and mode button messages. The mode messages control which track we are updating and do that by pre-pending the track name onto the front of the grid message. The tracks then route for this as they do normally. Note the spigot on the mode section, this is there so that only button on messages get through. We don't actually care about button off messages here so we just stop them coming through.
 
 The grid messages are converted from their XY format into a single value that gives the step position. At this point it may be clear that there is a problem with the current setup. The grid buttons also have button up and down messages coming through, so when we press a button the **1** value gets stored, but as soon as it's released the **0** is stored over the top of it.
 

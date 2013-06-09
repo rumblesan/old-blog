@@ -7,4 +7,4 @@ title: 'Hello people from CDM!! '
 comments: true
 ---
 
-Thank's for coming to listen, sorry there's been a few hiccups. It should all be sorted now but I'm trying to make sure it stays up now.
+Thank's for coming to listen, sorry there's been a few hiccups. It should all be sorted now but I'm trying to make sure it stays up now.

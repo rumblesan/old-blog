@@ -17,7 +17,7 @@ tags:
 comments: true
 ---
 
-Have some drums! A full, working drum sequencer patch, borrowing liberally from the excellent rjlib for a decent drum synth and hooking it up to the Euclidean sequencers we've made.
+Have some drums! A full, working drum sequencer patch, borrowing liberally from the excellent rjlib for a decent drum synth and hooking it up to the Euclidean sequencers we've made.
 
 ![Euclidean drums](/a/2011-11-15-patch-a-day-november-2011-day-13-euclidean-drums/Euclidean-drums.png)
 

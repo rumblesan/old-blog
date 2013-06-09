@@ -21,7 +21,7 @@ So I said I'd get a post on this sorted and here it is. Nothing too taxing, just
 
 
 
-So, I feel that a good place to start this is by explaining what a Finite State Machine is, since a Markov Chain is basically a variation on this. I'll pull a picture from the [wiki ](http://view.eecs.berkeley.edu/wiki/Main_Page)of the [Electrical Engineering and Computer Sciences](http://www.eecs.berkeley.edu/) College at UC Berkley.
+So, I feel that a good place to start this is by explaining what a Finite State Machine is, since a Markov Chain is basically a variation on this. I'll pull a picture from the [wiki ](http://view.eecs.berkeley.edu/wiki/Main_Page)of the [Electrical Engineering and Computer Sciences](http://www.eecs.berkeley.edu/) College at UC Berkley.
 
 ![Finite State Machine](http://view.eecs.berkeley.edu/wiki/Finite_State_Machines)
 

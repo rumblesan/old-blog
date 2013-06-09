@@ -19,7 +19,7 @@ tags:
 comments: true
 ---
 
-So I've extended the patch from last night with a few more sounds and another delay section in the chain. I think I'm going to leave this as it is for now and try to start on something else tomorrow. I've also put some audio up on SoundCloud for those that want to hear this and the extended patch is again download-able. This can turn out some quite interesting sounds sometimes and I'm quite pleased with it.
+So I've extended the patch from last night with a few more sounds and another delay section in the chain. I think I'm going to leave this as it is for now and try to start on something else tomorrow. I've also put some audio up on SoundCloud for those that want to hear this and the extended patch is again download-able. This can turn out some quite interesting sounds sometimes and I'm quite pleased with it.
 
 
 
@@ -31,7 +31,7 @@ The bell sounds are pretty much the same as the stuff seen previously, I modifie
 
 The extra delay section is controlled by a very slow LFO which is the combination of two sin waves, the frequencies of which are randomly chosen at the startup of the patch.
 
-Now for the sounds, let's try the SoundCloud widget again and if that doesn't work then go to [http://soundcloud.com/tasteforreality/delaycation](http://soundcloud.com/tasteforreality/delaycation)
+Now for the sounds, let's try the SoundCloud widget again and if that doesn't work then go to [http://soundcloud.com/tasteforreality/delaycation](http://soundcloud.com/tasteforreality/delaycation)
 
 [soundcloud][http://soundcloud.com/tasteforreality/delaycation](http://soundcloud.com/tasteforreality/delaycation)[/soundcloud]
 

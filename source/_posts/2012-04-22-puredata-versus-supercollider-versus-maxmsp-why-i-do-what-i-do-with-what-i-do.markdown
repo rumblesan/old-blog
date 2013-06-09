@@ -19,18 +19,18 @@ So I got an interesting couple of questions in the comments for the last post. M
 
 > _Hi_
 > 
-> I actually came across your blog/web page via various discussions on the Pure Data forum, which naturally I followed up and enjoy reading. However, I noticed in one of your earlier posts (on your own blog) the mention of SuperCollider. Naturally, since I came from the Pure Data forum, I’m a PD fan, like many out there. But reading your remarks about SC I’m interested to ask what is the difference between the two programs? Is it worthwhile (a personal choice of course) looking into both programs, or in fact is one enough and it’s all a matter of interfaces?
+> I actually came across your blog/web page via various discussions on the Pure Data forum, which naturally I followed up and enjoy reading. However, I noticed in one of your earlier posts (on your own blog) the mention of SuperCollider. Naturally, since I came from the Pure Data forum, I'm a PD fan, like many out there. But reading your remarks about SC I'm interested to ask what is the difference between the two programs? Is it worthwhile (a personal choice of course) looking into both programs, or in fact is one enough and it's all a matter of interfaces?
 > 
-> Oddly enough I notice that you do your ‘models’ in PD, probably because it’s freely available, or is that not correct.
+> Oddly enough I notice that you do your 'models' in PD, probably because it's freely available, or is that not correct.
 > 
-> Thanks for the posts, I’m trying to hang in there, but since there’s no real order easy to complicated etc I often find myself out of my own depth. I also have to say I sometimes try to understand the importance of certain ideas in connection with the results. But in the final picture who cares, it’s very interesting and I’m learning as I read your posts.
+> Thanks for the posts, I'm trying to hang in there, but since there's no real order easy to complicated etc I often find myself out of my own depth. I also have to say I sometimes try to understand the importance of certain ideas in connection with the results. But in the final picture who cares, it's very interesting and I'm learning as I read your posts.
 > 
 > _Thanks in advance_.
 > 
 > Joe
 
 
-I wrote a reply back in the comments but I think it's worth expanding on some of these questions with a bit more space to talk. Also on Thursday night at the London Hackspace I got to hear two members of the Birmingham Laptop Ensemble (_BiLE_) give a talk about the work they did and their thoughts on working with SuperCollider.
+I wrote a reply back in the comments but I think it's worth expanding on some of these questions with a bit more space to talk. Also on Thursday night at the London Hackspace I got to hear two members of the Birmingham Laptop Ensemble (_BiLE_) give a talk about the work they did and their thoughts on working with SuperCollider.
 
 So, what do I feel the differences between SC and PD/Max are and why have I gone down the visual patching route.
 

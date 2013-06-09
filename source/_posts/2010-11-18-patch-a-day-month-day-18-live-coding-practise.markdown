@@ -19,7 +19,7 @@ tags:
 comments: true
 ---
 
-So This might be a bit of a cop out but I'm currently writing this on Tuesday night under the assumption that I'm going to be busy at the pub on Wednesday evening and looking at arty things on Thursday so I'm allowing a bit of leeway due to time constraints. This evening I decided to have a go at practising some Live-Coding and realised that Once Patch-a-Day month is over, it might be a good idea to start semi regular entries on the subject, perhaps with videos as well. I'd like to do it in languages other than PureData but I'll need some time to get up to speed with them first. Anyway, here's a picture of the patch I constructed tonight and a bit of blurb about how it works.
+So This might be a bit of a cop out but I'm currently writing this on Tuesday night under the assumption that I'm going to be busy at the pub on Wednesday evening and looking at arty things on Thursday so I'm allowing a bit of leeway due to time constraints. This evening I decided to have a go at practising some Live-Coding and realised that Once Patch-a-Day month is over, it might be a good idea to start semi regular entries on the subject, perhaps with videos as well. I'd like to do it in languages other than PureData but I'll need some time to get up to speed with them first. Anyway, here's a picture of the patch I constructed tonight and a bit of blurb about how it works.
 
 
 
@@ -29,7 +29,7 @@ The first parts to be built were the three counters in the upper left, duplicate
 
 The contents of the click subpatch are shown at the bottom of the picture, just a noise source feeding a vcf~ object which gets triggered by a vline~. Inside the click patches there is a select that triggers of about eight numbers I picked out, roughly spread between 0 and 99. The two click patches also have slightly different frequency peaks and envelope times to get a bit more variation.
 
-The third counter is controlling the drum subpatch. The sound is made by having the envelope from the vline~ control the frequency of the filter, it's not great but it does a reasonably good job of being percussive. I need more practise at making these on the fly I think.
+The third counter is controlling the drum subpatch. The sound is made by having the envelope from the vline~ control the frequency of the filter, it's not great but it does a reasonably good job of being percussive. I need more practise at making these on the fly I think.
 
 The other bits around here are some more counters which will periodically change the length of some of the first counters. It didn't work quite as well as I'd hoped but the idea is one I'll try to reuse.
 

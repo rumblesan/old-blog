@@ -12,7 +12,7 @@ tags:
 comments: true
 ---
 
-Arrays in data structures are a little tricky it seems. Not too tricky, but they require a couple of extra objects and like symbols, it seems that you can't have a scalar with just arrays. This is because to modify an array field in a data structure scalar, you need to first create that scalar, and you can apparently only create a scalar using a float sent into an append object. If I've got this wrong then someone feel free to tell me.
+Arrays in data structures are a little tricky it seems. Not too tricky, but they require a couple of extra objects and like symbols, it seems that you can't have a scalar with just arrays. This is because to modify an array field in a data structure scalar, you need to first create that scalar, and you can apparently only create a scalar using a float sent into an append object. If I've got this wrong then someone feel free to tell me.
 
 Anyway, there are three new objects to use with data structure arrays, setsize and getsize should be pretty obvious, element maybe not so much. Have a look at the patch and I'll go through what's going on.
 

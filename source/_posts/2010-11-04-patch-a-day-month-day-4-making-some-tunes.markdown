@@ -19,7 +19,7 @@ tags:
 comments: true
 ---
 
-So today we actually get Pure Data making some noise at us by combining patches from days two and three. Since that's not an especially difficult task to complete I've extended the whole thing as well with some extra bits to make everything a bit more musical. The problem with our patch is that we don't actually have any control over what notes are going to be played, just what the interval between them will be. Whilst this makes it easier to have a small number of states have a large range of notes, it doesn't necessarily make for good music.
+So today we actually get Pure Data making some noise at us by combining patches from days two and three. Since that's not an especially difficult task to complete I've extended the whole thing as well with some extra bits to make everything a bit more musical. The problem with our patch is that we don't actually have any control over what notes are going to be played, just what the interval between them will be. Whilst this makes it easier to have a small number of states have a large range of notes, it doesn't necessarily make for good music.
 
 
 
@@ -31,7 +31,7 @@ The second addition is the scaler subpatch and this is really what makes the who
 
 ![Scaler Patch](/a/2010-11-04-patch-a-day-month-day-4-making-some-tunes/ScalerPatch.png)
 
-Inside we have two tables, major and minor, which hold interval data for the major and minor scales. The incoming note value gets run through the mod 12 object, the output of this is then used to look up the corresponding value in the chosen table. The mod value is subtracted from the original note value and the new value added on. This way all the notes that come through will only be notes on the A major or Minor scale. To change the key it would be necessary to add a value to the beginning and then subtract this at the end, which I haven't done yet but will soon. This patch is going to turn up quite a bit from now on.
+Inside we have two tables, major and minor, which hold interval data for the major and minor scales. The incoming note value gets run through the mod 12 object, the output of this is then used to look up the corresponding value in the chosen table. The mod value is subtracted from the original note value and the new value added on. This way all the notes that come through will only be notes on the A major or Minor scale. To change the key it would be necessary to add a value to the beginning and then subtract this at the end, which I haven't done yet but will soon. This patch is going to turn up quite a bit from now on.
 
 Finally the output of the scaler patch goes to the mtof object which converts our midi number into a frequency to feed to the synth.
 

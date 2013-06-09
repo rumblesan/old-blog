@@ -17,7 +17,7 @@ comments: true
 
 This title may sound a bit dull but I've got some good intentions in mind so keep reading.
 
-Yesterday I started reading up on how Euclidean Rhythms are created, I won't go into too much detail here yet as there are a few stepping stones first but for those who want to jump straight to it there's [this paper by Godfried Toussaint](http://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf) and then a [blog post from Ruin and Wesen](http://ruinwesen.com/blog?id=216) which give most of the information you need. I had a look around to see if somebody had done this with Pure Data but it seemed most people had used or created externals. Whilst I'm not against using externals to do things, I wanted to try and make a Euclidean Rhythm generator in vanilla PD, because I'm a glutton for punishment pretty much.
+Yesterday I started reading up on how Euclidean Rhythms are created, I won't go into too much detail here yet as there are a few stepping stones first but for those who want to jump straight to it there's [this paper by Godfried Toussaint](http://cgm.cs.mcgill.ca/~godfried/publications/banff.pdf) and then a [blog post from Ruin and Wesen](http://ruinwesen.com/blog?id=216) which give most of the information you need. I had a look around to see if somebody had done this with Pure Data but it seemed most people had used or created externals. Whilst I'm not against using externals to do things, I wanted to try and make a Euclidean Rhythm generator in vanilla PD, because I'm a glutton for punishment pretty much.
 
 A bit of research later and it's clear that this is going to need some interesting list manipulation to get the results we're after. Essentially the process involves interleaving the elements of a list in a fashion that's actually a bit tricky to do with PD because of it's non dynamic nature.
 
@@ -64,7 +64,7 @@ Scaling this idea up a little it can be used to interleave two lists together. B
 
 This patch talks about main list and sub list. To follow on from the above example, main list is **1 2 3 4 5** and sub list is **a b c d e**. The top left is just a bit of logic to make sure the sub list is in place before the main list starts the process running. The two groups of objects in the top centre are the list split feedback loops that serialise a list. These are setup so that a bang message can be sent to the get-next receive objects to get the next element. Also there's a route bang and a send $0-done. When there are no more elements in the main list we assume that everything is finished and the lists are interleaved.
 
-The section in the middle at the bottom joins the main and sub list items into one list, sends that to the final joining section, and then sends the bangs to get the next two items. The section on the right gets the join item pairs, recursively joins them to make one list and then when it recieves the done signal it outputs it.
+The section in the middle at the bottom joins the main and sub list items into one list, sends that to the final joining section, and then sends the bangs to get the next two items. The section on the right gets the join item pairs, recursively joins them to make one list and then when it recieves the done signal it outputs it.
 
 There are a couple of problems with this patch thought, that I'll fix tomorrow night but explain now in case someone wants to try and solve them themselves.
 

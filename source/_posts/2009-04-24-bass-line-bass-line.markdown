@@ -26,7 +26,7 @@ This thing is lots of fun. Lots of knob tweaking, squelch making, bass vibrating
 
 
 
-I'm going to grab a couple cheapish rack mount synths and samplers I think. And then I just need to finish the DS Grid Sequencer........I'll have to come up with a better name for it than that.
+I'm going to grab a couple cheapish rack mount synths and samplers I think. And then I just need to finish the DS Grid Sequencer........I'll have to come up with a better name for it than that.
 
 
 
